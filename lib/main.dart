@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:studentbankmobile/widget/theme_Provider.dart';
+import 'package:studentbankmobile/widgets/theme_Provider.dart';
 
 void main() {
   runApp(const MyApp());
