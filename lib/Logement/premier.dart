@@ -28,8 +28,8 @@ class _premierState extends State<premier> {
       // ),
       body:GestureDetector(
         onTap: (){
-              changeMode();
-              // Navigator.push(context, MaterialPageRoute(builder: (context)=>AccueilLoyer_Dark()));
+              // changeMode();
+               Navigator.push(context, MaterialPageRoute(builder: (context)=>AccueilLoyer()));
             },
         child: 
             Container(
@@ -52,6 +52,7 @@ class _premierState extends State<premier> {
                     alignment: Alignment.bottomRight,
                     child: Text("logement",style: TextStyle(color: Colors.black,fontSize: 23,fontWeight: FontWeight.bold),),
                   ),
+                  //switch.adaptative permet de changer demode
                   Align(
                     alignment: Alignment.bottomCenter,
                     child: Switch.adaptive(
