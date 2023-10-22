@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 // import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
-class loyerinfo extends StatelessWidget {
-  loyerinfo({super.key,required this.index});
+class loyerinfo_dark extends StatelessWidget {
+  loyerinfo_dark({super.key,required this.index});
   int index;
   var pNames=[
     "img (2)",
@@ -26,11 +26,8 @@ class loyerinfo extends StatelessWidget {
                   height: MediaQuery.of(context).size.height/2,
                   width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
-                    color: Colors.white,
-                    // borderRadius: BorderRadius.only(
-                    //   bottomLeft: Radius.circular(30),
-                    //   bottomRight: Radius.circular(30),
-                    // )
+                    color: Colors.grey.shade900,
+                    image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
                   ),
                   child: ListView(
                     scrollDirection: Axis.vertical,
@@ -39,7 +36,7 @@ class loyerinfo extends StatelessWidget {
                         height: 300,
                     decoration: BoxDecoration(
                       boxShadow: [
-                        BoxShadow(color: Colors.orange,blurRadius: 15.0,spreadRadius: 15.2),
+                        BoxShadow(color: Colors.white,blurRadius: 15.0,spreadRadius: 15.2),
                       ],
                       image: DecorationImage(image: AssetImage('images/maisonNight.jpg'),fit: BoxFit.cover),
                       borderRadius: BorderRadius.only(bottomRight: Radius.circular(30),bottomLeft: Radius.circular(30))
@@ -87,7 +84,13 @@ class loyerinfo extends StatelessWidget {
                 ),
 
                 // SizedBox(height: 10),
-                 Center(
+                Container(
+                  decoration: BoxDecoration(
+                    color:Colors.grey.shade900,
+                  ),
+                  child:Column(
+                    children: [
+                       Center(
                    child: Container(
                           alignment: Alignment.center,
                           // margin: EdgeInsets.all(3),
@@ -95,52 +98,20 @@ class loyerinfo extends StatelessWidget {
                           width: double.infinity,
                           height: 200,
                           decoration: BoxDecoration(
+
                             borderRadius: BorderRadius.circular(10),
                             image: DecorationImage(image: AssetImage("images/${pNames[index]}.jpg"),fit: BoxFit.fill),
                           ),
                           // child: Image.asset(""),
                         ),
                  ),
+                 
                 // SizedBox(height: 10),
-                Column(
-                  // crossAxisAlignment:CrossAxisAlignment.center
-                  children: [
+                // Column(
+                //   // crossAxisAlignment:CrossAxisAlignment.center
+                //   children: [
 
-                  // Row(children: [Padding(padding:EdgeInsets.only(top: 10,left: 20),child:Text("Apartement",style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold,color: Colors.black)),),],),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Padding(padding: EdgeInsets.only(left:10,top: 20),
-                      child: Row(children: [Icon(CupertinoIcons.money_dollar_circle_fill,size: 25,color:Colors.orange),SizedBox(width: 5,),Text("prix du loyer",style:TextStyle(color:Colors.orange))],) 
-                      ),
-                      Padding(padding: EdgeInsets.only(left:10,top: 20),
-                      child:Row(children: [Icon(CupertinoIcons.rectangle_fill_on_rectangle_fill,size:25,color:Colors.orange),SizedBox(width: 10,),Text("Place            ",style:TextStyle(color:Colors.orange))],) 
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Padding(padding: EdgeInsets.only(left:10,top: 20),
-                      child: Row(children: [Icon(Icons.place,size:25,color:Colors.orange),SizedBox(width: 10,),Text("Localisation",style:TextStyle(color:Colors.orange))],) 
-                      ),
-                      Padding(padding: EdgeInsets.only(left:10,top: 20),
-                      child: Row(children: [Icon(Icons.screenshot_monitor,size:25,color:Colors.orange),SizedBox(width: 10,),Text("Surface        ",style:TextStyle(color:Colors.orange))],) 
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Padding(padding: EdgeInsets.only(left:10,top: 20),
-                      child: Row(children: [Icon(CupertinoIcons.cube_box_fill,size:25,color:Colors.orange),SizedBox(width: 10,),Text("Meuble   ",style:TextStyle(color:Colors.orange))],) 
-                      ),
-                      Padding(padding: EdgeInsets.only(left:10,top: 20),
-                      child: Row(children: [Icon(CupertinoIcons.person_2,size:25,color:Colors.orange),SizedBox(width: 10,),Text("Colocation",style:TextStyle(color:Colors.orange))],) 
-                      ),
-                    ],
-                  )
-                ]),
+                // ]),
                  Container(
                   
                     margin: EdgeInsets.only(left:30,top:10),
@@ -148,16 +119,20 @@ class loyerinfo extends StatelessWidget {
                       // mainAxisAlignment: MainAxisAlignment.center,
                       // crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                       Align(
+                        Align(
                           alignment: Alignment.topLeft,
                           child:
-                       Text("Descriptif",style:TextStyle(color:Colors.orange,fontSize:15,fontWeight: FontWeight.bold)),
-                        ),SizedBox(height: 10,),
-                        Text("Lorem Ipsum is simply dummy\ntext of the printing and typesetting\ntext of the printing and typesettingtext of the printing \nand typesetting\ntext of the printing and typesetting\nindustry. Lorem Ipsum has\ntext of the printing and typesetting\nindustry. Lorem Ipsum has \n\n",style: TextStyle(color: Colors.black,fontSize: 15),),
+                       Text("Descriptif",style:TextStyle(color:Colors.red,fontSize:15,fontWeight: FontWeight.bold)),
+                        ),
+                       SizedBox(height: 10,),
+                        Text("Lorem Ipsum is simply dummy\ntext of the printing and typesetting\ntext of the printing and typesettingtext of the printing \nand typesetting\ntext of the printing and typesetting\nindustry. Lorem Ipsum has\ntext of the printing and typesetting\nindustry. Lorem Ipsum has \n\n",style: TextStyle(color: Colors.white,fontSize: 15),),
                        ],
                     )
                   ),  
               
+                    ],
+                  )
+                )
       ],
       ),
             ],
@@ -172,11 +147,8 @@ class loyerinfo extends StatelessWidget {
                   height: MediaQuery.of(context).size.height/2,
                   width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
-                    color: Colors.white,
-                    // borderRadius: BorderRadius.only(
-                    //   bottomLeft: Radius.circular(30),
-                    //   bottomRight: Radius.circular(30),
-                    // )
+                    color: Colors.black,
+                    image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
                   ),
                   child: ListView(
                     scrollDirection: Axis.vertical,
@@ -185,7 +157,7 @@ class loyerinfo extends StatelessWidget {
                         height: 300,
                     decoration: BoxDecoration(
                       boxShadow: [
-                        BoxShadow(color: Colors.orange,blurRadius: 15.0,spreadRadius: 15.2),
+                        BoxShadow(color: Colors.white,blurRadius: 15.0,spreadRadius: 15.2),
                       ],
                       image: DecorationImage(image: AssetImage('images/maisonNight.jpg'),fit: BoxFit.cover),
                       borderRadius: BorderRadius.only(bottomRight: Radius.circular(30),bottomLeft: Radius.circular(30))
@@ -228,61 +200,34 @@ class loyerinfo extends StatelessWidget {
                 ),
 
                 // SizedBox(height: 10),
-                 Center(
+                  Container(
+                  decoration: BoxDecoration(
+                    color:Colors.grey.shade900,
+                  ),
+                  child:Column(
+                    children: [
+                       Center(
                    child: Container(
                           alignment: Alignment.center,
-                          margin: EdgeInsets.all(10),
+                          // margin: EdgeInsets.all(3),
                           // padding: EdgeInsets.all(20),
                           width: double.infinity,
                           height: 200,
                           decoration: BoxDecoration(
+
                             borderRadius: BorderRadius.circular(10),
                             image: DecorationImage(image: AssetImage("images/${pNames[index]}.jpg"),fit: BoxFit.fill),
                           ),
                           // child: Image.asset(""),
                         ),
                  ),
-                      
+                 
                 // SizedBox(height: 10),
-                Container(
-                  // height: 100,
-                    child: Column(children: [
-                      // Row(children: [Padding(padding:EdgeInsets.only(top: 10,left: 20),child:Text("Apartement",style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold,color: Colors.black)),),],),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Padding(padding: EdgeInsets.only(left:10,top: 20),
-                          child: Row(children: [Icon(CupertinoIcons.money_dollar_circle_fill,size: 25,color:Colors.orange),SizedBox(width: 5,),Text("prix du loyer",style:TextStyle(color:Colors.orange))],) 
-                          ),
-                          Padding(padding: EdgeInsets.only(left:10,top: 20),
-                          child:Row(children: [Icon(CupertinoIcons.rectangle_fill_on_rectangle_fill,size:25,color:Colors.orange),SizedBox(width: 10,),Text("Place            ",style:TextStyle(color:Colors.orange))],) 
-                          ),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Padding(padding: EdgeInsets.only(left:10,top: 20),
-                          child: Row(children: [Icon(Icons.place,size:25,color:Colors.orange),SizedBox(width: 10,),Text("Localisation",style:TextStyle(color:Colors.orange))],) 
-                          ),
-                          Padding(padding: EdgeInsets.only(left:10,top: 20),
-                          child: Row(children: [Icon(Icons.screenshot_monitor,size:25,color:Colors.orange),SizedBox(width: 10,),Text("Surface        ",style:TextStyle(color:Colors.orange))],) 
-                          ),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Padding(padding: EdgeInsets.only(left:10,top: 20),
-                          child: Row(children: [Icon(CupertinoIcons.cube_box_fill,size:25,color:Colors.orange),SizedBox(width: 10,),Text("Meuble   ",style:TextStyle(color:Colors.orange))],) 
-                          ),
-                          Padding(padding: EdgeInsets.only(left:10,top: 20),
-                          child: Row(children: [Icon(CupertinoIcons.person_2,size:25,color:Colors.orange),SizedBox(width: 10,),Text("Colocation",style:TextStyle(color:Colors.orange))],) 
-                          ),
-                        ],
-                      )
-                    ]),
-                ),
+                // Column(
+                //   // crossAxisAlignment:CrossAxisAlignment.center
+                //   children: [
+
+                // ]),
                  Container(
                   
                     margin: EdgeInsets.only(left:30,top:10),
@@ -290,16 +235,20 @@ class loyerinfo extends StatelessWidget {
                       // mainAxisAlignment: MainAxisAlignment.center,
                       // crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                       Align(
+                        Align(
                           alignment: Alignment.topLeft,
                           child:
-                       Text("Descriptif",style:TextStyle(color:Colors.orange,fontSize:15,fontWeight: FontWeight.bold)),
-                        ),SizedBox(height: 10,),
-                        Text("Lorem Ipsum is simply dummy\ntext of the printing and typesetting\ntext of the printing and typesettingtext of the printing \nand typesetting\ntext of the printing and typesetting\nindustry. Lorem Ipsum has\ntext of the printing and typesetting\nindustry. Lorem Ipsum has \n\n",style: TextStyle(color: Colors.black,fontSize: 15),),
+                       Text("Descriptif",style:TextStyle(color:Colors.red,fontSize:15,fontWeight: FontWeight.bold)),
+                        ),
+                       SizedBox(height: 10,),
+                        Text("Lorem Ipsum is simply dummy\ntext of the printing and typesetting\ntext of the printing and typesettingtext of the printing \nand typesetting\ntext of the printing and typesetting\nindustry. Lorem Ipsum has\ntext of the printing and typesetting\nindustry. Lorem Ipsum has \n\n",style: TextStyle(color: Colors.white,fontSize: 15),),
                        ],
                     )
                   ),  
-               
+              
+                    ],
+                  )
+                )
       ],
       ),
          ],
@@ -314,11 +263,8 @@ class loyerinfo extends StatelessWidget {
                   height: MediaQuery.of(context).size.height/2,
                   width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
-                    color: Colors.white,
-                    // borderRadius: BorderRadius.only(
-                    //   bottomLeft: Radius.circular(30),
-                    //   bottomRight: Radius.circular(30),
-                    // )
+                    color: Colors.black,
+                    image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
                   ),
                   child: ListView(
                     scrollDirection: Axis.vertical,
@@ -327,7 +273,7 @@ class loyerinfo extends StatelessWidget {
                         height: 300,
                     decoration: BoxDecoration(
                       boxShadow: [
-                        BoxShadow(color: Colors.orange,blurRadius: 15.0,spreadRadius: 15.2),
+                        BoxShadow(color: Colors.white,blurRadius: 15.0,spreadRadius: 15.2),
                       ],
                       image: DecorationImage(image: AssetImage('images/maisonNight.jpg'),fit: BoxFit.cover),
                       borderRadius: BorderRadius.only(bottomRight: Radius.circular(30),bottomLeft: Radius.circular(30))
@@ -371,59 +317,34 @@ class loyerinfo extends StatelessWidget {
                 ),
 
                 // SizedBox(height: 10),
-                 Center(
+                  Container(
+                  decoration: BoxDecoration(
+                    color:Colors.grey.shade900,
+                  ),
+                  child:Column(
+                    children: [
+                       Center(
                    child: Container(
                           alignment: Alignment.center,
-                          margin: EdgeInsets.all(10),
+                          // margin: EdgeInsets.all(3),
                           // padding: EdgeInsets.all(20),
                           width: double.infinity,
                           height: 200,
                           decoration: BoxDecoration(
+
                             borderRadius: BorderRadius.circular(10),
                             image: DecorationImage(image: AssetImage("images/${pNames[index]}.jpg"),fit: BoxFit.fill),
                           ),
                           // child: Image.asset(""),
                         ),
                  ),
-             Container(
-                  // height: 100,
-                    child: Column(children: [
-                      // Row(children: [Padding(padding:EdgeInsets.only(top: 10,left: 20),child:Text("Apartement",style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold,color: Colors.black)),),],),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Padding(padding: EdgeInsets.only(left:10,top: 20),
-                          child: Row(children: [Icon(CupertinoIcons.money_dollar_circle_fill,size: 25,color:Colors.orange),SizedBox(width: 5,),Text("prix du loyer",style:TextStyle(color:Colors.orange))],) 
-                          ),
-                          Padding(padding: EdgeInsets.only(left:10,top: 20),
-                          child:Row(children: [Icon(CupertinoIcons.rectangle_fill_on_rectangle_fill,size:25,color:Colors.orange),SizedBox(width: 10,),Text("Place            ",style:TextStyle(color:Colors.orange))],) 
-                          ),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Padding(padding: EdgeInsets.only(left:10,top: 20),
-                          child: Row(children: [Icon(Icons.place,size:25,color:Colors.orange),SizedBox(width: 10,),Text("Localisation",style:TextStyle(color:Colors.orange))],) 
-                          ),
-                          Padding(padding: EdgeInsets.only(left:10,top: 20),
-                          child: Row(children: [Icon(Icons.screenshot_monitor,size:25,color:Colors.orange),SizedBox(width: 10,),Text("Surface        ",style:TextStyle(color:Colors.orange))],) 
-                          ),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Padding(padding: EdgeInsets.only(left:10,top: 20),
-                          child: Row(children: [Icon(CupertinoIcons.cube_box_fill,size:25,color:Colors.orange),SizedBox(width: 10,),Text("Meuble   ",style:TextStyle(color:Colors.orange))],) 
-                          ),
-                          Padding(padding: EdgeInsets.only(left:10,top: 20),
-                          child: Row(children: [Icon(CupertinoIcons.person_2,size:25,color:Colors.orange),SizedBox(width: 10,),Text("Colocation",style:TextStyle(color:Colors.orange))],) 
-                          ),
-                        ],
-                      )
-                    ]),
-                ),
+                 
+                // SizedBox(height: 10),
+                // Column(
+                //   // crossAxisAlignment:CrossAxisAlignment.center
+                //   children: [
+
+                // ]),
                  Container(
                   
                     margin: EdgeInsets.only(left:30,top:10),
@@ -434,13 +355,17 @@ class loyerinfo extends StatelessWidget {
                         Align(
                           alignment: Alignment.topLeft,
                           child:
-                       Text("Descriptif",style:TextStyle(color:Colors.orange,fontSize:15,fontWeight: FontWeight.bold)),
-                        ),SizedBox(height: 10,),
-                        Text("Lorem Ipsum is simply dummy\ntext of the printing and typesetting\ntext of the printing and typesettingtext of the printing \nand typesetting\ntext of the printing and typesetting\nindustry. Lorem Ipsum has\ntext of the printing and typesetting\nindustry. Lorem Ipsum has \n\n",style: TextStyle(color: Colors.black,fontSize: 15),),
+                       Text("Descriptif",style:TextStyle(color:Colors.red,fontSize:15,fontWeight: FontWeight.bold)),
+                        ),
+                       SizedBox(height: 10,),
+                        Text("Lorem Ipsum is simply dummy\ntext of the printing and typesetting\ntext of the printing and typesettingtext of the printing \nand typesetting\ntext of the printing and typesetting\nindustry. Lorem Ipsum has\ntext of the printing and typesetting\nindustry. Lorem Ipsum has \n\n",style: TextStyle(color: Colors.white,fontSize: 15),),
                        ],
                     )
                   ),  
-                
+              
+                    ],
+                  )
+                )
       ],
       ),
           ],
@@ -454,12 +379,9 @@ class loyerinfo extends StatelessWidget {
                 Container(
                   height: MediaQuery.of(context).size.height/2,
                   width: MediaQuery.of(context).size.width,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    // borderRadius: BorderRadius.only(
-                    //   bottomLeft: Radius.circular(30),
-                    //   bottomRight: Radius.circular(30),
-                    // )
+                   decoration: BoxDecoration(
+                    color: Colors.black,
+                    image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
                   ),
                   child: ListView(
                     scrollDirection: Axis.vertical,
@@ -468,7 +390,7 @@ class loyerinfo extends StatelessWidget {
                         height: 300,
                     decoration: BoxDecoration(
                       boxShadow: [
-                        BoxShadow(color: Colors.orange,blurRadius: 15.0,spreadRadius: 15.2),
+                        BoxShadow(color: Colors.white,blurRadius: 3.5,spreadRadius: 5.2),
                       ],
                       image: DecorationImage(image: AssetImage('images/maisonNight.jpg'),fit: BoxFit.cover),
                       borderRadius: BorderRadius.only(bottomRight: Radius.circular(30),bottomLeft: Radius.circular(30))
@@ -510,59 +432,34 @@ class loyerinfo extends StatelessWidget {
                     ],
                   ),
                 ),
-                  Center(
-                        child: Container(
+                   Container(
+                  decoration: BoxDecoration(
+                    color:Colors.grey.shade900,
+                  ),
+                  child:Column(
+                    children: [
+                       Center(
+                   child: Container(
                           alignment: Alignment.center,
-                          margin: EdgeInsets.all(2),
+                          // margin: EdgeInsets.all(3),
                           // padding: EdgeInsets.all(20),
                           width: double.infinity,
                           height: 200,
                           decoration: BoxDecoration(
+
                             borderRadius: BorderRadius.circular(10),
                             image: DecorationImage(image: AssetImage("images/${pNames[index]}.jpg"),fit: BoxFit.fill),
                           ),
                           // child: Image.asset(""),
                         ),
-                      ),
-                Container(
-                  // height: 100,
-                    child: Column(children: [
-                      // Row(children: [Padding(padding:EdgeInsets.only(top: 10,left: 20),child:Text("Apartement",style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold,color: Colors.black)),),],),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Padding(padding: EdgeInsets.only(left:10,top: 20),
-                          child: Row(children: [Icon(CupertinoIcons.money_dollar_circle_fill,size: 25,color:Colors.orange),SizedBox(width: 5,),Text("prix du loyer",style:TextStyle(color:Colors.orange))],) 
-                          ),
-                          Padding(padding: EdgeInsets.only(left:10,top: 20),
-                          child:Row(children: [Icon(CupertinoIcons.rectangle_fill_on_rectangle_fill,size:25,color:Colors.orange),SizedBox(width: 10,),Text("Place            ",style:TextStyle(color:Colors.orange))],) 
-                          ),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Padding(padding: EdgeInsets.only(left:10,top: 20),
-                          child: Row(children: [Icon(Icons.place,size:25,color:Colors.orange),SizedBox(width: 10,),Text("Localisation",style:TextStyle(color:Colors.orange))],) 
-                          ),
-                          Padding(padding: EdgeInsets.only(left:10,top: 20),
-                          child: Row(children: [Icon(Icons.screenshot_monitor,size:25,color:Colors.orange),SizedBox(width: 10,),Text("Surface        ",style:TextStyle(color:Colors.orange))],) 
-                          ),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Padding(padding: EdgeInsets.only(left:10,top: 20),
-                          child: Row(children: [Icon(CupertinoIcons.cube_box_fill,size:25,color:Colors.orange),SizedBox(width: 10,),Text("Meuble   ",style:TextStyle(color:Colors.orange))],) 
-                          ),
-                          Padding(padding: EdgeInsets.only(left:10,top: 20),
-                          child: Row(children: [Icon(CupertinoIcons.person_2,size:25,color:Colors.orange),SizedBox(width: 10,),Text("Colocation",style:TextStyle(color:Colors.orange))],) 
-                          ),
-                        ],
-                      )
-                    ]),
-                ),
+                 ),
+                 
+                // SizedBox(height: 10),
+                // Column(
+                //   // crossAxisAlignment:CrossAxisAlignment.center
+                //   children: [
+
+                // ]),
                  Container(
                   
                     margin: EdgeInsets.only(left:30,top:10),
@@ -573,13 +470,17 @@ class loyerinfo extends StatelessWidget {
                         Align(
                           alignment: Alignment.topLeft,
                           child:
-                       Text("Descriptif",style:TextStyle(color:Colors.orange,fontSize:15,fontWeight: FontWeight.bold)),
-                        ),SizedBox(height: 10,),
-                        Text("Lorem Ipsum is simply dummy\ntext of the printing and typesetting\ntext of the printing and typesettingtext of the printing \nand typesetting\ntext of the printing and typesetting\nindustry. Lorem Ipsum has\ntext of the printing and typesetting\nindustry. Lorem Ipsum has \n\n",style: TextStyle(color: Colors.black,fontSize: 15),),
+                       Text("Descriptif",style:TextStyle(color:Colors.red,fontSize:15,fontWeight: FontWeight.bold)),
+                        ),
+                       SizedBox(height: 10,),
+                        Text("Lorem Ipsum is simply dummy\ntext of the printing and typesetting\ntext of the printing and typesettingtext of the printing \nand typesetting\ntext of the printing and typesetting\nindustry. Lorem Ipsum has\ntext of the printing and typesetting\nindustry. Lorem Ipsum has \n\n",style: TextStyle(color: Colors.white,fontSize: 15),),
                        ],
                     )
                   ),  
-                 
+              
+                    ],
+                  )
+                )
               
       ],
       ),
@@ -592,7 +493,10 @@ class loyerinfo extends StatelessWidget {
                   height: 70,
                   // margin: EdgeInsets.only(top: 0),
                   decoration: BoxDecoration(
-                    color: Colors.orange,
+                    boxShadow: [
+                      BoxShadow(color: Colors.white,blurRadius: 3.4,spreadRadius: 4.5)
+                    ],
+                    color: Colors.grey.shade900,
                     borderRadius: BorderRadius.only(topLeft: Radius.circular(45),topRight: Radius.circular(45))),
                 child: Center(
                   child: Container(

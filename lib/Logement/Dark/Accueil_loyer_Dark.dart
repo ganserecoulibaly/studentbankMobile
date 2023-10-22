@@ -1,20 +1,24 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
-import 'package:studentbankmobile/widgets/change_Mode.dart';
-import '../Dark/Accueil_loyer_Dark.dart';
-import 'Gestion_logement.dart';
-import 'annonce.dart';
-import 'loyer_liste.dart';
+import 'package:studentbankmobile/Logement/Dark/Gestion_logement_Dark.dart';
+import 'package:studentbankmobile/Logement/Dark/annonce_Dark.dart';
+import 'package:studentbankmobile/Logement/Dark/loyer_liste_Dark.dart';
 
-class AccueilLoyer extends StatefulWidget {
-  const AccueilLoyer({super.key});
+import '../../widgets/change_Mode.dart';
+import '../light/Accueil_loyer.dart';
+// import 'Gestion_logement.dart';
+// import 'annonce.dart';
+// import 'loyer_liste.dart';
+
+class AccueilLoyer_Dark extends StatefulWidget {
+  const AccueilLoyer_Dark({super.key});
 
   @override
-  State<AccueilLoyer> createState() => _AccueilLoyerState();
+  State<AccueilLoyer_Dark> createState() => _AccueilLoyer_DarkState();
 }
 
-class _AccueilLoyerState extends State<AccueilLoyer> {
+class _AccueilLoyer_DarkState extends State<AccueilLoyer_Dark> {
   @override
   Widget build(BuildContext context) {
     bool press=false;
@@ -24,7 +28,7 @@ class _AccueilLoyerState extends State<AccueilLoyer> {
         margin: EdgeInsets.all(0),
         padding: EdgeInsets.all(0),
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: Colors.grey.shade900,
           image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
         ),
         // width: double.infinity,
@@ -35,7 +39,7 @@ class _AccueilLoyerState extends State<AccueilLoyer> {
             Container(
               decoration: BoxDecoration(
                 boxShadow: [
-                  BoxShadow(color: Colors.orange.shade200,blurRadius: 3.0,spreadRadius: 4.2),
+                  BoxShadow(color: Colors.white,blurRadius: 3.0,spreadRadius: 4.2),
                 ],
                 image: DecorationImage(image: AssetImage('images/maisonNight.jpg'),fit: BoxFit.cover),
                 borderRadius: BorderRadius.only(bottomRight: Radius.circular(30),bottomLeft: Radius.circular(30))
@@ -51,7 +55,7 @@ class _AccueilLoyerState extends State<AccueilLoyer> {
                     initialPage: 0,
 
                     /// The color to paint the indicator.
-                    indicatorColor: Colors.orange,
+                    indicatorColor: Colors.red,
                   
                     /// The color to paint behind th indicator.
                     indicatorBackgroundColor: Colors.white,
@@ -86,10 +90,10 @@ class _AccueilLoyerState extends State<AccueilLoyer> {
                        Align(
                       alignment: Alignment.centerRight,
                         child: IconButton(onPressed: (){},icon: Icon(Icons.favorite_border),color: Colors.white,),
-                        ),  
+                        ),
                       Text("lorem ghdfshgvhsgsvss\nfhvsgvbfsfj\bnfbssbvfsvsvhn",style: TextStyle(color:Colors.white,fontSize: 13,fontWeight: FontWeight.normal),),
                       SizedBox(height: 10,),
-                      ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white),onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>Annonces()));}, child: Text("voir plus",style: TextStyle(color: Colors.black),))
+                      ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white),onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>Annonces_dark()));}, child: Text("voir plus",style: TextStyle(color: Colors.black),))
                     ],),
                     ),
                     Center(
@@ -116,10 +120,10 @@ class _AccueilLoyerState extends State<AccueilLoyer> {
                       Align(
                       alignment: Alignment.centerRight,
                         child: IconButton(onPressed: (){},icon: Icon(Icons.favorite_border),color: Colors.white,),
-                        ),
+                        ), 
                       Text("lorem ghdfshgvhsgsvss\nfhvsgvbfsfj\bnfbssbvfsvsvhn",style: TextStyle(color:Colors.white,fontSize: 13,fontWeight: FontWeight.normal),),
                       SizedBox(height: 10,),
-                      ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white),onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>Annonces()));}, child: Text("voir plus",style: TextStyle(color: Colors.black),))
+                      ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white),onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>Annonces_dark()));}, child: Text("voir plus",style: TextStyle(color: Colors.black),))
                     ],),),
                     Center(child: 
                     Column(
@@ -145,11 +149,10 @@ class _AccueilLoyerState extends State<AccueilLoyer> {
                        Align(
                       alignment: Alignment.centerRight,
                         child: IconButton(onPressed: (){},icon: Icon(Icons.favorite_border),color: Colors.white,),
-                        ),
-                        
+                        ), 
                       Text("lorem ghdfshgvhsgsvss\nfhvsgvbfsfj\bnfbssbvfsvsvhn",style: TextStyle(color:Colors.white,fontSize: 13,fontWeight: FontWeight.normal),),
                       SizedBox(height: 10,),
-                      ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white),onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>Annonces()));}, child: Text("voir plus",style: TextStyle(color: Colors.black),))
+                      ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white),onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>Annonces_dark()));}, child: Text("voir plus",style: TextStyle(color: Colors.black),))
                     ],),)
                     ],
 
@@ -166,13 +169,15 @@ class _AccueilLoyerState extends State<AccueilLoyer> {
                     isLoop: true,
                   ),
             ),
-            Container(
-              padding: EdgeInsets.only(top: 20,bottom: 20),
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                // boxShadow: BoxShadow(blurRadius: ),
-              ),
-              child: Center(
+            // Container(
+            //   padding: EdgeInsets.only(top: 20,bottom: 20),
+            //   alignment: Alignment.center,
+            //   decoration: BoxDecoration(
+            //     // boxShadow: BoxShadow(blurRadius: ),
+            //   ),
+            //   child: 
+            // ),
+           Center(
                 child: Column(
                   // alignment: Alignment.center,
               children: [
@@ -180,11 +185,11 @@ class _AccueilLoyerState extends State<AccueilLoyer> {
                       padding: EdgeInsets.all(20),
                       alignment: Alignment.center,
                       width:300,
-                      decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((8))),
+                      // decoration:  BoxDecoration(color: Colors.grey.shade900,borderRadius: BorderRadius.circular((8))),
                       child:Row(
                         children: [
                            Container(
-                      decoration: BoxDecoration(color: Colors.orange,borderRadius: BorderRadius.circular(7)),
+                      decoration: BoxDecoration(color: Colors.red,borderRadius: BorderRadius.circular(7)),
                       height:35,width: 50,
                       
                       child: 
@@ -196,7 +201,7 @@ class _AccueilLoyerState extends State<AccueilLoyer> {
                         // style:ElevatedButton.styleFrom(primary: Colors.white),
                         onPressed: (){
                         setState(() {
-                          Navigator.push(context,MaterialPageRoute(builder: (context)=>Loyerlist()));
+                          Navigator.push(context,MaterialPageRoute(builder: (context)=>Loyerlist_dark()));
                         });
                       }, child:const Text("Rechercher\n un appartement",style: TextStyle(fontSize: 16,color: Colors.black),)),
                     
@@ -208,11 +213,11 @@ class _AccueilLoyerState extends State<AccueilLoyer> {
                       padding: EdgeInsets.all(20),
                       alignment: Alignment.center,
                       width:300,
-                      decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((8))),
+                      // decoration:  BoxDecoration(color: Colors.grey.shade900,borderRadius: BorderRadius.circular((8))),
                       child:Row(
                         children: [
                            Container(
-                      decoration: BoxDecoration(color: Colors.orange,borderRadius: BorderRadius.circular(7)),
+                      decoration: BoxDecoration(color: Colors.red,borderRadius: BorderRadius.circular(7)),
                       height:35,width: 50,
                       
                       child: 
@@ -232,11 +237,11 @@ class _AccueilLoyerState extends State<AccueilLoyer> {
                       padding: EdgeInsets.all(20),
                       alignment: Alignment.center,
                       width:300,
-                      decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((8))),
+                      // decoration:  BoxDecoration(color: Colors.grey.shade900,borderRadius: BorderRadius.circular((8))),
                       child:Row(
                         children: [
                            Container(
-                      decoration: BoxDecoration(color: Colors.orange,borderRadius: BorderRadius.circular(7)),
+                      decoration: BoxDecoration(color: Colors.red,borderRadius: BorderRadius.circular(7)),
                       height:35,width: 50,
                       
                       child: 
@@ -255,17 +260,17 @@ class _AccueilLoyerState extends State<AccueilLoyer> {
                     padding: EdgeInsets.all(20),
                     alignment: Alignment.center,
                     width:300,
-                    decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((8))),
+                    // decoration:  BoxDecoration(color: Colors.grey.shade900,borderRadius: BorderRadius.circular((8))),
                     child:Row(
                       children: [
                           Container(
-                    decoration: BoxDecoration(color: Colors.orange,borderRadius: BorderRadius.circular(7)),
+                    decoration: BoxDecoration(color: Colors.red,borderRadius: BorderRadius.circular(7)),
                     height:35,width: 50,
                     
                     child: 
                   Image.asset('images/🦆 icon _building one_.png',color: Colors.white,),
                   ),ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white,elevation: 10,shadowColor: Colors.black),
-                    onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>GestionLog()));}, child:const Text("Gerer mes logements",style: TextStyle(fontSize: 16,color: Colors.black),)),
+                    onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>GestionLog_dark()));}, child:const Text("Gerer mes logements",style: TextStyle(fontSize: 16,color: Colors.black),)),
                   
                       ],
                     ),
@@ -276,11 +281,11 @@ class _AccueilLoyerState extends State<AccueilLoyer> {
                     padding: EdgeInsets.all(20),
                     alignment: Alignment.center,
                     width:300,
-                    decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((8))),
+                    // decoration:  BoxDecoration(color: Colors.grey.shade900,borderRadius: BorderRadius.circular((8))),
                     child:Row(
                       children: [
                           Container(
-                    decoration: BoxDecoration(color: Colors.orange,borderRadius: BorderRadius.circular(7)),
+                    decoration: BoxDecoration(color: Colors.red,borderRadius: BorderRadius.circular(7)),
                     height:35,width: 50,
                     
                     child: 
@@ -296,8 +301,6 @@ class _AccueilLoyerState extends State<AccueilLoyer> {
               ],
               ),
               ),
-            ),
-           
           ],
         ),
       ),
@@ -306,7 +309,7 @@ class _AccueilLoyerState extends State<AccueilLoyer> {
                   height: 70,
                   // margin: EdgeInsets.only(top: 0),
                   decoration: BoxDecoration(
-                    color: Colors.orange,
+                    color: Colors.grey.shade900,
                     borderRadius: BorderRadius.only(topLeft: Radius.circular(45),topRight: Radius.circular(45))),
                 child: Center(
                   child: Container(

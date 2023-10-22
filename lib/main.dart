@@ -3,8 +3,7 @@ import 'package:provider/provider.dart';
 // import 'package:studentbankmobile/Logement/Accueil_loyer.dart';
 import 'package:studentbankmobile/widgets/theme_Provider.dart';
 
-import 'Logement/light/premier.dart';
-// import 'Logement/premier.dart';
+import 'Logement/premier.dart';
 
 void main() {
   runApp(const MyApp());
