@@ -102,7 +102,7 @@ class _GestionLog_darkState extends State<GestionLog_dark> {
                       padding: EdgeInsets.all(20),
                       alignment: Alignment.center,
                       width:300,
-                      decoration:  BoxDecoration(color: Colors.grey.shade900,borderRadius: BorderRadius.circular((8))),
+                      // decoration:  BoxDecoration(color: Colors.grey.shade900,borderRadius: BorderRadius.circular((8))),
                       child:Row(
                         children: [
                            Container(
@@ -127,7 +127,7 @@ class _GestionLog_darkState extends State<GestionLog_dark> {
                       padding: EdgeInsets.all(20),
                       alignment: Alignment.center,
                       width:300,
-                      decoration:  BoxDecoration(color: Colors.grey.shade900,borderRadius: BorderRadius.circular((8))),
+                      // decoration:  BoxDecoration(color: Colors.grey.shade900,borderRadius: BorderRadius.circular((8))),
                       child:Row(
                         children: [
                            Container(
@@ -151,7 +151,7 @@ class _GestionLog_darkState extends State<GestionLog_dark> {
                       padding: EdgeInsets.all(20),
                       alignment: Alignment.center,
                       width:300,
-                      decoration:  BoxDecoration(color: Colors.grey.shade900,borderRadius: BorderRadius.circular((8))),
+                      // decoration:  BoxDecoration(color: Colors.grey.shade900,borderRadius: BorderRadius.circular((8))),
                       child:Row(
                         children: [
                            Container(
