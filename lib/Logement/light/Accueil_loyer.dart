@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
+import 'package:studentbankmobile/Logement/light/filtre.dart';
 import 'package:studentbankmobile/Logement/light/location.dart';
 import 'package:studentbankmobile/widgets/change_Mode.dart';
 import '../Dark/Accueil_loyer_Dark.dart';
@@ -84,6 +85,7 @@ class _AccueilLoyerState extends State<AccueilLoyer> {
                         ],
                         
                       ),
+                     
                        Align(
                       alignment: Alignment.centerRight,
                         child: IconButton(onPressed: (){},icon: Icon(Icons.favorite_border),color: Colors.white,),
@@ -143,6 +145,7 @@ class _AccueilLoyerState extends State<AccueilLoyer> {
                         ],
                         
                       ),
+                      
                        Align(
                       alignment: Alignment.centerRight,
                         child: IconButton(onPressed: (){},icon: Icon(Icons.favorite_border),color: Colors.white,),
@@ -177,6 +180,12 @@ class _AccueilLoyerState extends State<AccueilLoyer> {
                 child: Column(
                   // alignment: Alignment.center,
               children: [
+                     Align(
+                        alignment: Alignment.topLeft,
+                        child: IconButton(icon: Icon(Icons.search),onPressed: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>Filtre()));
+                        },),
+                      ),
                     Container(
                       padding: EdgeInsets.all(20),
                       alignment: Alignment.center,

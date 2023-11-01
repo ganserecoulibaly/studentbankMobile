@@ -231,7 +231,7 @@ class loyerinfo extends StatelessWidget {
                  Center(
                    child: Container(
                           alignment: Alignment.center,
-                          margin: EdgeInsets.all(10),
+                          // margin: EdgeInsets.all(10),
                           // padding: EdgeInsets.all(20),
                           width: double.infinity,
                           height: 200,
