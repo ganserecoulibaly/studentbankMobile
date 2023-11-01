@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:studentbankmobile/Logement/Dark/Gestion_logement_Dark.dart';
 import 'package:studentbankmobile/Logement/Dark/annonce_Dark.dart';
+import 'package:studentbankmobile/Logement/Dark/location_Dark.dart';
 import 'package:studentbankmobile/Logement/Dark/loyer_liste_Dark.dart';
 
 import '../../widgets/change_Mode.dart';
@@ -226,7 +227,7 @@ class _AccueilLoyer_DarkState extends State<AccueilLoyer_Dark> {
                       ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white,elevation: 10,shadowColor: Colors.black),
                       onPressed: (){
                         showDialog(context: context, builder: (context)=>Dialog(child: Text("service indisponible pour le moment"),));
-                      }, child:const Text("Assurance",style: TextStyle(fontSize: 16,color: Colors.black),)),
+                      }, child:const Text("Assurance  ",style: TextStyle(fontSize: 16,color: Colors.black),)),
                       
                         ],
                       ),
@@ -292,7 +293,9 @@ class _AccueilLoyer_DarkState extends State<AccueilLoyer_Dark> {
                   Image.asset('images/🦆 icon _building one_.png',color: Colors.white,),
                   ),ElevatedButton(
                       style: ElevatedButton.styleFrom(backgroundColor: Colors.white,elevation: 10,shadowColor: Colors.black),
-                      onPressed: (){}, child:const Text("Mes Documents",style: TextStyle(fontSize: 18,color: Colors.black),)),
+                      onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>location_dark()));
+                      }, child:const Text("Mes Documents",style: TextStyle(fontSize: 18,color: Colors.black),)),
                     
                       ],
                     ),

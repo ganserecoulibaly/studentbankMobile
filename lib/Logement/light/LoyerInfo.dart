@@ -39,7 +39,7 @@ class loyerinfo extends StatelessWidget {
                         height: 300,
                     decoration: BoxDecoration(
                       boxShadow: [
-                        BoxShadow(color: Colors.orange,blurRadius: 15.0,spreadRadius: 15.2),
+                        BoxShadow(color: Colors.orange.shade200,blurRadius: 3.0,spreadRadius: 4.2),
                       ],
                       image: DecorationImage(image: AssetImage('images/maisonNight.jpg'),fit: BoxFit.cover),
                       borderRadius: BorderRadius.only(bottomRight: Radius.circular(30),bottomLeft: Radius.circular(30))
@@ -73,7 +73,7 @@ class loyerinfo extends StatelessWidget {
                               child: IconButton(onPressed: (){},icon: Icon(Icons.favorite_border),color: Colors.white,),
                               ),
                             Text("lorem ghdfshgvhsgsvss\nfhvsgvbfsfj\bnfbssbvfsvsvhn",style: TextStyle(color:Colors.white,fontSize: 13,fontWeight: FontWeight.normal),),
-                            SizedBox(height: 10,),
+                            // SizedBox(height: 10,),
                             ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white),onPressed: (){}, child: Text("voir plus",style: TextStyle(color: Colors.black),))
                           ],),
                           ),
@@ -90,10 +90,10 @@ class loyerinfo extends StatelessWidget {
                  Center(
                    child: Container(
                           alignment: Alignment.center,
-                          // margin: EdgeInsets.all(3),
+                          margin: EdgeInsets.only(left:15,right:15),
                           // padding: EdgeInsets.all(20),
-                          width: double.infinity,
-                          height: 200,
+                          width: 400,
+                          height: 300,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             image: DecorationImage(image: AssetImage("images/${pNames[index]}.jpg"),fit: BoxFit.fill),

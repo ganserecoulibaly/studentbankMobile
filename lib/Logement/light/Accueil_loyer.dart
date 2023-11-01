@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
+import 'package:studentbankmobile/Logement/light/location.dart';
 import 'package:studentbankmobile/widgets/change_Mode.dart';
 import '../Dark/Accueil_loyer_Dark.dart';
 import 'Gestion_logement.dart';
@@ -198,7 +199,7 @@ class _AccueilLoyerState extends State<AccueilLoyer> {
                         setState(() {
                           Navigator.push(context,MaterialPageRoute(builder: (context)=>Loyerlist()));
                         });
-                      }, child:const Text("Rechercher\n un appartement",style: TextStyle(fontSize: 16,color: Colors.black),)),
+                      }, child:const Text("Rechercher un          \nappartement           ",style: TextStyle(fontSize: 16,color: Colors.black),)),
                     
                         ],
                       )  
@@ -221,7 +222,7 @@ class _AccueilLoyerState extends State<AccueilLoyer> {
                       ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white,elevation: 10,shadowColor: Colors.black),
                       onPressed: (){
                         showDialog(context: context, builder: (context)=>Dialog(child: Text("service indisponible pour le moment"),));
-                      }, child:const Text("Assurance",style: TextStyle(fontSize: 16,color: Colors.black),)),
+                      }, child:const Text("Assurance                ",style: TextStyle(fontSize: 16,color: Colors.black),)),
                       
                         ],
                       ),
@@ -287,7 +288,9 @@ class _AccueilLoyerState extends State<AccueilLoyer> {
                   Image.asset('images/🦆 icon _building one_.png',color: Colors.white,),
                   ),ElevatedButton(
                       style: ElevatedButton.styleFrom(backgroundColor: Colors.white,elevation: 10,shadowColor: Colors.black),
-                      onPressed: (){}, child:const Text("Mes Documents",style: TextStyle(fontSize: 18,color: Colors.black),)),
+                      onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>location()));
+                      }, child:const Text("Mes Documents          ",style: TextStyle(fontSize: 16,color: Colors.black),)),
                     
                       ],
                     ),
@@ -321,7 +324,7 @@ class _AccueilLoyerState extends State<AccueilLoyer> {
                         SizedBox(width:15),
                         IconButton(onPressed: (){}, icon:Image.asset("images/euro_symbol.png"),iconSize: 40),
                         SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset("images/Acceuil_icone.png"),iconSize: 50,),
+                        IconButton(onPressed: (){}, icon:Image.asset("images/Acceuil_icone.png",),iconSize: 50,),
                         SizedBox(width:15),
                         IconButton(onPressed: (){}, icon:Image.asset('images/move_location.png'),iconSize: 40),
                         
