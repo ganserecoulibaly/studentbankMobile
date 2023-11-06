@@ -5,10 +5,17 @@ import 'package:provider/provider.dart';
 import 'package:studentbankmobile/widgets/theme_Provider.dart';
 
 import 'Logement/premier.dart';
+import 'Sp_coder/connexion/page_intro.dart';
+import 'Sp_coder/provider/user_provider.dart';
 
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => UserProvider(),
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -32,7 +39,7 @@ class MyApp extends StatelessWidget {
         // themeMode:themeProvider.themeMode,
         // theme: MyThemes.lightTheme,
         // darkTheme: MyThemes.darkTheme,
-      home:premier(),
+      home:PageIntro(),
     );
     },
     );
