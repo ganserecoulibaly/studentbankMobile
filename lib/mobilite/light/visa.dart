@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:studentbankmobile/mobilite/light/document.dart';
 
 class Visa extends StatefulWidget {
   const Visa({super.key});
@@ -141,7 +142,10 @@ class _VisaState extends State<Visa> {
                 margin: EdgeInsets.only(right: 10),
                 child: Align(
                   alignment: Alignment.centerRight,
-                  child: ElevatedButton(onPressed: (){}, child: Text("Continuer",style: TextStyle(color: Colors.blue.shade200),),style: ElevatedButton.styleFrom(backgroundColor: Colors.white),),
+                  child: ElevatedButton(onPressed: (){
+
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>MesDocs()));
+                  }, child: Text("Continuer",style: TextStyle(color: Colors.blue.shade200),),style: ElevatedButton.styleFrom(backgroundColor: Colors.white),),
                 ),
                )
               ],
@@ -175,7 +179,8 @@ class _VisaState extends State<Visa> {
                         IconButton(onPressed: (){}, icon:Image.asset('images/move_location.png'),iconSize: 40),
                         
                         SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset('images/night_shelter.png'),iconSize: 40)
+                        IconButton(onPressed: (){
+                        }, icon:Image.asset('images/night_shelter.png'),iconSize: 40)
                       ],
                     ),
                   ),
