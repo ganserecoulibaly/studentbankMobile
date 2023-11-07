@@ -241,13 +241,14 @@ class _Accueil_mobiliteState extends State<Accueil_mobilite> {
           ],
         ),
       ),
-      bottomNavigationBar:  Container(
+     bottomNavigationBar:  Container(
                   // color: Colors.orange,
                   height: 70,
                   // margin: EdgeInsets.only(top: 0),
                   decoration: BoxDecoration(
                     color: Colors.blue.shade200,
-                    borderRadius: BorderRadius.only(topLeft: Radius.circular(45),topRight: Radius.circular(45))),
+                    // borderRadius: BorderRadius.only(topLeft: Radius.circular(45),topRight: Radius.circular(45))
+                    ),
                 child: Center(
                   child: Container(
                   // margin: EdgeInsets.all(10),
@@ -261,7 +262,7 @@ class _Accueil_mobiliteState extends State<Accueil_mobilite> {
                         SizedBox(width:15),
                         IconButton(onPressed: (){}, icon:Image.asset("images/euro_symbol.png"),iconSize: 40),
                         SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset("images/Acceuil_icone.png",),iconSize: 50,),
+                        IconButton(onPressed: (){}, icon:Image.asset("images/Acceuil_icone.png",),iconSize: 40,),
                         SizedBox(width:15),
                         IconButton(onPressed: (){}, icon:Image.asset('images/move_location.png'),iconSize: 40),
                         
@@ -272,7 +273,7 @@ class _Accueil_mobiliteState extends State<Accueil_mobilite> {
                   ),
                 ),
                 )
-               
+              
     );
   }
 }
