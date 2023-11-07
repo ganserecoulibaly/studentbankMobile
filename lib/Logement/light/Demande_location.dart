@@ -6,13 +6,13 @@ import 'package:flutter/material.dart';
 
 import 'loyer_liste.dart';
 
-class location extends StatefulWidget {
-  const location({super.key});
+class Demandelocation extends StatefulWidget {
+  const Demandelocation({super.key});
 
   @override
-  State<location> createState() => _locationState();
+  State<Demandelocation> createState() => _DemandelocationState();
 }
-class _locationState extends State<location> {
+class _DemandelocationState extends State<Demandelocation> {
 FilePickerResult?result;
 FilePickerResult?result1;
 FilePickerResult?result2;
@@ -127,11 +127,11 @@ void pickFile3()async{
       body: Container(
           decoration: BoxDecoration(
             color:Colors.white,
-              image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
+            image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
         
           ),
         
-          child:Column(
+          child:ListView(
               // mainAxisAlignment: MainAxisAlignment.spaceEvenly,  
               children: [
                Container(
@@ -156,7 +156,7 @@ void pickFile3()async{
                       SizedBox(height: 10,),
                       Align(
                         alignment: Alignment.center,
-                        child: Text("Mes Documents",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
+                        child: Text("Demande de location",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
                       
                       ),
                       Text("lorem ghdfshgvhsgsvss\nfhvsgvbfsfj\bnfbssbvfsvsvhn",style: TextStyle(color:Colors.white,fontSize: 13,fontWeight: FontWeight.normal),),
@@ -184,8 +184,9 @@ void pickFile3()async{
                       ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white,elevation: 10,shadowColor: Colors.black),
                       onPressed: (){
                        pickFile();
-                        }, child:const Text("Contrat de logement",style: TextStyle(fontSize: 15,color: Colors.black),)),
-                      Icon(Icons.upload_file,color: Colors.orange,),
+                        }, child:const Text("Assurance habitation",style: TextStyle(fontSize: 15,color: Colors.black),)),
+                      
+                        IconButton(onPressed: (){}, icon: Icon(Icons.download_for_offline_outlined,color: Colors.orange,),)
                         ],
                       ),
                   ),
@@ -208,8 +209,9 @@ void pickFile3()async{
                       ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white,elevation: 10,shadowColor: Colors.black),
                       onPressed: (){
                        pickFile1();
-                        }, child:const Text("Facture de logement",style: TextStyle(fontSize: 15,color: Colors.black),)),
-                      Icon(Icons.upload_file,color: Colors.orange,),
+                        }, child:const Text("Caution",style: TextStyle(fontSize: 15,color: Colors.black),)),
+                      
+                        IconButton(onPressed: (){}, icon: Icon(Icons.download_for_offline_outlined,color: Colors.orange,),)
                         ],
                       ),
                   ),
@@ -232,12 +234,46 @@ void pickFile3()async{
                       ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white,elevation: 10,shadowColor: Colors.black),
                       onPressed: (){
                        pickFile2();
-                        }, child:const Text("autre                          ",style: TextStyle(fontSize: 15,color: Colors.black),)),
-                      Icon(Icons.upload_file,color: Colors.orange,),
+                        }, child:const Text("Contrat                         ",style: TextStyle(fontSize: 15,color: Colors.black),)),
+                      
+                        IconButton(onPressed: (){}, icon: Icon(Icons.download_for_offline_outlined,color: Colors.orange,),)
                         ],
                       ),
                   ),
               result2!=null?Text("${_filename2}"):Text(""),
+              Container(
+                      padding: EdgeInsets.all(20),
+                      alignment: Alignment.center,
+                      width:300,
+                      // decoration:  BoxDecoration(color: Colors.grey.shade900,borderRadius: BorderRadius.circular((8))),
+                      child:Row(
+                        children: [
+                           Container(
+                      decoration: BoxDecoration(color: Colors.orange,borderRadius: BorderRadius.circular(7)),
+                      height:35,width: 50,
+                      
+                      child: 
+                    Image.asset('images/🦆 icon _building one_.png',color: Colors.white,),
+                    ),
+                      ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white,elevation: 10,shadowColor: Colors.black),
+                      onPressed: (){
+                       pickFile3();
+                        }, child:const Text("Autres                         ",style: TextStyle(fontSize: 15,color: Colors.black),)),
+                        IconButton(onPressed: (){}, icon: Icon(Icons.download_for_offline_outlined,color: Colors.orange,),)
+                        ],
+                      ),
+                  ),
+              result3!=null?Text("${_filename3}"):Text(""),
+              SizedBox(height: 15,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.red,elevation: 2),onPressed: (){}, child: Text("Annuler",style: TextStyle(color: Colors.black),)),
+                  SizedBox(width: 15,),
+                  ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.red),onPressed: (){}, child: Text("Valider",style: TextStyle(color: Colors.black),)),
+                ],
+              )
             // SizedBox(height: 60,),
               ],
             ),

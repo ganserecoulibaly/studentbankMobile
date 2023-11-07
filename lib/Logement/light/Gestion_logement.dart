@@ -1,6 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
+import 'package:studentbankmobile/Logement/light/DeclarerSinistre.dart';
+import 'package:studentbankmobile/Logement/light/Demande_location.dart';
+import 'package:studentbankmobile/Logement/light/Deposer_preavis.dart';
+import 'package:studentbankmobile/Logement/light/demander_caution.dart';
 
 
 class GestionLog extends StatefulWidget {
@@ -116,7 +120,31 @@ class _GestionLogState extends State<GestionLog> {
                       style: ElevatedButton.styleFrom(backgroundColor: Colors.white,elevation: 10,shadowColor: Colors.black),
                       
                         // style:ElevatedButton.styleFrom(primary: Colors.white),
-                        onPressed: (){
+                        onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>Demandelocation()));
+                      }, child:const Text("Demande de location",style: TextStyle(fontSize: 14,color: Colors.black),)),
+                    
+                        ],
+                      )  
+                      ),
+                    Container(
+                      padding: EdgeInsets.all(20),
+                      alignment: Alignment.center,
+                      width:300,
+                      decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((8))),
+                      child:Row(
+                        children: [
+                           Container(
+                      decoration: BoxDecoration(color: Colors.orange,borderRadius: BorderRadius.circular(7)),
+                      height:35,width: 50,
+                      
+                      child: 
+                    Image.asset('images/🦆 icon _building one_.png',color: Colors.white,),
+                    ),
+                     ElevatedButton(
+                      style: ElevatedButton.styleFrom(backgroundColor: Colors.white,elevation: 10,shadowColor: Colors.black),
+                      
+                        // style:ElevatedButton.styleFrom(primary: Colors.white),
+                        onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>DeclarerSinistre()));
                       }, child:const Text("Deposer un sinistre",style: TextStyle(fontSize: 14,color: Colors.black),)),
                     
                         ],
@@ -139,7 +167,8 @@ class _GestionLogState extends State<GestionLog> {
                     ),
                       ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white,elevation: 10,shadowColor: Colors.black),
                       onPressed: (){
-                        showDialog(context: context, builder: (context)=>Dialog(child: Text("service indisponible pour le moment"),));
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>DeposerPreavis()));
+                        // showDialog(context: context, builder: (context)=>Dialog(child: Text("service indisponible pour le moment"),));
                       }, child:const Text("Deposer un pré avis",style: TextStyle(fontSize: 14,color: Colors.black),)),
                       
                         ],
@@ -162,7 +191,9 @@ class _GestionLogState extends State<GestionLog> {
                     Image.asset('images/🦆 icon _building one_.png',color: Colors.white,),
                     ),
                       ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white,elevation: 10,shadowColor: Colors.black),
-                      onPressed: (){}, child:const Text("Demander une caution /\nGarantie",style: TextStyle(fontSize: 14,color: Colors.black),)),
+                      onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>DemanderCaution()));
+                      }, child:const Text("Demander une caution /\nGarantie",style: TextStyle(fontSize: 14,color: Colors.black),)),
                      
                         ],
                       ),

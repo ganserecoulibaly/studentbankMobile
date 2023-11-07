@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
+import 'package:studentbankmobile/mobilite/dark/Accueil_mobilite_dark.dart';
+import 'package:studentbankmobile/mobilite/light/Accueil_mobilite.dart';
 // import 'package:studentbankmobile/Logement/Dark/Accueil_loyer_Dark.dart';
 // import 'package:studentbankmobile/Logement/Accueil_loyer.dart';
 import 'package:studentbankmobile/widgets/change_Theme_button.dart';
@@ -9,14 +11,14 @@ import 'Dark/Accueil_loyer_Dark.dart';
 import 'light/Accueil_loyer.dart';
 // import 'light/Accueil_loyer.dart';
 
-class premier extends StatefulWidget {
-  const premier({super.key});
-
+class deuxieme extends StatefulWidget {
+  const deuxieme({super.key});
   @override
-  State<premier> createState() => _premierState();
+
+  State<deuxieme> createState() => _deuxiemeState();
 }
 
-class _premierState extends State<premier> {
+class _deuxiemeState extends State<deuxieme> {
   bool press=false;
   @override
   Widget build(BuildContext context) {
@@ -29,13 +31,13 @@ class _premierState extends State<premier> {
       body:GestureDetector(
         onTap: (){
               // changeMode();
-               Navigator.push(context, MaterialPageRoute(builder: (context)=>AccueilLoyer()));
+               Navigator.push(context, MaterialPageRoute(builder: (context)=>Accueil_mobilite()));
             },
         child: 
             Container(
               height: double.infinity,
               decoration: BoxDecoration(
-                image: DecorationImage(image: AssetImage('images/maisonpiscine2.jpg'),fit: BoxFit.cover)
+                image: DecorationImage(image: AssetImage('images/mobilite.jpeg'),fit: BoxFit.cover)
               ),
            
             child:
@@ -50,7 +52,7 @@ class _premierState extends State<premier> {
                   ),
                   Align(
                     alignment: Alignment.bottomRight,
-                    child: Text("logement",style: TextStyle(color: Colors.black,fontSize: 23,fontWeight: FontWeight.bold),),
+                    child: Text("Mobilite",style: TextStyle(color: Colors.black,fontSize: 23,fontWeight: FontWeight.bold),),
                   ),
                   //switch.adaptative permet de changer demode
                   Align(
@@ -62,11 +64,11 @@ class _premierState extends State<premier> {
                           setState(() {
                             press=!press;
                             if(press==false){
-                                 Navigator.push(context, MaterialPageRoute(builder: (context)=>AccueilLoyer()));
+                                 Navigator.push(context, MaterialPageRoute(builder: (context)=>Accueil_mobilite_dark()));
                           
                            }
                             else{
-                                   Navigator.push(context, MaterialPageRoute(builder: (context)=>AccueilLoyer_Dark()));
+                                   Navigator.push(context, MaterialPageRoute(builder: (context)=>Accueil_mobilite()));
                             
                            }
                         

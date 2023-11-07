@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
+import 'package:studentbankmobile/Logement/deuxieme.dart';
 // import 'package:studentbankmobile/Logement/Accueil_loyer.dart';
 import 'package:studentbankmobile/widgets/theme_Provider.dart';
 
@@ -39,7 +40,7 @@ class MyApp extends StatelessWidget {
         // themeMode:themeProvider.themeMode,
         // theme: MyThemes.lightTheme,
         // darkTheme: MyThemes.darkTheme,
-      home:PageIntro(),
+      home:premier(),
     );
     },
     );
