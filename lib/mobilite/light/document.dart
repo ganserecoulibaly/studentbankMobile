@@ -140,6 +140,33 @@ void pickFile3()async{
             // child: Image.asset("images/mobilite.jpeg",fit: BoxFit.contain,),
             height: 150,
             width: double.infinity,
+              child:Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                 Align(
+                  alignment: Alignment.center,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        margin: EdgeInsets.all(20),
+                        child: LinearProgressIndicator(
+                        color: Colors.blue.shade100,
+                        backgroundColor: Colors.blueGrey,
+                        value: 2/5,
+                        borderRadius: BorderRadius.circular(30),
+                        minHeight: 10,
+                        ),
+                      ),
+                      SizedBox(height: 30,),
+                      Text("hvjhhvhj",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),)
+                    ],
+                  ),
+                )
+             
+              ],
+            ),
           ),
           Center(child: Text("Mes Documents",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),),
           Center(child: Text("Pieces joints",style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold),),),

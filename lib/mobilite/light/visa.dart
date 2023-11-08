@@ -30,6 +30,29 @@ class _VisaState extends State<Visa> {
             // child: Image.asset("images/mobilite.jpeg",fit: BoxFit.contain,),
             height: 150,
             width: double.infinity,
+            child:
+                Align(
+                  alignment: Alignment.center,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        margin: EdgeInsets.all(20),
+                        child: LinearProgressIndicator(
+                        color: Colors.blue.shade100,
+                        backgroundColor: Colors.blueGrey,
+                        value: 1/5,
+                        borderRadius: BorderRadius.circular(30),
+                        minHeight: 10,
+                        ),
+                      ),
+                      SizedBox(height: 30,),
+                      Text("hvjhhvhj",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),)
+                    ],
+                  ),
+                )
+             
           ),
           Center(child: Text("Informations Personnelles",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),),
           Container(
@@ -44,13 +67,16 @@ class _VisaState extends State<Visa> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 SizedBox(height: 10,),
-                Radio<radioSex>(value: radioSex.Monsieur, groupValue: sexe, onChanged: (radioSex? value){
+                Radio<radioSex>(
+                  activeColor: Colors.blue.shade100,
+                  value: radioSex.Monsieur, groupValue: sexe, onChanged: (radioSex? value){
                   setState(() {
                     sexe=value!;
                   });
                 }),
                 Text("Monsieur"),
-                Radio<radioSex>(value: radioSex.Madame, groupValue: sexe, onChanged: (radioSex? value){
+                Radio<radioSex>(
+                  activeColor: Colors.blue.shade100,value: radioSex.Madame, groupValue: sexe, onChanged: (radioSex? value){
                   setState(() {
                     sexe=value!;
                   });

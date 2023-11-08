@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:studentbankmobile/mobilite/light/traitement.dart';
 
 class Myphoto extends StatefulWidget {
   const Myphoto({super.key});
@@ -56,6 +57,33 @@ void pickFile()async{
             // child: Image.asset("images/mobilite.jpeg",fit: BoxFit.contain,),
             height: 150,
             width: double.infinity,
+              child:Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Align(
+                  alignment: Alignment.center,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                     Container(
+                        margin: EdgeInsets.all(20),
+                        child: LinearProgressIndicator(
+                        color: Colors.blue.shade100,
+                        value: 3/5,
+                        backgroundColor: Colors.blueGrey,
+                        borderRadius: BorderRadius.circular(30),
+                        minHeight: 10,
+                        ),
+                      ),
+                      SizedBox(height: 30,),
+                      Text("hvjhhvhj",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),)
+                    ],
+                  ),
+                )
+             
+              ],
+            ),
           ),
           Center(child: Text("Mes Documents",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),),
           Center(
@@ -80,8 +108,7 @@ void pickFile()async{
               child: Align(
                 alignment: Alignment.center,
                 child: TextButton(onPressed: (){
-
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>Myphoto()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>traitement()));
                 }, child: Text(" Finaliser ma demande ",style: TextStyle(color: Colors.white),)),
               ),
               )
