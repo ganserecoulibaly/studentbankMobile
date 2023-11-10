@@ -62,12 +62,13 @@ class _premierState extends State<premier> {
                           setState(() {
                             press=!press;
                             if(press==false){
-                              Navigator.push(context, MaterialPageRoute(builder: (context)=>AccueilLoyer_Dark()));
-                            }
+                                 Navigator.push(context, MaterialPageRoute(builder: (context)=>AccueilLoyer()));
+                          
+                           }
                             else{
-
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=>AccueilLoyer()));
-                            }
+                                   Navigator.push(context, MaterialPageRoute(builder: (context)=>AccueilLoyer_Dark()));
+                            
+                           }
                         
                           });
                        

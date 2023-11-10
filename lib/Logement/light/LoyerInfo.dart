@@ -27,6 +27,8 @@ class loyerinfo extends StatelessWidget {
                   width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
                     color: Colors.white,
+                    image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
+        
                     // borderRadius: BorderRadius.only(
                     //   bottomLeft: Radius.circular(30),
                     //   bottomRight: Radius.circular(30),

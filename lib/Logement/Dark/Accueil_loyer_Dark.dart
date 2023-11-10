@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:studentbankmobile/Logement/Dark/Gestion_logement_Dark.dart';
 import 'package:studentbankmobile/Logement/Dark/annonce_Dark.dart';
+import 'package:studentbankmobile/Logement/Dark/filtre_dark.dart';
 import 'package:studentbankmobile/Logement/Dark/location_Dark.dart';
 import 'package:studentbankmobile/Logement/Dark/loyer_liste_Dark.dart';
+import 'package:studentbankmobile/Logement/light/filtre.dart';
 
 import '../../widgets/change_Mode.dart';
 import '../light/Accueil_loyer.dart';
@@ -182,6 +184,12 @@ class _AccueilLoyer_DarkState extends State<AccueilLoyer_Dark> {
                 child: Column(
                   // alignment: Alignment.center,
               children: [
+                      Align(
+                        alignment: Alignment.topLeft,
+                        child: IconButton(icon: Icon(Icons.search,color: Colors.white,),onPressed: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>Filtre_dark()));
+                        },),
+                      ),
                     Container(
                       padding: EdgeInsets.all(20),
                       alignment: Alignment.center,

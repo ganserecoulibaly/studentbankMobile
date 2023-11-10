@@ -1,14 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class Filtre extends StatefulWidget {
-  const Filtre({super.key});
+class Filtre_dark extends StatefulWidget {
+  const Filtre_dark({super.key});
 
   @override
-  State<Filtre> createState() => _FiltreState();
+  State<Filtre_dark> createState() => _Filtre_darkState();
 }
 
-class _FiltreState extends State<Filtre> {
+class _Filtre_darkState extends State<Filtre_dark> {
    late  TextEditingController _Location;
     late TextEditingController _meuble;
     late TextEditingController _Surface;
@@ -42,7 +42,10 @@ class _FiltreState extends State<Filtre> {
     return Scaffold(
       
       body: Container(
-        decoration: BoxDecoration(color: Colors.orange),
+        decoration: BoxDecoration(
+          color: 
+         Colors.grey.shade900,
+        ),
         child: ListView(
           // scrollDirection: Axis.vertical,
           children: [
@@ -69,7 +72,7 @@ class _FiltreState extends State<Filtre> {
                 )
               ],
             ),
-            Container(
+          Container(
               margin: EdgeInsets.only(left: 10),
               child: Column(
                 children: [
@@ -212,6 +215,7 @@ class _FiltreState extends State<Filtre> {
                 ],
               ),
             )
+        
           ],
         ),
       ),

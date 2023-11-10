@@ -1,6 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
+import 'package:studentbankmobile/Logement/Dark/DeclarerSinistre_dark.dart';
+import 'package:studentbankmobile/Logement/Dark/Demande_location_dark.dart';
+import 'package:studentbankmobile/Logement/Dark/Deposer_preavis_dark.dart';
+import 'package:studentbankmobile/Logement/Dark/demander_caution_dark.dart';
+import 'package:studentbankmobile/Logement/light/demander_caution.dart';
 
 
 class GestionLog_dark extends StatefulWidget {
@@ -98,7 +103,7 @@ class _GestionLog_darkState extends State<GestionLog_dark> {
                 child: Column(
                   // alignment: Alignment.center,
               children: [
-                    Container(
+                                        Container(
                       padding: EdgeInsets.all(20),
                       alignment: Alignment.center,
                       width:300,
@@ -117,7 +122,32 @@ class _GestionLog_darkState extends State<GestionLog_dark> {
                       
                         // style:ElevatedButton.styleFrom(primary: Colors.white),
                         onPressed: (){
-                      }, child:const Text("Deposer un sinistre",style: TextStyle(fontSize: 14,color: Colors.black),)),
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>DeclarerSinistre_dark()));
+                      }, child:const Text("Depclarer un sinistre",style: TextStyle(fontSize: 14,color: Colors.black),)),
+                    
+                        ],
+                      )  
+                      ),
+                    Container(
+                      padding: EdgeInsets.all(20),
+                      alignment: Alignment.center,
+                      width:300,
+                      // decoration:  BoxDecoration(color: Colors.grey.shade900,borderRadius: BorderRadius.circular((8))),
+                      child:Row(
+                        children: [
+                           Container(
+                      decoration: BoxDecoration(color: Colors.red,borderRadius: BorderRadius.circular(7)),
+                      height:35,width: 50,
+                      
+                      child: 
+                    Image.asset('images/🦆 icon _building one_.png',color: Colors.white,),
+                    ),
+                     ElevatedButton(
+                      style: ElevatedButton.styleFrom(backgroundColor: Colors.white,elevation: 10,shadowColor: Colors.black),
+                      
+                        // style:ElevatedButton.styleFrom(primary: Colors.white),
+                        onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>Demandelocation_dark()));
+                      }, child:const Text("Demander Location",style: TextStyle(fontSize: 14,color: Colors.black),)),
                     
                         ],
                       )  
@@ -139,8 +169,8 @@ class _GestionLog_darkState extends State<GestionLog_dark> {
                     ),
                       ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white,elevation: 10,shadowColor: Colors.black),
                       onPressed: (){
-                        showDialog(context: context, builder: (context)=>Dialog(child: Text("service indisponible pour le moment"),));
-                      }, child:const Text("Deposer un pré avis",style: TextStyle(fontSize: 14,color: Colors.black),)),
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>DeposerPreavis_dark()));
+                       }, child:const Text("Deposer un pré avis",style: TextStyle(fontSize: 14,color: Colors.black),)),
                       
                         ],
                       ),
@@ -162,7 +192,9 @@ class _GestionLog_darkState extends State<GestionLog_dark> {
                     Image.asset('images/🦆 icon _building one_.png',color: Colors.white,),
                     ),
                       ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white,elevation: 10,shadowColor: Colors.black),
-                      onPressed: (){}, child:const Text("Demander une caution /\nGarantie",style: TextStyle(fontSize: 14,color: Colors.black),)),
+                      onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>DemanderCaution_dark()));
+                      }, child:const Text("Demander une caution /\nGarantie",style: TextStyle(fontSize: 14,color: Colors.black),)),
                      
                         ],
                       ),
