@@ -4,7 +4,8 @@ import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter/cupertino.dart';
-import 'package:studentbankmobile/mobilite/light/myphoto.dart';
+
+import 'myphoto.dart';
 
 class MesDocs extends StatefulWidget {
   const MesDocs({super.key});
@@ -130,183 +131,193 @@ void pickFile3()async{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
-        children: [
-          Container(
-            margin: EdgeInsets.all(20),
-            
-            decoration:BoxDecoration(borderRadius: BorderRadius.circular(20),
-            image: DecorationImage(image:  AssetImage("images/mobilite.jpeg"),fit: BoxFit.cover,scale: 4)),
-            // child: Image.asset("images/mobilite.jpeg",fit: BoxFit.contain,),
-            height: 150,
-            width: double.infinity,
-              child:Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                 Align(
-                  alignment: Alignment.center,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
+      body: Container(
+         margin: EdgeInsets.all(0),
+        padding: EdgeInsets.all(0),
+        decoration: BoxDecoration(
+          color: Colors.white70,
+          image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
+        ),
+        // width: double.infinity,
+        // height: double.infinity,
+        child: ListView(
+          children: [
+            Container(
+              margin: EdgeInsets.all(20),
+              
+              decoration:BoxDecoration(borderRadius: BorderRadius.circular(20),
+              image: DecorationImage(image:  AssetImage("images/mobilite.jpeg"),fit: BoxFit.cover,scale: 4)),
+              // child: Image.asset("images/mobilite.jpeg",fit: BoxFit.contain,),
+              height: 150,
+              width: double.infinity,
+                child:Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                   Align(
+                    alignment: Alignment.center,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          margin: EdgeInsets.all(20),
+                          child: LinearProgressIndicator(
+                          color: Colors.blue.shade100,
+                          backgroundColor: Colors.blueGrey,
+                          value: 2/5,
+                          borderRadius: BorderRadius.circular(30),
+                          minHeight: 10,
+                          ),
+                        ),
+                        SizedBox(height: 30,),
+                        Text("Demande de Visa",style: TextStyle(color:Colors.blue.shade100, fontWeight: FontWeight.bold,fontSize: 20),)
+                      ],
+                    ),
+                  )
+               
+                ],
+              ),
+            ),
+            Center(child: Text("Mes Documents",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),),
+            Center(child: Text("Pieces joints",style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold),),),
+            Container(
+              margin: EdgeInsets.only(top:20,left: 20,right: 20),
+              height: 250,
+              width: double.infinity,
+              decoration: BoxDecoration(
+              border: Border.all(color: Colors.black,),
+              boxShadow: [
+                BoxShadow(blurRadius: 3.0,spreadRadius: 4.8,color: Colors.white),
+                BoxShadow(blurRadius: 3.0,spreadRadius: 4.8,color: Colors.white),
+                ],borderRadius: BorderRadius.circular(10)
+                ),
+                
+              child: 
+              Column(
+                children: [
+                  Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Container(
-                        margin: EdgeInsets.all(20),
-                        child: LinearProgressIndicator(
-                        color: Colors.blue.shade100,
-                        backgroundColor: Colors.blueGrey,
-                        value: 2/5,
-                        borderRadius: BorderRadius.circular(30),
-                        minHeight: 10,
-                        ),
+                        margin: EdgeInsets.all(10),
+                        height: 150,
+                        width: 100,
+                        decoration: BoxDecoration(color: Colors.black),
+                        child: Center(child: IconButton(onPressed: (){pickFile();}, icon: Icon(Icons.upload_file),color: Colors.white,)),
                       ),
-                      SizedBox(height: 30,),
-                      Text("hvjhhvhj",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),)
+                      SizedBox(width: 30,),
+                      Container(
+                        margin: EdgeInsets.all(10),
+                        height: 150,
+                        width: 100,
+                        decoration: BoxDecoration(color: Colors.black),
+                        child: Center(child: IconButton(onPressed: (){pickFile1();}, icon: Icon(Icons.upload_file),color: Colors.white,)),
+                      )
                     ],
                   ),
-                )
-             
-              ],
-            ),
-          ),
-          Center(child: Text("Mes Documents",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),),
-          Center(child: Text("Pieces joints",style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold),),),
-          Container(
-            margin: EdgeInsets.only(top:20,left: 20,right: 20),
-            height: 250,
-            width: double.infinity,
-            decoration: BoxDecoration(
-            border: Border.all(color: Colors.black,),
-            boxShadow: [
-              BoxShadow(blurRadius: 3.0,spreadRadius: 4.8,color: Colors.white),
-              BoxShadow(blurRadius: 3.0,spreadRadius: 4.8,color: Colors.white),
-              ],borderRadius: BorderRadius.circular(10)
+                  Container(
+                    margin: EdgeInsets.only(left: 10,right: 10),
+                    height: 70,
+                    decoration: BoxDecoration(border: Border.all(color: Colors.black,style: BorderStyle.values[1],),),
+                    child:  Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                    Text("Recto"),
+                    SizedBox(width: 30,),
+                    Text("Verso")
+                    ],
+                  ),
+                  )
+                ],
               ),
-              
-            child: 
+            ),
             Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Container(
-                      margin: EdgeInsets.all(10),
-                      height: 150,
-                      width: 100,
-                      decoration: BoxDecoration(color: Colors.black),
-                      child: Center(child: IconButton(onPressed: (){pickFile();}, icon: Icon(Icons.upload_file),color: Colors.white,)),
-                    ),
-                    SizedBox(width: 30,),
-                    Container(
-                      margin: EdgeInsets.all(10),
-                      height: 150,
-                      width: 100,
-                      decoration: BoxDecoration(color: Colors.black),
-                      child: Center(child: IconButton(onPressed: (){pickFile1();}, icon: Icon(Icons.upload_file),color: Colors.white,)),
-                    )
-                  ],
-                ),
-                Container(
-                  margin: EdgeInsets.only(left: 10,right: 10),
-                  height: 70,
-                  decoration: BoxDecoration(border: Border.all(color: Colors.black,style: BorderStyle.values[1],),),
-                  child:  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                  Text("Recto"),
-                  SizedBox(width: 30,),
-                  Text("Verso")
-                  ],
-                ),
-                )
+             result!=null?Text("recto: ${_filename}"):Text(""),
+             result1!=null?Text("verso: ${_filename1}"):Text(""),
               ],
             ),
-          ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-           result!=null?Text("recto: ${_filename}"):Text(""),
-           result1!=null?Text("verso: ${_filename1}"):Text(""),
-            ],
-          ),
-          SizedBox(height: 20,),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              SizedBox(),
-              Text("CV",style: TextStyle(fontWeight: FontWeight.bold),),
-              SizedBox(width: 20,),
-              Text("Lettre de motivation",style: TextStyle(fontWeight: FontWeight.bold),),
-            ],
-          ),
-          Container(
-            margin: EdgeInsets.only(top: 20,left:20,right: 20),
-            height: 250,
-            width: double.infinity,
-            decoration: BoxDecoration(
-            
-            border: Border.all(color: Colors.black,),
-            borderRadius: BorderRadius.circular(10),
-            boxShadow: [
-              BoxShadow(blurRadius: 3.0,spreadRadius: 4.8,color: Colors.white),
-              BoxShadow(blurRadius: 3.0,spreadRadius: 4.8,color: Colors.white),
-              ]),
-            child: 
-            Column(
+            SizedBox(height: 20,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Container(
-                      margin: EdgeInsets.all(10),
-                      height: 150,
-                      width: 100,
-                      decoration: BoxDecoration(color: Colors.black),
-                      child: Center(child: IconButton(onPressed: (){pickFile2();}, icon: Icon(Icons.upload_file),color: Colors.white,)),
-                    ),
-                    SizedBox(width: 30,),
-                    Container(
-                      margin: EdgeInsets.all(10),
-                      height: 150,
-                      width: 100,
-                      decoration: BoxDecoration(color: Colors.black),
-                      child: Center(child: IconButton(onPressed: (){pickFile3();}, icon: Icon(Icons.upload_file),color: Colors.white,)),
-                    )
-                  ],
-                ),
-                Container(
-                  margin: EdgeInsets.only(left: 10,right: 10),
-                  height: 70,
-                  decoration: BoxDecoration(border: Border.all(color: Colors.black,style: BorderStyle.values[1],),),
-                  child:  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                  Text("Joindre"),
-                  SizedBox(width: 30,),
-                  Text("Joindre")
-                  ],
-                ),
-                )
+                SizedBox(),
+                Text("CV",style: TextStyle(fontWeight: FontWeight.bold),),
+                SizedBox(width: 20,),
+                Text("Lettre de motivation",style: TextStyle(fontWeight: FontWeight.bold),),
               ],
             ),
-          ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-                result2!=null?Text("cv: ${_filename2}"):Text(""),
-                result3!=null?Text("motivation: ${_filename3}"):Text(""),
-            ],
-          ),
             Container(
-              margin: EdgeInsets.only(top:5,right: 10,bottom: 5),
-              child: Align(
-                alignment: Alignment.centerRight,
-                child: ElevatedButton(onPressed: (){
-
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>Myphoto()));
-                }, child: Text("Continuer",style: TextStyle(color: Colors.blue.shade200),),style: ElevatedButton.styleFrom(backgroundColor: Colors.white),),
+              margin: EdgeInsets.only(top: 20,left:20,right: 20),
+              height: 250,
+              width: double.infinity,
+              decoration: BoxDecoration(
+              
+              border: Border.all(color: Colors.black,),
+              borderRadius: BorderRadius.circular(10),
+              boxShadow: [
+                BoxShadow(blurRadius: 3.0,spreadRadius: 4.8,color: Colors.white),
+                BoxShadow(blurRadius: 3.0,spreadRadius: 4.8,color: Colors.white),
+                ]),
+              child: 
+              Column(
+                children: [
+                  Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Container(
+                        margin: EdgeInsets.all(10),
+                        height: 150,
+                        width: 100,
+                        decoration: BoxDecoration(color: Colors.black),
+                        child: Center(child: IconButton(onPressed: (){pickFile2();}, icon: Icon(Icons.upload_file),color: Colors.white,)),
+                      ),
+                      SizedBox(width: 30,),
+                      Container(
+                        margin: EdgeInsets.all(10),
+                        height: 150,
+                        width: 100,
+                        decoration: BoxDecoration(color: Colors.black),
+                        child: Center(child: IconButton(onPressed: (){pickFile3();}, icon: Icon(Icons.upload_file),color: Colors.white,)),
+                      )
+                    ],
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(left: 10,right: 10),
+                    height: 70,
+                    decoration: BoxDecoration(border: Border.all(color: Colors.black,style: BorderStyle.values[1],),),
+                    child:  Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                    Text("Joindre"),
+                    SizedBox(width: 30,),
+                    Text("Joindre")
+                    ],
+                  ),
+                  )
+                ],
               ),
-              )
-        ],
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                  result2!=null?Text("cv: ${_filename2}"):Text(""),
+                  result3!=null?Text("motivation: ${_filename3}"):Text(""),
+              ],
+            ),
+              Container(
+                margin: EdgeInsets.only(top:5,right: 10,bottom: 5),
+                child: Align(
+                  alignment: Alignment.centerRight,
+                  child: ElevatedButton(onPressed: (){
+      
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>Myphoto()));
+                  }, child: Text("Continuer",style: TextStyle(color: Colors.blue.shade200),),style: ElevatedButton.styleFrom(backgroundColor: Colors.white),),
+                ),
+                )
+          ],
+        ),
       ),
        bottomNavigationBar:  Container(
                   // color: Colors.orange,

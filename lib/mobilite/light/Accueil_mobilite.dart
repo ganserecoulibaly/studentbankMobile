@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:studentbankmobile/Logement/light/filtre.dart';
 import 'package:studentbankmobile/Logement/light/location.dart';
+import 'package:studentbankmobile/mobilite/light/Demande_accueil.dart';
 import 'package:studentbankmobile/mobilite/light/visa.dart';
 import 'package:studentbankmobile/widgets/change_Mode.dart';
 
@@ -23,12 +24,12 @@ class _Accueil_mobiliteState extends State<Accueil_mobilite> {
     bool press=false;
     
     return Scaffold(
-      // extendBody: true,
+      extendBody: true,
       body: Container(
         margin: EdgeInsets.all(0),
         padding: EdgeInsets.all(0),
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: Colors.white70,
           image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
         ),
         // width: double.infinity,
@@ -151,12 +152,16 @@ class _Accueil_mobiliteState extends State<Accueil_mobilite> {
                                   setState(() {
                                     _drop1value= value!;
                                   });
-                           },
-                            onTap: (){
-                            if(_drop1value=="Visa"){
+                                    if(_drop1value=="Visa"){
                             Navigator.push(context, MaterialPageRoute(builder: (context)=>Visa()));
                             }
+                            if(_drop1value=="Accueil et  imigration"){
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>demande_accueil()));
+                            }
                            },
+                          //   onTap: (){
+                          
+                          //  },
                            icon:Icon(Icons.arrow_drop_down),
                            iconSize: 30,
                            iconEnabledColor: Colors.red,
@@ -182,10 +187,11 @@ class _Accueil_mobiliteState extends State<Accueil_mobilite> {
                                   setState(() {
                                     _drop2value= value!;
                                   });
-                           },
-                           onTap: (){
-                            if(_drop1value=="Visa"){
+                                   if(_drop2value=="Visa"){
                             Navigator.push(context, MaterialPageRoute(builder: (context)=>Visa()));
+                            } 
+                            if(_drop2value=="Accueil et  imigration"){
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>demande_accueil()));
                             }
                            },
                            icon:Icon(Icons.arrow_drop_down),

@@ -40,7 +40,11 @@ class MyApp extends StatelessWidget {
         // themeMode:themeProvider.themeMode,
         // theme: MyThemes.lightTheme,
         // darkTheme: MyThemes.darkTheme,
-      home:premier(),
+// <<<<<<< HEAD
+      home:PageIntro(),
+// =======
+      // home:deuxieme(),
+// >>>>>>> 95ed056 (accueil_mobilite termine et accueil_mobilite_dark + commencement partie visa)
     );
     },
     );

@@ -1,9 +1,11 @@
+import 'dart:developer';
 import 'dart:io';
 
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:studentbankmobile/mobilite/light/traitement.dart';
+
+import 'valide_dossier.dart';
 
 class Myphoto extends StatefulWidget {
   const Myphoto({super.key});
@@ -13,7 +15,9 @@ class Myphoto extends StatefulWidget {
 }
 
 class _MyphotoState extends State<Myphoto> {
+ 
 
+  int time= 0;
 FilePickerResult?result;
 
 String? _filename;
@@ -45,8 +49,16 @@ void pickFile()async{
   }
 }
 @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    time=TimeOfDay.now().minute.toInt()-time;
+  }
+@override
+  
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
       body: ListView(
         children: [
            Container(
@@ -77,7 +89,7 @@ void pickFile()async{
                         ),
                       ),
                       SizedBox(height: 30,),
-                      Text("hvjhhvhj",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),)
+                      Text("Demande de Visa",style: TextStyle(color:Colors.blue.shade100, fontWeight: FontWeight.bold,fontSize: 20),)
                     ],
                   ),
                 )
@@ -108,7 +120,49 @@ void pickFile()async{
               child: Align(
                 alignment: Alignment.center,
                 child: TextButton(onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>traitement()));
+                  showDialog(context: context, builder: (context){
+                    return Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white
+                      ),
+                      child: Column(
+                        
+                        children: [
+                          Container(
+                            margin: EdgeInsets.only(top:50,left: 30,right: 30,bottom: 40),
+                            child: LinearProgressIndicator(
+                            color: Colors.blue.shade100,
+                            value: 4/5,
+                            backgroundColor: Colors.blueGrey,
+                            borderRadius: BorderRadius.circular(30),
+                            minHeight: 10,
+                            ),
+                          ),
+                          Center(
+                            child: 
+                              Text("  Soyez patient! \nvotre demande est\n   en cour de \n  traitement.",style: TextStyle(color: Colors.red.shade400,fontSize: 20,fontStyle: FontStyle.italic),)),
+                          Center(
+                            child: Container(
+                              margin: EdgeInsets.only(top: 50),
+                                width: 200,
+                                height: 200,    
+                              child: CircleAvatar(
+                                backgroundColor: Colors.red.shade400,
+                                // foregroundColor: Colors.white,
+                                child: GestureDetector(
+                                  onTap: () {
+                                      Navigator.push(context,MaterialPageRoute(builder: (context)=>valider_doc_visa()));
+                                  },
+                                  child:Text("en attente"),
+                                ) 
+                              )
+                            ),
+                          ),
+                       ],
+                        ),
+                    );
+                  });
+                    // Navigator.push(context, MaterialPageRoute(builder: (context)=>traitement()));
                 }, child: Text(" Finaliser ma demande ",style: TextStyle(color: Colors.white),)),
               ),
               )

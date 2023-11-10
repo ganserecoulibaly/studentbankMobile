@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:studentbankmobile/mobilite/light/document.dart';
+
+import 'document.dart';
 
 class Visa extends StatefulWidget {
   const Visa({super.key});
@@ -20,6 +21,7 @@ class _VisaState extends State<Visa> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
       body: ListView(
         children: [
           Container(
@@ -48,7 +50,7 @@ class _VisaState extends State<Visa> {
                         ),
                       ),
                       SizedBox(height: 30,),
-                      Text("hvjhhvhj",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),)
+                      Text("Demande de Visa",style: TextStyle(color:Colors.blue.shade100, fontWeight: FontWeight.bold,fontSize: 20),)
                     ],
                   ),
                 )
