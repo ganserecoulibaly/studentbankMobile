@@ -62,11 +62,11 @@ class _deuxiemeState extends State<mobilite> {
                           setState(() {
                             press=!press;
                             if(press==false){
-                                 Navigator.push(context, MaterialPageRoute(builder: (context)=>Accueil_mobilite_dark()));
+                                 Navigator.push(context, MaterialPageRoute(builder: (context)=>Accueil_mobilite()));
                           
                            }
                             else{
-                                   Navigator.push(context, MaterialPageRoute(builder: (context)=>Accueil_mobilite()));
+                                   Navigator.push(context, MaterialPageRoute(builder: (context)=>Accueil_mobilite_dark()));
                             
                            }
                         
