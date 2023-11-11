@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
-import 'package:studentbankmobile/Logement/deuxieme.dart';
+import 'package:studentbankmobile/Logement/logement.dart';
 // import 'package:studentbankmobile/Logement/Accueil_loyer.dart';
 import 'package:studentbankmobile/widgets/theme_Provider.dart';
 
-import 'Logement/premier.dart';
 import 'Sp_coder/connexion/page_intro.dart';
 import 'Sp_coder/provider/user_provider.dart';
 
@@ -41,7 +40,8 @@ class MyApp extends StatelessWidget {
         // theme: MyThemes.lightTheme,
         // darkTheme: MyThemes.darkTheme,
 // <<<<<<< HEAD
-      home:PageIntro(),
+      // home:PageIntro(),
+      home:loyer(),
 // =======
       // home:deuxieme(),
 // >>>>>>> 95ed056 (accueil_mobilite termine et accueil_mobilite_dark + commencement partie visa)

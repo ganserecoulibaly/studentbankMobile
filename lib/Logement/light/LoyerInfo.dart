@@ -94,7 +94,7 @@ class loyerinfo extends StatelessWidget {
                           alignment: Alignment.center,
                           margin: EdgeInsets.only(left:15,right:15),
                           // padding: EdgeInsets.all(20),
-                          width: 400,
+                          width: double.infinity,
                           height: 300,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),

@@ -93,10 +93,10 @@ class loyerinfo_dark extends StatelessWidget {
                        Center(
                    child: Container(
                           alignment: Alignment.center,
-                          // margin: EdgeInsets.all(3),
+                          margin: EdgeInsets.only(left:15,right:15),
                           // padding: EdgeInsets.all(20),
                           width: double.infinity,
-                          height: 200,
+                          height:300,
                           decoration: BoxDecoration(
 
                             borderRadius: BorderRadius.circular(10),
@@ -105,13 +105,46 @@ class loyerinfo_dark extends StatelessWidget {
                           // child: Image.asset(""),
                         ),
                  ),
-                 
-                // SizedBox(height: 10),
-                // Column(
-                //   // crossAxisAlignment:CrossAxisAlignment.center
-                //   children: [
+                  // SizedBox(height: 10),
+                Column(
+                  // crossAxisAlignment:CrossAxisAlignment.center
+                  children: [
 
-                // ]),
+                  // Row(children: [Padding(padding:EdgeInsets.only(top: 10,left: 20),child:Text("Apartement",style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold,color: Colors.black)),),],),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Padding(padding: EdgeInsets.only(left:10,top: 20),
+                      child: Row(children: [Icon(CupertinoIcons.money_dollar_circle_fill,size: 25,color:Colors.white),SizedBox(width: 5,),Text("prix du loyer",style:TextStyle(color:Colors.red))],) 
+                      ),
+                      Padding(padding: EdgeInsets.only(left:10,top: 20),
+                      child:Row(children: [Icon(CupertinoIcons.rectangle_fill_on_rectangle_fill,size:25,color:Colors.white),SizedBox(width: 10,),Text("Place            ",style:TextStyle(color:Colors.red))],) 
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Padding(padding: EdgeInsets.only(left:10,top: 20),
+                      child: Row(children: [Icon(Icons.place,size:25,color:Colors.white),SizedBox(width: 10,),Text("Localisation",style:TextStyle(color:Colors.red))],) 
+                      ),
+                      Padding(padding: EdgeInsets.only(left:10,top: 20),
+                      child: Row(children: [Icon(Icons.screenshot_monitor,size:25,color:Colors.white),SizedBox(width: 10,),Text("Surface        ",style:TextStyle(color:Colors.red))],) 
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Padding(padding: EdgeInsets.only(left:10,top: 20),
+                      child: Row(children: [Icon(CupertinoIcons.cube_box_fill,size:25,color:Colors.white),SizedBox(width: 10,),Text("Meuble   ",style:TextStyle(color:Colors.red))],) 
+                      ),
+                      Padding(padding: EdgeInsets.only(left:10,top: 20),
+                      child: Row(children: [Icon(CupertinoIcons.person_2,size:25,color:Colors.white),SizedBox(width: 10,),Text("Colocation",style:TextStyle(color:Colors.red))],) 
+                      ),
+                    ],
+                  )
+                ]),
                  Container(
                   
                     margin: EdgeInsets.only(left:30,top:10),

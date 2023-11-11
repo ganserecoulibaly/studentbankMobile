@@ -42,9 +42,13 @@ class _Filtre_darkState extends State<Filtre_dark> {
     return Scaffold(
       
       body: Container(
+        width: double.infinity,
+        height: double.infinity,
         decoration: BoxDecoration(
           color: 
          Colors.grey.shade900,
+        
+        image: DecorationImage(image: AssetImage("images/background .png",),fit: BoxFit.fill,),
         ),
         child: ListView(
           // scrollDirection: Axis.vertical,

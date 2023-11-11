@@ -9,14 +9,14 @@ import 'Dark/Accueil_loyer_Dark.dart';
 import 'light/Accueil_loyer.dart';
 // import 'light/Accueil_loyer.dart';
 
-class premier extends StatefulWidget {
-  const premier({super.key});
+class loyer extends StatefulWidget {
+  const loyer({super.key});
 
   @override
-  State<premier> createState() => _premierState();
+  State<loyer> createState() => _loyerState();
 }
 
-class _premierState extends State<premier> {
+class _loyerState extends State<loyer> {
   bool press=false;
   @override
   Widget build(BuildContext context) {
