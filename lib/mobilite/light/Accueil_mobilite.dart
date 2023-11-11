@@ -198,7 +198,10 @@ class _Accueil_mobiliteState extends State<Accueil_mobilite> {
                                   setState(() {
                                     _drop2value= value!;
                                   });
-                                   if(_drop2value=="Visa"){
+                             if(_drop2value=="Etudiant etrangers et internationaux"){
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>etudiant_etranger_internationaux()));
+                            } 
+                            if(_drop2value=="Visa"){
                             Navigator.push(context, MaterialPageRoute(builder: (context)=>Visa()));
                             } 
                             if(_drop2value=="Accueil et  imigration"){
