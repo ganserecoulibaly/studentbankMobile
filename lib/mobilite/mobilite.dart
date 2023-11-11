@@ -7,18 +7,16 @@ import 'package:studentbankmobile/mobilite/light/Accueil_mobilite.dart';
 import 'package:studentbankmobile/widgets/change_Theme_button.dart';
 
 import '../widgets/change_Mode.dart';
-import 'Dark/Accueil_loyer_Dark.dart';
-import 'light/Accueil_loyer.dart';
 // import 'light/Accueil_loyer.dart';
 
-class deuxieme extends StatefulWidget {
-  const deuxieme({super.key});
+class mobilite extends StatefulWidget {
+  const mobilite({super.key});
   @override
 
-  State<deuxieme> createState() => _deuxiemeState();
+  State<mobilite> createState() => _deuxiemeState();
 }
 
-class _deuxiemeState extends State<deuxieme> {
+class _deuxiemeState extends State<mobilite> {
   bool press=false;
   @override
   Widget build(BuildContext context) {
@@ -64,11 +62,11 @@ class _deuxiemeState extends State<deuxieme> {
                           setState(() {
                             press=!press;
                             if(press==false){
-                                 Navigator.push(context, MaterialPageRoute(builder: (context)=>Accueil_mobilite_dark()));
+                                 Navigator.push(context, MaterialPageRoute(builder: (context)=>Accueil_mobilite()));
                           
                            }
                             else{
-                                   Navigator.push(context, MaterialPageRoute(builder: (context)=>Accueil_mobilite()));
+                                   Navigator.push(context, MaterialPageRoute(builder: (context)=>Accueil_mobilite_dark()));
                             
                            }
                         

@@ -1,15 +1,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:studentbankmobile/mobilite/dark/paiement_dark.dart';
 import 'package:studentbankmobile/mobilite/light/paiement.dart';
-class demande_accueil extends StatefulWidget {
-  const demande_accueil({super.key});
+
+class demande_accueil_dark extends StatefulWidget {
+  const demande_accueil_dark({super.key});
 
   @override
-  State<demande_accueil> createState() => _demande_accueilState();
+  State<demande_accueil_dark> createState() => _demande_accueil_darkState();
 }
 
-class _demande_accueilState extends State<demande_accueil> {
+class _demande_accueil_darkState extends State<demande_accueil_dark> {
   TextEditingController _nom=TextEditingController();
   TextEditingController _prenom=TextEditingController();
   TextEditingController _date=TextEditingController();
@@ -208,7 +210,7 @@ class _demande_accueilState extends State<demande_accueil> {
                 SizedBox(width: 30,),
                  Container(
                   child: TextButton(onPressed: (){
-                    Navigator.push(context,MaterialPageRoute(builder: (context)=>paiement()));
+                    Navigator.push(context,MaterialPageRoute(builder: (context)=>paiement_dark()));
                   }, child: Text("Continuer",style: TextStyle(color: Colors.red),)),
                 )
               ],
@@ -217,14 +219,20 @@ class _demande_accueilState extends State<demande_accueil> {
           ],
         ),
       ),
-       bottomNavigationBar:  Container(
+      bottomNavigationBar:  Container(
                   // color: Colors.orange,
                   height: 70,
                   // margin: EdgeInsets.only(top: 0),
                   decoration: BoxDecoration(
-                    color: Colors.blue.shade100,
-                    // borderRadius: BorderRadius.only(topLeft: Radius.circular(45),topRight: Radius.circular(45))
-                    ),
+                        color: Colors.grey.shade900,
+                        image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain),
+                        boxShadow: [
+                          BoxShadow(color: Colors.white),
+                          BoxShadow(color: Colors.white),
+                          BoxShadow(color: Colors.white),
+                          BoxShadow(color: Colors.white),
+                        ]
+                  ),
                 child: Center(
                   child: Container(
                   // margin: EdgeInsets.all(10),
@@ -249,7 +257,7 @@ class _demande_accueilState extends State<demande_accueil> {
                   ),
                 ),
                 )
-
-    );
+              
+     );
   }
 }

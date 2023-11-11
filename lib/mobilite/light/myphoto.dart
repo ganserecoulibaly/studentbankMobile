@@ -151,7 +151,7 @@ void pickFile()async{
                                 // foregroundColor: Colors.white,
                                 child: GestureDetector(
                                   onTap: () {
-                                      Navigator.push(context,MaterialPageRoute(builder: (context)=>valider_doc_visa()));
+                                      Navigator.push(context,MaterialPageRoute(builder: (context)=>valider_doc()));
                                   },
                                   child:Text("en attente"),
                                 ) 
@@ -173,7 +173,7 @@ void pickFile()async{
                   height: 70,
                   // margin: EdgeInsets.only(top: 0),
                   decoration: BoxDecoration(
-                    color: Colors.blue.shade200,
+                    color: Colors.blue.shade100,
                     // borderRadius: BorderRadius.only(topLeft: Radius.circular(45),topRight: Radius.circular(45))
                     ),
                 child: Center(
@@ -200,7 +200,9 @@ void pickFile()async{
                     ),
                   ),
                 ),
-                )
+                ),
+              
     );
+    
   }
 }

@@ -186,7 +186,7 @@ class _VisaState extends State<Visa> {
                   height: 70,
                   // margin: EdgeInsets.only(top: 0),
                   decoration: BoxDecoration(
-                    color: Colors.blue.shade200,
+                    color: Colors.blue.shade100,
                     // borderRadius: BorderRadius.only(topLeft: Radius.circular(45),topRight: Radius.circular(45))
                     ),
                 child: Center(

@@ -5,16 +5,16 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter/cupertino.dart';
 
-import 'myphoto.dart';
+import 'myphoto_dark.dart';
 
-class MesDocs extends StatefulWidget {
-  const MesDocs({super.key});
+class MesDocs_dark extends StatefulWidget {
+  const MesDocs_dark({super.key});
 
   @override
-  State<MesDocs> createState() => _MesDocsState();
+  State<MesDocs_dark> createState() => _MesDocs_darkState();
 }
 
-class _MesDocsState extends State<MesDocs> {
+class _MesDocs_darkState extends State<MesDocs_dark> {
 
 FilePickerResult?result;
 FilePickerResult?result1;
@@ -135,7 +135,7 @@ void pickFile3()async{
          margin: EdgeInsets.all(0),
         padding: EdgeInsets.all(0),
         decoration: BoxDecoration(
-          color: Colors.white70,
+          color: Colors.grey.shade900,
           image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
         ),
         // width: double.infinity,
@@ -312,21 +312,27 @@ void pickFile3()async{
                   alignment: Alignment.centerRight,
                   child: ElevatedButton(onPressed: (){
       
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>Myphoto()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>Myphoto_dark()));
                   }, child: Text("Continuer",style: TextStyle(color: Colors.blue.shade200),),style: ElevatedButton.styleFrom(backgroundColor: Colors.white),),
                 ),
                 )
           ],
         ),
       ),
-       bottomNavigationBar:  Container(
+     bottomNavigationBar:  Container(
                   // color: Colors.orange,
                   height: 70,
                   // margin: EdgeInsets.only(top: 0),
                   decoration: BoxDecoration(
-                    color: Colors.blue.shade100,
-                    // borderRadius: BorderRadius.only(topLeft: Radius.circular(45),topRight: Radius.circular(45))
-                    ),
+                        color: Colors.grey.shade900,
+                        image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain),
+                        boxShadow: [
+                          BoxShadow(color: Colors.white),
+                          BoxShadow(color: Colors.white),
+                          BoxShadow(color: Colors.white),
+                          BoxShadow(color: Colors.white),
+                        ]
+                  ),
                 child: Center(
                   child: Container(
                   // margin: EdgeInsets.all(10),
@@ -340,18 +346,18 @@ void pickFile3()async{
                         SizedBox(width:15),
                         IconButton(onPressed: (){}, icon:Image.asset("images/euro_symbol.png"),iconSize: 40),
                         SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset("images/Acceuil_icone.png",),iconSize: 50,),
+                        IconButton(onPressed: (){}, icon:Image.asset("images/Acceuil_icone.png",),iconSize: 40,),
                         SizedBox(width:15),
                         IconButton(onPressed: (){}, icon:Image.asset('images/move_location.png'),iconSize: 40),
                         
                         SizedBox(width:15),
-                        IconButton(onPressed: (){
-                        }, icon:Image.asset('images/night_shelter.png'),iconSize: 40)
+                        IconButton(onPressed: (){}, icon:Image.asset('images/night_shelter.png'),iconSize: 40)
                       ],
                     ),
                   ),
                 ),
                 )
+              
  
     );
   }
