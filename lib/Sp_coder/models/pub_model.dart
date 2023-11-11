@@ -1,6 +1,3 @@
-import 'dart:ui';
-
-import 'package:flutter/material.dart';
 
 class Publication {
   final String photoDeProfil;
@@ -45,7 +42,7 @@ List<Publication> publications = [
   Publication(
     nom: 'Sangare',
     titre: 'Amitié',
-    texte: "Nous vous passant toutes nos salutation ",
+    texte: "Bonjour je suis a la recherche une chambre, même en colacation Nous vous passant toutes nos salutation ",
     heure: '1min',
     photoDeProfil: 'images/Germany.png',
     photoDePublication: 'images/group-five-african-college-students-spending-time-together-campus-university-yard-black-afro-friends-studying-education-theme_627829-6007 1.png',
@@ -64,13 +61,4 @@ List<Publication> publications = [
 ];
 
 
-// Publication publication2 = Publication(
-//   photoDeProfil: 'url_de_la_photo',
-//   nom: 'John Doe',
-//   titre: 'Ma publication',
-//   texte: 'Voici le texte de ma publication.',
-//   photoDePublication: 'url_de_la_photo_de_publication',
-//   videoDePublication: 'url_de_la_video',
-//   heure: 'Il y a 2 heures',
-//   couleurDegrade: [Colors.blue, Colors.green], // Dégradé de bleu à vert
-// );
+

@@ -28,13 +28,10 @@ class HomeIntro extends StatelessWidget {
             ],
           ),
 
-          Positioned(
-            bottom: -450.0,
-            left: 0,
-            right: 0,
-            top:0,
+          Container(
+            alignment: Alignment(0, 0.50),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 InkWell(
                   onTap: () {
@@ -42,39 +39,39 @@ class HomeIntro extends StatelessWidget {
                         MaterialPageRoute(builder: (context) {
                           return ConnexionPage();
                         }));
-
                   },
-                  child: Container(
-                    width: 150.0,
-                    height: 30.0,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(25.0),
-                      gradient: LinearGradient(
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                        colors: [Colors.orangeAccent, Colors.pinkAccent],
-                      ),
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text("continuer",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 18,
-                          ),
+                  child: Transform.translate(
+                    offset: Offset(0, -10),
+                    child: Container(
+                      width: 150.0,
+                      height: 30.0,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(25.0),
+                        gradient: LinearGradient(
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                          colors: [Colors.orangeAccent, Colors.pinkAccent],
                         ),
-                        // Icon(
-                        //   Icons.arrow_forward,
-                        //   color: Colors.white,
-                        // ),
-                      ],
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "continuer",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 )
               ],
             ),
-          ),
+          )
+
         ],
       ),
       floatingActionButton: Container(

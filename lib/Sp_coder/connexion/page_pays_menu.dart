@@ -3,8 +3,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:studentbankmobile/Sp_coder/connexion/page_info_perso.dart';
 import 'package:studentbankmobile/Sp_coder/connexion/page_inscription.dart';
-
 import '../widgets/checkpoints_widget.dart';
+
 
 class PaysMenuPage extends StatefulWidget {
   const PaysMenuPage({Key? key}) : super(key: key);
@@ -20,11 +20,11 @@ class _PaysMenuPageState extends State<PaysMenuPage> {
   String cityValue = "";
   String address = "";
 
-  List<String> checkPoints = ["Étape 1", "Étape 2", "Étape 3"];
+  List<String> checkPoints = ["1", "2", "3","4",];
 
   int checkedTill = 0;
 
-  Color checkPointFilledColor = Colors.blue;
+  Color checkPointFilledColor = Colors.green;
 
   @override
   Widget build(BuildContext context) {
@@ -56,10 +56,14 @@ class _PaysMenuPageState extends State<PaysMenuPage> {
                 ),
               ],
             ),
-            CheckPoints(
-              checkedTill: checkedTill,
-              checkPoints: checkPoints,
-              checkPointFilledColor: checkPointFilledColor,
+
+            Container(
+              margin: EdgeInsets.only(top: 65.0),
+              child:  CheckPoints(
+                checkedTill: checkedTill,
+                checkPoints: checkPoints,
+                checkPointFilledColor: checkPointFilledColor,
+              ),
             ),
 
             Padding(
@@ -130,7 +134,7 @@ class _PaysMenuPageState extends State<PaysMenuPage> {
 
                         ),
 
-                        SizedBox(height: 30.0),
+                        SizedBox(height: 50.0),
 
                         InkWell(
                           onTap: () {

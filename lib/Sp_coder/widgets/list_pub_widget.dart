@@ -97,7 +97,7 @@ class _ListPubState extends State<ListPub> {
 
                 ),
                 Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 10),
+                    padding: EdgeInsets.symmetric(horizontal: 10.0),
                 child: Container(
                   decoration: BoxDecoration(
                   ),

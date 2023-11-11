@@ -8,22 +8,23 @@ class CheckPoints extends StatelessWidget {
 
   CheckPoints({this.checkedTill= 1, required this.checkPoints, required this.checkPointFilledColor});
 
-  final double circleDia = 32;
+  final double circleDia = 20;
 
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (c, s){
       
-      final double cWidth = ((s.maxWidth -(32.0 * (checkPoints.length + 1)))/
+      final double cWidth = ((s.maxWidth -(20.0 * (checkPoints.length + 1)))/
           (checkPoints.length - 1));
       
       return Container(
-        height: 56,
+        height: 40,
+        //color: Colors.grey,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          //mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children:<Widget>[
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 12),
+              padding: EdgeInsets.symmetric(horizontal: 9.0, ),
               child: Row(
                 children: checkPoints.map(
                         (e) {
@@ -39,7 +40,7 @@ class CheckPoints extends StatelessWidget {
                                   child: Icon(
                                     Icons.done,
                                     color: Colors.white,
-                                    size: 18,
+                                    size: 10,
                                   ),
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
@@ -65,7 +66,7 @@ class CheckPoints extends StatelessWidget {
                 ),
             ),
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 2),
+              //padding: EdgeInsets.symmetric(horizontal: 2),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: checkPoints.map(

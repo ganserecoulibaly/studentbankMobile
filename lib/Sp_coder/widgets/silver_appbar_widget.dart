@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
+import '../navigation_bar/customBottomNagationBar_Profil_widget.dart';
+import '../profile_user_page.dart';
+
 
 class SliverAppbarpub extends StatefulWidget {
   const SliverAppbarpub({Key? key}) : super(key: key);
@@ -59,11 +62,13 @@ class _SliverAppbarpubState extends State<SliverAppbarpub> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  // CircleAvatar avec une image cliquable
                   GestureDetector(
-                    onTap: () {
-
-                    },
+                      onTap: (){
+                        Navigator.pushReplacement(context,
+                            MaterialPageRoute(builder: (context) {
+                              return CustomBottomNavigationBarProfil();
+                            }));
+                      },
                     child: CircleAvatar(
                       backgroundImage: AssetImage('images/person-removebg-preview.png'),
                       radius: 20,

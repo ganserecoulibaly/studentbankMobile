@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:studentbankmobile/Sp_coder/connexion/page_etablissement.dart';
 import 'package:studentbankmobile/Sp_coder/connexion/page_pays_menu.dart';
 
+import '../widgets/checkpoints_widget.dart';
+
 class InfoPerson extends StatefulWidget {
   const InfoPerson({Key? key}) : super(key: key);
 
@@ -16,6 +18,12 @@ class _InfoPersonState extends State<InfoPerson> {
   final TextEditingController _prenomController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _phoneController = TextEditingController();
+
+  List<String> checkPoints = ["1", "2", "3","4",];
+
+  int checkedTill = 1;
+
+  Color checkPointFilledColor = Colors.green;
 
   @override
   Widget build(BuildContext context) {
@@ -47,6 +55,14 @@ class _InfoPersonState extends State<InfoPerson> {
                 ),
               ],
             ),
+           Container(
+             margin: EdgeInsets.only(top: 65.0),
+             child:  CheckPoints(
+               checkedTill: checkedTill,
+               checkPoints: checkPoints,
+               checkPointFilledColor: checkPointFilledColor,
+             ),
+           ),
             Padding(
               padding: EdgeInsets.only(left: 10.0, right: 10, top: 80.0),
               child: Container(
@@ -70,12 +86,12 @@ class _InfoPersonState extends State<InfoPerson> {
 
                         SizedBox(height: 5.0),
 
-                        Text("Inscription jdhvbofuhbvohvour vbuherfvozheo uhzeiufgvzehouvregzer",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 12.0,
-                          ),
-                          textAlign: TextAlign.center,),
+                        // Text("Inscription jdhvbofuhbvohvour vbuherfvozheo uhzeiufgvzehouvregzer",
+                        //   style: TextStyle(
+                        //     color: Colors.white,
+                        //     fontSize: 12.0,
+                        //   ),
+                        //   textAlign: TextAlign.center,),
 
                         SizedBox(height: 5.0),
 
@@ -237,7 +253,7 @@ class _InfoPersonState extends State<InfoPerson> {
                           ),
                         ),
 
-                        SizedBox(height: 20.0),
+                        SizedBox(height: 40.0),
 
                         InkWell(
                           onTap: () {
@@ -278,7 +294,7 @@ class _InfoPersonState extends State<InfoPerson> {
                           ),
                         ),
 
-                        SizedBox(height: 15.0),
+                        SizedBox(height: 25.0),
 
                         InkWell(
                           onTap: () {

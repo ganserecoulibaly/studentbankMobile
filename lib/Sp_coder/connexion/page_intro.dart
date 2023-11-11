@@ -40,6 +40,8 @@ class _PageIntroState extends State<PageIntro> {
           // Indicateur de pages
           Container(
             alignment: const Alignment(0, 0.50),
+            child: Transform.translate(
+                offset: Offset(0, -10),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -83,7 +85,8 @@ class _PageIntroState extends State<PageIntro> {
                 SmoothPageIndicator(controller: _controller, count: 2,),
 
               ],
-            ),
+            )
+              ,)
           )
         ],
       ),

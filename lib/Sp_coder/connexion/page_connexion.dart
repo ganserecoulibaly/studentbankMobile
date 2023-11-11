@@ -279,7 +279,7 @@ class _ConnexionPageState extends State<ConnexionPage> {
                        mainAxisAlignment: MainAxisAlignment.center,
                        children: [
                          SizedBox(
-                           width: 100.0,
+                           width: MediaQuery.of(context).size.width /3,
                            child: Divider(
                              color: Colors.white,
                              thickness: 1,
@@ -293,7 +293,7 @@ class _ConnexionPageState extends State<ConnexionPage> {
                          )),
                          SizedBox(width:5,),
                          SizedBox(
-                           width: 100.0,
+                           width: MediaQuery.of(context).size.width /3,
                            child: Divider(
                              color: Colors.white,
                              thickness: 1,
@@ -302,7 +302,7 @@ class _ConnexionPageState extends State<ConnexionPage> {
                        ],
                      ),
 
-                     SizedBox(height:5.0,),
+                     SizedBox(height:30.0,),
 
                      InkWell(
                        onTap: () {
@@ -348,7 +348,7 @@ class _ConnexionPageState extends State<ConnexionPage> {
                      ),
 
 
-                     SizedBox(height: 15,),
+                     SizedBox(height: 25,),
 
                      Container(
                          width: 150.0,

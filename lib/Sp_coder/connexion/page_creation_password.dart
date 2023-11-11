@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:studentbankmobile/Sp_coder/connexion/home_intro.dart';
 import 'package:studentbankmobile/Sp_coder/connexion/page_etablissement.dart';
 import 'package:studentbankmobile/Sp_coder/connexion/splash_page.dart';
-
+import '../widgets/checkpoints_widget.dart';
 import '../widgets/hyperlinktext_widget.dart';
-import 'home_services.dart';
+
 
 class CreationPassword extends StatefulWidget {
   const CreationPassword({Key? key}) : super(key: key);
@@ -21,6 +21,12 @@ class _CreationPasswordState extends State<CreationPassword> {
 
   bool _obscureText1 = false;
   bool _obscureText2 = false;
+
+  List<String> checkPoints = ["1", "2", "3","4",];
+
+  int checkedTill = 3;
+
+  Color checkPointFilledColor = Colors.green;
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +59,14 @@ class _CreationPasswordState extends State<CreationPassword> {
               ],
             ),
 
-
+            Container(
+              margin: EdgeInsets.only(top: 65.0),
+              child:  CheckPoints(
+                checkedTill: checkedTill,
+                checkPoints: checkPoints,
+                checkPointFilledColor: checkPointFilledColor,
+              ),
+            ),
 
             Padding(
               padding: EdgeInsets.only(left: 10.0, right: 10, top: 80.0),
@@ -208,7 +221,7 @@ class _CreationPasswordState extends State<CreationPassword> {
                           ),
                         ),
 
-                        SizedBox(height:15.0,),
+                        SizedBox(height:50.0,),
 
                         InkWell(
                           onTap: () {

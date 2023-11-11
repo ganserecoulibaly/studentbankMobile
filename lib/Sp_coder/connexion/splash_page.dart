@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../home_page.dart';
-import 'home_intro.dart';
+import '../navigation_bar/customBottomNavigationbar_widget.dart';
+
 
 class SplashPage extends StatefulWidget {
   const SplashPage({Key? key}) : super(key: key);
@@ -20,7 +20,7 @@ class _SplashPageState extends State<SplashPage> {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
           builder: (context) {
-            return HomePage();
+            return CustomBottomNavigationBar();
           },
         ),
       );

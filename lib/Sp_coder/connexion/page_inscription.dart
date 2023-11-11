@@ -336,7 +336,7 @@ class _InscriptionPageState extends State<InscriptionPage> {
                         ),
 
 
-                        SizedBox(height:5.0,),
+                        SizedBox(height:30.0,),
 
                         InkWell(
                           onTap: () {
@@ -380,7 +380,7 @@ class _InscriptionPageState extends State<InscriptionPage> {
                           ),
                         ),
 
-                        SizedBox(height:5.0,),
+                        SizedBox(height:20.0,),
 
                         InkWell(
                           onTap: () {

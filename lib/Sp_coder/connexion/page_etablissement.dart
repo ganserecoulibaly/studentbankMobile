@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:studentbankmobile/Sp_coder/connexion/page_creation_password.dart';
 import 'package:studentbankmobile/Sp_coder/connexion/page_info_perso.dart';
 
+import '../widgets/checkpoints_widget.dart';
+
 class Etablissement extends StatefulWidget {
   const Etablissement({Key? key}) : super(key: key);
 
@@ -14,6 +16,12 @@ class _EtablissementState extends State<Etablissement> {
   final TextEditingController _etablissementController = TextEditingController();
   final TextEditingController _etudeDomaineController = TextEditingController();
   final TextEditingController _niveauEtudeController = TextEditingController();
+
+  List<String> checkPoints = ["1", "2", "3","4",];
+
+  int checkedTill = 2;
+
+  Color checkPointFilledColor = Colors.green;
 
   @override
   Widget build(BuildContext context) {
@@ -45,6 +53,16 @@ class _EtablissementState extends State<Etablissement> {
                 ),
               ],
             ),
+
+            Container(
+              margin: EdgeInsets.only(top: 65.0),
+              child:  CheckPoints(
+                checkedTill: checkedTill,
+                checkPoints: checkPoints,
+                checkPointFilledColor: checkPointFilledColor,
+              ),
+            ),
+
             Padding(
               padding: EdgeInsets.only(left: 10.0, right: 10, top: 80.0),
               child: Container(
@@ -214,7 +232,7 @@ class _EtablissementState extends State<Etablissement> {
                           ),
                         ),
 
-                        SizedBox(height: 15.0),
+                        SizedBox(height: 50.0),
 
                         InkWell(
                           onTap: () {
