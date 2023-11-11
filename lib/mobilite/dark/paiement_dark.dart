@@ -53,7 +53,8 @@ class _paiement_darkState extends State<paiement_dark> {
             // margin: EdgeInsets.all(5),
             decoration: BoxDecoration(
               border: Border.all(color: Colors.black),
-              borderRadius: BorderRadius.circular(30)
+              borderRadius: BorderRadius.circular(30),
+              color: Colors.white
             ),
             // width: double.infiniy,
             
