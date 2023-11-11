@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-class erasmus extends StatefulWidget {
-  const erasmus({super.key});
+
+class etudiant_etranger_internationnaux_dark extends StatefulWidget {
+  const etudiant_etranger_internationnaux_dark({super.key});
 
   @override
-  State<erasmus> createState() => _erasmusState();
+  State<etudiant_etranger_internationnaux_dark> createState() => _etudiant_etranger_internationnaux_darkState();
 }
 
-class _erasmusState extends State<erasmus> {
+class _etudiant_etranger_internationnaux_darkState extends State<etudiant_etranger_internationnaux_dark> {
   String pays="France";
   String ville="Marseille";
   String universite="Universite 1";
@@ -28,7 +29,8 @@ class _erasmusState extends State<erasmus> {
           image: DecorationImage(image:  AssetImage("images/mobilite.jpeg"),fit: BoxFit.cover,scale: 4)),    
           child: Container(
             decoration: BoxDecoration(
-              color: Colors.white12
+                        color: Colors.grey.shade900,
+                        image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
             ),
             child: ListView(
               children: [

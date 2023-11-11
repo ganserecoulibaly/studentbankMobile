@@ -7,7 +7,7 @@ import 'package:studentbankmobile/mobilite/light/Demande_accueil.dart';
 import 'package:studentbankmobile/mobilite/light/admission.dart';
 import 'package:studentbankmobile/mobilite/light/demande_admission.dart';
 import 'package:studentbankmobile/mobilite/light/demande_admission_insc.dart';
-import 'package:studentbankmobile/mobilite/light/erasmus.dart';
+import 'package:studentbankmobile/mobilite/light/Etudiant_etranger_internationaux.dart';
 import 'package:studentbankmobile/mobilite/light/visa.dart';
 import 'package:studentbankmobile/widgets/change_Mode.dart';
 
@@ -157,7 +157,7 @@ class _Accueil_mobiliteState extends State<Accueil_mobilite> {
                                     _drop1value= value!;
                                   });
                             if(_drop1value=="Etudiant Europeens erasmus"){
-                               Navigator.push(context, MaterialPageRoute(builder: (context)=>erasmus()));
+                               Navigator.push(context, MaterialPageRoute(builder: (context)=>etudiant_etranger_internationaux()));
                             }
                             if(_drop1value=="Visa"){
                             Navigator.push(context, MaterialPageRoute(builder: (context)=>Visa()));

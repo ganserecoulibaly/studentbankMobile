@@ -3,6 +3,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:studentbankmobile/Logement/light/filtre.dart';
 import 'package:studentbankmobile/Logement/light/location.dart';
+import 'package:studentbankmobile/mobilite/dark/Demande_accueil_dark.dart';
+import 'package:studentbankmobile/mobilite/dark/admission_dark.dart';
+import 'package:studentbankmobile/mobilite/dark/demande_admission_insc_dark.dart';
+import 'package:studentbankmobile/mobilite/dark/demande_visa_dark.dart';
+import 'package:studentbankmobile/mobilite/dark/etudiant_Etranger_internationnaux_dark.dart';
+import 'package:studentbankmobile/mobilite/light/Demande_accueil.dart';
+import 'package:studentbankmobile/mobilite/light/admission.dart';
+import 'package:studentbankmobile/mobilite/light/demande_admission.dart';
+import 'package:studentbankmobile/mobilite/light/demande_admission_insc.dart';
+import 'package:studentbankmobile/mobilite/light/Etudiant_etranger_internationaux.dart';
+import 'package:studentbankmobile/mobilite/light/visa.dart';
 import 'package:studentbankmobile/widgets/change_Mode.dart';
 
 class Accueil_mobilite_dark extends StatefulWidget {
@@ -13,22 +24,23 @@ class Accueil_mobilite_dark extends StatefulWidget {
 }
 
 class _Accueil_mobilite_darkState extends State<Accueil_mobilite_dark> {
-   String _drop1value="  Etudiant Europeens erasmus";
-  String _drop2value="  Etudiant etrangers et internationaux";
-  var list=["  Etudiant Europeens erasmus","  Visa","  Assurance et voyage","  Accueil et  imigration"];
-   var list2=["  Etudiant etrangers et internationaux","  Universite",'  Visa',"  Assurance et voyage","  Accueil et  imigration"];
+  String _drop1value="Etudiant Europeens erasmus";
+  String _drop2value="Etudiant etrangers et internationaux";
+  var list=["Etudiant Europeens erasmus","Visa","Assurance et voyage","Accueil et  imigration"];
+  var list2=["Etudiant etrangers et internationaux","Universite",'Visa',"Assurance et voyage","Accueil et  imigration"];
   @override
   Widget build(BuildContext context) {
     bool press=false;
+    
     return Scaffold(
-      // extendBody: true,
+      extendBody: true,
       body: Container(
         margin: EdgeInsets.all(0),
         padding: EdgeInsets.all(0),
         decoration: BoxDecoration(
-          color: Colors.grey.shade900,
-          image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
-        ),
+                        color: Colors.grey.shade900,
+                        image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
+         ),
         // width: double.infinity,
         // height: double.infinity,
         child: ListView(
@@ -137,19 +149,35 @@ class _Accueil_mobilite_darkState extends State<Accueil_mobilite_dark> {
                    child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
-                        color: Colors.blue.shade200
+                        color: Colors.blue.shade100
                       ),
-                      width: 300,
+                      width: 330,
                      child: DropdownButton(
                             items:list.map((String items){
-                              return DropdownMenuItem(child: Text(items),value: items,);
+                              return DropdownMenuItem(child: Text(items,style: TextStyle(fontSize: 18)),value: items,);
                             }).toList(),
                            value: _drop1value,
                            onChanged: (String? value) {
                                   setState(() {
                                     _drop1value= value!;
                                   });
+                            if(_drop1value=="Etudiant Europeens erasmus"){
+                               Navigator.push(context, MaterialPageRoute(builder: (context)=>etudiant_etranger_internationnaux_dark()));
+                            }
+                            if(_drop1value=="Visa"){
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>demande_visa_dark()));
+                            }
+                            if(_drop1value=="Accueil et  imigration"){
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>demande_accueil_dark()));
+                            }
+                            if(_drop1value=="Assurance et voyage"){
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>admision_dark()));
+                            }
+                            
                            },
+                          //   onTap: (){
+                          
+                          //  },
                            icon:Icon(Icons.arrow_drop_down),
                            iconSize: 30,
                            iconEnabledColor: Colors.red,
@@ -163,18 +191,33 @@ class _Accueil_mobilite_darkState extends State<Accueil_mobilite_dark> {
                    child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
-                        color: Colors.blue.shade200
+                        color: Colors.blue.shade100
                       ),
-                      width: 300,
+                      width: 330,
                      child: DropdownButton(
                             items:list2.map((String items){
-                              return DropdownMenuItem(child: Text(items),value: items,);
+                              return DropdownMenuItem(child: Text(items,style: TextStyle(fontSize: 18),),value: items,);
                             }).toList(),
                            value: _drop2value,
                            onChanged: (String? value) {
                                   setState(() {
                                     _drop2value= value!;
                                   });
+                                      if(_drop2value=="Etudiant etrangers et internationaux"){
+                               Navigator.push(context, MaterialPageRoute(builder: (context)=>etudiant_etranger_internationnaux_dark()));
+                            }
+                                   if(_drop2value=="Visa"){
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>demande_visa_dark()));
+                            } 
+                            if(_drop2value=="Accueil et  imigration"){
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>demande_accueil_dark()));
+                            }
+                            if(_drop2value=="Universite"){
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>demandeAdmission_ins_dark()));
+                            }
+                            if(_drop2value=="Assurance et voyage"){
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>admision_dark()));
+                            }
                            },
                            icon:Icon(Icons.arrow_drop_down),
                            iconSize: 30,
@@ -189,13 +232,13 @@ class _Accueil_mobilite_darkState extends State<Accueil_mobilite_dark> {
                    child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
-                        color: Colors.blue.shade200
+                        color: Colors.blue.shade100
                       ),
-                      width: 300,
+                      width: 330,
                      child:Row(
                       children: [
-                        TextButton(onPressed: (){}, child: Text("My Buddy",style: TextStyle(color: Colors.red),) ),
-                        SizedBox(width: 180,),
+                        TextButton(onPressed: (){}, child: Text("My Buddy",style: TextStyle(color: Colors.red,fontSize: 18),) ),
+                        SizedBox(width: 120,),
                         Expanded(child:Icon(Icons.arrow_drop_down,color: Colors.red,size: 30,) )
                         
                       ],
@@ -207,13 +250,13 @@ class _Accueil_mobilite_darkState extends State<Accueil_mobilite_dark> {
                    child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
-                        color: Colors.blue.shade200
+                        color: Colors.blue.shade100
                       ),
-                      width: 300,
+                      width: 330,
                      child: Row(
                       children: [
-                        TextButton(onPressed: (){}, child: Text("Nos Services",style: TextStyle(color: Colors.red),) ),
-                         SizedBox(width: 160,),
+                        TextButton(onPressed: (){}, child: Text("Nos Services",style: TextStyle(color: Colors.red,fontSize: 18),) ),
+                         SizedBox(width: 100,),
                         Expanded(child:Icon(Icons.arrow_drop_down,color: Colors.red,size: 30,), )
                         
                       ],
@@ -229,13 +272,20 @@ class _Accueil_mobilite_darkState extends State<Accueil_mobilite_dark> {
           ],
         ),
       ),
-      bottomNavigationBar:  Container(
+     bottomNavigationBar:  Container(
                   // color: Colors.orange,
                   height: 70,
                   // margin: EdgeInsets.only(top: 0),
                   decoration: BoxDecoration(
-                    color: Colors.grey.shade900,
-                    borderRadius: BorderRadius.only(topLeft: Radius.circular(45),topRight: Radius.circular(45))),
+                        color: Colors.grey.shade900,
+                        image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain),
+                        boxShadow: [
+                          BoxShadow(color: Colors.white),
+                          BoxShadow(color: Colors.white),
+                          BoxShadow(color: Colors.white),
+                          BoxShadow(color: Colors.white),
+                        ]
+                  ),
                 child: Center(
                   child: Container(
                   // margin: EdgeInsets.all(10),
@@ -249,7 +299,7 @@ class _Accueil_mobilite_darkState extends State<Accueil_mobilite_dark> {
                         SizedBox(width:15),
                         IconButton(onPressed: (){}, icon:Image.asset("images/euro_symbol.png"),iconSize: 40),
                         SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset("images/Acceuil_icone.png",),iconSize: 50,),
+                        IconButton(onPressed: (){}, icon:Image.asset("images/Acceuil_icone.png",),iconSize: 40,),
                         SizedBox(width:15),
                         IconButton(onPressed: (){}, icon:Image.asset('images/move_location.png'),iconSize: 40),
                         
@@ -260,7 +310,7 @@ class _Accueil_mobilite_darkState extends State<Accueil_mobilite_dark> {
                   ),
                 ),
                 )
-               
+              
     );
   }
 }
