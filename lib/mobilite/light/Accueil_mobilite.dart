@@ -4,6 +4,10 @@ import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:studentbankmobile/Logement/light/filtre.dart';
 import 'package:studentbankmobile/Logement/light/location.dart';
 import 'package:studentbankmobile/mobilite/light/Demande_accueil.dart';
+import 'package:studentbankmobile/mobilite/light/admission.dart';
+import 'package:studentbankmobile/mobilite/light/demande_admission.dart';
+import 'package:studentbankmobile/mobilite/light/demande_admission_insc.dart';
+import 'package:studentbankmobile/mobilite/light/erasmus.dart';
 import 'package:studentbankmobile/mobilite/light/visa.dart';
 import 'package:studentbankmobile/widgets/change_Mode.dart';
 
@@ -18,7 +22,7 @@ class _Accueil_mobiliteState extends State<Accueil_mobilite> {
   String _drop1value="Etudiant Europeens erasmus";
   String _drop2value="Etudiant etrangers et internationaux";
   var list=["Etudiant Europeens erasmus","Visa","Assurance et voyage","Accueil et  imigration"];
-   var list2=["Etudiant etrangers et internationaux","Universite",'Visa',"Assurance et voyage","Accueil et  imigration"];
+  var list2=["Etudiant etrangers et internationaux","Universite",'Visa',"Assurance et voyage","Accueil et  imigration"];
   @override
   Widget build(BuildContext context) {
     bool press=false;
@@ -140,24 +144,31 @@ class _Accueil_mobiliteState extends State<Accueil_mobilite> {
                    child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
-                        color: Colors.blue.shade200
+                        color: Colors.blue.shade100
                       ),
-                      width: 300,
+                      width: 330,
                      child: DropdownButton(
                             items:list.map((String items){
-                              return DropdownMenuItem(child: Text(items),value: items,);
+                              return DropdownMenuItem(child: Text(items,style: TextStyle(fontSize: 18)),value: items,);
                             }).toList(),
                            value: _drop1value,
                            onChanged: (String? value) {
                                   setState(() {
                                     _drop1value= value!;
                                   });
-                                    if(_drop1value=="Visa"){
+                            if(_drop1value=="Etudiant Europeens erasmus"){
+                               Navigator.push(context, MaterialPageRoute(builder: (context)=>erasmus()));
+                            }
+                            if(_drop1value=="Visa"){
                             Navigator.push(context, MaterialPageRoute(builder: (context)=>Visa()));
                             }
                             if(_drop1value=="Accueil et  imigration"){
                             Navigator.push(context, MaterialPageRoute(builder: (context)=>demande_accueil()));
                             }
+                            if(_drop1value=="Assurance et voyage"){
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>admision()));
+                            }
+                            
                            },
                           //   onTap: (){
                           
@@ -175,12 +186,12 @@ class _Accueil_mobiliteState extends State<Accueil_mobilite> {
                    child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
-                        color: Colors.blue.shade200
+                        color: Colors.blue.shade100
                       ),
-                      width: 300,
+                      width: 330,
                      child: DropdownButton(
                             items:list2.map((String items){
-                              return DropdownMenuItem(child: Text(items),value: items,);
+                              return DropdownMenuItem(child: Text(items,style: TextStyle(fontSize: 18),),value: items,);
                             }).toList(),
                            value: _drop2value,
                            onChanged: (String? value) {
@@ -192,6 +203,12 @@ class _Accueil_mobiliteState extends State<Accueil_mobilite> {
                             } 
                             if(_drop2value=="Accueil et  imigration"){
                             Navigator.push(context, MaterialPageRoute(builder: (context)=>demande_accueil()));
+                            }
+                            if(_drop2value=="Universite"){
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>demandeAdmission_ins()));
+                            }
+                            if(_drop2value=="Assurance et voyage"){
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>admision()));
                             }
                            },
                            icon:Icon(Icons.arrow_drop_down),
@@ -207,13 +224,13 @@ class _Accueil_mobiliteState extends State<Accueil_mobilite> {
                    child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
-                        color: Colors.blue.shade200
+                        color: Colors.blue.shade100
                       ),
-                      width: 300,
+                      width: 330,
                      child:Row(
                       children: [
-                        TextButton(onPressed: (){}, child: Text("My Buddy",style: TextStyle(color: Colors.red),) ),
-                        SizedBox(width: 180,),
+                        TextButton(onPressed: (){}, child: Text("My Buddy",style: TextStyle(color: Colors.red,fontSize: 18),) ),
+                        SizedBox(width: 120,),
                         Expanded(child:Icon(Icons.arrow_drop_down,color: Colors.red,size: 30,) )
                         
                       ],
@@ -225,13 +242,13 @@ class _Accueil_mobiliteState extends State<Accueil_mobilite> {
                    child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
-                        color: Colors.blue.shade200
+                        color: Colors.blue.shade100
                       ),
-                      width: 300,
+                      width: 330,
                      child: Row(
                       children: [
-                        TextButton(onPressed: (){}, child: Text("Nos Services",style: TextStyle(color: Colors.red),) ),
-                         SizedBox(width: 160,),
+                        TextButton(onPressed: (){}, child: Text("Nos Services",style: TextStyle(color: Colors.red,fontSize: 18),) ),
+                         SizedBox(width: 100,),
                         Expanded(child:Icon(Icons.arrow_drop_down,color: Colors.red,size: 30,), )
                         
                       ],
@@ -252,7 +269,7 @@ class _Accueil_mobiliteState extends State<Accueil_mobilite> {
                   height: 70,
                   // margin: EdgeInsets.only(top: 0),
                   decoration: BoxDecoration(
-                    color: Colors.blue.shade200,
+                    color: Colors.blue.shade100,
                     // borderRadius: BorderRadius.only(topLeft: Radius.circular(45),topRight: Radius.circular(45))
                     ),
                 child: Center(

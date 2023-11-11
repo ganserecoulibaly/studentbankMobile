@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:studentbankmobile/mobilite/light/paiement.dart';
 class demande_accueil extends StatefulWidget {
   const demande_accueil({super.key});
 
@@ -206,7 +207,9 @@ class _demande_accueilState extends State<demande_accueil> {
                 ),
                 SizedBox(width: 30,),
                  Container(
-                  child: TextButton(onPressed: (){}, child: Text("Continuer",style: TextStyle(color: Colors.red),)),
+                  child: TextButton(onPressed: (){
+                    Navigator.push(context,MaterialPageRoute(builder: (context)=>paiement()));
+                  }, child: Text("Continuer",style: TextStyle(color: Colors.red),)),
                 )
               ],
             ),
@@ -214,6 +217,39 @@ class _demande_accueilState extends State<demande_accueil> {
           ],
         ),
       ),
+       bottomNavigationBar:  Container(
+                  // color: Colors.orange,
+                  height: 70,
+                  // margin: EdgeInsets.only(top: 0),
+                  decoration: BoxDecoration(
+                    color: Colors.blue.shade100,
+                    // borderRadius: BorderRadius.only(topLeft: Radius.circular(45),topRight: Radius.circular(45))
+                    ),
+                child: Center(
+                  child: Container(
+                  // margin: EdgeInsets.all(10),
+
+                  padding: EdgeInsets.all(5),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SizedBox(width:15),
+                        IconButton(onPressed: (){}, icon: Image.asset('images/setting.png'),iconSize: 40,),
+                        SizedBox(width:15),
+                        IconButton(onPressed: (){}, icon:Image.asset("images/euro_symbol.png"),iconSize: 40),
+                        SizedBox(width:15),
+                        IconButton(onPressed: (){}, icon:Image.asset("images/Acceuil_icone.png",),iconSize: 40,),
+                        SizedBox(width:15),
+                        IconButton(onPressed: (){}, icon:Image.asset('images/move_location.png'),iconSize: 40),
+                        
+                        SizedBox(width:15),
+                        IconButton(onPressed: (){}, icon:Image.asset('images/night_shelter.png'),iconSize: 40)
+                      ],
+                    ),
+                  ),
+                ),
+                )
+
     );
   }
 }

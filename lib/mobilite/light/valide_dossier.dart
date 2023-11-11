@@ -2,14 +2,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:studentbankmobile/mobilite/light/Accueil_mobilite.dart';
 
-class valider_doc_visa extends StatefulWidget {
-  const valider_doc_visa({super.key});
+class valider_doc extends StatefulWidget {
+  const valider_doc({super.key});
 
   @override
-  State<valider_doc_visa> createState() => _valider_doc_visaState();
+  State<valider_doc> createState() => _valider_docState();
 }
 
-class _valider_doc_visaState extends State<valider_doc_visa> {
+class _valider_docState extends State<valider_doc> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,6 +54,7 @@ class _valider_doc_visaState extends State<valider_doc_visa> {
               )
         ],
       ),
+     
     );
   }
 }
