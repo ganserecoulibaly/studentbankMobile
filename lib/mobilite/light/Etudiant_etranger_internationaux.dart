@@ -12,17 +12,19 @@ class _etudiant_etranger_internationauxState extends State<etudiant_etranger_int
   String pays="France";
   String ville="Marseille";
   String universite="Universite 1";
-  String formation="Genie civil";
-  var list_Pays=["France","Etats-unis","Angleterre"];
-  var list_ville=["Marseille","Paris","Berlin"];
-  var list_universite=["Universite 1","Universite 2","Universite 3"];
-  var liste_formation=["Genie Civil","Medecine","informatique"];
+  String format="Genie civil";
   List<Color> color=[
      Colors.white60,
     Colors.blue.shade100,
     Colors.black87,
   ];
   @override
+  
+  var list_Pays=["France","Etats-unis","Angleterre"];
+  var list_ville=["Marseille","Paris","Berlin"];
+  var list_universite=["Universite 1","Universite 2","Universite 3"];
+  // var liste_formation=["Genie Civil","Medecine","informatique"];
+  var maformation=["Genie civil","Medecine","Informatique"];
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
@@ -139,13 +141,13 @@ class _etudiant_etranger_internationauxState extends State<etudiant_etranger_int
                               ])
                              ),
                             child:  DropdownButton(
-                              items:list_universite.map((String items){
+                              items:maformation.map((String items){
                                 return DropdownMenuItem(child: Text(items,style: TextStyle(fontSize: 20)),value: items,);
                               }).toList(),
-                             value: universite,
+                             value: format,
                              onChanged: (String? value) {
                                     setState(() {
-                                      universite= value!;
+                                      format= value!;
                                     });
                              },
                              ),
