@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "801030716432",
+    "project_id": "studentbank-8134c",
+    "storage_bucket": "studentbank-8134c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:801030716432:android:09b6923781b1422b279e95",
+        "android_client_info": {
+          "package_name": "com.example.studentbankmobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBt5YtvnrGl6YKqrx-GwBU8pI6Wez57MQE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
