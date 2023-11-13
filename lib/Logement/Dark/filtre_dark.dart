@@ -48,7 +48,7 @@ class _Filtre_darkState extends State<Filtre_dark> {
           color: 
          Colors.grey.shade900,
         
-        image: DecorationImage(image: AssetImage("images/background .png",),fit: BoxFit.fill,),
+        image: DecorationImage(image: AssetImage("images/darkFilter.jpg",),fit: BoxFit.fill,),
         ),
         child: ListView(
           // scrollDirection: Axis.vertical,
@@ -94,11 +94,12 @@ class _Filtre_darkState extends State<Filtre_dark> {
                             width: 50,
                             height: 50,
                             child: TextField(
+                              textAlign: TextAlign.center,
                               controller: _prixmin,
-                              obscureText: true,
                               decoration: InputDecoration(
                                 // border: OutlineInputBorder(),
                                 labelText: '  min',
+                                labelStyle: TextStyle(color: Colors.black)
                               ),
                             ),)
                             ),
@@ -114,11 +115,12 @@ class _Filtre_darkState extends State<Filtre_dark> {
                             width: 50,
                             height: 50,
                             child: TextField(
+                              textAlign: TextAlign.center,
                               controller: _prixmax,
-                              obscureText: true,
                               decoration: InputDecoration(
                                 // border: OutlineInputBorder(),
                                 labelText: '  max',
+                                labelStyle: TextStyle(color: Colors.black)
                               ),
                             ),)
                             ),
@@ -137,10 +139,11 @@ class _Filtre_darkState extends State<Filtre_dark> {
                               child:  SizedBox(
                                 width: 100,
                                 child: TextField(
+                                  textAlign: TextAlign.center,
                                   controller: _place,
-                                  obscureText: true,
                                   decoration: InputDecoration(
                                     labelText: '  Place',
+                                    labelStyle: TextStyle(color: Colors.black)
                                   ),
                             ),)
                              ),
@@ -160,11 +163,12 @@ class _Filtre_darkState extends State<Filtre_dark> {
                               child: SizedBox(
                                 width: 100,
                                 child: TextField(
+                                  textAlign: TextAlign.center,
                                   controller: _Location,
-                                  obscureText: true,
                                   decoration: InputDecoration(
                                 // border: OutlineInputBorder(),
-                                labelText: ' Location',
+                                labelText: ' Location', 
+                                labelStyle: TextStyle(color: Colors.black)
                               ),
                             ),)
                             ),
@@ -183,11 +187,12 @@ class _Filtre_darkState extends State<Filtre_dark> {
                               child: SizedBox(
                                 width: 100,
                                 child: TextField(
+                                  textAlign: TextAlign.center,
                                   controller: _Surface,
-                                  obscureText: true,
                                   decoration: InputDecoration(
                                 // border: OutlineInputBorder(),
-                                labelText: ' Surface',
+                                labelText: ' Surface', 
+                                labelStyle: TextStyle(color: Colors.black)
                               ),
                             ),)
                             ), 
@@ -206,10 +211,11 @@ class _Filtre_darkState extends State<Filtre_dark> {
                               child:  SizedBox(
                                 width: 100,
                                 child: TextField(
+                                  textAlign: TextAlign.center,
                                   controller: _meuble,
-                                  obscureText: true,
                                   decoration: InputDecoration(
-                                    labelText: ' meuble',
+                                    labelText: ' meuble', 
+                                    labelStyle: TextStyle(color: Colors.black)
                                   ),
                             ),)
                             ),

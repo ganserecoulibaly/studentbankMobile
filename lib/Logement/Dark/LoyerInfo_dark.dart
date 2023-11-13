@@ -96,7 +96,7 @@ class loyerinfo_dark extends StatelessWidget {
                           margin: EdgeInsets.only(left:15,right:15),
                           // padding: EdgeInsets.all(20),
                           width: double.infinity,
-                          height:300,
+                          height: 300,
                           decoration: BoxDecoration(
 
                             borderRadius: BorderRadius.circular(10),
@@ -244,8 +244,10 @@ class loyerinfo_dark extends StatelessWidget {
                           alignment: Alignment.center,
                           // margin: EdgeInsets.all(3),
                           // padding: EdgeInsets.all(20),
+                          margin: EdgeInsets.only(left:15,right:15),
+                          // padding: EdgeInsets.all(20),
                           width: double.infinity,
-                          height: 200,
+                          height: 300,
                           decoration: BoxDecoration(
 
                             borderRadius: BorderRadius.circular(10),
@@ -361,8 +363,10 @@ class loyerinfo_dark extends StatelessWidget {
                           alignment: Alignment.center,
                           // margin: EdgeInsets.all(3),
                           // padding: EdgeInsets.all(20),
+                          margin: EdgeInsets.only(left:15,right:15),
+                          // padding: EdgeInsets.all(20),
                           width: double.infinity,
-                          height: 200,
+                          height: 300,
                           decoration: BoxDecoration(
 
                             borderRadius: BorderRadius.circular(10),
@@ -476,8 +480,10 @@ class loyerinfo_dark extends StatelessWidget {
                           alignment: Alignment.center,
                           // margin: EdgeInsets.all(3),
                           // padding: EdgeInsets.all(20),
+                          margin: EdgeInsets.only(left:15,right:15),
+                          // padding: EdgeInsets.all(20),
                           width: double.infinity,
-                          height: 200,
+                          height: 300,
                           decoration: BoxDecoration(
 
                             borderRadius: BorderRadius.circular(10),
@@ -521,41 +527,6 @@ class loyerinfo_dark extends StatelessWidget {
         ),
       ][index]
       ),
-      bottomNavigationBar:  Container(
-                  // color: Colors.orange,
-                  height: 70,
-                  // margin: EdgeInsets.only(top: 0),
-                  decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(color: Colors.white,blurRadius: 3.4,spreadRadius: 4.5)
-                    ],
-                    color: Colors.grey.shade900,
-                    borderRadius: BorderRadius.only(topLeft: Radius.circular(45),topRight: Radius.circular(45))),
-                child: Center(
-                  child: Container(
-                  // margin: EdgeInsets.all(10),
-
-                  padding: EdgeInsets.all(5),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon: Image.asset('images/setting.png'),iconSize: 40,),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset("images/euro_symbol.png"),iconSize: 40),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset("images/Acceuil_icone.png"),iconSize: 50),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset('images/move_location.png'),iconSize: 40),
-                        
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset('images/night_shelter.png'),iconSize: 40)
-                      ],
-                    ),
-                  ),
-                ),
-                )
-             
     );
   }
 }

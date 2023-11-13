@@ -103,10 +103,10 @@ class _GestionLog_darkState extends State<GestionLog_dark> {
                 child: Column(
                   // alignment: Alignment.center,
               children: [
-                                        Container(
-                      padding: EdgeInsets.all(20),
+                     Container(
+                      padding: EdgeInsets.all(10),
                       alignment: Alignment.center,
-                      width:300,
+                      width:350,
                       // decoration:  BoxDecoration(color: Colors.grey.shade900,borderRadius: BorderRadius.circular((8))),
                       child:Row(
                         children: [
@@ -123,15 +123,15 @@ class _GestionLog_darkState extends State<GestionLog_dark> {
                         // style:ElevatedButton.styleFrom(primary: Colors.white),
                         onPressed: (){
                           Navigator.push(context, MaterialPageRoute(builder: (context)=>DeclarerSinistre_dark()));
-                      }, child:const Text("Depclarer un sinistre",style: TextStyle(fontSize: 14,color: Colors.black),)),
+                      }, child:const Text("Déclarer un sinistre                       ",style: TextStyle(fontSize: 14,color: Colors.black),)),
                     
                         ],
                       )  
                       ),
                     Container(
-                      padding: EdgeInsets.all(20),
+                      padding: EdgeInsets.all(10),
                       alignment: Alignment.center,
-                      width:300,
+                      width:350,
                       // decoration:  BoxDecoration(color: Colors.grey.shade900,borderRadius: BorderRadius.circular((8))),
                       child:Row(
                         children: [
@@ -147,16 +147,16 @@ class _GestionLog_darkState extends State<GestionLog_dark> {
                       
                         // style:ElevatedButton.styleFrom(primary: Colors.white),
                         onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>Demandelocation_dark()));
-                      }, child:const Text("Demander Location",style: TextStyle(fontSize: 14,color: Colors.black),)),
+                      }, child:const Text("Demander Location                      ",style: TextStyle(fontSize: 14,color: Colors.black),)),
                     
                         ],
                       )  
                       ),
                 // const SizedBox(height: 8,),
                 Container(
-                      padding: EdgeInsets.all(20),
+                      padding: EdgeInsets.all(10),
                       alignment: Alignment.center,
-                      width:300,
+                      width:350,
                       // decoration:  BoxDecoration(color: Colors.grey.shade900,borderRadius: BorderRadius.circular((8))),
                       child:Row(
                         children: [
@@ -170,7 +170,7 @@ class _GestionLog_darkState extends State<GestionLog_dark> {
                       ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white,elevation: 10,shadowColor: Colors.black),
                       onPressed: (){
                           Navigator.push(context, MaterialPageRoute(builder: (context)=>DeposerPreavis_dark()));
-                       }, child:const Text("Deposer un pré avis",style: TextStyle(fontSize: 14,color: Colors.black),)),
+                       }, child:const Text("Déposer un pré avis                       ",style: TextStyle(fontSize: 14,color: Colors.black),)),
                       
                         ],
                       ),
@@ -178,9 +178,9 @@ class _GestionLog_darkState extends State<GestionLog_dark> {
                 
                 // const SizedBox(height: 8,),
                  Container(
-                      padding: EdgeInsets.all(20),
+                      padding: EdgeInsets.all(10),
                       alignment: Alignment.center,
-                      width:300,
+                      width:350,
                       // decoration:  BoxDecoration(color: Colors.grey.shade900,borderRadius: BorderRadius.circular((8))),
                       child:Row(
                         children: [
@@ -194,7 +194,7 @@ class _GestionLog_darkState extends State<GestionLog_dark> {
                       ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white,elevation: 10,shadowColor: Colors.black),
                       onPressed: (){
                         Navigator.push(context, MaterialPageRoute(builder: (context)=>DemanderCaution_dark()));
-                      }, child:const Text("Demander une caution /\nGarantie",style: TextStyle(fontSize: 14,color: Colors.black),)),
+                      }, child:const Text("Demander une caution / Garantie",style: TextStyle(fontSize: 14,color: Colors.black),)),
                      
                         ],
                       ),
@@ -207,41 +207,7 @@ class _GestionLog_darkState extends State<GestionLog_dark> {
           ],
         ),
       ),  
-       bottomNavigationBar:  Container(
-                  // color: Colors.orange,
-                  height: 70,
-                  // margin: EdgeInsets.only(top: 0),
-                  decoration: BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(color: Colors.white,blurRadius: 3.0,spreadRadius: 4.2),
-                    ],
-                    color: Colors.grey.shade900,
-                    borderRadius: BorderRadius.only(topLeft: Radius.circular(45),topRight: Radius.circular(45))),
-                child: Center(
-                  child: Container(
-                  // margin: EdgeInsets.all(10),
-
-                  padding: EdgeInsets.all(5),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon: Image.asset('images/setting.png'),iconSize: 40,),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset("images/euro_symbol.png"),iconSize: 40),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset("images/Acceuil_icone.png"),iconSize: 50),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset('images/move_location.png'),iconSize: 40),
-                        
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset('images/night_shelter.png'),iconSize: 40)
-                      ],
-                    ),
-                  ),
-                ),
-                )
-                  
+    
     );
     
   }

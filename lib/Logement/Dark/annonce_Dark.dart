@@ -18,6 +18,7 @@ class _Annonces_darkState extends State<Annonces_dark> {
     "img (5)",
     "img (6)",
   ];
+  int i=0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -168,7 +169,6 @@ class _Annonces_darkState extends State<Annonces_dark> {
             Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
-                    color: Colors.orange
                   ),
                   margin: EdgeInsets.only(left:20,right: 20,top: 10,bottom: 10),
                   child:Row(
@@ -181,54 +181,59 @@ class _Annonces_darkState extends State<Annonces_dark> {
                     ],
                   )
                 ),
-             Container(
-                  margin: EdgeInsets.only(top:30,left: 30,right: 20),
-                  padding: EdgeInsets.all(10),
-                  decoration: BoxDecoration(  
-                  borderRadius: BorderRadius.only(topLeft: Radius.circular(20),bottomLeft: Radius.circular(20))),
-                  child: SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child:
-                      Row(
-                        children: [
-                          for(int i=0;i<4;i++)
-                           Container(
-                                height: 200,
-                                width: 300,
-                                margin: EdgeInsets.only(left: 10,bottom: 2),
-                                // padding: EdgeInsets.all(20),
-                                decoration: BoxDecoration(
-                                  color: Colors.orange,
-                                  // border: Border.all(color:Colors.black54),
-                                   boxShadow:[
-                                    BoxShadow(blurRadius: 5,color: Colors.orange),
-                                    BoxShadow(blurRadius: 5,color: Colors.orange),],
-                                  // color: Color.fromARGB(255, 235, 236, 236),
-                                  borderRadius: BorderRadius.circular(10),
-                                  image: DecorationImage(image: AssetImage("images/${pNames[i]}.jpg",),fit: BoxFit.cover)
-                                ),
-                                child: GestureDetector(
-                                  onTap: (){
-                                     Navigator.push(context, MaterialPageRoute(builder: (context)=>loyerinfo_dark(index: i)));
-                                  },
-                                ),
-
-                                // child:GestureDetector(
-                                //     // child: Image.asset(scale:10,
-                                //     //   "images/${pNames[i]}.jpg",
-                                //       // fit:BoxFit.cover,
-                                      
-                                //   ),
-                                //   onTap: (){
-                                //     Navigator.push(context, MaterialPageRoute(builder: (context)=>loyerinfo(index: i)));
-                                //   },
-                                // ) 
+             Center(
+               child: Container(
+                    decoration: BoxDecoration(  
+                    borderRadius: BorderRadius.only(topLeft: Radius.circular(20),bottomLeft: Radius.circular(20))),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                         IconButton(
+                                    onPressed: (){
+                                      setState(() {
+                                      if(i==0){
+                                        i=3;
+                                      }
+                                      i=i-1;
+                                      });
+                                    }, icon: 
+                                    Icon(Icons.arrow_circle_left,color: Colors.white,)
+                                  ),
+                         Container(
+                              // padding: EdgeInsets.all(20),
+                              width: 250,
+                              height: 200,
+                              decoration: BoxDecoration(
+                                // border: Border.all(color:Colors.black54),
+                                 boxShadow:[
+                                  BoxShadow(blurRadius: 5,color: Colors.white),
+                                  ],
+                                // color: Color.fromARGB(255, 235, 236, 236),
+                                borderRadius: BorderRadius.circular(10),
+                               ),
+                              child: GestureDetector(
+                                      onTap: (){
+                                         Navigator.push(context, MaterialPageRoute(builder: (context)=>loyerinfo_dark(index: i)));
+                                      },
+                                      child: Image(image: AssetImage("images/${pNames[i]}.jpg"),fit: BoxFit.fill,repeat: ImageRepeat.noRepeat,),
+                                    ),
+                                 
                               ),
-                        ],
-                      )
-                  
+                              IconButton(
+                                    onPressed: (){
+                                      setState(() {
+                                        i=i+1;
+                                        if(i==4){
+                                          i=1;
+                                        }
+                                      });
+                                    }, 
+                                    icon: Icon(Icons.arrow_circle_right,color: Colors.white,)
+                            ),
+                      ],
+                    ),
                   ),
-                ),
+             ),
                 Column(
                   // crossAxisAlignment:CrossAxisAlignment.center
                   children: [
@@ -238,21 +243,10 @@ class _Annonces_darkState extends State<Annonces_dark> {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Padding(padding: EdgeInsets.only(left:10,top: 20),
-                      child: Row(children: [Icon(CupertinoIcons.money_dollar_circle_fill,size: 25,color:Colors.orange),SizedBox(width: 5,),Text("prix du loyer",style:TextStyle(color:Colors.orange))],) 
+                      child: Row(children: [Icon(CupertinoIcons.money_dollar_circle_fill,size: 25,color:Colors.white),SizedBox(width: 5,),Text("prix du loyer",style:TextStyle(color:Colors.red))],) 
                       ),
                       Padding(padding: EdgeInsets.only(left:10,top: 20),
-                      child:Row(children: [Icon(CupertinoIcons.rectangle_fill_on_rectangle_fill,size:25,color:Colors.orange),SizedBox(width: 10,),Text("Place            ",style:TextStyle(color:Colors.orange))],) 
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Padding(padding: EdgeInsets.only(left:10,top: 20),
-                      child: Row(children: [Icon(Icons.place,size:25,color:Colors.orange),SizedBox(width: 10,),Text("Localisation",style:TextStyle(color:Colors.orange))],) 
-                      ),
-                      Padding(padding: EdgeInsets.only(left:10,top: 20),
-                      child: Row(children: [Icon(Icons.screenshot_monitor,size:25,color:Colors.orange),SizedBox(width: 10,),Text("Surface        ",style:TextStyle(color:Colors.orange))],) 
+                      child:Row(children: [Icon(CupertinoIcons.rectangle_fill_on_rectangle_fill,size:25,color:Colors.white),SizedBox(width: 10,),Text("Place            ",style:TextStyle(color:Colors.red))],) 
                       ),
                     ],
                   ),
@@ -260,10 +254,21 @@ class _Annonces_darkState extends State<Annonces_dark> {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Padding(padding: EdgeInsets.only(left:10,top: 20),
-                      child: Row(children: [Icon(CupertinoIcons.cube_box_fill,size:25,color:Colors.orange),SizedBox(width: 10,),Text("Meuble   ",style:TextStyle(color:Colors.orange))],) 
+                      child: Row(children: [Icon(Icons.place,size:25,color:Colors.white),SizedBox(width: 10,),Text("Localisation",style:TextStyle(color:Colors.red))],) 
                       ),
                       Padding(padding: EdgeInsets.only(left:10,top: 20),
-                      child: Row(children: [Icon(CupertinoIcons.person_2,size:25,color:Colors.orange),SizedBox(width: 10,),Text("Colocation",style:TextStyle(color:Colors.orange))],) 
+                      child: Row(children: [Icon(Icons.screenshot_monitor,size:25,color:Colors.white),SizedBox(width: 10,),Text("Surface        ",style:TextStyle(color:Colors.red))],) 
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Padding(padding: EdgeInsets.only(left:10,top: 20),
+                      child: Row(children: [Icon(CupertinoIcons.cube_box_fill,size:25,color:Colors.white),SizedBox(width: 10,),Text("Meuble   ",style:TextStyle(color:Colors.red))],) 
+                      ),
+                      Padding(padding: EdgeInsets.only(left:10,top: 20),
+                      child: Row(children: [Icon(CupertinoIcons.person_2,size:25,color:Colors.white),SizedBox(width: 10,),Text("Colocation",style:TextStyle(color:Colors.red))],) 
                       ),
                     ],
                   )
@@ -271,41 +276,6 @@ class _Annonces_darkState extends State<Annonces_dark> {
         ]
         ),
       ),
-        bottomNavigationBar:  Container(
-                  // color: Colors.orange,
-                  // color: Colors.grey.shade900,
-                  height: 70,
-                  // margin: EdgeInsets.only(top: 0),
-                  decoration: BoxDecoration(
-                    boxShadow: [
-                       BoxShadow(color: Colors.white,blurRadius: 3.0,spreadRadius: 4.2),
-                    ],
-                    color: Colors.grey.shade900,
-                    borderRadius: BorderRadius.only(topLeft: Radius.circular(45),topRight: Radius.circular(45))),
-                child: Center(
-                  child: Container(
-                  // margin: EdgeInsets.all(10),
-                  padding: EdgeInsets.all(5),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon: Image.asset('images/setting.png'),iconSize: 40,),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset("images/euro_symbol.png"),iconSize: 40),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset("images/Acceuil_icone.png"),iconSize: 50,),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset('images/move_location.png'),iconSize: 40),
-                        
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset('images/night_shelter.png'),iconSize: 40)
-                      ],
-                    ),
-                  ),
-                ),
-                )
- 
     );
   }
 }

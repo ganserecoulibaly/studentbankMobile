@@ -27,12 +27,7 @@ class loyerinfo extends StatelessWidget {
                   width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
-        
-                    // borderRadius: BorderRadius.only(
-                    //   bottomLeft: Radius.circular(30),
-                    //   bottomRight: Radius.circular(30),
-                    // )
+                    image: DecorationImage(image: AssetImage('images/LogoNlogement.png'),fit: BoxFit.contain)
                   ),
                   child: ListView(
                     scrollDirection: Axis.vertical,
@@ -144,7 +139,9 @@ class loyerinfo extends StatelessWidget {
                   )
                 ]),
                  Container(
-                  
+                    decoration: BoxDecoration(
+                      color: Colors.transparent
+                    ),
                     margin: EdgeInsets.only(left:30,top:10),
                     child:Column(
                       // mainAxisAlignment: MainAxisAlignment.center,
@@ -160,8 +157,8 @@ class loyerinfo extends StatelessWidget {
                     )
                   ),  
               
-      ],
-      ),
+                ],
+              ),
             ],
           ),
        ListView(
@@ -175,10 +172,7 @@ class loyerinfo extends StatelessWidget {
                   width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    // borderRadius: BorderRadius.only(
-                    //   bottomLeft: Radius.circular(30),
-                    //   bottomRight: Radius.circular(30),
-                    // )
+                    image: DecorationImage(image: AssetImage('images/LogoNlogement.png'),fit: BoxFit.contain)
                   ),
                   child: ListView(
                     scrollDirection: Axis.vertical,
@@ -187,7 +181,7 @@ class loyerinfo extends StatelessWidget {
                         height: 300,
                     decoration: BoxDecoration(
                       boxShadow: [
-                        BoxShadow(color: Colors.orange,blurRadius: 15.0,spreadRadius: 15.2),
+                        BoxShadow(color: Colors.orange.shade200,blurRadius: 3.0,spreadRadius: 4.2),
                       ],
                       image: DecorationImage(image: AssetImage('images/maisonNight.jpg'),fit: BoxFit.cover),
                       borderRadius: BorderRadius.only(bottomRight: Radius.circular(30),bottomLeft: Radius.circular(30))
@@ -235,8 +229,10 @@ class loyerinfo extends StatelessWidget {
                           alignment: Alignment.center,
                           // margin: EdgeInsets.all(10),
                           // padding: EdgeInsets.all(20),
+                          margin: EdgeInsets.only(left:15,right:15),
+                          // padding: EdgeInsets.all(20),
                           width: double.infinity,
-                          height: 200,
+                          height: 300,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             image: DecorationImage(image: AssetImage("images/${pNames[index]}.jpg"),fit: BoxFit.fill),
@@ -248,6 +244,9 @@ class loyerinfo extends StatelessWidget {
                 // SizedBox(height: 10),
                 Container(
                   // height: 100,
+                    decoration: BoxDecoration(
+                      color: Colors.transparent
+                    ),
                     child: Column(children: [
                       // Row(children: [Padding(padding:EdgeInsets.only(top: 10,left: 20),child:Text("Apartement",style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold,color: Colors.black)),),],),
                       Row(
@@ -286,7 +285,9 @@ class loyerinfo extends StatelessWidget {
                     ]),
                 ),
                  Container(
-                  
+                    decoration: BoxDecoration(
+                      color: Colors.transparent
+                    ),
                     margin: EdgeInsets.only(left:30,top:10),
                     child:Column(
                       // mainAxisAlignment: MainAxisAlignment.center,
@@ -317,10 +318,7 @@ class loyerinfo extends StatelessWidget {
                   width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    // borderRadius: BorderRadius.only(
-                    //   bottomLeft: Radius.circular(30),
-                    //   bottomRight: Radius.circular(30),
-                    // )
+                    image: DecorationImage(image: AssetImage('images/LogoNlogement.png'),fit: BoxFit.contain)
                   ),
                   child: ListView(
                     scrollDirection: Axis.vertical,
@@ -329,7 +327,7 @@ class loyerinfo extends StatelessWidget {
                         height: 300,
                     decoration: BoxDecoration(
                       boxShadow: [
-                        BoxShadow(color: Colors.orange,blurRadius: 15.0,spreadRadius: 15.2),
+                        BoxShadow(color: Colors.orange.shade200,blurRadius: 3.0,spreadRadius: 4.2),
                       ],
                       image: DecorationImage(image: AssetImage('images/maisonNight.jpg'),fit: BoxFit.cover),
                       borderRadius: BorderRadius.only(bottomRight: Radius.circular(30),bottomLeft: Radius.circular(30))
@@ -376,10 +374,11 @@ class loyerinfo extends StatelessWidget {
                  Center(
                    child: Container(
                           alignment: Alignment.center,
-                          margin: EdgeInsets.all(10),
+                          // padding: EdgeInsets.all(20),
+                          margin: EdgeInsets.only(left:15,right:15),
                           // padding: EdgeInsets.all(20),
                           width: double.infinity,
-                          height: 200,
+                          height: 300,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             image: DecorationImage(image: AssetImage("images/${pNames[index]}.jpg"),fit: BoxFit.fill),
@@ -389,6 +388,9 @@ class loyerinfo extends StatelessWidget {
                  ),
              Container(
                   // height: 100,
+                    decoration: BoxDecoration(
+                      color: Colors.transparent
+                    ),
                     child: Column(children: [
                       // Row(children: [Padding(padding:EdgeInsets.only(top: 10,left: 20),child:Text("Apartement",style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold,color: Colors.black)),),],),
                       Row(
@@ -427,7 +429,9 @@ class loyerinfo extends StatelessWidget {
                     ]),
                 ),
                  Container(
-                  
+                    decoration: BoxDecoration(
+                      color: Colors.transparent
+                    ),
                     margin: EdgeInsets.only(left:30,top:10),
                     child:Column(
                       // mainAxisAlignment: MainAxisAlignment.center,
@@ -458,10 +462,7 @@ class loyerinfo extends StatelessWidget {
                   width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    // borderRadius: BorderRadius.only(
-                    //   bottomLeft: Radius.circular(30),
-                    //   bottomRight: Radius.circular(30),
-                    // )
+                    image: DecorationImage(image: AssetImage('images/LogoNlogement.png'),fit: BoxFit.contain)
                   ),
                   child: ListView(
                     scrollDirection: Axis.vertical,
@@ -470,12 +471,13 @@ class loyerinfo extends StatelessWidget {
                         height: 300,
                     decoration: BoxDecoration(
                       boxShadow: [
-                        BoxShadow(color: Colors.orange,blurRadius: 15.0,spreadRadius: 15.2),
+                        BoxShadow(color: Colors.orange.shade200,blurRadius: 3.0,spreadRadius: 4.2),
                       ],
                       image: DecorationImage(image: AssetImage('images/maisonNight.jpg'),fit: BoxFit.cover),
                       borderRadius: BorderRadius.only(bottomRight: Radius.circular(30),bottomLeft: Radius.circular(30))
                     ),
                     child: Container(
+                        
                            child: 
                           Center(
                             child: 
@@ -515,10 +517,10 @@ class loyerinfo extends StatelessWidget {
                   Center(
                         child: Container(
                           alignment: Alignment.center,
-                          margin: EdgeInsets.all(2),
+                          margin: EdgeInsets.only(left:15,right:15),
                           // padding: EdgeInsets.all(20),
                           width: double.infinity,
-                          height: 200,
+                          height: 300,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             image: DecorationImage(image: AssetImage("images/${pNames[index]}.jpg"),fit: BoxFit.fill),
@@ -528,6 +530,10 @@ class loyerinfo extends StatelessWidget {
                       ),
                 Container(
                   // height: 100,
+                    decoration: BoxDecoration(
+                    color: Colors.transparent,
+                    // image: DecorationImage(image: AssetImage('images/LogoNlogement.png'),fit: BoxFit.fill)
+                  ),
                     child: Column(children: [
                       // Row(children: [Padding(padding:EdgeInsets.only(top: 10,left: 20),child:Text("Apartement",style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold,color: Colors.black)),),],),
                       Row(
@@ -566,7 +572,9 @@ class loyerinfo extends StatelessWidget {
                     ]),
                 ),
                  Container(
-                  
+                    decoration: BoxDecoration(
+                      color: Colors.transparent
+                    ),
                     margin: EdgeInsets.only(left:30,top:10),
                     child:Column(
                       // mainAxisAlignment: MainAxisAlignment.center,
@@ -589,37 +597,37 @@ class loyerinfo extends StatelessWidget {
         ),
       ][index]
       ),
-      bottomNavigationBar:  Container(
-                  // color: Colors.orange,
-                  height: 70,
-                  // margin: EdgeInsets.only(top: 0),
-                  decoration: BoxDecoration(
-                    color: Colors.orange,
-                    borderRadius: BorderRadius.only(topLeft: Radius.circular(45),topRight: Radius.circular(45))),
-                child: Center(
-                  child: Container(
-                  // margin: EdgeInsets.all(10),
+      // bottomNavigationBar:  Container(
+      //             // color: Colors.orange,
+      //             height: 70,
+      //             // margin: EdgeInsets.only(top: 0),
+      //             decoration: BoxDecoration(
+      //               color: Colors.orange,
+      //               borderRadius: BorderRadius.only(topLeft: Radius.circular(45),topRight: Radius.circular(45))),
+      //           child: Center(
+      //             child: Container(
+      //             // margin: EdgeInsets.all(10),
 
-                  padding: EdgeInsets.all(5),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon: Image.asset('images/setting.png'),iconSize: 40,),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset("images/euro_symbol.png"),iconSize: 40),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset("images/Acceuil_icone.png"),iconSize: 50),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset('images/move_location.png'),iconSize: 40),
+      //             padding: EdgeInsets.all(5),
+      //               child: Row(
+      //                 mainAxisAlignment: MainAxisAlignment.center,
+      //                 children: [
+      //                   SizedBox(width:15),
+      //                   IconButton(onPressed: (){}, icon: Image.asset('images/setting.png'),iconSize: 40,),
+      //                   SizedBox(width:15),
+      //                   IconButton(onPressed: (){}, icon:Image.asset("images/euro_symbol.png"),iconSize: 40),
+      //                   SizedBox(width:15),
+      //                   IconButton(onPressed: (){}, icon:Image.asset("images/Acceuil_icone.png"),iconSize: 50),
+      //                   SizedBox(width:15),
+      //                   IconButton(onPressed: (){}, icon:Image.asset('images/move_location.png'),iconSize: 40),
                         
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset('images/night_shelter.png'),iconSize: 40)
-                      ],
-                    ),
-                  ),
-                ),
-                )
+      //                   SizedBox(width:15),
+      //                   IconButton(onPressed: (){}, icon:Image.asset('images/night_shelter.png'),iconSize: 40)
+      //                 ],
+      //               ),
+      //             ),
+      //           ),
+      //           )
              
     );
   }

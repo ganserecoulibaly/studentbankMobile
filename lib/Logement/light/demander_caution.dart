@@ -19,7 +19,7 @@ class _DemanderCautionState extends State<DemanderCaution> {
         padding: EdgeInsets.all(0),
         decoration: BoxDecoration(
           color: Colors.white,
-          image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
+          image: DecorationImage(image: AssetImage('images/LogoNlogement.png'),fit: BoxFit.fill)
         ),
         // width: double.infinity,
         // height: double.infinity,
@@ -197,37 +197,37 @@ class _DemanderCautionState extends State<DemanderCaution> {
           ],
         ),
       ),  
-       bottomNavigationBar:  Container(
-                  // color: Colors.orange,
-                  height: 70,
-                  // margin: EdgeInsets.only(top: 0),
-                  decoration: BoxDecoration(
-                    color: Colors.orange,
-                    borderRadius: BorderRadius.only(topLeft: Radius.circular(45),topRight: Radius.circular(45))),
-                child: Center(
-                  child: Container(
-                  // margin: EdgeInsets.all(10),
+      //  bottomNavigationBar:  Container(
+      //             // color: Colors.orange,
+      //             height: 70,
+      //             // margin: EdgeInsets.only(top: 0),
+      //             decoration: BoxDecoration(
+      //               color: Colors.orange,
+      //               borderRadius: BorderRadius.only(topLeft: Radius.circular(45),topRight: Radius.circular(45))),
+      //           child: Center(
+      //             child: Container(
+      //             // margin: EdgeInsets.all(10),
 
-                  padding: EdgeInsets.all(5),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon: Image.asset('images/setting.png'),iconSize: 40,),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset("images/euro_symbol.png"),iconSize: 40),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset("images/Acceuil_icone.png"),iconSize: 50),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset('images/move_location.png'),iconSize: 40),
+      //             padding: EdgeInsets.all(5),
+      //               child: Row(
+      //                 mainAxisAlignment: MainAxisAlignment.center,
+      //                 children: [
+      //                   SizedBox(width:15),
+      //                   IconButton(onPressed: (){}, icon: Image.asset('images/setting.png'),iconSize: 40,),
+      //                   SizedBox(width:15),
+      //                   IconButton(onPressed: (){}, icon:Image.asset("images/euro_symbol.png"),iconSize: 40),
+      //                   SizedBox(width:15),
+      //                   IconButton(onPressed: (){}, icon:Image.asset("images/Acceuil_icone.png"),iconSize: 50),
+      //                   SizedBox(width:15),
+      //                   IconButton(onPressed: (){}, icon:Image.asset('images/move_location.png'),iconSize: 40),
                         
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset('images/night_shelter.png'),iconSize: 40)
-                      ],
-                    ),
-                  ),
-                ),
-                )
+      //                   SizedBox(width:15),
+      //                   IconButton(onPressed: (){}, icon:Image.asset('images/night_shelter.png'),iconSize: 40)
+      //                 ],
+      //               ),
+      //             ),
+      //           ),
+      //           )
                   
     );
     

@@ -31,18 +31,18 @@ class _DeposerPreavis_darkState extends State<DeposerPreavis_dark> {
               height: 200,
               decoration: BoxDecoration(
                 boxShadow: [
-                       BoxShadow(color: Colors.orange.shade200,blurRadius: 3.0,spreadRadius: 4.2),
+                       BoxShadow(color: Colors.white,blurRadius: 3.0,spreadRadius: 4.2),
               ],
                 image: DecorationImage(image: AssetImage('images/maisonNight.jpg'),fit: BoxFit.cover),
                 borderRadius: BorderRadius.only(bottomRight: Radius.circular(30),bottomLeft: Radius.circular(30))
               ),
               child:  Align(
                         alignment: Alignment.center,
-                        child: Text("Deposer un pré avis",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
+                        child: Text("Déposer un pré avis",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
                       
                       ),
             ),
-            Container(
+           Container(
                margin: EdgeInsets.all(20),
 
               padding: EdgeInsets.all(20),
@@ -58,7 +58,7 @@ class _DeposerPreavis_darkState extends State<DeposerPreavis_dark> {
                 children: [
                   Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                        Align(
                     alignment: Alignment.topLeft,
@@ -74,7 +74,7 @@ class _DeposerPreavis_darkState extends State<DeposerPreavis_dark> {
                     alignment: Alignment.center,
                     child: Column(
                       children: [
-                        Text("Loyer Precedent"),
+                        Text("Loyer Précédent"),
                         Center(child: Text("350${Icons.euro}"),)
                       ]
                       ),
@@ -97,7 +97,7 @@ class _DeposerPreavis_darkState extends State<DeposerPreavis_dark> {
                 children: [
                   Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                        Align(
                     alignment: Alignment.topLeft,
@@ -135,7 +135,7 @@ class _DeposerPreavis_darkState extends State<DeposerPreavis_dark> {
                       padding: EdgeInsets.all(20),
                       alignment: Alignment.center,
                       width:300,
-                      decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((8))),
+                      decoration:  BoxDecoration(color: Colors.transparent,borderRadius: BorderRadius.circular((8))),
                       child:Row(
                         children: [
                            Container(
@@ -149,7 +149,7 @@ class _DeposerPreavis_darkState extends State<DeposerPreavis_dark> {
                       
                         // style:ElevatedButton.styleFrom(primary: Colors.white),
                         onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>DeclarerSinistre()));
-                      }, child:const Text("Date d'entree",style: TextStyle(fontSize: 14,color: Colors.black),)),
+                      }, child:const Text("Date de rentrée souhaitée",style: TextStyle(fontSize: 14,color: Colors.black),)),
                     
                         ],
                       )  
@@ -158,7 +158,7 @@ class _DeposerPreavis_darkState extends State<DeposerPreavis_dark> {
                       padding: EdgeInsets.all(20),
                       alignment: Alignment.center,
                       width:300,
-                      decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((8))),
+                      decoration:  BoxDecoration(color: Colors.transparent,borderRadius: BorderRadius.circular((8))),
                       child:Row(
                         children: [
                            Container(
@@ -172,7 +172,7 @@ class _DeposerPreavis_darkState extends State<DeposerPreavis_dark> {
                       
                         // style:ElevatedButton.styleFrom(primary: Colors.white),
                         onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>DeclarerSinistre()));
-                      }, child:const Text("Date de sortie souhaiter",style: TextStyle(fontSize: 14,color: Colors.black),)),
+                      }, child:const Text("Date De Sortie souhaitée",style: TextStyle(fontSize: 14,color: Colors.black),)),
                     
                         ],
                       )  
@@ -211,40 +211,6 @@ class _DeposerPreavis_darkState extends State<DeposerPreavis_dark> {
           ],
         ),
       ),  
-       bottomNavigationBar: Container(
-                  // color: Colors.orange,
-                  height: 70,
-                  // margin: EdgeInsets.only(top: 0),
-                  decoration: BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(color: Colors.white,blurRadius: 3.0,spreadRadius: 4.2),
-                    ],
-                    color: Colors.grey.shade900,
-                    borderRadius: BorderRadius.only(topLeft: Radius.circular(45),topRight: Radius.circular(45))),
-                child: Center(
-                  child: Container(
-                  // margin: EdgeInsets.all(10),
-
-                  padding: EdgeInsets.all(5),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon: Image.asset('images/setting.png'),iconSize: 40,),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset("images/euro_symbol.png"),iconSize: 40),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset("images/Acceuil_icone.png"),iconSize: 50),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset('images/move_location.png'),iconSize: 40),
-                        
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset('images/night_shelter.png'),iconSize: 40)
-                      ],
-                    ),
-                  ),
-                ),
-                )
     );
     
   }
