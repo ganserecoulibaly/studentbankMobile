@@ -38,7 +38,7 @@ class _demande_accueil_darkState extends State<demande_accueil_dark> {
             margin: EdgeInsets.all(30),
             
             decoration:BoxDecoration(borderRadius: BorderRadius.circular(20),
-            image: DecorationImage(image:  AssetImage("images/mobilite.jpeg"),fit: BoxFit.cover,scale: 4)),
+            image: DecorationImage(image:  AssetImage("images/mobilite_2.jpeg"),fit: BoxFit.fill,scale: 4)),
             // child: Image.asset("images/mobilite.jpeg",fit: BoxFit.contain,),
             height: 150,
             width: double.infinity,

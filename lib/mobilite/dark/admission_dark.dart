@@ -32,7 +32,7 @@ class _admision_darkState extends State<admision_dark> {
             child:
                 Align(
                   alignment: Alignment.center,
-                  child: Text("Mes Admission",style: TextStyle(color:Colors.blue.shade100, fontWeight: FontWeight.bold,fontSize: 20),),
+                  child: Text("Mes Admissions",style: TextStyle(color:Colors.blue.shade100, fontWeight: FontWeight.bold,fontSize: 20),),
                 ),
           ),
           Container(
@@ -47,7 +47,7 @@ class _admision_darkState extends State<admision_dark> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Image.asset("images/🦆 icon _building one_.png"),
-                Text("Univeriste de Lyon"),
+                Text("Université de Lyon"),
                 Icon(CupertinoIcons.hand_thumbsup)
               ],
             ),
@@ -64,7 +64,7 @@ class _admision_darkState extends State<admision_dark> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Image.asset("images/🦆 icon _building one_.png"),
-                Text("Univeriste de Lyon"),
+                Text("Université de Lyon"),
                 Icon(CupertinoIcons.hand_thumbsup)
               ],
             ),
@@ -81,7 +81,7 @@ class _admision_darkState extends State<admision_dark> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Image.asset("images/🦆 icon _building one_.png"),
-                Text("Univeriste de Lyon"),
+                Text("Université de Lyon"),
                 Icon(CupertinoIcons.hand_thumbsup)
               ],
             ),
@@ -117,44 +117,6 @@ class _admision_darkState extends State<admision_dark> {
           ]
         ),
       ),
-       bottomNavigationBar:  Container(
-                  // color: Colors.orange,
-                  height: 70,
-                  // margin: EdgeInsets.only(top: 0),
-                  decoration: BoxDecoration(
-                        color: Colors.grey.shade900,
-                        image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain),
-                        boxShadow: [
-                          BoxShadow(color: Colors.white),
-                          BoxShadow(color: Colors.white),
-                          BoxShadow(color: Colors.white),
-                          BoxShadow(color: Colors.white),
-                        ]
-                  ),
-                child: Center(
-                  child: Container(
-                  // margin: EdgeInsets.all(10),
-
-                  padding: EdgeInsets.all(5),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon: Image.asset('images/setting.png'),iconSize: 40,),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset("images/euro_symbol.png"),iconSize: 40),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset("images/Acceuil_icone.png",),iconSize: 40,),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset('images/move_location.png'),iconSize: 40),
-                        
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset('images/night_shelter.png'),iconSize: 40)
-                      ],
-                    ),
-                  ),
-                ),
-                )             
-     );
+          );
   }
 }

@@ -22,16 +22,6 @@ class _admission_en_attenteState extends State<admission_en_attente> {
                       child: Column(
                         
                         children: [
-                          // Container(
-                          //   margin: EdgeInsets.only(top:50,left: 30,right: 30,bottom: 40),
-                          //   child: LinearProgressIndicator(
-                          //   color: Colors.blue.shade100,
-                          //   value: 4/5,
-                          //   backgroundColor: Colors.blueGrey,
-                          //   borderRadius: BorderRadius.circular(30),
-                          //   minHeight: 10,
-                          //   ),
-                          // ),
                           SizedBox(height: 30,),
                           Container(
                             margin: EdgeInsets.all(10),
@@ -77,39 +67,7 @@ class _admission_en_attenteState extends State<admission_en_attente> {
                        ],
                         ),
                     ),
-                     bottomNavigationBar:  Container(
-                  // color: Colors.orange,
-                  height: 70,
-                  // margin: EdgeInsets.only(top: 0),
-                  decoration: BoxDecoration(
-                    color: Colors.blue.shade100,
-                    // borderRadius: BorderRadius.only(topLeft: Radius.circular(45),topRight: Radius.circular(45))
-                    ),
-                child: Center(
-                  child: Container(
-                  // margin: EdgeInsets.all(10),
-
-                  padding: EdgeInsets.all(5),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon: Image.asset('images/setting.png'),iconSize: 40,),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset("images/euro_symbol.png"),iconSize: 40),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset("images/Acceuil_icone.png",),iconSize: 40,),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset('images/move_location.png'),iconSize: 40),
-                        
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset('images/night_shelter.png'),iconSize: 40)
-                      ],
-                    ),
-                  ),
-                ),
-                )
-
+                  
     );
   }
 }

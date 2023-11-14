@@ -26,7 +26,7 @@ class _etudiant_etranger_internationnaux_darkState extends State<etudiant_etrang
     return Scaffold(
       body: Container(
           decoration:BoxDecoration(borderRadius: BorderRadius.circular(20),
-          image: DecorationImage(image:  AssetImage("images/mobilite.jpeg"),fit: BoxFit.cover,scale: 4)),    
+          image: DecorationImage(image:  AssetImage("images/mobilite_2.jpeg"),fit: BoxFit.fill,scale: 4)),    
           child: Container(
             decoration: BoxDecoration(
                         color: Colors.grey.shade900,

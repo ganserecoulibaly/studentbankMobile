@@ -14,13 +14,17 @@ class _admisionState extends State<admision> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+         decoration: BoxDecoration(
+          color: Colors.white70,
+          image: DecorationImage(image: AssetImage('images/LogoN_Mobilite.png'),fit: BoxFit.fill)
+        ),
         child: ListView(
           children: [
             Container(
             margin: EdgeInsets.all(20),
             
             decoration:BoxDecoration(borderRadius: BorderRadius.circular(20),
-            image: DecorationImage(image:  AssetImage("images/mobilite.jpeg"),fit: BoxFit.cover,scale: 4)),
+            image: DecorationImage(image:  AssetImage("images/mobilite_2.jpeg"),fit: BoxFit.fill,scale: 4)),
             // child: Image.asset("images/mobilite.jpeg",fit: BoxFit.contain,),
             height: 250,
             width: double.infinity,
@@ -42,7 +46,24 @@ class _admisionState extends State<admision> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Image.asset("images/🦆 icon _building one_.png"),
-                Text("Univeriste de Lyon"),
+                Text("Université de Lyon"),
+                Icon(CupertinoIcons.hand_thumbsup)
+              ],
+            ),
+          ),
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.blue.shade200,
+            borderRadius: BorderRadius.circular(30)
+            ),
+            margin: EdgeInsets.all(20),
+            height: 50,
+            width: 250,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Image.asset("images/🦆 icon _building one_.png"),
+                Text("Université de Lyon"),
                 Icon(CupertinoIcons.hand_thumbsup)
               ],
             ),
@@ -59,24 +80,7 @@ class _admisionState extends State<admision> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Image.asset("images/🦆 icon _building one_.png"),
-                Text("Univeriste de Lyon"),
-                Icon(CupertinoIcons.hand_thumbsup)
-              ],
-            ),
-          ),
-          Container(
-            decoration: BoxDecoration(
-              color: Colors.blue.shade100,
-            borderRadius: BorderRadius.circular(30)
-            ),
-            margin: EdgeInsets.all(20),
-            height: 50,
-            width: 250,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Image.asset("images/🦆 icon _building one_.png"),
-                Text("Univeriste de Lyon"),
+                Text("Université de Lyon"),
                 Icon(CupertinoIcons.hand_thumbsup)
               ],
             ),
@@ -112,39 +116,7 @@ class _admisionState extends State<admision> {
           ]
         ),
       ),
-       bottomNavigationBar:  Container(
-                  // color: Colors.orange,
-                  height: 70,
-                  // margin: EdgeInsets.only(top: 0),
-                  decoration: BoxDecoration(
-                    color: Colors.blue.shade100,
-                    // borderRadius: BorderRadius.only(topLeft: Radius.circular(45),topRight: Radius.circular(45))
-                    ),
-                child: Center(
-                  child: Container(
-                  // margin: EdgeInsets.all(10),
-
-                  padding: EdgeInsets.all(5),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon: Image.asset('images/setting.png'),iconSize: 40,),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset("images/euro_symbol.png"),iconSize: 40),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset("images/Acceuil_icone.png",),iconSize: 40,),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset('images/move_location.png'),iconSize: 40),
-                        
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset('images/night_shelter.png'),iconSize: 40)
-                      ],
-                    ),
-                  ),
-                ),
-                )
-
+    
     );
   }
 }

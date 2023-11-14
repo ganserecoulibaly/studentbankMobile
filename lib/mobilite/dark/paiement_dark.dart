@@ -14,8 +14,10 @@ class _paiement_darkState extends State<paiement_dark> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        
-        decoration: BoxDecoration(color: Colors.grey.shade900),
+          decoration: BoxDecoration(
+          color: Colors.grey.shade900,   
+          image: DecorationImage(image: AssetImage("images/Logo N.png"),fit: BoxFit.fill)
+        ),
         child: ListView(children: [
            Container(
             margin: EdgeInsets.all(30),

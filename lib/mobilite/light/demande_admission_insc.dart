@@ -25,7 +25,7 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
           //   end: Alignment.bottomRight,
           //   colors: [Colors.white, Colors.pinkAccent],
           // ),
-          image: DecorationImage(image: AssetImage("images/DEBUT.png"),fit: BoxFit.cover)
+          image: DecorationImage(image: AssetImage("images/whiteFilter.jpg"),fit: BoxFit.fill)
         ),
         child:   ListView(
           children: [
@@ -33,7 +33,7 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                 margin: EdgeInsets.all(30),
                 
                 decoration:BoxDecoration(borderRadius: BorderRadius.circular(20),
-                image: DecorationImage(image:  AssetImage("images/mobilite.jpeg"),fit: BoxFit.cover,scale: 4)),
+                image: DecorationImage(image:  AssetImage("images/mobilite_2.jpeg"),fit: BoxFit.fill,scale: 4)),
                 // child: Image.asset("images/mobilite.jpeg",fit: BoxFit.contain,),
                 height: 150,
                 width: double.infinity,
@@ -54,10 +54,10 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                             ),
                             decoration: BoxDecoration(
                               boxShadow: [
-                                BoxShadow(color: Colors.white),
-                                BoxShadow(color: Colors.white),
-                                BoxShadow(color: Colors.white),
-                                BoxShadow(color: Colors.white),
+                                BoxShadow(color: Colors.grey.shade900),
+                                BoxShadow(color: Colors.grey.shade900),
+                                BoxShadow(color: Colors.grey.shade900),
+                                BoxShadow(color: Colors.grey.shade900),
                               ]
                             ),
                           ),
@@ -79,7 +79,7 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                                           
                                   Image(image:AssetImage("images/🦆 icon _building one_.png")),
                                           // SizedBox(height:3),
-                                  Text("Universite de Barcelone",style: TextStyle(color: Colors.pink,fontSize: 14,fontWeight: FontWeight.bold,),)
+                                  Text("Université de Barcelone",style: TextStyle(color: Colors.pink,fontSize: 14,fontWeight: FontWeight.bold,),)
                                     
                                 ],
                               )
@@ -92,7 +92,7 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
               ),
             ),
              Container(
-                        decoration: BoxDecoration(color: Colors.white,
+                        decoration: BoxDecoration(color: Colors.grey.shade900,
                         borderRadius: BorderRadius.circular(20)
                         ),
                         margin: EdgeInsets.all(10),
@@ -103,11 +103,11 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                             children: [
                               Align(
                                 alignment: Alignment.topLeft,
-                                child: Text("Description",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontStyle: FontStyle.normal),),
+                                child: Text("Description",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontStyle: FontStyle.normal),),
                               ),
                                Center(
                                 // alignment: Alignment.center,
-                                  child: Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",style: TextStyle(color: Colors.black,fontSize: 20),),
+                                  child: Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",style: TextStyle(color: Colors.white,fontSize: 20),),
                               ),
                               SizedBox(height: 10,),
                               Container(
@@ -158,7 +158,7 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                         width: 190,
                         height: 40,
                         decoration: BoxDecoration(
-                          color: Colors.white,
+                          color: Colors.grey.shade900,
                           borderRadius: BorderRadius.circular(30)
                           ),
                         child: Row(
@@ -169,7 +169,7 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                          width: 190,
                          height: 40,
                         decoration: BoxDecoration(
-                          color: Colors.white,
+                          color: Colors.grey.shade900,
                           borderRadius: BorderRadius.circular(30)
                           ),
                         child: Row(
@@ -185,7 +185,7 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                         width: 190,
                          height: 40,
                         decoration: BoxDecoration(
-                          color: Colors.white,
+                          color: Colors.grey.shade900,
                           borderRadius: BorderRadius.circular(30)
                           ),
                         child: Row(
@@ -196,7 +196,7 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                         width: 190,
                          height: 40,
                         decoration: BoxDecoration(
-                          color: Colors.white,
+                          color: Colors.grey.shade900,
                           borderRadius: BorderRadius.circular(30)
                           ),
                         child: Row(
@@ -212,7 +212,7 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                          width: 190,
                          height: 40,
                         decoration: BoxDecoration(
-                          color: Colors.white,
+                          color: Colors.grey.shade900,
                           borderRadius: BorderRadius.circular(30)
                           ),
                         child: Row(
@@ -223,7 +223,7 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                          width: 190,
                          height: 40,
                         decoration: BoxDecoration(
-                          color: Colors.white,
+                          color: Colors.grey.shade900,
                           borderRadius: BorderRadius.circular(30)
                           ),
                         child: Row(
@@ -361,8 +361,8 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("Mail: adress@mail.com",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold),),
-                      Text("Numero de telephone: 00.00.00.00.00",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold),),
+                      Text("Mail: adress@mail.com",style: TextStyle(color:Colors.grey.shade900,fontSize: 16,fontWeight: FontWeight.bold),),
+                      Text("Numero de telephone: 00.00.00.00.00",style: TextStyle(color:Colors.grey.shade900,fontSize: 16,fontWeight: FontWeight.bold),),
                     ],
                   ),
                 ),
@@ -377,11 +377,11 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                   ),
                   // height: 60,
                   width: 250,
-                  child: TextButton(onPressed: (){},child: Text("contacter l'universite",style: TextStyle(color: Colors.white,fontSize: 18),),),
+                  child: TextButton(onPressed: (){},child: Text("contacter l'Université",style: TextStyle(color: Colors.white,fontSize: 18),),),
                               ),
                 ),
                 Container(
-                  child: Text("Vous pourriez aussi aimer",style: TextStyle(color: Colors.pink,fontSize: 24,fontWeight: FontWeight.bold),),
+                  child: Text("Vous pourriez aussi aimer",style: TextStyle(color: Colors.pink,fontSize: 20,fontWeight: FontWeight.bold),),
                 ),
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
@@ -408,10 +408,10 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                                       child: Image(image: AssetImage("images/img (6).jpg",),fit: BoxFit.fill,),),
                                       Container(
                                         margin: EdgeInsets.only(left:5),
-                                        child: Text("lorem hdbjbshdb hbjfbjs fdsj")),
+                                        child: Text("lorem hdbjbshdb\n hbjfbjs fdsj")),
                                       Container(
                                         margin: EdgeInsets.all(5),
-                                        child: Text(univ[i],style: TextStyle(fontSize: 18,color: Colors.pink),)),
+                                        child: Text(univ[i],style: TextStyle(fontSize: 14,color: Colors.pink),)),
                                     Row(
                                       children: [
                                         RatingBar.builder(
@@ -483,12 +483,13 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                           child: Text("Adrien",style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold,color: Colors.white),),
                         ),
                         Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             for(int i=0;i<5;i++)
                             Container(
                             margin: EdgeInsets.only(left: 10),
-                            height: 60,
-                            width: 60,
+                            height: 40,
+                            width: 40,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(30),
                               color: Colors.white
@@ -498,8 +499,8 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                                 Align(
                                   alignment: Alignment.topRight,
                                   child: Container(
-                                    width: 10,
-                                    height: 10,
+                                    width: 5,
+                                    height: 5,
                                     decoration: BoxDecoration(color: Colors.green[300],borderRadius: BorderRadius.circular(30)),
                                   ),
                                 ),
@@ -514,40 +515,7 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
           ],
         ),
       ),
-        bottomNavigationBar:  Container(
-                  // color: Colors.orange,
-                  height: 70,
-                  // margin: EdgeInsets.only(top: 0),
-                  decoration: BoxDecoration(
-                    color: Colors.blue.shade100,
-                    // borderRadius: BorderRadius.only(topLeft: Radius.circular(45),topRight: Radius.circular(45))
-                    ),
-                child: Center(
-                  child: Container(
-                  // margin: EdgeInsets.all(10),
-
-                  padding: EdgeInsets.all(5),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon: Image.asset('images/setting.png'),iconSize: 40,),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset("images/euro_symbol.png"),iconSize: 40),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset("images/Acceuil_icone.png",),iconSize: 40,),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset('images/move_location.png'),iconSize: 40),
-                        
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset('images/night_shelter.png'),iconSize: 40)
-                      ],
-                    ),
-                  ),
-                ),
-                )
-              
- 
+     
     );
   }
 }
