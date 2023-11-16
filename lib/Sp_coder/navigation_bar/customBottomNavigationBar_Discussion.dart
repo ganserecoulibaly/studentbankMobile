@@ -2,13 +2,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-
 import '../chat/discussions_page.dart';
 import '../create_poste _page.dart';
 import '../home_page.dart';
 import '../home_services.dart';
 import '../profile_user_page.dart';
 import '../setting_page.dart';
+import 'package:badges/badges.dart' as badges;
 
 class CustomBottomNavigationBarDiscussion extends StatefulWidget {
   @override
@@ -17,17 +17,21 @@ class CustomBottomNavigationBarDiscussion extends StatefulWidget {
 }
 
 class _CustomBottomNavigationBarDiscussionState extends State<CustomBottomNavigationBarDiscussion> {
-  int selectedIndex = 4;
-
+  int selectedIndex = 3;
 
   final List<Widget> pages = [
     HomePage(),
     HomeService(),
     CreatePoste(),
-    SettingPage(),
     DiscussionPage(),
     ProfilUser(),
+
+
+
   ];
+
+  int messageNotifications = 2;
+  int notificationCount = 5;
 
   @override
   Widget build(BuildContext context) {
@@ -79,43 +83,6 @@ class _CustomBottomNavigationBarDiscussionState extends State<CustomBottomNaviga
               //   });
               // },
             ),
-            GButton(
-              icon: CupertinoIcons.gear_big,
-              text: 'Parametre',
-              onPressed: () {
-                setState(() {
-                  selectedIndex = 3;
-                });
-              },
-            ),
-
-            GButton(
-              icon: CupertinoIcons.bubble_left_bubble_right,
-              text: 'Message',
-              onPressed: () {
-                setState(() {
-                  selectedIndex = 4;
-                });
-              },
-            ),
-            GButton(
-              icon: CupertinoIcons.bell_circle,
-              text: 'Notification',
-              // onPressed: () {
-              //   setState(() {
-              //     selectedIndex = 4;
-              //   });
-              // },
-            ),
-            GButton(
-              icon: CupertinoIcons.search,
-              text: 'Recherche',
-              // onPressed: () {
-              //   setState(() {
-              //     selectedIndex = 5;
-              //   });
-              // },
-            ),
 
             GButton(
               icon: CupertinoIcons.map_pin_ellipse,
@@ -128,11 +95,30 @@ class _CustomBottomNavigationBarDiscussionState extends State<CustomBottomNaviga
             ),
 
             GButton(
+              icon: CupertinoIcons.bubble_left_bubble_right,
+              text: 'Message',
+              onPressed: () {
+                setState(() {
+                  selectedIndex = 3;
+                });
+              },
+            ),
+            GButton(
+              icon: CupertinoIcons.bell_circle,
+              text: 'Notification',
+              // onPressed: () {
+              //   setState(() {
+              //     selectedIndex = 4;
+              //   });
+              // },
+            ),
+
+            GButton(
               icon: CupertinoIcons.profile_circled,
               text: 'Profil',
               onPressed: () {
                 setState(() {
-                  selectedIndex = 5;
+                  selectedIndex = 4;
                 });
               },
             ),

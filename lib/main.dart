@@ -3,7 +3,6 @@ import 'package:provider/provider.dart';
 import 'package:studentbankmobile/widgets/theme_Provider.dart';
 import 'Sp_coder/connexion/page_intro.dart';
 import 'Sp_coder/provider/user_provider.dart';
-import 'Sp_coder/create_poste _page.dart';
 
 
 void main() {
@@ -42,6 +41,7 @@ class MyApp extends StatelessWidget {
         // theme: MyThemes.lightTheme,
         // darkTheme: MyThemes.darkTheme,
       home:PageIntro(),
+
     );
     },
     );

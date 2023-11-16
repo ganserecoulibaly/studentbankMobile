@@ -87,12 +87,13 @@ class _ListPubState extends State<ListPub> {
                     ),
                     title: Text(publication.nom, style: TextStyle(
                       fontSize: 12,
+                      fontWeight: FontWeight.bold
                     ),),
                     subtitle: Text(publication.titre, style: TextStyle(
                       fontSize: 12,
                     ),),
                     trailing: Text(publication.heure, style: TextStyle(
-                      fontSize: 12,
+                      fontSize: 12.0,
                     ),)
 
                 ),
@@ -103,7 +104,7 @@ class _ListPubState extends State<ListPub> {
                   ),
                   child: Text(publication.texte,
                     style: TextStyle(
-                      fontSize: 12,
+                      fontSize: 14,
                     ),),
                 ),
                 ),
@@ -151,7 +152,7 @@ class _ListPubState extends State<ListPub> {
                              Text(
                                "j'aime",
                                style: TextStyle(
-                                 fontSize: 10,
+                                 fontSize: 12.0,
                                  color: Colors.white54,
                                ),
                              ),
@@ -173,7 +174,7 @@ class _ListPubState extends State<ListPub> {
                           Text(
                             "Commenter",
                             style: TextStyle(
-                              fontSize: 10,
+                              fontSize: 12.0,
                               color: Colors.white54,
                             ),
                           ),
@@ -193,7 +194,7 @@ class _ListPubState extends State<ListPub> {
                            Text(
                              "Partager",
                              style: TextStyle(
-                               fontSize: 10,
+                               fontSize: 12.0,
                                color: Colors.white54,
                              ),
                            ),

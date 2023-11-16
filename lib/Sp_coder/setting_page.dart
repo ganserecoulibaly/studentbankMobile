@@ -1,5 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:studentbankmobile/Sp_coder/home_page.dart';
+
+import 'navigation_bar/customBottomNavigationbar_widget.dart';
 
 class SettingPage extends StatefulWidget {
   const SettingPage({Key? key}) : super(key: key);
@@ -9,6 +12,8 @@ class SettingPage extends StatefulWidget {
 }
 
 class _SettingPageState extends State<SettingPage> {
+
+  ScrollController _scrollController = ScrollController();
 
   bool annoncesPartenaires = false;
   bool associations = false;
@@ -37,11 +42,28 @@ class _SettingPageState extends State<SettingPage> {
             width:double.infinity,
             height: double.infinity,
           ),
-
-          //Normalement la place de notre Appbar prenant un Column
+          Column(
+            children: [
+              AppBar(
+                backgroundColor: Colors.transparent,
+                elevation: 0,
+                leading: IconButton(
+                  icon: Icon(
+                    Icons.arrow_back_ios,
+                    size: 20.0,),
+                  onPressed: () {
+                    Navigator.pushReplacement(context,
+                        MaterialPageRoute(builder: (context) {
+                          return CustomBottomNavigationBar();
+                        }));
+                  },
+                ),
+              ),
+            ],
+          ),
 
           Padding(
-              padding:EdgeInsets.only(left: 10.0, right: 10.0, top: 30.0),
+              padding:EdgeInsets.only(left: 10.0, right: 10.0, top: 70.0),
               child: Container(
                 width: double.infinity,
                 child: Image.asset('images/StudentBank - Logotype - Version quadrichrome dégradé-01 2.png',
@@ -51,53 +73,74 @@ class _SettingPageState extends State<SettingPage> {
           ),
 
           Padding(
-            padding: EdgeInsets.only(left: 10.0, right: 10.0, top: 80.0),
+            padding: EdgeInsets.only(left: 10.0, right: 10.0, top: 125.0),
             child: Container(
               width: double.infinity,
               height: double.infinity,
               decoration: BoxDecoration(
                   color: Colors.transparent
               ),
-              child: ListView(
-                physics: BouncingScrollPhysics(),
-                children: [
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      buildSwitchTile('Annonces partenaires', annoncesPartenaires),
-                      Divider(color: Colors.pink,
-                              thickness: 1.0,
-                      ),
-                      buildSwitchTile('Associations', associations),
-                      Divider(color: Colors.pink,
-                        thickness: 1.0,
-                      ),
-                      buildSwitchTile('Universités', universites),
-                      Divider(color: Colors.pink,
-                        thickness: 1.0,
-                      ),
-                      buildSwitchTile('Étudiants', etudiants),
-                      Divider(color: Colors.pink,
-                        thickness: 1.0,
-                      ),
-                      buildSwitchTile('Alternance', alternance),
-                      Divider(color: Colors.pink,
-                        thickness: 1.0,
-                      ),
-                      buildSwitchTile('Stage', stage),
-                      Divider(color: Colors.pink,
-                        thickness: 1.0,
-                      ),
-                      buildSwitchTile('Jobs Étudiants', jobsEtudiants),
-                      Divider(color: Colors.pink,
-                        thickness: 1.0,
-                      ),
-                      buildSwitchTile('Informations', informations),
-                    ],
-                  )
-                ],
-              ),
+              child: Scrollbar(
+                //thickness: 3.0,
+                radius: Radius.circular(20.0),
+                thumbVisibility: true,
+                controller: _scrollController,
+                child: ListView(
+                  controller: _scrollController,
+                  physics: BouncingScrollPhysics(),
+                  children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        buildSwitchTile('Annonces partenaires', annoncesPartenaires),
+                        Padding(
+                            padding:EdgeInsets.only(right: 14.0),
+                        child: Divider(color: Colors.pink,
+                          thickness: 1.0,
+                        ),),
+                        buildSwitchTile('Associations', associations),
+                        Padding(
+                          padding:EdgeInsets.only(right: 14.0),
+                          child: Divider(color: Colors.pink,
+                            thickness: 1.0,
+                          ),),
+                        buildSwitchTile('Universités', universites),
+                        Padding(
+                          padding:EdgeInsets.only(right: 14.0),
+                          child: Divider(color: Colors.pink,
+                            thickness: 1.0,
+                          ),),
+                        buildSwitchTile('Étudiants', etudiants),
+                        Padding(
+                          padding:EdgeInsets.only(right: 14.0),
+                          child: Divider(color: Colors.pink,
+                            thickness: 1.0,
+                          ),),
+                        buildSwitchTile('Alternance', alternance),
+                        Padding(
+                          padding:EdgeInsets.only(right: 14.0),
+                          child: Divider(color: Colors.pink,
+                            thickness: 1.0,
+                          ),),
+                        buildSwitchTile('Stage', stage),
+                        Padding(
+                          padding:EdgeInsets.only(right: 14.0),
+                          child: Divider(color: Colors.pink,
+                            thickness: 1.0,
+                          ),),
+                        buildSwitchTile('Jobs Étudiants', jobsEtudiants),
+                        Padding(
+                          padding:EdgeInsets.only(right: 14.0),
+                          child: Divider(color: Colors.pink,
+                            thickness: 1.0,
+                          ),),
+                        buildSwitchTile('Informations', informations),
+                      ],
+                    )
+                  ],
+                ),
+              )
             ),
           )
         ],
@@ -117,7 +160,7 @@ class _SettingPageState extends State<SettingPage> {
               Text(
                 title,
                 style: TextStyle(
-                    fontSize: 16,
+                    fontSize: 16.0,
                     color: Colors.white),
               ),
              Transform.scale(

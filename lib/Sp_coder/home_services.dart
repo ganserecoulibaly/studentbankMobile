@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:studentbankmobile/Sp_coder/page_piece_identit%C3%A9.dart';
 import 'package:studentbankmobile/Sp_coder/widgets/menu_widget.dart';
-
+import 'package:badges/badges.dart' as badges;
 import 'home_page.dart';
 import 'models/menu_model.dart';
 
@@ -14,6 +15,8 @@ class HomeService extends StatefulWidget {
 }
 
 class _HomeServiceState extends State<HomeService> {
+
+
 
 
   @override
@@ -47,7 +50,10 @@ class _HomeServiceState extends State<HomeService> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children:[
                           Icon(CupertinoIcons.gear_alt_fill, color: Colors.white,),
-                          Icon(CupertinoIcons.bell_circle,color: Colors.white,)
+                          badges.Badge(
+                            badgeContent: Text('3'),
+                            child:  Icon(CupertinoIcons.bell_circle,color: Colors.white,),
+                          )
                         ]
                     ),
                   ],
@@ -80,10 +86,6 @@ class _HomeServiceState extends State<HomeService> {
                     children: [
                       InkWell(
                         onTap: (){
-                          Navigator.pushReplacement(context,
-                              MaterialPageRoute(builder: (context) {
-                                return HomePage();
-                              }));
                         },
                         child: MenuWidget(menuModel: banque,),
                       ),
@@ -147,3 +149,5 @@ class _HomeServiceState extends State<HomeService> {
     );
   }
 }
+
+

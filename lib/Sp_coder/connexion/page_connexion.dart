@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:studentbankmobile/Sp_coder/connexion/page_inscription.dart';
 
+import '../widgets/shimmer_arrow_widget.dart';
 import 'home_intro.dart';
 
 class ConnexionPage extends StatefulWidget {
@@ -347,8 +348,7 @@ class _ConnexionPageState extends State<ConnexionPage> {
                        ),
                      ),
 
-
-                     SizedBox(height: 25,),
+                     SizedBox(height: 20,),
 
                      Container(
                          width: 150.0,
@@ -385,7 +385,8 @@ class _ConnexionPageState extends State<ConnexionPage> {
                                    color: Colors.white
                                  ),
                                ),
-                             )
+                             ),
+
                            ],
                          )
                      ),
@@ -395,7 +396,7 @@ class _ConnexionPageState extends State<ConnexionPage> {
                ],
             ),
           ),
-          )
+          ),
         ],
       )
     );

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
+import 'package:studentbankmobile/Sp_coder/setting_page.dart';
 import '../navigation_bar/customBottomNagationBar_Profil_widget.dart';
 import '../profile_user_page.dart';
 
@@ -74,7 +75,7 @@ class _SliverAppbarpubState extends State<SliverAppbarpub> {
                       radius: 20,
                     )
                   ),
-                  SizedBox(height: 10.0,),
+                  SizedBox(height: 15.0,),
                   // Icône cliquable
                   Stack(
                     alignment: Alignment.center,
@@ -112,11 +113,14 @@ class _SliverAppbarpubState extends State<SliverAppbarpub> {
                       ),
                     ],
                   ),
-                  SizedBox(height: 5.0,),
+                  SizedBox(height: 15.0,),
                   // Icône cliquable
                   GestureDetector(
                     onTap: () {
-
+                      Navigator.pushReplacement(context,
+                          MaterialPageRoute(builder: (context) {
+                            return SettingPage();
+                          }));
                     },
                     child: Icon(
                         Icons.menu,

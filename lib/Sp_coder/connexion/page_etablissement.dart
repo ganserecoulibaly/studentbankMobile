@@ -55,7 +55,7 @@ class _EtablissementState extends State<Etablissement> {
             ),
 
             Container(
-              margin: EdgeInsets.only(top: 65.0),
+              margin: EdgeInsets.only(top: 80.0),
               child:  CheckPoints(
                 checkedTill: checkedTill,
                 checkPoints: checkPoints,
@@ -64,7 +64,7 @@ class _EtablissementState extends State<Etablissement> {
             ),
 
             Padding(
-              padding: EdgeInsets.only(left: 10.0, right: 10, top: 80.0),
+              padding: EdgeInsets.only(left: 10.0, right: 10, top: 100.0),
               child: Container(
                 width: double.infinity,
                 height: double.infinity,

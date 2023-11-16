@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:studentbankmobile/Sp_coder/models/list_user_chat_model.dart';
 
 import '../widgets/listUserChat_widget.dart';
+import '../widgets/shimmer_arrow_widget.dart';
 import 'chatRoom_page.dart';
 
 class DiscussionPage extends StatefulWidget {
@@ -126,12 +127,17 @@ class _DiscussionPageState extends State<DiscussionPage> {
               child: ListView(
                 physics: BouncingScrollPhysics(),
                 children: [
+                  Padding(
+                      padding:EdgeInsets.only(left: 30.0,),
+                  child:SchimmerArrowos(),
+                  ),
+                  SizedBox(height: 10.0,),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                      Padding(
-                         padding: EdgeInsets.only(left: 10.0, right: 10.0,),
+                         padding: EdgeInsets.only(left: 45.0, right: 45.0,),
                      child:  Container(
                        height: 40.0,
                        decoration: BoxDecoration(
@@ -260,7 +266,6 @@ class _DiscussionPageState extends State<DiscussionPage> {
                         padding: EdgeInsets.only(left: 10.0, right: 10.0),
                       child: Divider(color: Colors.white,
                         thickness: 1.0,
-
                       ),),
                       ListUserChat(listUserModel: user1,),
                       ListUserChat(listUserModel: user2,),

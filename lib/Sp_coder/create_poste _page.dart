@@ -1,6 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'home_page.dart';
+import 'bottom_dialog_widget/data_apercu_poste.dart';
+import 'bottom_dialog_widget/data_bottom_dialog.dart';
+import 'bottom_dialog_widget/data_date_time.dart';
+import 'bottom_dialog_widget/data_import_image.dart';
+import 'bottom_dialog_widget/data_reglage.dart';
+
 
 class CreatePoste extends StatefulWidget {
   const CreatePoste({Key? key}) : super(key: key);
@@ -13,41 +18,204 @@ class _CreatePosteState extends State<CreatePoste> {
   final TextEditingController _titrePosteController = TextEditingController();
   final TextEditingController _DescriPosteController = TextEditingController();
 
-  DateTime selectedDate = DateTime.now();
-  TimeOfDay selectedTime = TimeOfDay.now();
 
-  Future<void> _selectDate(BuildContext context) async {
-    final DateTime? picked = await showDatePicker(
-      context: context,
-      initialDate: selectedDate,
-      firstDate: DateTime(2000),
-      lastDate: DateTime(2101),
+  /////////////////////////////////////BottomDialog d'importation d'image////////////
+  void showBottomImportImage(BuildContext context) {
+    showModalBottomSheet(
+        context: context,
+        isScrollControlled: false,
+        backgroundColor: Colors.white,
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(top: Radius.circular(30)),
+        ),
+        builder: (BuildContext context) {
+          return DataImportImageDialog();
+        }
     );
-    if (picked != null && picked != selectedDate) {
-      setState(() {
-        selectedDate = picked;
-      });
-    }
   }
 
-  Future<void> _selectTime(BuildContext context) async {
-    final TimeOfDay? picked = await showTimePicker(
+
+/////////////////////////////////////BottomDialog de Type de publication////////////
+  void showBottomSheet(BuildContext context) {
+    showModalBottomSheet(
       context: context,
-      initialTime: selectedTime,
+      isScrollControlled: true,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(30)),
+      ),
+      builder: (context) => DraggableScrollableSheet(
+        initialChildSize: 0.4,
+        maxChildSize: 0.9,
+        minChildSize: 0.32,
+        expand: false,
+        builder: (context, scrollCtrl) {
+          return Padding(
+              padding: EdgeInsets.only(left: 10.0, right: 10.0, top: 10.0),
+          child: Stack(
+            children: [
+          Column(
+          children: [
+          Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Container(),
+              Column(
+                children:[
+                  Container(
+                    width: 70.0,
+                    height: 8.0,
+                    decoration: BoxDecoration(
+                        color: Colors.grey,
+                        borderRadius: BorderRadius.circular(30)
+                    ),
+                  ),
+                  SizedBox(
+                    height: 5.0
+                  ),
+                  Text(
+                    "Types de publication",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 1,
+                  ),
+                ]
+              ),
+              Container(),
+            ],
+          ),
+            Divider(
+              color: Colors.pink,
+              thickness: 1.0,
+            ),
+            ],
+          ),
+              SingleChildScrollView(
+                physics: BouncingScrollPhysics(),
+                controller: scrollCtrl,
+                child: TypePublicationDialog(),
+              ),
+
+            ],
+          )
+          );
+        },
+      ),
     );
-    if (picked != null && picked != selectedTime) {
-      setState(() {
-        selectedTime = picked;
-      });
-    }
   }
 
-  int selectedIndex = 2;
+  /////////////////////////////////////BottomDialog Reglage////////////
+  void showBottomReglage(BuildContext context) {
+    showModalBottomSheet(
+        context: context,
+        isScrollControlled: false,
+        backgroundColor: Colors.white,
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(top: Radius.circular(30)),
+        ),
+        builder: (BuildContext context) {
+          return ReglageDialog();
+        }
+    );
+  }
+
+
+  /////////////////////////////////////BottomDialog date time////////////
+  void showBottomDateTime(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: false,
+      backgroundColor: Colors.white,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(30)),
+      ),
+      builder: (BuildContext context) {
+        return DateTimeDialog();
+      }
+    );
+  }
+
+
+  /////////////////////////////////////BottomDialog Aperçu de Poste////////////
+  void showBottomSheetApercuPoste(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(30)),
+      ),
+      builder: (context) => DraggableScrollableSheet(
+        initialChildSize: 0.4,
+        maxChildSize: 0.9,
+        minChildSize: 0.32,
+        expand: false,
+        builder: (context, scrollCtrl) {
+          return Padding(
+              padding: EdgeInsets.only(left: 10.0, right: 10.0, top: 10.0),
+              child: Stack(
+                children: [
+                  Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(),
+                          Column(
+                              children:[
+                                Container(
+                                  width: 70.0,
+                                  height: 8.0,
+                                  decoration: BoxDecoration(
+                                      color: Colors.grey,
+                                      borderRadius: BorderRadius.circular(30)
+                                  ),
+                                ),
+                                SizedBox(
+                                    height: 5.0
+                                ),
+                                Text(
+                                  "Aperçu de vôtre publication",
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                  overflow: TextOverflow.ellipsis,
+                                  maxLines: 1,
+                                ),
+                              ]
+                          ),
+                          Container(),
+                        ],
+                      ),
+                      Divider(
+                        color: Colors.pink,
+                        thickness: 1.0,
+                      ),
+                    ],
+                  ),
+                  SingleChildScrollView(
+                    physics: BouncingScrollPhysics(),
+                    controller: scrollCtrl,
+                    child: ApercuPoste(),
+                  ),
+
+                ],
+              )
+          );
+        },
+      ),
+    );
+  }
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xFFFAC7C3),
+        backgroundColor: Colors.black,
         body: Stack(
           children: [
             Image.asset(
@@ -176,7 +344,7 @@ class _CreatePosteState extends State<CreatePoste> {
                             children: [
                               Text("Description",style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 12.0,
+                                fontSize: 13.0,
                               ),),
                             ],
                           ),
@@ -215,7 +383,7 @@ class _CreatePosteState extends State<CreatePoste> {
                             children: [
                               Text("Associer une image",style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 12.0,
+                                fontSize: 13.0,
                               ),
                               ),
                             ],
@@ -224,10 +392,10 @@ class _CreatePosteState extends State<CreatePoste> {
 
                         InkWell(
                           onTap: () {
-                            _ImportePicture();
+                            showBottomImportImage(context);
                           },
                           child: Container(
-                            height: 30.0,
+                            height:  35.0,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(5.0),
                               color: Colors.white,
@@ -265,6 +433,70 @@ class _CreatePosteState extends State<CreatePoste> {
                             ),
                           ),
                         ),
+
+
+                        SizedBox(height: 10.0),
+
+                        Container(
+                          width: double.infinity,
+                          height: 20.0,
+                          margin: EdgeInsets.only(left: 2.0, ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Text("Type de publication",style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 13.0,
+                              ),
+                              ),
+                            ],
+                          ),
+                        ),
+
+                        InkWell(
+                          onTap: () {
+                            showBottomSheet(context);
+                          },
+                          child: Container(
+                            height:  35.0,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5.0),
+                              color: Colors.white,
+                              border: Border.all(
+                                color: Colors.pinkAccent,
+                                width: 1.0,
+                              ),
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Row(
+                                  children: [
+                                    Icon(
+                                      CupertinoIcons.tags,
+                                      color: Colors.black,
+                                      size: 20,
+                                    ),
+                                    SizedBox(width: 5.0),
+                                    Text(
+                                      "Selectioné",
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 14.0,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                Icon(
+                                  CupertinoIcons.chevron_down,
+                                  color: Colors.black,
+                                  size: 25,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+
                         SizedBox(height: 10.0),
 
                         Container(
@@ -276,7 +508,7 @@ class _CreatePosteState extends State<CreatePoste> {
                             children: [
                               Text("Option",style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 12.0,
+                                fontSize: 13.0,
                               ),),
                             ],
                           ),
@@ -284,11 +516,10 @@ class _CreatePosteState extends State<CreatePoste> {
 
                         InkWell(
                           onTap:(){
-                            _showSettings();
+                            showBottomReglage(context);
                           },
                           child: Container(
-                            //width: 235.0,
-                            height: 30.0,
+                            height: 35.0,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(5.0),
                               color: Colors.white,
@@ -328,10 +559,10 @@ class _CreatePosteState extends State<CreatePoste> {
 
                         InkWell(
                           onTap:(){
-                            _showDateIme();
+                            showBottomDateTime(context);
                           },
                           child: Container(
-                            height: 30.0,
+                            height: 35.0,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20.0),
                               color: Colors.white,
@@ -361,35 +592,75 @@ class _CreatePosteState extends State<CreatePoste> {
 
                         SizedBox(height: 25.0),
 
-                        InkWell(
-                          onTap: () {
+                        Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children:[
+                            InkWell(
+                              onTap: () {
 
-                          },
-                          child: Container(
-                            width: 80.0,
-                            height: 18.0,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20.0),
-                              gradient: LinearGradient(
-                                begin: Alignment.topCenter,
-                                end: Alignment.bottomCenter,
-                                colors: [Colors.orange, Colors.pinkAccent],
-                              ),
-                            ),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  "Publier",
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 14.0,
+                              },
+                              child: Container(
+                                width: 95.0,
+                                height: 25.0,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20.0),
+                                  gradient: LinearGradient(
+                                    begin: Alignment.topCenter,
+                                    end: Alignment.bottomCenter,
+                                    colors: [Colors.orange, Colors.pinkAccent],
                                   ),
                                 ),
-                              ],
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      "Publier",
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 14.0,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
                             ),
-                          ),
-                        ),
+
+                            InkWell(
+                              onTap: () {
+                                showBottomSheetApercuPoste(context);
+                              },
+                              child: Container(
+                                width: 95.0,
+                                height: 25.0,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20.0),
+                                  gradient: LinearGradient(
+                                    begin: Alignment.topCenter,
+                                    end: Alignment.bottomCenter,
+                                    colors: [Colors.orange, Colors.pinkAccent],
+                                  ),
+                                ),
+                                child: Padding(
+                                  padding: EdgeInsets.only(left: 10.0, right:10.0),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        "Aperçu",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 14.0,
+                                        ),
+                                      ),
+                                      Icon(Icons.visibility,
+                                          color: Colors.white)
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ]
+                        )
                       ],
                     )
                   ],
@@ -399,299 +670,6 @@ class _CreatePosteState extends State<CreatePoste> {
           ],
         ),
 
-      // bottomNavigationBar: SingleChildScrollView(
-      //   physics: BouncingScrollPhysics(),
-      //   scrollDirection: Axis.horizontal,
-      //   child: GNav(
-      //     backgroundColor: Color(0xFFFAC7C3),
-      //     tabBackgroundColor: Colors.pinkAccent,
-      //     padding: EdgeInsets.all(10),
-      //     gap: 8,
-      //     tabs: [
-      //       GButton(
-      //         icon: CupertinoIcons.house_fill,
-      //         text: 'Accueil',
-      //       ),
-      //       GButton(
-      //         icon: CupertinoIcons.square_stack_3d_up_fill,
-      //         text: 'Menu',
-      //       ),
-      //       GButton(
-      //         icon: CupertinoIcons.plus_square,
-      //         text: 'Publier',
-      //       ),
-      //       GButton(
-      //         icon: CupertinoIcons.money_euro_circle_fill,
-      //         text: 'Banque',
-      //       ),
-      //       GButton(
-      //         icon: CupertinoIcons.mail,
-      //         text: 'message',
-      //       ),
-      //       GButton(
-      //         icon: CupertinoIcons.search,
-      //         text: 'Recherche',
-      //       ),
-      //       GButton(
-      //         icon: CupertinoIcons.gear_alt_fill,
-      //         text: 'Parametre',
-      //       ),
-      //       GButton(
-      //         icon: CupertinoIcons.location_solid,
-      //         text: 'Mobilité',
-      //       ),
-      //     ],
-      //   ),
-      // )
-
     );
   }
-
-  Future<void> _ImportePicture() async {
-    await showModalBottomSheet(
-      backgroundColor: Colors.transparent,
-      context: context,
-      builder: (BuildContext context) {
-        return Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10.0),
-          child: ListView(
-            physics: BouncingScrollPhysics(),
-            children: [
-              Container(
-                decoration: const BoxDecoration(
-                  color: Colors.black54,
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(20.0),
-                    topRight: Radius.circular(20.0),
-                  ),
-                ),
-                padding: const EdgeInsets.symmetric(vertical: 20.0),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    const SizedBox(height: 8.0),
-                    TextButton(
-                      onPressed: () async {
-                        Navigator.pop(context);
-                      },
-                      child: const Center(child: Text('Supprimer la photo',
-                        style: TextStyle(color: Colors.red),)),
-                    ),
-                    const SizedBox(height: 8.0),
-                    TextButton(
-                      onPressed: () {
-                        Navigator.pop(context);
-
-                      },
-                      child: const Center(child: Text('Prendre une photo')),
-                    ),
-                    const SizedBox(height: 8.0),
-                    TextButton(
-                      onPressed: () {
-                        Navigator.pop(context);
-                      },
-                      child: const Center(child: Text('Choisir une photo')),
-                    ),
-                    const SizedBox(height: 8.0),
-                    TextButton(
-                      onPressed: () async {
-                        Navigator.pop(context);
-                      },
-                      child: const Center(child: Text('Annuler')),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          )
-        );
-      },
-    );
-  }
-
-  Future<void> _showSettings() async {
-    await showModalBottomSheet(
-      backgroundColor: Colors.transparent,
-      context: context,
-      builder: (BuildContext context) {
-        return Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10.0),
-          child: ListView(
-            physics: BouncingScrollPhysics(),
-            children: [
-              Container(
-                decoration: const BoxDecoration(
-                  color: Colors.black54,
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(20.0),
-                    topRight: Radius.circular(20.0),
-                  ),
-                ),
-                padding: const EdgeInsets.symmetric(vertical: 20.0),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    const SizedBox(height: 8.0),
-                    Container(
-                      width:120.0 ,
-                      height: 30.0,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20.0),
-                        color: Colors.white,
-                      ),
-                      child:Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 20.0),
-                        child:  Row(
-                          children: [
-                            Icon(
-                              CupertinoIcons.globe,
-                              color: Colors.black,
-                              size: 20,
-                            ),
-                            const SizedBox(width: 15.0),
-                            Text("Public",style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 14.0,
-                            ),),
-                          ],
-                        ),
-                      )
-                    ),
-                    const SizedBox(height: 8.0),
-                    TextButton(
-                      onPressed: () {
-                        Navigator.pop(context);
-                      },
-                      child: const Center(child: Text('Privé')),
-                    ),
-                    Text('Seuls vos amis peuvent voir votre poste',
-                      style: TextStyle(
-                          color: Colors.white
-                      ),
-                      textAlign: TextAlign.center,),
-                    const SizedBox(height: 3.0),
-                    TextButton(
-                      onPressed: () {
-                        Navigator.pop(context);
-                      },
-                      child: const Center(child: Text('Public')),
-                    ),
-                    Text('Tout le monde peut voir votre poste',
-                      style: TextStyle(
-                          color: Colors.white
-                      ),
-                      textAlign: TextAlign.center,),
-                    const SizedBox(height: 3.0),
-                    TextButton(
-                      onPressed: () async {
-                        Navigator.pop(context);
-                      },
-                      child: const Center(child: Text('Annuler')),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          )
-        );
-      },
-    );
-  }
-
-  Future<void> _showDateIme() async {
-    await showModalBottomSheet(
-      backgroundColor: Colors.transparent,
-      context: context,
-      builder: (BuildContext context) {
-        return Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20.0),
-          child: ListView(
-            physics: BouncingScrollPhysics(),
-            children: [
-              Container(
-                decoration: const BoxDecoration(
-                  color: Colors.black54,
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(20.0),
-                    topRight: Radius.circular(20.0),
-                  ),
-                ),
-                padding: const EdgeInsets.symmetric(vertical: 20.0),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    const SizedBox(height: 8.0),
-                    Container(
-                        width:150.0 ,
-                        height: 30.0,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20.0),
-                          color: Colors.white,
-                        ),
-                        child:Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 20.0),
-                          child:  Row(
-                            children: [
-                              Text(
-                                'Heure : ${selectedTime.format(context)}',
-                                style: TextStyle(fontSize: 12),
-                              ),
-                            ],
-                          ),
-                        )
-                    ),
-
-                    const SizedBox(height: 8.0),
-
-                    Container(
-                        width:150.0 ,
-                        height: 25.0,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20.0),
-                          color: Colors.white,
-                        ),
-                        child:Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 20.0),
-                          child:  Row(
-                            children: [
-                              Text("Date: 08/11/23",style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 15.0,
-                              ),),
-                            ],
-                          ),
-                        )
-                    ),
-
-                    const SizedBox(height: 8.0),
-                    TextButton(
-                      onPressed: () => _selectTime(context),
-
-                      child: const Center(child: Text("Modifier l'heure")),
-                    ),
-                    const SizedBox(height: 8.0),
-                    TextButton(
-                      onPressed: () => _selectDate(context),
-                      child: const Center(child: Text("Modifier la date")),
-                    ),
-                    const SizedBox(height: 8.0),
-                    TextButton(
-                      onPressed: () async {
-                        Navigator.pop(context);
-                      },
-                      child: const Center(child: Text('Annuler')),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          )
-        );
-      },
-    );
-  }
-
-
 }
-
-

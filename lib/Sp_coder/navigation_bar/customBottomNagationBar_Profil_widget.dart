@@ -6,7 +6,8 @@ import '../create_poste _page.dart';
 import '../home_page.dart';
 import '../home_services.dart';
 import '../profile_user_page.dart';
-import '../setting_page.dart';
+import 'package:badges/badges.dart' as Badges;
+
 
 class CustomBottomNavigationBarProfil extends StatefulWidget {
   @override
@@ -15,19 +16,19 @@ class CustomBottomNavigationBarProfil extends StatefulWidget {
 }
 
 class _CustomBottomNavigationBarProfilState extends State<CustomBottomNavigationBarProfil> {
-  int selectedIndex = 5;
+  int selectedIndex = 4;
 
   final List<Widget> pages = [
     HomePage(),
     HomeService(),
     CreatePoste(),
-    SettingPage(),
     DiscussionPage(),
     ProfilUser(),
 
-
-
   ];
+
+  int messageNotifications = 2;
+  int notificationCount = 5;
 
   @override
   Widget build(BuildContext context) {
@@ -79,43 +80,6 @@ class _CustomBottomNavigationBarProfilState extends State<CustomBottomNavigation
               //   });
               // },
             ),
-            GButton(
-              icon: CupertinoIcons.gear_big,
-              text: 'Parametre',
-              onPressed: () {
-                setState(() {
-                  selectedIndex = 3;
-                });
-              },
-            ),
-
-            GButton(
-              icon: CupertinoIcons.bubble_left_bubble_right,
-              text: 'Message',
-              onPressed: () {
-                setState(() {
-                  selectedIndex = 4;
-                });
-              },
-            ),
-            GButton(
-              icon: CupertinoIcons.bell_circle,
-              text: 'Notification',
-              // onPressed: () {
-              //   setState(() {
-              //     selectedIndex = 4;
-              //   });
-              // },
-            ),
-            GButton(
-              icon: CupertinoIcons.search,
-              text: 'Recherche',
-              // onPressed: () {
-              //   setState(() {
-              //     selectedIndex = 5;
-              //   });
-              // },
-            ),
 
             GButton(
               icon: CupertinoIcons.map_pin_ellipse,
@@ -128,11 +92,30 @@ class _CustomBottomNavigationBarProfilState extends State<CustomBottomNavigation
             ),
 
             GButton(
+              icon: CupertinoIcons.bubble_left_bubble_right,
+              text: 'Message',
+              onPressed: () {
+                setState(() {
+                  selectedIndex = 3;
+                });
+              },
+            ),
+            GButton(
+              icon: CupertinoIcons.bell_circle,
+              text: 'Notification',
+              // onPressed: () {
+              //   setState(() {
+              //     selectedIndex = 4;
+              //   });
+              // },
+            ),
+
+            GButton(
               icon: CupertinoIcons.profile_circled,
               text: 'Profil',
               onPressed: () {
                 setState(() {
-                  selectedIndex = 5;
+                  selectedIndex = 4;
                 });
               },
             ),

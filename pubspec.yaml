@@ -51,6 +51,7 @@ dependencies:
   csc_picker: ^0.2.7
   story_view: ^0.15.0
   card_swiper: ^3.0.1
+  badges: ^3.1.2
 
 
 

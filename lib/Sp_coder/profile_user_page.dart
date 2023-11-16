@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'home_page.dart';
 
 
 class ProfilUser extends StatefulWidget {
@@ -176,7 +175,7 @@ class _ProfilUserState extends State<ProfilUser> {
                             ],
                           ),
                         ),
-                        SizedBox(height: 5.0),
+                        SizedBox(height: 10.0),
 
                         Container(
                           height: 18.0,
@@ -201,7 +200,7 @@ class _ProfilUserState extends State<ProfilUser> {
                             ],
                           ),
                         ),
-                        SizedBox(height: 5.0),
+                        SizedBox(height: 10.0),
 
                         Container(
                           height: 18.0,
@@ -226,7 +225,7 @@ class _ProfilUserState extends State<ProfilUser> {
                             ],
                           ),
                         ),
-                        SizedBox(height: 5.0),
+                        SizedBox(height: 10.0),
 
                         Container(
                           height: 18.0,
@@ -253,7 +252,7 @@ class _ProfilUserState extends State<ProfilUser> {
                         ),
 
 
-                        SizedBox(height: 5.0),
+                        SizedBox(height: 10.0),
 
                         Container(
                           height: 18.0,
@@ -330,6 +329,50 @@ class _ProfilUserState extends State<ProfilUser> {
                                       ],
                                     )
                                 ),
+
+                                SizedBox(width: 8.0),
+                                Container(
+                                    width: 170.0,
+                                    height: 130.0,
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.only(
+                                          bottomLeft: Radius.circular(15.0),
+                                          bottomRight: Radius.circular(15.0)),
+                                      border: Border.all(
+                                        color: Colors.orangeAccent,
+                                        width: 4.0,
+                                      ),
+                                    ),
+                                    child: Stack(
+                                      children: [
+                                        Image.asset(
+                                          'images/group-five-african-college-students-spending-time-together-campus-university-yard-black-afro-friends-studying-education-theme_627829-6007 1.png',
+                                          width:double.infinity,
+                                          height: double.infinity,
+                                          fit: BoxFit.cover,),
+
+                                        Column(
+                                          mainAxisAlignment: MainAxisAlignment.end,
+                                          children: [
+                                            Container(
+                                              width: 170.0,
+                                              height: 45.0,
+                                              decoration: BoxDecoration(
+                                                  color: Colors.orangeAccent,
+                                                  borderRadius: BorderRadius.only(topLeft: Radius.circular(15),topRight: Radius.circular(15))
+                                              ),
+                                              child: Padding(
+                                                padding: EdgeInsets.symmetric(horizontal: 10),
+                                                child: Text("je vous presente mon certificat de remise lors de mon stage Rstel Hight-T ",style: TextStyle(fontSize: 10),),
+                                              ),
+                                            ),
+                                          ],
+                                        )
+                                      ],
+                                    )
+                                ),
+
                                 SizedBox(width: 8.0),
                                 Container(
                                   width: 170.0,
@@ -377,7 +420,7 @@ class _ProfilUserState extends State<ProfilUser> {
                           )
                         ),
 
-                        SizedBox(height: 5.0),
+                        SizedBox(height: 10.0),
 
                         InkWell(
                           onTap: (){},
@@ -481,12 +524,23 @@ class _ProfilUserState extends State<ProfilUser> {
 
                         SizedBox(height: 10.0),
 
-                        Container(
-                            width: double.infinity,
-                            decoration: BoxDecoration(
-                                color: Colors.black
-                            ),
-                        ),
+                        // Card(
+                        //   color: Colors.green,
+                        //   elevation: 4, // élévation pour ajouter une ombre
+                        //   shape: RoundedRectangleBorder(
+                        //     borderRadius: BorderRadius.circular(12.0), // coins arrondis
+                        //   ),
+                        //   child: ListTile(
+                        //     title: Text('Titre'),
+                        //     subtitle: Text('Sous-titre'),
+                        //     leading: Icon(Icons.info), // icône à gauche
+                        //     trailing: Icon(Icons.arrow_forward), // icône à droite
+                        //     onTap: () {
+                        //       // Action à effectuer lorsqu'on appuie sur le Card
+                        //     },
+                        //   ),
+                        // )
+
                       ],
                     )
                   ],

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../navigation_bar/customBottomNavigationBar_Discussion.dart';
 import 'discussions_page.dart';
+import 'input_field.dart';
 
 class ChatRoomPage extends StatefulWidget {
   const ChatRoomPage({Key? key}) : super(key: key);
@@ -13,7 +14,7 @@ class ChatRoomPage extends StatefulWidget {
 
 class _ChatRoomPageState extends State<ChatRoomPage> {
 
-  TextEditingController messageController = TextEditingController();
+
 
   List<Message> messages = List.generate(
     20,
@@ -93,14 +94,9 @@ class _ChatRoomPageState extends State<ChatRoomPage> {
                             overflow: TextOverflow.ellipsis,
                           ),
                         ),
-                        SizedBox(height: 5.0),
-                        Text(
-                          "En ligne",
-                          style: TextStyle(
-                            color: Colors.white,
-                          ),
-                        ),
-                        SizedBox(height: 10.0),
+                        // SizedBox(height: 5.0),
+                        //
+                        // SizedBox(height: 10.0),
                         InkWell(
                           onTap: () {},
                           child: Container(
@@ -180,90 +176,7 @@ class _ChatRoomPageState extends State<ChatRoomPage> {
               ),
             ),
           ),
-          Align(
-            alignment: Alignment.bottomCenter,
-             child:
-             Container(
-               padding: EdgeInsets.only(left: 5.0, right:5.0, ),
-              color: Colors.black,
-              height: 40,
-              child: Row(
-                children: [
-                  InkWell(
-                    onTap:(){},
-                    child: Icon(
-                      Icons.emoji_emotions,
-                      color: Colors.white70,
-                      size: 20,
-                    ),
-                  ),
-
-                  SizedBox(width: 5.0),
-
-                  InkWell(
-                    onTap:(){},
-                    child: Icon(
-                      Icons.camera_alt_outlined,
-                      color: Colors.white70,
-                      size: 20,
-                    ),
-                  ),
-
-                  SizedBox(width: 10.0),
-
-                  Expanded(
-                    child: SingleChildScrollView(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: [
-                          Container(
-                            //height: 40,
-                            padding: EdgeInsets.only(left: 3.0, right:3.0, top:3.0  ),
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(5.0)
-                            ),
-                            child: TextField(
-                              onTap: () {
-                              },
-                              textInputAction: TextInputAction.newline,
-                              controller: messageController,
-                              minLines: 1, // Nombre minimum de lignes visibles
-                              maxLines: 5, // Nombre maximum de lignes visibles
-                              style: const TextStyle(
-                                color: Colors.black,
-                                fontSize: 11
-                              ),
-                              cursorColor: Colors.blue
-                              , // Couleur du texte du curseur
-                              decoration: InputDecoration(
-                                contentPadding: EdgeInsets.symmetric(vertical: 1.0),
-                                border: InputBorder.none,
-                                hintText: "Message",
-                                hintStyle: const TextStyle(color: Colors.blue), // Couleur du texte d'indication
-                              ),
-                            ),
-                          )
-
-                        ],
-                      ),
-                    ),
-                  ),
-                  SizedBox(width: 10.0),
-
-                 InkWell(
-                   onTap:(){},
-                   child: Icon(
-                     Icons.send,
-                     color: Colors.white70,
-                     size: 20,
-                   ),
-                 )
-                ],
-              ),
-            ),
-          )
-
+          ChatInputField(),
         ],
       ),
     );
