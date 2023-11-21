@@ -25,7 +25,7 @@ class _demande_accueilState extends State<demande_accueil> {
          margin: EdgeInsets.all(0),
         padding: EdgeInsets.all(0),
         decoration: BoxDecoration(
-          color: Colors.white70,
+          color: Colors.pink,
           image: DecorationImage(image: AssetImage('images/LogoN_Mobilite.png'),fit: BoxFit.fill)
         ),
         // width: double.infinity,
@@ -36,7 +36,7 @@ class _demande_accueilState extends State<demande_accueil> {
             margin: EdgeInsets.all(30),
             
             decoration:BoxDecoration(borderRadius: BorderRadius.circular(20),
-            image: DecorationImage(image:  AssetImage("images/mobilite.jpeg"),fit: BoxFit.cover,scale: 4)),
+            image: DecorationImage(image:  AssetImage("images/mobilite_3.jpg"),fit: BoxFit.cover,scale: 4)),
             // child: Image.asset("images/mobilite.jpeg",fit: BoxFit.contain,),
             height: 150,
             width: double.infinity,
@@ -50,7 +50,7 @@ class _demande_accueilState extends State<demande_accueil> {
                       Container(
                         margin: EdgeInsets.all(20),
                         child: LinearProgressIndicator(
-                        color: Colors.blue.shade100,
+                        color: Colors.pink.shade100,
                         backgroundColor: Colors.blueGrey,
                         value: 1/3,
                         borderRadius: BorderRadius.circular(30),
@@ -230,13 +230,13 @@ class _demande_accueilState extends State<demande_accueil> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  child: TextButton(onPressed: (){}, child: Text("Appeler",style: TextStyle(color: Colors.red),)),
+                  child: TextButton(onPressed: (){}, child: Text("Appeler",style: TextStyle(color: Colors.black),)),
                 ),
                 SizedBox(width: 30,),
                  Container(
                   child: TextButton(onPressed: (){
                     Navigator.push(context,MaterialPageRoute(builder: (context)=>paiement()));
-                  }, child: Text("Continuer",style: TextStyle(color: Colors.red),)),
+                  }, child: Text("Continuer",style: TextStyle(color: Colors.black),)),
                 )
               ],
             ),

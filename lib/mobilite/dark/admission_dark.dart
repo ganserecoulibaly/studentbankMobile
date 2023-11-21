@@ -25,19 +25,19 @@ class _admision_darkState extends State<admision_dark> {
             margin: EdgeInsets.all(20),
             
             decoration:BoxDecoration(borderRadius: BorderRadius.circular(20),
-            image: DecorationImage(image:  AssetImage("images/mobilite.jpeg"),fit: BoxFit.cover,scale: 4)),
+            image: DecorationImage(image:  AssetImage("images/mobilite_3.jpg"),fit: BoxFit.cover,scale: 4)),
             // child: Image.asset("images/mobilite.jpeg",fit: BoxFit.contain,),
             height: 250,
             width: double.infinity,
             child:
                 Align(
                   alignment: Alignment.center,
-                  child: Text("Mes Admissions",style: TextStyle(color:Colors.blue.shade100, fontWeight: FontWeight.bold,fontSize: 20),),
+                  child: Text("Mes Admissions",style: TextStyle(color:Colors.pink.shade100, fontWeight: FontWeight.bold,fontSize: 20),),
                 ),
           ),
           Container(
             decoration: BoxDecoration(
-              color: Colors.blue.shade100,
+              color: Colors.pink.shade100,
             borderRadius: BorderRadius.circular(30)
             ),
             margin: EdgeInsets.all(20),
@@ -54,7 +54,7 @@ class _admision_darkState extends State<admision_dark> {
           ),
           Container(
             decoration: BoxDecoration(
-              color: Colors.blue.shade100,
+              color: Colors.pink.shade100,
             borderRadius: BorderRadius.circular(30)
             ),
             margin: EdgeInsets.all(20),
@@ -71,7 +71,7 @@ class _admision_darkState extends State<admision_dark> {
           ),
           Container(
             decoration: BoxDecoration(
-              color: Colors.blue.shade100,
+              color: Colors.pink.shade100,
             borderRadius: BorderRadius.circular(30)
             ),
             margin: EdgeInsets.all(20),

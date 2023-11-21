@@ -28,7 +28,7 @@ class _valider_doc_darkState extends State<valider_doc_dark> {
                Container(
                 margin: EdgeInsets.only(top:50,left: 30,right: 30,bottom: 40),
                 child: LinearProgressIndicator(
-                color: Colors.blue.shade100,
+                color: Colors.pink.shade100,
                 value: 1,
                 backgroundColor: Colors.blueGrey,
                 borderRadius: BorderRadius.circular(30),

@@ -33,8 +33,8 @@ class _Accueil_mobiliteState extends State<Accueil_mobilite> {
         margin: EdgeInsets.all(0),
         padding: EdgeInsets.all(0),
         decoration: BoxDecoration(
-          color: Colors.white70,
-          image: DecorationImage(image: AssetImage('images/LogoN_Mobilite.png'),fit: BoxFit.fill)
+          color: Colors.pink,
+          // image: DecorationImage(image: AssetImage('images/LogoN_Mobilite.png'),fit: BoxFit.fill)
         ),
         // width: double.infinity,
         // height: double.infinity,
@@ -44,9 +44,9 @@ class _Accueil_mobiliteState extends State<Accueil_mobilite> {
             Container(
               decoration: BoxDecoration(
                 boxShadow: [
-                  BoxShadow(color: Colors.blue.shade200,blurRadius: 3.0,spreadRadius: 4.2),
+                  BoxShadow(color: Colors.pink.shade200,blurRadius: 3.0,spreadRadius: 4.2),
                 ],
-                image: DecorationImage(image: AssetImage('images/mobilite_2.jpeg'),fit: BoxFit.fill),
+                image: DecorationImage(image: AssetImage('images/mobilite_3.jpg'),fit: BoxFit.fill),
                 borderRadius: BorderRadius.only(bottomRight: Radius.circular(30),bottomLeft: Radius.circular(30))
               ),
               child: ImageSlideshow(
@@ -60,7 +60,7 @@ class _Accueil_mobiliteState extends State<Accueil_mobilite> {
                     initialPage: 0,
 
                     /// The color to paint the indicator.
-                    indicatorColor: Colors.blue.shade200,
+                    indicatorColor: Colors.pink.shade200,
                   
                     /// The color to paint behind th indicator.
                     indicatorBackgroundColor: Colors.white,
@@ -137,14 +137,14 @@ class _Accueil_mobiliteState extends State<Accueil_mobilite> {
               child: Center(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
                   // alignment: Alignment.center,
               children: [
                       Center(
                    child: Container(
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        color: Colors.blue.shade200
+                        // borderRadius: BorderRadius.circular(30),
+                        border: Border.all(color: Colors.white,width: 2),
+                        color: Colors.pink.shade200
                       ),
                       width: 330,
                      child: DropdownButton(
@@ -173,11 +173,11 @@ class _Accueil_mobiliteState extends State<Accueil_mobilite> {
                           //   onTap: (){
                           
                           //  },
-                           icon:Icon(Icons.arrow_drop_down),
+                           icon:Icon(Icons.arrow_drop_down_circle_outlined),
                            iconSize: 30,
-                           iconEnabledColor: Colors.red,
+                           iconEnabledColor: Colors.white,
                            isExpanded: true,
-                           style: TextStyle(color: Colors.red,),
+                           style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 18),
                            ),
                    ),
                  ),
@@ -185,8 +185,9 @@ class _Accueil_mobiliteState extends State<Accueil_mobilite> {
                   Center(
                    child: Container(
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        color: Colors.blue.shade200
+                        // borderRadius: BorderRadius.circular(30),
+                        border: Border.all(color: Colors.white,width: 2),
+                        color: Colors.pink.shade200
                       ),
                       width: 330,
                      child: DropdownButton(
@@ -214,11 +215,11 @@ class _Accueil_mobiliteState extends State<Accueil_mobilite> {
                             Navigator.push(context, MaterialPageRoute(builder: (context)=>admision()));
                             }
                            },
-                           icon:Icon(Icons.arrow_drop_down),
+                            icon:Icon(Icons.arrow_drop_down_circle_outlined),
                            iconSize: 30,
-                           iconEnabledColor: Colors.red,
+                           iconEnabledColor: Colors.white,
                            isExpanded: true,
-                           style: TextStyle(color: Colors.red,),
+                           style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 18),
                            ),
                    ),
                  ),
@@ -227,14 +228,19 @@ class _Accueil_mobiliteState extends State<Accueil_mobilite> {
                    child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
-                        color: Colors.blue.shade200
+                        color: Colors.pink.shade200
                       ),
                       width: 330,
-                     child:Row(
+                     child:Column(
                       children: [
-                        TextButton(onPressed: (){}, child: Text("My Buddy",style: TextStyle(color: Colors.red,fontSize: 16),) ),
-                        SizedBox(width: 120,),
-                        Expanded(child:Icon(Icons.arrow_drop_down,color: Colors.red,size: 30,) )
+                        // SizedBox(width: 30,),
+                        Center(
+                          child: TextButton(
+                            onPressed: (){}, 
+                            child:const Text("My Buddy",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 18),) )
+                            ),
+                        // SizedBox(width: 120,),
+                        // Expanded(child:Icon(Icons.arrow_circle_down_sharp,color: Colors.white,size: 30,) )
                         
                       ],
                      )
@@ -245,14 +251,15 @@ class _Accueil_mobiliteState extends State<Accueil_mobilite> {
                    child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
-                        color: Colors.blue.shade200
+                        color: Colors.pink.shade200
                       ),
                       width: 330,
-                     child: Row(
+                     child: Column(
                       children: [
-                        TextButton(onPressed: (){}, child: Text("Nos Services",style: TextStyle(color: Colors.red,fontSize: 16),) ),
-                         SizedBox(width: 100,),
-                        Expanded(child:Icon(Icons.arrow_drop_down,color: Colors.red,size: 30,), )
+                        SizedBox(width: 30,),
+                        Center(child: TextButton(onPressed: (){}, child: Text("Nos Services",style: TextStyle(color: Colors.black,fontSize: 18),) )),
+                        //  SizedBox(width: 100,),
+                        // Expanded(child:Icon(Icons.arrow_circle_down,color: Colors.white,size: 30,), )
                         
                       ],
                      )

@@ -185,7 +185,7 @@ void pickFile5()async{
     return Scaffold(
       body: Container(
         decoration:BoxDecoration(borderRadius: BorderRadius.circular(20),
-        image: DecorationImage(image:  AssetImage("images/mobilite_2.jpeg"),fit: BoxFit.cover,scale: 4)),
+        image: DecorationImage(image:  AssetImage("images/mobilite_3.jpg"),fit: BoxFit.cover,scale: 4)),
         child:Center(
           child: ListView(
             children: [
@@ -199,7 +199,7 @@ void pickFile5()async{
               Container(                  
                 margin: EdgeInsets.only(top:20,left: 20,right: 20,bottom: 10),
                 width: double.infinity,
-                decoration: BoxDecoration(borderRadius: BorderRadius.circular(30),color:Colors.blue.shade100),
+                decoration: BoxDecoration(borderRadius: BorderRadius.circular(30),color:Colors.pink.shade100),
                 height: 50,
                 child: Center(
                   child: Row(
@@ -220,7 +220,7 @@ void pickFile5()async{
                   margin: EdgeInsets.only(left: 20,right: 20,bottom: 10),
                 width: double.infinity,
                 height: 50,
-                decoration: BoxDecoration(borderRadius: BorderRadius.circular(30),color: Colors.blue.shade100),
+                decoration: BoxDecoration(borderRadius: BorderRadius.circular(30),color: Colors.pink.shade100),
                 child: Center(
                   child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -240,7 +240,7 @@ void pickFile5()async{
                   margin: EdgeInsets.only(left: 20,right: 20,bottom: 10),
                 width: double.infinity,
                 height: 50,
-                decoration: BoxDecoration(borderRadius: BorderRadius.circular(30),color:Colors.blue.shade100),
+                decoration: BoxDecoration(borderRadius: BorderRadius.circular(30),color:Colors.pink.shade100),
                 child: Center(
                   child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -260,7 +260,7 @@ void pickFile5()async{
                   margin: EdgeInsets.only(left: 20,right: 20,bottom: 10),
                 width: double.infinity,
                 height: 50,
-                decoration: BoxDecoration(borderRadius: BorderRadius.circular(30),color: Colors.blue.shade100),
+                decoration: BoxDecoration(borderRadius: BorderRadius.circular(30),color: Colors.pink.shade100),
                 child: Center(
                   child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -280,7 +280,7 @@ void pickFile5()async{
                   margin: EdgeInsets.only(left: 20,right: 20,bottom: 10),
                 width: double.infinity,
                 height: 50,
-                decoration: BoxDecoration(borderRadius: BorderRadius.circular(30),color: Colors.blue.shade100),
+                decoration: BoxDecoration(borderRadius: BorderRadius.circular(30),color: Colors.pink.shade100),
                 child: Center(
                   child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,

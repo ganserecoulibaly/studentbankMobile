@@ -16,7 +16,7 @@ class _valider_docState extends State<valider_doc> {
       extendBody: true,
       body: Container(
          decoration: BoxDecoration(
-          color: Colors.white70,
+          color: Colors.pink,
           image: DecorationImage(image: AssetImage('images/LogoN_Mobilite.png'),fit: BoxFit.fill)
         ),
         child: ListView(
@@ -24,7 +24,7 @@ class _valider_docState extends State<valider_doc> {
              Container(
               margin: EdgeInsets.only(top:50,left: 30,right: 30,bottom: 40),
               child: LinearProgressIndicator(
-              color: Colors.blue.shade100,
+              color: Colors.pink.shade100,
               value: 1,
               backgroundColor: Colors.blueGrey,
               borderRadius: BorderRadius.circular(30),

@@ -247,7 +247,7 @@ class _AnnoncesState extends State<Annonces> {
                                       i=i-1;
                                       });
                                     }, icon: 
-                                    Icon(Icons.arrow_circle_left,color: Colors.white,)
+                                    Icon(Icons.arrow_circle_left)
                                   ),
                          Container(
                               // padding: EdgeInsets.all(20),
@@ -278,7 +278,7 @@ class _AnnoncesState extends State<Annonces> {
                                         }
                                       });
                                     }, 
-                                    icon: Icon(Icons.arrow_circle_right,color: Colors.white,)
+                                    icon: Icon(Icons.arrow_circle_right,)
                             ),
                       ],
                     ),

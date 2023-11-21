@@ -61,7 +61,7 @@ void pickFile()async{
       extendBody: true,
       body: Container(
          decoration: BoxDecoration(
-          color: Colors.white70,
+          color: Colors.pink,
           image: DecorationImage(image: AssetImage('images/LogoN_Mobilite.png'),fit: BoxFit.fill)
         ),
         child: ListView(
@@ -70,7 +70,7 @@ void pickFile()async{
               margin: EdgeInsets.all(20),
               
               decoration:BoxDecoration(borderRadius: BorderRadius.circular(20),
-              image: DecorationImage(image:  AssetImage("images/mobilite_2.jpeg"),fit: BoxFit.cover,scale: 4)),
+              image: DecorationImage(image:  AssetImage("images/mobilite_3.jpg"),fit: BoxFit.cover,scale: 4)),
               // child: Image.asset("images/mobilite.jpeg",fit: BoxFit.contain,),
               height: 150,
               width: double.infinity,
@@ -86,7 +86,7 @@ void pickFile()async{
                        Container(
                           margin: EdgeInsets.all(20),
                           child: LinearProgressIndicator(
-                          color: Colors.blue.shade100,
+                          color: Colors.pink.shade100,
                           value: 3/5,
                           backgroundColor: Colors.blueGrey,
                           borderRadius: BorderRadius.circular(30),
@@ -94,7 +94,7 @@ void pickFile()async{
                           ),
                         ),
                         SizedBox(height: 30,),
-                        Text("Demande de Visa",style: TextStyle(color:Colors.blue.shade100, fontWeight: FontWeight.bold,fontSize: 20),)
+                        Text("Demande de Visa",style: TextStyle(color:Colors.pink.shade100, fontWeight: FontWeight.bold,fontSize: 20),)
                       ],
                     ),
                   )
@@ -136,7 +136,7 @@ void pickFile()async{
                             Container(
                               margin: EdgeInsets.only(top:50,left: 30,right: 30,bottom: 40),
                               child: LinearProgressIndicator(
-                              color: Colors.blue.shade100,
+                              color: Colors.pink.shade100,
                               value: 4/5,
                               backgroundColor: Colors.blueGrey,
                               borderRadius: BorderRadius.circular(30),
@@ -152,7 +152,7 @@ void pickFile()async{
                                   width: 200,
                                   height: 200,    
                                 child: CircleAvatar(
-                                  backgroundColor: Colors.red.shade400,
+                                  backgroundColor: Colors.pink.shade400,
                                   // foregroundColor: Colors.white,
                                   child: GestureDetector(
                                     onTap: () {

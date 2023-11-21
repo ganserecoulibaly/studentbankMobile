@@ -16,7 +16,7 @@ class _admission_en_attenteState extends State<admission_en_attente> {
                         gradient: LinearGradient(
                           colors: [
                           Colors.orange,
-                          Colors.red,
+                          Colors.pink,
                         ])
                       ),
                       child: Column(
@@ -37,7 +37,7 @@ class _admission_en_attenteState extends State<admission_en_attente> {
                                   width: 200,
                                   height: 200,    
                                 child: CircleAvatar(
-                                  backgroundColor: Colors.red.shade400,
+                                  backgroundColor: Colors.pink.shade400,
                                   // foregroundColor: Colors.white,
                                   child: Text("En Cours de Traitement...") 
                                 )

@@ -27,7 +27,7 @@ class _demande_accueil_darkState extends State<demande_accueil_dark> {
          margin: EdgeInsets.all(0),
         padding: EdgeInsets.all(0),
         decoration: BoxDecoration(
-          color: Colors.white70,
+          color: Colors.pink,
           image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
         ),
         // width: double.infinity,
@@ -38,7 +38,7 @@ class _demande_accueil_darkState extends State<demande_accueil_dark> {
             margin: EdgeInsets.all(30),
             
             decoration:BoxDecoration(borderRadius: BorderRadius.circular(20),
-            image: DecorationImage(image:  AssetImage("images/mobilite_2.jpeg"),fit: BoxFit.fill,scale: 4)),
+            image: DecorationImage(image:  AssetImage("images/mobilite_3.jpg"),fit: BoxFit.fill,scale: 4)),
             // child: Image.asset("images/mobilite.jpeg",fit: BoxFit.contain,),
             height: 150,
             width: double.infinity,
@@ -52,7 +52,7 @@ class _demande_accueil_darkState extends State<demande_accueil_dark> {
                       Container(
                         margin: EdgeInsets.all(20),
                         child: LinearProgressIndicator(
-                        color: Colors.blue.shade100,
+                        color: Colors.pink.shade100,
                         backgroundColor: Colors.blueGrey,
                         value: 1/3,
                         borderRadius: BorderRadius.circular(30),
@@ -60,7 +60,7 @@ class _demande_accueil_darkState extends State<demande_accueil_dark> {
                         ),
                       ),
                       SizedBox(height: 30,),
-                      Text("Demande d'accueil",style: TextStyle(color:Colors.blue.shade100, fontWeight: FontWeight.bold,fontSize: 20),)
+                      Text("Demande d'accueil",style: TextStyle(color:Colors.pink.shade100, fontWeight: FontWeight.bold,fontSize: 20),)
                     ],
                   ),
                 ),

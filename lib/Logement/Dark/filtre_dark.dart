@@ -221,7 +221,16 @@ class _Filtre_darkState extends State<Filtre_dark> {
                             ),
                             ],) 
                         ),
-                        
+                      Container(
+                        decoration: BoxDecoration(color: Colors.white),
+                        child: Center(
+                           child: TextButton(child: Text("Continuer",style: TextStyle(color: Colors.black),),
+                           onPressed: (){
+                            Navigator.pop(context);
+                           },
+                          ),
+                        )
+                      )  
                 ],
               ),
             )

@@ -33,7 +33,7 @@ class _demande_admission_darkState extends State<demande_admission_dark> {
             
             decoration:BoxDecoration(borderRadius: BorderRadius.circular(20),
             color: Colors.grey.shade900,
-            image: DecorationImage(image:  AssetImage("images/mobilite.jpeg"),fit: BoxFit.cover,scale: 4)),
+            image: DecorationImage(image:  AssetImage("images/mobilite_3.jpg"),fit: BoxFit.cover,scale: 4)),
             // child: Image.asset("images/mobilite.jpeg",fit: BoxFit.contain,),
             height: 150,
             width: double.infinity,
@@ -47,7 +47,7 @@ class _demande_admission_darkState extends State<demande_admission_dark> {
                       Container(
                         margin: EdgeInsets.all(20),
                         child: LinearProgressIndicator(
-                        color: Colors.blue.shade100,
+                        color: Colors.pink.shade100,
                         backgroundColor: Colors.blueGrey,
                         value: 2/3,
                         borderRadius: BorderRadius.circular(30),

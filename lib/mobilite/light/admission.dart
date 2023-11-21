@@ -15,7 +15,7 @@ class _admisionState extends State<admision> {
     return Scaffold(
       body: Container(
          decoration: BoxDecoration(
-          color: Colors.white70,
+          color: Colors.pink,
           image: DecorationImage(image: AssetImage('images/LogoN_Mobilite.png'),fit: BoxFit.fill)
         ),
         child: ListView(
@@ -24,19 +24,19 @@ class _admisionState extends State<admision> {
             margin: EdgeInsets.all(20),
             
             decoration:BoxDecoration(borderRadius: BorderRadius.circular(20),
-            image: DecorationImage(image:  AssetImage("images/mobilite_2.jpeg"),fit: BoxFit.fill,scale: 4)),
+            image: DecorationImage(image:  AssetImage("images/mobilite_3.jpg"),fit: BoxFit.fill,scale: 4)),
             // child: Image.asset("images/mobilite.jpeg",fit: BoxFit.contain,),
             height: 250,
             width: double.infinity,
             child:
                 Align(
                   alignment: Alignment.center,
-                  child: Text("Mes Admission",style: TextStyle(color:Colors.blue.shade100, fontWeight: FontWeight.bold,fontSize: 20),),
+                  child: Text("Mes Admission",style: TextStyle(color:Colors.pink.shade100, fontWeight: FontWeight.bold,fontSize: 20),),
                 ),
           ),
           Container(
             decoration: BoxDecoration(
-              color: Colors.blue.shade100,
+              color: Colors.pink.shade100,
             borderRadius: BorderRadius.circular(30)
             ),
             margin: EdgeInsets.all(20),
@@ -53,7 +53,7 @@ class _admisionState extends State<admision> {
           ),
           Container(
             decoration: BoxDecoration(
-              color: Colors.blue.shade200,
+              color: Colors.pink.shade200,
             borderRadius: BorderRadius.circular(30)
             ),
             margin: EdgeInsets.all(20),
@@ -70,7 +70,7 @@ class _admisionState extends State<admision> {
           ),
           Container(
             decoration: BoxDecoration(
-              color: Colors.blue.shade100,
+              color: Colors.pink.shade200,
             borderRadius: BorderRadius.circular(30)
             ),
             margin: EdgeInsets.all(20),
@@ -93,7 +93,7 @@ class _admisionState extends State<admision> {
                 width: 150,
                 // decoration: BoxDecoration(gradient: LinearGradient(colors: [Colors.white,Colors.pink])),
              decoration: BoxDecoration(
-              color: Colors.pink,
+              color: Colors.pink.shade300,
               borderRadius: BorderRadius.circular(30)
               ),
             child: TextButton(onPressed: (){
@@ -102,7 +102,7 @@ class _admisionState extends State<admision> {
               ),
                Container(
                 decoration: BoxDecoration(
-                  color: Colors.pink,
+                  color: Colors.pink.shade300,
                 borderRadius: BorderRadius.circular(30)
                 ),
                 width: 150,

@@ -33,7 +33,7 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                 margin: EdgeInsets.all(30),
                 
                 decoration:BoxDecoration(borderRadius: BorderRadius.circular(20),
-                image: DecorationImage(image:  AssetImage("images/mobilite_2.jpeg"),fit: BoxFit.fill,scale: 4)),
+                image: DecorationImage(image:  AssetImage("images/mobilite_3.jpg"),fit: BoxFit.fill,scale: 4)),
                 // child: Image.asset("images/mobilite.jpeg",fit: BoxFit.contain,),
                 height: 150,
                 width: double.infinity,
@@ -46,7 +46,7 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                           Container(
                             margin: EdgeInsets.all(20),
                             child: LinearProgressIndicator(
-                            color: Colors.blue.shade100,
+                            color: Colors.pink.shade100,
                             backgroundColor: Colors.blueGrey,
                             value: 2/3,
                             borderRadius: BorderRadius.circular(30),
@@ -120,7 +120,7 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                                         
                                         borderRadius: BorderRadius.circular(30),
                                         // gradient: LinearGradient(colors: [Colors.white70,Colors.pinkAccent])
-                                        color: Colors.pink
+                                        color: Colors.pink.shade300
                                       ),
                                       width: 150,
                                       child: TextButton(onPressed: (){
@@ -132,7 +132,7 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                                       decoration:BoxDecoration(
                                         borderRadius: BorderRadius.circular(30),
                                         // gradient: LinearGradient(colors: [const Color.fromARGB(179, 212, 44, 44),Colors.pinkAccent])
-                                       color: Colors.pink
+                                       color: Colors.pink.shade300
                                       ),
                                       width: 150,
                                       child: TextButton(onPressed: (){},child: Text("contactez-nous",style: TextStyle(color: Colors.white,fontSize: 14),),),
@@ -158,7 +158,7 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                         width: 190,
                         height: 40,
                         decoration: BoxDecoration(
-                          color: Colors.grey.shade900,
+                          color: Colors.white,
                           borderRadius: BorderRadius.circular(30)
                           ),
                         child: Row(
@@ -169,7 +169,7 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                          width: 190,
                          height: 40,
                         decoration: BoxDecoration(
-                          color: Colors.grey.shade900,
+                          color: Colors.white,
                           borderRadius: BorderRadius.circular(30)
                           ),
                         child: Row(
@@ -196,7 +196,7 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                         width: 190,
                          height: 40,
                         decoration: BoxDecoration(
-                          color: Colors.grey.shade900,
+                          color: Colors.white,
                           borderRadius: BorderRadius.circular(30)
                           ),
                         child: Row(
@@ -212,7 +212,7 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                          width: 190,
                          height: 40,
                         decoration: BoxDecoration(
-                          color: Colors.grey.shade900,
+                          color: Colors.white,
                           borderRadius: BorderRadius.circular(30)
                           ),
                         child: Row(
@@ -223,7 +223,7 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                          width: 190,
                          height: 40,
                         decoration: BoxDecoration(
-                          color: Colors.grey.shade900,
+                          color: Colors.white,
                           borderRadius: BorderRadius.circular(30)
                           ),
                         child: Row(

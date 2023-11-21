@@ -24,7 +24,7 @@ class _VisaState extends State<Visa> {
       extendBody: true,
       body: Container(
          decoration: BoxDecoration(
-          color: Colors.white70,
+          color: Colors.pink,
           image: DecorationImage(image: AssetImage('images/LogoN_Mobilite.png'),fit: BoxFit.fill)
         ),
         child: ListView(
@@ -33,7 +33,7 @@ class _VisaState extends State<Visa> {
               margin: EdgeInsets.all(20),
               
               decoration:BoxDecoration(borderRadius: BorderRadius.circular(20),
-              image: DecorationImage(image:  AssetImage("images/mobilite_2.jpeg"),fit: BoxFit.fill,scale: 4)),
+              image: DecorationImage(image:  AssetImage("images/mobilite_3.jpg"),fit: BoxFit.fill,scale: 4)),
               // child: Image.asset("images/mobilite.jpeg",fit: BoxFit.contain,),
               height: 150,
               width: double.infinity,
@@ -47,7 +47,7 @@ class _VisaState extends State<Visa> {
                         Container(
                           margin: EdgeInsets.all(20),
                           child: LinearProgressIndicator(
-                          color: Colors.blue.shade100,
+                          color: Colors.pink.shade100,
                           backgroundColor: Colors.blueGrey,
                           value: 1/5,
                           borderRadius: BorderRadius.circular(30),
@@ -55,7 +55,7 @@ class _VisaState extends State<Visa> {
                           ),
                         ),
                         SizedBox(height: 30,),
-                        Text("Demande de Visa",style: TextStyle(color:Colors.blue.shade100, fontWeight: FontWeight.bold,fontSize: 20),)
+                        Text("Demande de Visa",style: TextStyle(color:Colors.pink.shade100, fontWeight: FontWeight.bold,fontSize: 20),)
                       ],
                     ),
                   )
@@ -75,7 +75,7 @@ class _VisaState extends State<Visa> {
                 children: [
                   SizedBox(height: 10,),
                   Radio<radioSex>(
-                    activeColor: Colors.blue.shade100,
+                    activeColor: Colors.pink.shade100,
                     value: radioSex.Monsieur, groupValue: sexe, onChanged: (radioSex? value){
                     setState(() {
                       sexe=value!;
@@ -83,7 +83,7 @@ class _VisaState extends State<Visa> {
                   }),
                   Text("Monsieur"),
                   Radio<radioSex>(
-                    activeColor: Colors.blue.shade100,value: radioSex.Madame, groupValue: sexe, onChanged: (radioSex? value){
+                    activeColor: Colors.pink.shade100,value: radioSex.Madame, groupValue: sexe, onChanged: (radioSex? value){
                     setState(() {
                       sexe=value!;
                     });
@@ -105,7 +105,7 @@ class _VisaState extends State<Visa> {
                       margin: EdgeInsets.all(10),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.blue.shade100,),
+                        color: Colors.pink.shade100,),
                       child: TextField(
                         controller: _nom,
                       ),
@@ -120,7 +120,7 @@ class _VisaState extends State<Visa> {
                       margin: EdgeInsets.all(10),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.blue.shade100,),
+                        color: Colors.pink.shade100,),
                       child: TextField(
                         controller: _prenom,
                       ),
@@ -135,7 +135,7 @@ class _VisaState extends State<Visa> {
                       margin: EdgeInsets.all(10),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.blue.shade100,),
+                        color: Colors.pink.shade100,),
                       child: TextField(
                         controller: _dateLieu,
                       ),
@@ -150,7 +150,7 @@ class _VisaState extends State<Visa> {
                       margin: EdgeInsets.all(10),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.blue.shade100,),
+                        color: Colors.pink.shade100,),
                       child: TextField(
                         controller: _adresse,
                       ),
@@ -165,7 +165,7 @@ class _VisaState extends State<Visa> {
                       margin: EdgeInsets.all(10),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.blue.shade100,),
+                        color: Colors.pink.shade100,),
                       child: TextField(
                         controller: _num,
                       ),
@@ -178,7 +178,7 @@ class _VisaState extends State<Visa> {
                     child: ElevatedButton(onPressed: (){
       
                             Navigator.push(context, MaterialPageRoute(builder: (context)=>MesDocs()));
-                    }, child: Text("Continuer",style: TextStyle(color: Colors.blue.shade200),),style: ElevatedButton.styleFrom(backgroundColor: Colors.white),),
+                    }, child: Text("Continuer",style: TextStyle(color: Colors.pink),),style: ElevatedButton.styleFrom(backgroundColor: Colors.white),),
                   ),
                  )
                 ],

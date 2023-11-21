@@ -26,7 +26,7 @@ class _demandeAdmission_ins_darkState extends State<demandeAdmission_ins_dark> {
                 margin: EdgeInsets.all(30),
                 
                 decoration:BoxDecoration(borderRadius: BorderRadius.circular(20),
-                image: DecorationImage(image:  AssetImage("images/mobilite.jpeg"),fit: BoxFit.cover,scale: 4)),
+                image: DecorationImage(image:  AssetImage("images/mobilite_3.jpg"),fit: BoxFit.cover,scale: 4)),
                 // child: Image.asset("images/mobilite.jpeg",fit: BoxFit.contain,),
                 height: 150,
                 width: double.infinity,
@@ -85,7 +85,7 @@ class _demandeAdmission_ins_darkState extends State<demandeAdmission_ins_dark> {
               ),
             ),
               Container(
-                        decoration: BoxDecoration(color: Colors.white,
+                        decoration: BoxDecoration(color: Colors.grey.shade900,
                         borderRadius: BorderRadius.circular(20)
                         ),
                         margin: EdgeInsets.all(10),
@@ -96,11 +96,11 @@ class _demandeAdmission_ins_darkState extends State<demandeAdmission_ins_dark> {
                             children: [
                               Align(
                                 alignment: Alignment.topLeft,
-                                child: Text("Description",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontStyle: FontStyle.normal),),
+                                child: Text("Description",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontStyle: FontStyle.normal),),
                               ),
                                Center(
                                 // alignment: Alignment.center,
-                                  child: Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",style: TextStyle(color: Colors.black,fontSize: 20),),
+                                  child: Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",style: TextStyle(color: Colors.white,fontSize: 20),),
                               ),
                               SizedBox(height: 10,),
                               Container(
@@ -354,8 +354,8 @@ class _demandeAdmission_ins_darkState extends State<demandeAdmission_ins_dark> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("Mail: adress@mail.com",style: TextStyle(color:Colors.white,fontSize: 16,fontWeight: FontWeight.bold),),
-                      Text("Numero de telephone: 00.00.00.00.00",style: TextStyle(color:Colors.white,fontSize: 16,fontWeight: FontWeight.bold),),
+                      Text("Mail: adress@mail.com",style: TextStyle(color:Colors.grey.shade900,fontSize: 16,fontWeight: FontWeight.bold),),
+                      Text("Numero de telephone: 00.00.00.00.00",style: TextStyle(color:Colors.grey.shade900,fontSize: 16,fontWeight: FontWeight.bold),),
                     ],
                   ),
                 ),
@@ -481,7 +481,7 @@ class _demandeAdmission_ins_darkState extends State<demandeAdmission_ins_dark> {
                             for(int i=0;i<5;i++)
                             Container(
                             margin: EdgeInsets.only(left: 10),
-                            height: 40,
+                           height: 40,
                             width: 40,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(30),

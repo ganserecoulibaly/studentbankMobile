@@ -29,7 +29,7 @@ class _etudiant_etranger_internationauxState extends State<etudiant_etranger_int
     return Scaffold(
       body: Container(
           decoration:BoxDecoration(borderRadius: BorderRadius.circular(20),
-          image: DecorationImage(image:  AssetImage("images/mobilite.jpeg"),fit: BoxFit.cover,scale: 4)),    
+          image: DecorationImage(image:  AssetImage("images/mobilite_3.jpg"),fit: BoxFit.cover,scale: 4)),    
           child: Container(
             decoration: BoxDecoration(
               color: Colors.white12

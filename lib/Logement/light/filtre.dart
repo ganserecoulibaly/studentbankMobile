@@ -225,7 +225,17 @@ class _FiltreState extends State<Filtre> {
                         
                 ],
               ),
-            )
+            ),
+             Container(
+                        decoration: BoxDecoration(color: Colors.grey[900]),
+                        child: Center(
+                           child: TextButton(child: Text("Continuer",style: TextStyle(color: Colors.orange),),
+                           onPressed: (){
+                            Navigator.pop(context);
+                           },
+                          ),
+                        )
+                      )  
           ],
         ),
       ),

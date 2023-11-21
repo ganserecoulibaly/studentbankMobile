@@ -35,7 +35,7 @@ class _deuxiemeState extends State<mobilite> {
             Container(
               height: double.infinity,
               decoration: BoxDecoration(
-                image: DecorationImage(image: AssetImage('images/mobilite.jpeg'),fit: BoxFit.cover)
+                image: DecorationImage(image: AssetImage('images/mobilite_3.jpg'),fit: BoxFit.cover)
               ),
            
             child:

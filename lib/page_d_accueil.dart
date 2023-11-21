@@ -22,7 +22,7 @@ class _AccueilState extends State<Accueil> {
           //   end: Alignment.bottomRight,
           //   colors: [Colors.white, Colors.pinkAccent],
           // ),
-          image: DecorationImage(image: AssetImage("images/DEBUT.png"),fit: BoxFit.cover)
+          image: DecorationImage(image: AssetImage("images/darkFilter.jpg"),fit: BoxFit.cover)
         ),
         child: ListView(
            children: [
