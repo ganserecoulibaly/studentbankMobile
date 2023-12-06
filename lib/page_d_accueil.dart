@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:studentbankmobile/Logement/logement.dart';
 import 'package:studentbankmobile/Sp_coder/connexion/page_intro.dart';
+import 'package:studentbankmobile/banque_sow/compte_virement_1.dart';
+import 'package:studentbankmobile/banque_sow/mes_depanages.dart';
 import 'package:studentbankmobile/mobilite/mobilite.dart';
+
+import 'banque_sow/compte_virement_2.dart';
 
 class Accueil extends StatefulWidget {
   const Accueil({super.key});
-
   @override
   State<Accueil> createState() => _AccueilState();
 }
-
 class _AccueilState extends State<Accueil> {
   @override
   Widget build(BuildContext context) {
@@ -56,16 +58,46 @@ class _AccueilState extends State<Accueil> {
                           Navigator.push(context, MaterialPageRoute(builder: (context)=>loyer()));
                           },child: Text("Logement",style: TextStyle(color: Colors.white),), ),
                       ),
-                       Container(
+                      Container(
                         margin: EdgeInsets.all(10),
                         decoration: BoxDecoration(
-                          color: Colors.pink,
-                          borderRadius: BorderRadius.circular(30)
+                            color: Colors.pink,
+                            borderRadius: BorderRadius.circular(30)
                         ),
                         child: TextButton(onPressed:(){
                           Navigator.push(context, MaterialPageRoute(builder: (context)=>mobilite()));
-                          },child: Text("Mobilite",style: TextStyle(color: Colors.white),), ),
-                      )
+                        },child: Text("Mobilite",style: TextStyle(color: Colors.white),), ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                            color: Colors.pink,
+                            borderRadius: BorderRadius.circular(30)
+                        ),
+                        child: TextButton(onPressed:(){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const compte_virement_1()));
+                        },child: Text("compte_virement_1",style: TextStyle(color: Colors.white),), ),
+                      ),
+                       Container(
+                        margin: EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                            color: Colors.pink,
+                            borderRadius: BorderRadius.circular(30)
+                        ),
+                        child: TextButton(onPressed:(){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const compte_virement_2()));
+                        },child: Text("compte_virement_2",style: TextStyle(color: Colors.white),), ),
+                      ),
+                       Container(
+                        margin: EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                            color: Colors.pink,
+                            borderRadius: BorderRadius.circular(30)
+                        ),
+                        child: TextButton(onPressed:(){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const depanages()));
+                        },child: Text("depannages",style: TextStyle(color: Colors.white),), ),
+                      ),
                     ],
                   ),
                 ),

@@ -1,5 +1,6 @@
 import 'dart:developer';
 import 'dart:io';
+import 'dart:math';
 
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/cupertino.dart';
@@ -128,12 +129,13 @@ void pickFile()async{
                     showDialog(context: context, builder: (context){
                       return Container(
                         decoration: BoxDecoration(
-                          color: Colors.white
+                          image: DecorationImage(image: AssetImage("images/en_attente_student.png",),fit: BoxFit.fill)
                         ),
-                        child: Column(
-                          
-                          children: [
-                            Container(
+                        child: GestureDetector(
+                          onTap: () {
+                                Navigator.push(context,MaterialPageRoute(builder: (context)=>valider_doc()));
+                          },
+                          child:  Container(
                               margin: EdgeInsets.only(top:50,left: 30,right: 30,bottom: 40),
                               child: LinearProgressIndicator(
                               color: Colors.pink.shade100,
@@ -143,28 +145,7 @@ void pickFile()async{
                               minHeight: 10,
                               ),
                             ),
-                            Center(
-                              child: 
-                                Text("  Soyez patient! \nvotre demande est\n   en cour de \n  traitement.",style: TextStyle(color: Colors.red.shade400,fontSize: 20,fontStyle: FontStyle.italic),)),
-                            Center(
-                              child: Container(
-                                margin: EdgeInsets.only(top: 50),
-                                  width: 200,
-                                  height: 200,    
-                                child: CircleAvatar(
-                                  backgroundColor: Colors.pink.shade400,
-                                  // foregroundColor: Colors.white,
-                                  child: GestureDetector(
-                                    onTap: () {
-                                        Navigator.push(context,MaterialPageRoute(builder: (context)=>valider_doc()));
-                                    },
-                                    child:Text("en attente"),
-                                  ) 
-                                )
-                              ),
-                            ),
-                         ],
-                          ),
+                        ),   
                       );
                     });
                       // Navigator.push(context, MaterialPageRoute(builder: (context)=>traitement()));

@@ -85,7 +85,8 @@ class _paiement_darkState extends State<paiement_dark> {
                   height: 40,
                   width: 250,
                   decoration: BoxDecoration(
-                    color: Colors.blue.shade100
+                    color: Colors.blue.shade100,
+                    borderRadius: BorderRadius.circular(30)
                   ),
                   child: Center(child: Text("Nom  et Prenom",style: TextStyle(fontSize: 18),)),
                 ),
@@ -101,7 +102,9 @@ class _paiement_darkState extends State<paiement_dark> {
                   height: 40,
                   width: 250,
                   decoration: BoxDecoration(
-                    color: Colors.blue.shade100
+                    color: Colors.blue.shade100,
+                    borderRadius: BorderRadius.circular(30)
+                  
                   ),
                   child: Center(child: Text("0000 0000 0000 0000,",style: TextStyle(fontSize: 16),)),
                 ),
@@ -122,9 +125,10 @@ class _paiement_darkState extends State<paiement_dark> {
                             height: 40,
                             width: 55,
                             decoration: BoxDecoration(
-                              color: Colors.blue.shade100
+                              color: Colors.blue.shade100,
+                    borderRadius: BorderRadius.circular(30)
                             ),
-                            child: Center(child: Text("MM/YY",style: TextStyle(fontSize: 14),)),
+                            child: Center(child: Text("MM/YY",style: TextStyle(fontSize: 12),)),
                           ),
                         ],
                       ),
@@ -141,7 +145,8 @@ class _paiement_darkState extends State<paiement_dark> {
                             height: 40,
                             width: 55,
                             decoration: BoxDecoration(
-                              color: Colors.blue.shade100
+                              color: Colors.blue.shade100,
+                           borderRadius: BorderRadius.circular(30)
                             ),
                             child: Center(child: Text("000",style: TextStyle(fontSize: 14),)),
                           ),

@@ -27,7 +27,7 @@ class _demande_accueil_darkState extends State<demande_accueil_dark> {
          margin: EdgeInsets.all(0),
         padding: EdgeInsets.all(0),
         decoration: BoxDecoration(
-          color: Colors.pink,
+          color: Colors.grey.shade900,
           image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
         ),
         // width: double.infinity,
@@ -174,7 +174,7 @@ class _demande_accueil_darkState extends State<demande_accueil_dark> {
                   controller: _date, //editing controller of this TextField
                   decoration: const InputDecoration( 
                      icon: Icon(Icons.calendar_today), //icon of text field
-                     label: Text("Enter Date De Naissance",style: TextStyle(color: Colors.redAccent,fontSize: 20,fontWeight: FontWeight.bold),) //label text of field
+                     label: Text("Enter Date De Naissance",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),) //label text of field
                   ),
                   readOnly: true,  //set it true, so that user will not able to edit text
                   onTap: () async {
@@ -205,13 +205,14 @@ class _demande_accueil_darkState extends State<demande_accueil_dark> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  child: TextButton(onPressed: (){}, child: Text("Appeler",style: TextStyle(color: Colors.red),)),
+                  child: TextButton(onPressed: (){}, child: Text("Appeler",style: TextStyle(color: Colors.white),)),
                 ),
                 SizedBox(width: 30,),
                  Container(
+                  decoration: BoxDecoration(),
                   child: TextButton(onPressed: (){
                     Navigator.push(context,MaterialPageRoute(builder: (context)=>paiement_dark()));
-                  }, child: Text("Continuer",style: TextStyle(color: Colors.red),)),
+                  }, child: Text("Continuer",style: TextStyle(color: Colors.white),)),
                 )
               ],
             ),

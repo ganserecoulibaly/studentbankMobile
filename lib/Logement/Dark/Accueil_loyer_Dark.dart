@@ -6,10 +6,7 @@ import 'package:studentbankmobile/Logement/Dark/annonce_Dark.dart';
 import 'package:studentbankmobile/Logement/Dark/filtre_dark.dart';
 import 'package:studentbankmobile/Logement/Dark/location_Dark.dart';
 import 'package:studentbankmobile/Logement/Dark/loyer_liste_Dark.dart';
-import 'package:studentbankmobile/Logement/light/filtre.dart';
 
-import '../../widgets/change_Mode.dart';
-import '../light/Accueil_loyer.dart';
 // import 'Gestion_logement.dart';
 // import 'annonce.dart';
 // import 'loyer_liste.dart';
@@ -24,7 +21,7 @@ class AccueilLoyer_Dark extends StatefulWidget {
 class _AccueilLoyer_DarkState extends State<AccueilLoyer_Dark> {
   @override
   Widget build(BuildContext context) {
-    bool press=false;
+    // bool press=false;
     return Scaffold(
       // extendBody: true,
       body: Container(
