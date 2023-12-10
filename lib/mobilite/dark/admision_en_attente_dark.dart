@@ -75,47 +75,7 @@ class _admission_en_attente_darkState extends State<admission_en_attente_dark> {
                        ],
                         ),
                     ),
-                    bottomNavigationBar:  Container(
-                  // color: Colors.orange,
-                  height: 70,
-                  // margin: EdgeInsets.only(top: 0),
-                  decoration: BoxDecoration(
-                        color: Colors.grey.shade900,
-                        image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain),
-                        boxShadow: [
-                          BoxShadow(color: Colors.white),
-                          BoxShadow(color: Colors.white),
-                          BoxShadow(color: Colors.white),
-                          BoxShadow(color: Colors.white),
-                        ]
-                  ),
-                child: Center(
-                  child: Container(
-                  // margin: EdgeInsets.all(10),
-
-                  padding: EdgeInsets.all(5),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon: Image.asset('images/setting.png'),iconSize: 40,),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset("images/euro_symbol.png"),iconSize: 40),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset("images/Acceuil_icone.png",),iconSize: 40,),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset('images/move_location.png'),iconSize: 40),
-                        
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset('images/night_shelter.png'),iconSize: 40)
-                      ],
-                    ),
-                  ),
-                ),
-                )
-              
- 
-
+                 
     );
   }
 }

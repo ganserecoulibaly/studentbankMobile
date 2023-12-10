@@ -14,6 +14,24 @@ class _DemanderCaution_darkState extends State<DemanderCaution_dark> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(250), 
+        child:   Container(
+              height: 200,
+              decoration: BoxDecoration(
+                boxShadow: [
+                       BoxShadow(color: Colors.white,blurRadius: 3.0,spreadRadius: 4.2),
+              ],
+                image: DecorationImage(image: AssetImage('images/maisonNight.jpg'),fit: BoxFit.cover),
+                borderRadius: BorderRadius.only(bottomRight: Radius.circular(30),bottomLeft: Radius.circular(30))
+              ),
+              child:  Align(
+                        alignment: Alignment.center,
+                        child: Text("Demander une caution",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
+                      
+                      ),
+            ),
+           ),
       body: Container(
         margin: EdgeInsets.all(0),
         padding: EdgeInsets.all(0),
@@ -27,22 +45,7 @@ class _DemanderCaution_darkState extends State<DemanderCaution_dark> {
           // scrollDirection: Axis.vertical,
           children: [
             
-            Container(
-              height: 200,
-              decoration: BoxDecoration(
-                boxShadow: [
-                       BoxShadow(color: Colors.orange.shade200,blurRadius: 3.0,spreadRadius: 4.2),
-              ],
-                image: DecorationImage(image: AssetImage('images/maisonNight.jpg'),fit: BoxFit.cover),
-                borderRadius: BorderRadius.only(bottomRight: Radius.circular(30),bottomLeft: Radius.circular(30))
-              ),
-              child:  Align(
-                        alignment: Alignment.center,
-                        child: Text("Demander une caution",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
-                      
-                      ),
-            ),
-            Container(
+           Container(
                margin: EdgeInsets.all(20),
 
               padding: EdgeInsets.all(20),
@@ -180,57 +183,25 @@ class _DemanderCaution_darkState extends State<DemanderCaution_dark> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  IconButton(onPressed: (){}, icon: Icon(Icons.upload_file,color: Colors.orange,),tooltip: "partie 1",),
+                  IconButton(onPressed: (){}, icon: Icon(Icons.upload_file,color: Colors.red,),tooltip: "partie 1",),
                   SizedBox(width: 10,),
-                  IconButton(onPressed: (){}, icon: Icon(Icons.upload_file,color: Colors.orange,),tooltip: "partie 2",),
+                  IconButton(onPressed: (){}, icon: Icon(Icons.upload_file,color: Colors.red,),tooltip: "partie 2",),
                   SizedBox(width: 10,),
-                  IconButton(onPressed: (){}, icon: Icon(Icons.upload_file,color: Colors.orange,),tooltip: "partie 3",)           
+                  IconButton(onPressed: (){}, icon: Icon(Icons.upload_file,color: Colors.red,),tooltip: "partie 3",)           
                 ],
               ),
             ),
             Center(
               child:
-               ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.red),onPressed: (){}, child: Text("Continuer",style: TextStyle(color: Colors.black),)),
+               Container(
+                margin: EdgeInsets.only(bottom: 10),
+                child: ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.red),onPressed: (){}, child: Text("Continuer",style: TextStyle(color: Colors.black),))),
               
             ),
-            SizedBox(height: 20,),
           ],
         ),
       ),  
-       bottomNavigationBar: Container(
-                  // color: Colors.orange,
-                  height: 70,
-                  // margin: EdgeInsets.only(top: 0),
-                  decoration: BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(color: Colors.white,blurRadius: 3.0,spreadRadius: 4.2),
-                    ],
-                    color: Colors.grey.shade900,
-                    borderRadius: BorderRadius.only(topLeft: Radius.circular(45),topRight: Radius.circular(45))),
-                child: Center(
-                  child: Container(
-                  // margin: EdgeInsets.all(10),
-
-                  padding: EdgeInsets.all(5),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon: Image.asset('images/setting.png'),iconSize: 40,),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset("images/euro_symbol.png"),iconSize: 40),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset("images/Acceuil_icone.png"),iconSize: 50),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset('images/move_location.png'),iconSize: 40),
-                        
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset('images/night_shelter.png'),iconSize: 40)
-                      ],
-                    ),
-                  ),
-                ),
-                )
+ 
     );
     
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
 import 'package:intl/intl.dart';
 import 'package:studentbankmobile/mobilite/light/paiement.dart';
 class demande_accueil extends StatefulWidget {
@@ -25,8 +26,8 @@ class _demande_accueilState extends State<demande_accueil> {
          margin: EdgeInsets.all(0),
         padding: EdgeInsets.all(0),
         decoration: BoxDecoration(
-          color: Colors.white70,
-          image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
+          color: Colors.pink,
+          image: DecorationImage(image: AssetImage('images/LogoN_Mobilite.png'),fit: BoxFit.fill)
         ),
         // width: double.infinity,
         // height: double.infinity,
@@ -36,7 +37,7 @@ class _demande_accueilState extends State<demande_accueil> {
             margin: EdgeInsets.all(30),
             
             decoration:BoxDecoration(borderRadius: BorderRadius.circular(20),
-            image: DecorationImage(image:  AssetImage("images/mobilite.jpeg"),fit: BoxFit.cover,scale: 4)),
+            image: DecorationImage(image:  AssetImage("images/mobilite_3.jpg"),fit: BoxFit.cover,scale: 4)),
             // child: Image.asset("images/mobilite.jpeg",fit: BoxFit.contain,),
             height: 150,
             width: double.infinity,
@@ -50,7 +51,7 @@ class _demande_accueilState extends State<demande_accueil> {
                       Container(
                         margin: EdgeInsets.all(20),
                         child: LinearProgressIndicator(
-                        color: Colors.blue.shade100,
+                        color: Colors.pink.shade100,
                         backgroundColor: Colors.blueGrey,
                         value: 1/3,
                         borderRadius: BorderRadius.circular(30),
@@ -70,7 +71,7 @@ class _demande_accueilState extends State<demande_accueil> {
             decoration:BoxDecoration(
                 // backgroundBlendMode: BlendMode.darken,
                 borderRadius: BorderRadius.circular(20),color: Colors.white,
-                border: Border.all(color: Colors.black)),
+                border: Border.all(color: Colors.grey.shade900)),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
@@ -82,11 +83,15 @@ class _demande_accueilState extends State<demande_accueil> {
                           height:30,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            color: Colors.black,),
+                            color: Colors.grey.shade900,),
                           child: TextField(
                             controller: _nom,
+                            style: TextStyle(color: Colors.white),
+                            textAlign: TextAlign.center,
                             decoration: InputDecoration(
-                              label: Text("Nom*",style: TextStyle(color: Colors.white,fontSize: 10),),
+                              labelText:"Nom*",
+                              labelStyle: TextStyle(color: Colors.white,fontSize: 20),
+                              hintStyle: TextStyle(color: Colors.white,fontSize: 20),
                               ),
                           ),
                         ),
@@ -96,10 +101,16 @@ class _demande_accueilState extends State<demande_accueil> {
                       margin: EdgeInsets.all(10),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.black,),
+                        color: Colors.grey.shade900,),
                       child: TextField(
                         controller: _prenom,
-                        decoration: InputDecoration(label: Text("Prenom*",style: TextStyle(color: Colors.white,fontSize: 10),)),
+                            style: TextStyle(color: Colors.white),
+                            textAlign: TextAlign.center,
+                        decoration: InputDecoration(
+                          labelText:"Prenom*",
+                          labelStyle: TextStyle(color: Colors.white)
+                              
+                          ),
                       ),
                     ),
                     
@@ -113,10 +124,14 @@ class _demande_accueilState extends State<demande_accueil> {
                           height:30,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            color: Colors.black,),
+                            color: Colors.grey.shade900,),
                           child: TextField(
                             controller: _adresse,
-                            decoration: InputDecoration(label: Text("Adresse mail*",style: TextStyle(color: Colors.white,fontSize: 10),)),
+                            style: TextStyle(color: Colors.white),
+                            textAlign: TextAlign.center,
+                            decoration: InputDecoration(
+                              labelText:"Adresse mail*",
+                              labelStyle: TextStyle(color: Colors.white)),
                           ),
                         ),
                          Container(
@@ -125,10 +140,14 @@ class _demande_accueilState extends State<demande_accueil> {
                       margin: EdgeInsets.all(10),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.black,),
+                        color: Colors.grey.shade900,),
                       child: TextField(
                         controller: _num,
-                        decoration: InputDecoration(label: Text("Tel*",style: TextStyle(color: Colors.white,fontSize: 10),)),
+                            style: TextStyle(color: Colors.white),
+                            textAlign: TextAlign.center,
+                        decoration: InputDecoration(
+                          labelText:"Tel*",
+                          labelStyle: TextStyle(color: Colors.white)),
                       ),
                     ),
                     
@@ -142,10 +161,14 @@ class _demande_accueilState extends State<demande_accueil> {
                           height:30,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            color: Colors.black,),
+                            color: Colors.grey.shade900,),
                           child: TextField(
-                            controller: _nom,
-                            decoration: InputDecoration(label: Text("Pays de Destination*",style: TextStyle(color: Colors.white,fontSize: 10),)),
+                            controller: _pays_des,
+                            style: TextStyle(color: Colors.white),
+                            textAlign: TextAlign.center,
+                            decoration: InputDecoration(
+                              labelText:"Pays de Destination*",
+                              labelStyle: TextStyle(color: Colors.white)),
                           ),
                         ),
                          Container(
@@ -154,10 +177,14 @@ class _demande_accueilState extends State<demande_accueil> {
                       margin: EdgeInsets.all(10),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.black,),
+                        color: Colors.grey.shade900,),
                       child: TextField(
-                        controller: _nom,
-                        decoration: InputDecoration(label: Text("Ville de destination*",style: TextStyle(color: Colors.white,fontSize: 10),)),
+                        controller: _vile_des,
+                            style: TextStyle(color: Colors.white),
+                            textAlign: TextAlign.center,
+                        decoration: InputDecoration(
+                          labelText: "Ville de destination*",
+                          labelStyle: TextStyle(color: Colors.white)),
                       ),
                     ),
                     
@@ -169,10 +196,10 @@ class _demande_accueilState extends State<demande_accueil> {
           ),
           Container(
             child: TextField(
-                  controller: _date, //editing controller of this TextField
+                  controller: _date,//editing controller of this TextField
                   decoration: const InputDecoration( 
                      icon: Icon(Icons.calendar_today), //icon of text field
-                     label: Text("Enter Date De Naissance",style: TextStyle(color: Colors.redAccent,fontSize: 20,fontWeight: FontWeight.bold),) //label text of field
+                     labelText: "Enter Date De Naissance", //label text of field
                   ),
                   readOnly: true,  //set it true, so that user will not able to edit text
                   onTap: () async {
@@ -188,28 +215,29 @@ class _demande_accueilState extends State<demande_accueil> {
                         print(formattedDate); //formatted date output using intl package =>  2021-03-16
                           //you can implement different kind of Date Format here according to your requirement
                         int formattedjour=DateTime.now().year-pickedDate.year;
-                        // setState(() {
-                        //    _dateNaissController.text = formattedDate; 
+                         setState(() {
+                            _date.text = formattedDate; 
                            
                         //    _ageController.text=formattedjour.toString();//set output date to TextField value. 
-                        // });
+                         });
                     }else{
                         print("Vous n'avez pas encore selectionne une date");
                     }
                   },),
           ),
+          // Text(_date.text,style: TextStyle(color: Colors.blue.shade200),),
           Container(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  child: TextButton(onPressed: (){}, child: Text("Appeler",style: TextStyle(color: Colors.red),)),
+                  child: TextButton(onPressed: ()=>FlutterPhoneDirectCaller.callNumber("338553682"), child: Text("Appeler",style: TextStyle(color: Colors.black),)),
                 ),
                 SizedBox(width: 30,),
                  Container(
                   child: TextButton(onPressed: (){
                     Navigator.push(context,MaterialPageRoute(builder: (context)=>paiement()));
-                  }, child: Text("Continuer",style: TextStyle(color: Colors.red),)),
+                  }, child: Text("Continuer",style: TextStyle(color: Colors.black),)),
                 )
               ],
             ),
@@ -217,39 +245,7 @@ class _demande_accueilState extends State<demande_accueil> {
           ],
         ),
       ),
-       bottomNavigationBar:  Container(
-                  // color: Colors.orange,
-                  height: 70,
-                  // margin: EdgeInsets.only(top: 0),
-                  decoration: BoxDecoration(
-                    color: Colors.blue.shade100,
-                    // borderRadius: BorderRadius.only(topLeft: Radius.circular(45),topRight: Radius.circular(45))
-                    ),
-                child: Center(
-                  child: Container(
-                  // margin: EdgeInsets.all(10),
-
-                  padding: EdgeInsets.all(5),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon: Image.asset('images/setting.png'),iconSize: 40,),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset("images/euro_symbol.png"),iconSize: 40),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset("images/Acceuil_icone.png",),iconSize: 40,),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset('images/move_location.png'),iconSize: 40),
-                        
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset('images/night_shelter.png'),iconSize: 40)
-                      ],
-                    ),
-                  ),
-                ),
-                )
-
+     
     );
   }
 }

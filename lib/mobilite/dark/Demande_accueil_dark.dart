@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
 import 'package:intl/intl.dart';
 import 'package:studentbankmobile/mobilite/dark/paiement_dark.dart';
 import 'package:studentbankmobile/mobilite/light/paiement.dart';
@@ -27,7 +28,7 @@ class _demande_accueil_darkState extends State<demande_accueil_dark> {
          margin: EdgeInsets.all(0),
         padding: EdgeInsets.all(0),
         decoration: BoxDecoration(
-          color: Colors.white70,
+          color: Colors.grey.shade900,
           image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
         ),
         // width: double.infinity,
@@ -38,7 +39,7 @@ class _demande_accueil_darkState extends State<demande_accueil_dark> {
             margin: EdgeInsets.all(30),
             
             decoration:BoxDecoration(borderRadius: BorderRadius.circular(20),
-            image: DecorationImage(image:  AssetImage("images/mobilite.jpeg"),fit: BoxFit.cover,scale: 4)),
+            image: DecorationImage(image:  AssetImage("images/mobilite_3.jpg"),fit: BoxFit.fill,scale: 4)),
             // child: Image.asset("images/mobilite.jpeg",fit: BoxFit.contain,),
             height: 150,
             width: double.infinity,
@@ -52,7 +53,7 @@ class _demande_accueil_darkState extends State<demande_accueil_dark> {
                       Container(
                         margin: EdgeInsets.all(20),
                         child: LinearProgressIndicator(
-                        color: Colors.blue.shade100,
+                        color: Colors.pink.shade100,
                         backgroundColor: Colors.blueGrey,
                         value: 1/3,
                         borderRadius: BorderRadius.circular(30),
@@ -60,7 +61,7 @@ class _demande_accueil_darkState extends State<demande_accueil_dark> {
                         ),
                       ),
                       SizedBox(height: 30,),
-                      Text("Demande d'accueil",style: TextStyle(color:Colors.blue.shade100, fontWeight: FontWeight.bold,fontSize: 20),)
+                      Text("Demande d'accueil",style: TextStyle(color:Colors.pink.shade100, fontWeight: FontWeight.bold,fontSize: 20),)
                     ],
                   ),
                 ),
@@ -174,7 +175,7 @@ class _demande_accueil_darkState extends State<demande_accueil_dark> {
                   controller: _date, //editing controller of this TextField
                   decoration: const InputDecoration( 
                      icon: Icon(Icons.calendar_today), //icon of text field
-                     label: Text("Enter Date De Naissance",style: TextStyle(color: Colors.redAccent,fontSize: 20,fontWeight: FontWeight.bold),) //label text of field
+                     label: Text("Enter Date De Naissance",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),) //label text of field
                   ),
                   readOnly: true,  //set it true, so that user will not able to edit text
                   onTap: () async {
@@ -205,13 +206,14 @@ class _demande_accueil_darkState extends State<demande_accueil_dark> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  child: TextButton(onPressed: (){}, child: Text("Appeler",style: TextStyle(color: Colors.red),)),
+                  child: TextButton(onPressed: ()=>FlutterPhoneDirectCaller.callNumber("338553682"), child: Text("Appeler",style: TextStyle(color: Colors.white),)),
                 ),
                 SizedBox(width: 30,),
                  Container(
+                  decoration: BoxDecoration(),
                   child: TextButton(onPressed: (){
                     Navigator.push(context,MaterialPageRoute(builder: (context)=>paiement_dark()));
-                  }, child: Text("Continuer",style: TextStyle(color: Colors.red),)),
+                  }, child: Text("Continuer",style: TextStyle(color: Colors.white),)),
                 )
               ],
             ),

@@ -27,31 +27,19 @@ class _Accueil_mobilite_darkState extends State<Accueil_mobilite_dark> {
   String _drop1value="Etudiant Europeens erasmus";
   String _drop2value="Etudiant etrangers et internationaux";
   var list=["Etudiant Europeens erasmus","Visa","Assurance et voyage","Accueil et  imigration"];
-  var list2=["Etudiant etrangers et internationaux","Universite",'Visa',"Assurance et voyage","Accueil et  imigration"];
+  var list2=["Etudiant etrangers et internationaux","Université",'Visa',"Assurance et voyage","Accueil et  imigration"];
   @override
   Widget build(BuildContext context) {
     bool press=false;
     
     return Scaffold(
       extendBody: true,
-      body: Container(
-        margin: EdgeInsets.all(0),
-        padding: EdgeInsets.all(0),
-        decoration: BoxDecoration(
-                        color: Colors.grey.shade900,
-                        image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
-         ),
-        // width: double.infinity,
-        // height: double.infinity,
-        child: ListView(
-          scrollDirection: Axis.vertical,
-          children: [
-            Container(
+      appBar: PreferredSize(preferredSize: Size.fromHeight(300), child:   Container(
               decoration: BoxDecoration(
                 boxShadow: [
-                  BoxShadow(color: Colors.blue.shade200,blurRadius: 3.0,spreadRadius: 4.2),
+                  BoxShadow(color: Colors.pink.shade200,blurRadius: 3.0,spreadRadius: 4.2),
                 ],
-                image: DecorationImage(image: AssetImage('images/mobilite.jpeg'),fit: BoxFit.cover),
+                image: DecorationImage(image: AssetImage('images/mobilite_3.jpg'),fit: BoxFit.fill),
                 borderRadius: BorderRadius.only(bottomRight: Radius.circular(30),bottomLeft: Radius.circular(30))
               ),
               child: ImageSlideshow(
@@ -59,13 +47,13 @@ class _Accueil_mobilite_darkState extends State<Accueil_mobilite_dark> {
                     width: double.infinity,
 
                     /// Height of the [ImageSlideshow].
-                    height: 450,
+                    height: 350,
 
                     /// The page to show when first creating the [ImageSlideshow].
                     initialPage: 0,
 
                     /// The color to paint the indicator.
-                    indicatorColor: Colors.blue.shade200,
+                    indicatorColor: Colors.pink.shade200,
                   
                     /// The color to paint behind th indicator.
                     indicatorBackgroundColor: Colors.white,
@@ -84,7 +72,7 @@ class _Accueil_mobilite_darkState extends State<Accueil_mobilite_dark> {
                       SizedBox(height: 10,),
                        Align(
                         alignment: Alignment.center,
-                        child: Text("Actualite",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
+                        child: Text("Actualité",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
                       
                       ),
                       Text("lorem ghdfshgvhsgsvss\nfhvsgvbfsfj\bnfbssbvfsvsvhn",style: TextStyle(color:Colors.white,fontSize: 13,fontWeight: FontWeight.normal),),
@@ -98,7 +86,7 @@ class _Accueil_mobilite_darkState extends State<Accueil_mobilite_dark> {
                       SizedBox(height: 10,),
                        Align(
                         alignment: Alignment.center,
-                        child: Text("Actualite",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
+                        child: Text("Actualité",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
                       
                       ),
                       Text("lorem ghdfshgvhsgsvss\nfhvsgvbfsfj\bnfbssbvfsvsvhn",style: TextStyle(color:Colors.white,fontSize: 13,fontWeight: FontWeight.normal),),
@@ -133,7 +121,20 @@ class _Accueil_mobilite_darkState extends State<Accueil_mobilite_dark> {
                     isLoop: true,
                   ),
             ),
-            Container(
+           ),
+      body: Container(
+        margin: EdgeInsets.all(0),
+        padding: EdgeInsets.all(0),
+        decoration: BoxDecoration(
+                        color: Colors.grey.shade900,
+                        image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
+         ),
+        // width: double.infinity,
+        // height: double.infinity,
+        child: ListView(
+          scrollDirection: Axis.vertical,
+          children: [
+           Container(
               padding: EdgeInsets.only(top: 20,bottom: 20),
               alignment: Alignment.center,
               decoration: BoxDecoration(
@@ -148,8 +149,8 @@ class _Accueil_mobilite_darkState extends State<Accueil_mobilite_dark> {
                       Center(
                    child: Container(
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        color: Colors.blue.shade100
+                        border: Border.all(color: Colors.white,width: 2),
+                        color: Colors.pink.shade100
                       ),
                       width: 330,
                      child: DropdownButton(
@@ -178,20 +179,20 @@ class _Accueil_mobilite_darkState extends State<Accueil_mobilite_dark> {
                           //   onTap: (){
                           
                           //  },
-                           icon:Icon(Icons.arrow_drop_down),
+                           icon:Icon(Icons.arrow_circle_down),
                            iconSize: 30,
-                           iconEnabledColor: Colors.red,
+                           iconEnabledColor: Colors.white,
                            isExpanded: true,
-                           style: TextStyle(color: Colors.red,),
-                           ),
+                           style: TextStyle(color: Colors.black,fontSize: 18,fontWeight: FontWeight.bold,),
+                          ),
                    ),
                  ),
                  SizedBox(height: 8,),
                   Center(
                    child: Container(
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        color: Colors.blue.shade100
+                        border: Border.all(color: Colors.white,width: 2),
+                        color: Colors.pink.shade100
                       ),
                       width: 330,
                      child: DropdownButton(
@@ -212,18 +213,18 @@ class _Accueil_mobilite_darkState extends State<Accueil_mobilite_dark> {
                             if(_drop2value=="Accueil et  imigration"){
                             Navigator.push(context, MaterialPageRoute(builder: (context)=>demande_accueil_dark()));
                             }
-                            if(_drop2value=="Universite"){
+                            if(_drop2value=="Université"){
                             Navigator.push(context, MaterialPageRoute(builder: (context)=>demandeAdmission_ins_dark()));
                             }
                             if(_drop2value=="Assurance et voyage"){
                             Navigator.push(context, MaterialPageRoute(builder: (context)=>admision_dark()));
                             }
                            },
-                           icon:Icon(Icons.arrow_drop_down),
+                           icon:Icon(Icons.arrow_circle_down),
                            iconSize: 30,
-                           iconEnabledColor: Colors.red,
+                           iconEnabledColor: Colors.white,
                            isExpanded: true,
-                           style: TextStyle(color: Colors.red,),
+                           style: TextStyle(color: Colors.black,fontSize: 18,fontWeight: FontWeight.bold,),
                            ),
                    ),
                  ),
@@ -232,14 +233,14 @@ class _Accueil_mobilite_darkState extends State<Accueil_mobilite_dark> {
                    child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
-                        color: Colors.blue.shade100
+                        color: Colors.pink.shade100
                       ),
                       width: 330,
-                     child:Row(
+                     child:Column(
                       children: [
-                        TextButton(onPressed: (){}, child: Text("My Buddy",style: TextStyle(color: Colors.red,fontSize: 18),) ),
-                        SizedBox(width: 120,),
-                        Expanded(child:Icon(Icons.arrow_drop_down,color: Colors.red,size: 30,) )
+                        Center(child: TextButton(onPressed: (){}, child: Text("My Buddy",style: TextStyle(color: Colors.red,fontSize: 16),) )),
+                        // SizedBox(width: 120,),
+                        // Expanded(child:Icon(Icons.arrow_drop_down,color: Colors.red,size: 30,) )
                         
                       ],
                      )
@@ -250,14 +251,14 @@ class _Accueil_mobilite_darkState extends State<Accueil_mobilite_dark> {
                    child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
-                        color: Colors.blue.shade100
+                        color: Colors.pink.shade100
                       ),
                       width: 330,
-                     child: Row(
+                     child: Column(
                       children: [
-                        TextButton(onPressed: (){}, child: Text("Nos Services",style: TextStyle(color: Colors.red,fontSize: 18),) ),
-                         SizedBox(width: 100,),
-                        Expanded(child:Icon(Icons.arrow_drop_down,color: Colors.red,size: 30,), )
+                        Center(child: TextButton(onPressed: (){}, child: Text("Nos Services",style: TextStyle(color: Colors.red,fontSize: 16),) )),
+                        //  SizedBox(width: 100,),
+                        // Expanded(child:Icon(Icons.arrow_drop_down,color: Colors.red,size: 30,), )
                         
                       ],
                      )
@@ -272,45 +273,7 @@ class _Accueil_mobilite_darkState extends State<Accueil_mobilite_dark> {
           ],
         ),
       ),
-     bottomNavigationBar:  Container(
-                  // color: Colors.orange,
-                  height: 70,
-                  // margin: EdgeInsets.only(top: 0),
-                  decoration: BoxDecoration(
-                        color: Colors.grey.shade900,
-                        image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain),
-                        boxShadow: [
-                          BoxShadow(color: Colors.white),
-                          BoxShadow(color: Colors.white),
-                          BoxShadow(color: Colors.white),
-                          BoxShadow(color: Colors.white),
-                        ]
-                  ),
-                child: Center(
-                  child: Container(
-                  // margin: EdgeInsets.all(10),
-
-                  padding: EdgeInsets.all(5),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon: Image.asset('images/setting.png'),iconSize: 40,),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset("images/euro_symbol.png"),iconSize: 40),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset("images/Acceuil_icone.png",),iconSize: 40,),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset('images/move_location.png'),iconSize: 40),
-                        
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset('images/night_shelter.png'),iconSize: 40)
-                      ],
-                    ),
-                  ),
-                ),
-                )
-              
+   
     );
   }
 }

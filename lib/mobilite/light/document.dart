@@ -135,8 +135,8 @@ void pickFile3()async{
          margin: EdgeInsets.all(0),
         padding: EdgeInsets.all(0),
         decoration: BoxDecoration(
-          color: Colors.white70,
-          image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
+          color: Colors.pink,
+          image: DecorationImage(image: AssetImage('images/LogoN_Mobilite.png'),fit: BoxFit.fill)
         ),
         // width: double.infinity,
         // height: double.infinity,
@@ -146,7 +146,7 @@ void pickFile3()async{
               margin: EdgeInsets.all(20),
               
               decoration:BoxDecoration(borderRadius: BorderRadius.circular(20),
-              image: DecorationImage(image:  AssetImage("images/mobilite.jpeg"),fit: BoxFit.cover,scale: 4)),
+              image: DecorationImage(image:  AssetImage("images/mobilite_3.jpg"),fit: BoxFit.fill,scale: 4)),
               // child: Image.asset("images/mobilite.jpeg",fit: BoxFit.contain,),
               height: 150,
               width: double.infinity,
@@ -162,7 +162,7 @@ void pickFile3()async{
                         Container(
                           margin: EdgeInsets.all(20),
                           child: LinearProgressIndicator(
-                          color: Colors.blue.shade100,
+                          color: Colors.pink.shade100,
                           backgroundColor: Colors.blueGrey,
                           value: 2/5,
                           borderRadius: BorderRadius.circular(30),
@@ -170,7 +170,7 @@ void pickFile3()async{
                           ),
                         ),
                         SizedBox(height: 30,),
-                        Text("Demande de Visa",style: TextStyle(color:Colors.blue.shade100, fontWeight: FontWeight.bold,fontSize: 20),)
+                        Text("Demande de Visa",style: TextStyle(color:Colors.pink.shade100, fontWeight: FontWeight.bold,fontSize: 20),)
                       ],
                     ),
                   )
@@ -313,46 +313,13 @@ void pickFile3()async{
                   child: ElevatedButton(onPressed: (){
       
                           Navigator.push(context, MaterialPageRoute(builder: (context)=>Myphoto()));
-                  }, child: Text("Continuer",style: TextStyle(color: Colors.blue.shade200),),style: ElevatedButton.styleFrom(backgroundColor: Colors.white),),
+                  }, child: Text("Continuer",style: TextStyle(color: Colors.pink),),style: ElevatedButton.styleFrom(backgroundColor: Colors.white),),
                 ),
                 )
           ],
         ),
       ),
-       bottomNavigationBar:  Container(
-                  // color: Colors.orange,
-                  height: 70,
-                  // margin: EdgeInsets.only(top: 0),
-                  decoration: BoxDecoration(
-                    color: Colors.blue.shade100,
-                    // borderRadius: BorderRadius.only(topLeft: Radius.circular(45),topRight: Radius.circular(45))
-                    ),
-                child: Center(
-                  child: Container(
-                  // margin: EdgeInsets.all(10),
-
-                  padding: EdgeInsets.all(5),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon: Image.asset('images/setting.png'),iconSize: 40,),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset("images/euro_symbol.png"),iconSize: 40),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset("images/Acceuil_icone.png",),iconSize: 50,),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset('images/move_location.png'),iconSize: 40),
-                        
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){
-                        }, icon:Image.asset('images/night_shelter.png'),iconSize: 40)
-                      ],
-                    ),
-                  ),
-                ),
-                )
- 
+     
     );
   }
 }

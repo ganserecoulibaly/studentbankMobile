@@ -184,15 +184,17 @@ void pickFile5()async{
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        
-        decoration: BoxDecoration(color: Colors.grey.shade900),
+          decoration: BoxDecoration(
+          color: Colors.grey.shade900,   
+          image: DecorationImage(image: AssetImage("images/Logo N.png"),fit: BoxFit.fill)
+        ),
         child: ListView(
           children: [
               Container(
             margin: EdgeInsets.all(20),
             
             decoration:BoxDecoration(borderRadius: BorderRadius.circular(20),
-            image: DecorationImage(image:  AssetImage("images/mobilite.jpeg"),fit: BoxFit.cover,scale: 4)),
+            image: DecorationImage(image:  AssetImage("images/mobilite_3.jpg"),fit: BoxFit.fill,scale: 4)),
             // child: Image.asset("images/mobilite.jpeg",fit: BoxFit.contain,),
             height: 250,
             width: double.infinity,

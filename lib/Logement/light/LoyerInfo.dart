@@ -14,30 +14,7 @@ class loyerinfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        child: [
-          ListView(
-            scrollDirection: Axis.vertical,
-            children: [
-              Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                  height: MediaQuery.of(context).size.height/2,
-                  width: MediaQuery.of(context).size.width,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
-        
-                    // borderRadius: BorderRadius.only(
-                    //   bottomLeft: Radius.circular(30),
-                    //   bottomRight: Radius.circular(30),
-                    // )
-                  ),
-                  child: ListView(
-                    scrollDirection: Axis.vertical,
-                    children: [
-                       Container(
+      appBar: PreferredSize(preferredSize: Size.fromHeight(300), child:     Container(
                         height: 300,
                     decoration: BoxDecoration(
                       boxShadow: [
@@ -82,11 +59,16 @@ class loyerinfo extends StatelessWidget {
                         
                         ),
                       ),
-                     
-                      
-                    ],
-                  ),
-                ),
+                   ),
+      body: Container(
+        child: [
+          ListView(
+            scrollDirection: Axis.vertical,
+            children: [
+              Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+               
 
                 // SizedBox(height: 10),
                  Center(
@@ -144,7 +126,9 @@ class loyerinfo extends StatelessWidget {
                   )
                 ]),
                  Container(
-                  
+                    decoration: BoxDecoration(
+                      color: Colors.transparent
+                    ),
                     margin: EdgeInsets.only(left:30,top:10),
                     child:Column(
                       // mainAxisAlignment: MainAxisAlignment.center,
@@ -159,9 +143,11 @@ class loyerinfo extends StatelessWidget {
                        ],
                     )
                   ),  
-              
-      ],
-      ),
+                  Center(
+                    child: Container(),
+                  )
+                ],
+              ),
             ],
           ),
        ListView(
@@ -170,64 +156,6 @@ class loyerinfo extends StatelessWidget {
            Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
-                  height: MediaQuery.of(context).size.height/2,
-                  width: MediaQuery.of(context).size.width,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    // borderRadius: BorderRadius.only(
-                    //   bottomLeft: Radius.circular(30),
-                    //   bottomRight: Radius.circular(30),
-                    // )
-                  ),
-                  child: ListView(
-                    scrollDirection: Axis.vertical,
-                    children: [
-                       Container(
-                        height: 300,
-                    decoration: BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(color: Colors.orange,blurRadius: 15.0,spreadRadius: 15.2),
-                      ],
-                      image: DecorationImage(image: AssetImage('images/maisonNight.jpg'),fit: BoxFit.cover),
-                      borderRadius: BorderRadius.only(bottomRight: Radius.circular(30),bottomLeft: Radius.circular(30))
-                    ),
-                    child: Container(
-                           child: 
-                          Center(
-                            child: 
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                            SizedBox(height: 10,),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                            Align(
-                              alignment: Alignment.centerLeft,
-                              child: Text("ANNONCES",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
-                            
-                            ),
-                            Align(
-                            alignment: Alignment.centerRight,
-                              child: IconButton(onPressed: (){},icon: Icon(Icons.menu),color: Colors.white,),
-                              ),
-                              ],
-                              
-                            ),
-                            Text("lorem ghdfshgvhsgsvss\nfhvsgvbfsfj\bnfbssbvfsvsvhn",style: TextStyle(color:Colors.white,fontSize: 13,fontWeight: FontWeight.normal),),
-                            SizedBox(height: 10,),
-                            ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white),onPressed: (){}, child: Text("voir plus",style: TextStyle(color: Colors.black),))
-                          ],),
-                          ),
-                        
-                        ),
-                      ),
-                     
-                    ],
-                  ),
-                ),
 
                 // SizedBox(height: 10),
                  Center(
@@ -235,8 +163,10 @@ class loyerinfo extends StatelessWidget {
                           alignment: Alignment.center,
                           // margin: EdgeInsets.all(10),
                           // padding: EdgeInsets.all(20),
+                          margin: EdgeInsets.only(left:15,right:15),
+                          // padding: EdgeInsets.all(20),
                           width: double.infinity,
-                          height: 200,
+                          height: 300,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             image: DecorationImage(image: AssetImage("images/${pNames[index]}.jpg"),fit: BoxFit.fill),
@@ -248,6 +178,9 @@ class loyerinfo extends StatelessWidget {
                 // SizedBox(height: 10),
                 Container(
                   // height: 100,
+                    decoration: BoxDecoration(
+                      color: Colors.transparent
+                    ),
                     child: Column(children: [
                       // Row(children: [Padding(padding:EdgeInsets.only(top: 10,left: 20),child:Text("Apartement",style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold,color: Colors.black)),),],),
                       Row(
@@ -286,7 +219,9 @@ class loyerinfo extends StatelessWidget {
                     ]),
                 ),
                  Container(
-                  
+                    decoration: BoxDecoration(
+                      color: Colors.transparent
+                    ),
                     margin: EdgeInsets.only(left:30,top:10),
                     child:Column(
                       // mainAxisAlignment: MainAxisAlignment.center,
@@ -312,74 +247,16 @@ class loyerinfo extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
-                  height: MediaQuery.of(context).size.height/2,
-                  width: MediaQuery.of(context).size.width,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    // borderRadius: BorderRadius.only(
-                    //   bottomLeft: Radius.circular(30),
-                    //   bottomRight: Radius.circular(30),
-                    // )
-                  ),
-                  child: ListView(
-                    scrollDirection: Axis.vertical,
-                    children: [
-                       Container(
-                        height: 300,
-                    decoration: BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(color: Colors.orange,blurRadius: 15.0,spreadRadius: 15.2),
-                      ],
-                      image: DecorationImage(image: AssetImage('images/maisonNight.jpg'),fit: BoxFit.cover),
-                      borderRadius: BorderRadius.only(bottomRight: Radius.circular(30),bottomLeft: Radius.circular(30))
-                    ),
-                    child: Container(
-                           child: 
-                          Center(
-                            child: 
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                            SizedBox(height: 10,),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                            Align(
-                              alignment: Alignment.centerLeft,
-                              child: Text("ANNONCES",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
-                            
-                            ),
-                            Align(
-                            alignment: Alignment.centerRight,
-                              child: IconButton(onPressed: (){},icon: Icon(Icons.menu),color: Colors.white,),
-                              ),
-                              ],
-                              
-                            ),
-                            Text("lorem ghdfshgvhsgsvss\nfhvsgvbfsfj\bnfbssbvfsvsvhn",style: TextStyle(color:Colors.white,fontSize: 13,fontWeight: FontWeight.normal),),
-                            SizedBox(height: 10,),
-                            ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white),onPressed: (){}, child: Text("voir plus",style: TextStyle(color: Colors.black),))
-                          ],),
-                          ),
-                        
-                        ),
-                      ),
-                     
-                      
-                    ],
-                  ),
-                ),
-
+          
                 // SizedBox(height: 10),
                  Center(
                    child: Container(
                           alignment: Alignment.center,
-                          margin: EdgeInsets.all(10),
+                          // padding: EdgeInsets.all(20),
+                          margin: EdgeInsets.only(left:15,right:15),
                           // padding: EdgeInsets.all(20),
                           width: double.infinity,
-                          height: 200,
+                          height: 300,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             image: DecorationImage(image: AssetImage("images/${pNames[index]}.jpg"),fit: BoxFit.fill),
@@ -389,6 +266,9 @@ class loyerinfo extends StatelessWidget {
                  ),
              Container(
                   // height: 100,
+                    decoration: BoxDecoration(
+                      color: Colors.transparent
+                    ),
                     child: Column(children: [
                       // Row(children: [Padding(padding:EdgeInsets.only(top: 10,left: 20),child:Text("Apartement",style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold,color: Colors.black)),),],),
                       Row(
@@ -427,7 +307,9 @@ class loyerinfo extends StatelessWidget {
                     ]),
                 ),
                  Container(
-                  
+                    decoration: BoxDecoration(
+                      color: Colors.transparent
+                    ),
                     margin: EdgeInsets.only(left:30,top:10),
                     child:Column(
                       // mainAxisAlignment: MainAxisAlignment.center,
@@ -453,72 +335,13 @@ class loyerinfo extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
-                  height: MediaQuery.of(context).size.height/2,
-                  width: MediaQuery.of(context).size.width,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    // borderRadius: BorderRadius.only(
-                    //   bottomLeft: Radius.circular(30),
-                    //   bottomRight: Radius.circular(30),
-                    // )
-                  ),
-                  child: ListView(
-                    scrollDirection: Axis.vertical,
-                    children: [
-                       Container(
-                        height: 300,
-                    decoration: BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(color: Colors.orange,blurRadius: 15.0,spreadRadius: 15.2),
-                      ],
-                      image: DecorationImage(image: AssetImage('images/maisonNight.jpg'),fit: BoxFit.cover),
-                      borderRadius: BorderRadius.only(bottomRight: Radius.circular(30),bottomLeft: Radius.circular(30))
-                    ),
-                    child: Container(
-                           child: 
-                          Center(
-                            child: 
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                            SizedBox(height: 10,),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                            Align(
-                              alignment: Alignment.centerLeft,
-                              child: Text("ANNONCES",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
-                            
-                            ),
-                            Align(
-                            alignment: Alignment.centerRight,
-                              child: IconButton(onPressed: (){},icon: Icon(Icons.menu),color: Colors.white,),
-                              ),
-                              ],
-                              
-                            ),
-                            Text("lorem ghdfshgvhsgsvss\nfhvsgvbfsfj\bnfbssbvfsvsvhn",style: TextStyle(color:Colors.white,fontSize: 13,fontWeight: FontWeight.normal),),
-                            SizedBox(height: 10,),
-                            ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white),onPressed: (){}, child: Text("voir plus",style: TextStyle(color: Colors.black),))
-                          ],),
-                          ),
-                        
-                        ),
-                      ),
-                    
-                      
-                    ],
-                  ),
-                ),
-                  Center(
+                 Center(
                         child: Container(
                           alignment: Alignment.center,
-                          margin: EdgeInsets.all(2),
+                          margin: EdgeInsets.only(left:15,right:15),
                           // padding: EdgeInsets.all(20),
                           width: double.infinity,
-                          height: 200,
+                          height: 300,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             image: DecorationImage(image: AssetImage("images/${pNames[index]}.jpg"),fit: BoxFit.fill),
@@ -528,6 +351,10 @@ class loyerinfo extends StatelessWidget {
                       ),
                 Container(
                   // height: 100,
+                    decoration: BoxDecoration(
+                    color: Colors.transparent,
+                    // image: DecorationImage(image: AssetImage('images/LogoNlogement.png'),fit: BoxFit.fill)
+                  ),
                     child: Column(children: [
                       // Row(children: [Padding(padding:EdgeInsets.only(top: 10,left: 20),child:Text("Apartement",style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold,color: Colors.black)),),],),
                       Row(
@@ -566,7 +393,9 @@ class loyerinfo extends StatelessWidget {
                     ]),
                 ),
                  Container(
-                  
+                    decoration: BoxDecoration(
+                      color: Colors.transparent
+                    ),
                     margin: EdgeInsets.only(left:30,top:10),
                     child:Column(
                       // mainAxisAlignment: MainAxisAlignment.center,
@@ -589,37 +418,37 @@ class loyerinfo extends StatelessWidget {
         ),
       ][index]
       ),
-      bottomNavigationBar:  Container(
-                  // color: Colors.orange,
-                  height: 70,
-                  // margin: EdgeInsets.only(top: 0),
-                  decoration: BoxDecoration(
-                    color: Colors.orange,
-                    borderRadius: BorderRadius.only(topLeft: Radius.circular(45),topRight: Radius.circular(45))),
-                child: Center(
-                  child: Container(
-                  // margin: EdgeInsets.all(10),
+      // bottomNavigationBar:  Container(
+      //             // color: Colors.orange,
+      //             height: 70,
+      //             // margin: EdgeInsets.only(top: 0),
+      //             decoration: BoxDecoration(
+      //               color: Colors.orange,
+      //               borderRadius: BorderRadius.only(topLeft: Radius.circular(45),topRight: Radius.circular(45))),
+      //           child: Center(
+      //             child: Container(
+      //             // margin: EdgeInsets.all(10),
 
-                  padding: EdgeInsets.all(5),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon: Image.asset('images/setting.png'),iconSize: 40,),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset("images/euro_symbol.png"),iconSize: 40),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset("images/Acceuil_icone.png"),iconSize: 50),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset('images/move_location.png'),iconSize: 40),
+      //             padding: EdgeInsets.all(5),
+      //               child: Row(
+      //                 mainAxisAlignment: MainAxisAlignment.center,
+      //                 children: [
+      //                   SizedBox(width:15),
+      //                   IconButton(onPressed: (){}, icon: Image.asset('images/setting.png'),iconSize: 40,),
+      //                   SizedBox(width:15),
+      //                   IconButton(onPressed: (){}, icon:Image.asset("images/euro_symbol.png"),iconSize: 40),
+      //                   SizedBox(width:15),
+      //                   IconButton(onPressed: (){}, icon:Image.asset("images/Acceuil_icone.png"),iconSize: 50),
+      //                   SizedBox(width:15),
+      //                   IconButton(onPressed: (){}, icon:Image.asset('images/move_location.png'),iconSize: 40),
                         
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset('images/night_shelter.png'),iconSize: 40)
-                      ],
-                    ),
-                  ),
-                ),
-                )
+      //                   SizedBox(width:15),
+      //                   IconButton(onPressed: (){}, icon:Image.asset('images/night_shelter.png'),iconSize: 40)
+      //                 ],
+      //               ),
+      //             ),
+      //           ),
+      //           )
              
     );
   }

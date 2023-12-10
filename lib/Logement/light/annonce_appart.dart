@@ -18,18 +18,7 @@ class Annonce_appart extends StatelessWidget {
     return Scaffold(
       
       // backgroundColor: Colors.white,
-      
-      body: Container(
-         margin: EdgeInsets.all(0),
-        padding: EdgeInsets.all(0),
-        decoration: BoxDecoration(
-          color: Colors.white,
-          image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
-        ),
-        child: ListView(
-          
-        children:[ 
-           Container(
+      appBar: PreferredSize(preferredSize: Size.fromHeight(300), child:   Container(
                 decoration: BoxDecoration(
                   boxShadow: [
                       BoxShadow(color: Colors.orange.shade200,blurRadius: 3.0,spreadRadius: 4.2),
@@ -73,6 +62,17 @@ class Annonce_appart extends StatelessWidget {
                     
                     ),
                   ),
+        ),
+      body: Container(
+         margin: EdgeInsets.all(0),
+        padding: EdgeInsets.all(0),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          image: DecorationImage(image: AssetImage('images/LogoNlogement.png'),fit: BoxFit.contain)
+        ),
+        child: ListView(
+          
+        children:[ 
           Container(
             child: Container(
              
@@ -231,37 +231,37 @@ class Annonce_appart extends StatelessWidget {
         ]   
      ),      ),
         
-           bottomNavigationBar:  Container(
-                  // color: Colors.orange,
-                  height: 70,
-                  // margin: EdgeInsets.only(top: 0),
-                  decoration: BoxDecoration(
-                    color: Colors.orange,
-                    borderRadius: BorderRadius.only(topLeft: Radius.circular(45),topRight: Radius.circular(45))),
-                child: Center(
-                  child: Container(
-                  // margin: EdgeInsets.all(10),
+          //  bottomNavigationBar:  Container(
+          //         // color: Colors.orange,
+          //         height: 70,
+          //         // margin: EdgeInsets.only(top: 0),
+          //         decoration: BoxDecoration(
+          //           color: Colors.orange,
+          //           borderRadius: BorderRadius.only(topLeft: Radius.circular(45),topRight: Radius.circular(45))),
+          //       child: Center(
+          //         child: Container(
+          //         // margin: EdgeInsets.all(10),
 
-                  padding: EdgeInsets.all(5),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon: Image.asset('images/setting.png'),iconSize: 40,),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset("images/euro_symbol.png"),iconSize: 40),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset("images/Acceuil_icone.png"),iconSize: 50),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset('images/move_location.png'),iconSize: 40),
+          //         padding: EdgeInsets.all(5),
+          //           child: Row(
+          //             mainAxisAlignment: MainAxisAlignment.center,
+          //             children: [
+          //               SizedBox(width:15),
+          //               IconButton(onPressed: (){}, icon: Image.asset('images/setting.png'),iconSize: 40,),
+          //               SizedBox(width:15),
+          //               IconButton(onPressed: (){}, icon:Image.asset("images/euro_symbol.png"),iconSize: 40),
+          //               SizedBox(width:15),
+          //               IconButton(onPressed: (){}, icon:Image.asset("images/Acceuil_icone.png"),iconSize: 50),
+          //               SizedBox(width:15),
+          //               IconButton(onPressed: (){}, icon:Image.asset('images/move_location.png'),iconSize: 40),
                         
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset('images/night_shelter.png'),iconSize: 40)
-                      ],
-                    ),
-                  ),
-                ),
-                )
+          //               SizedBox(width:15),
+          //               IconButton(onPressed: (){}, icon:Image.asset('images/night_shelter.png'),iconSize: 40)
+          //             ],
+          //           ),
+          //         ),
+          //       ),
+          //       )
              
       );
   }

@@ -14,10 +14,25 @@ class location_dark extends StatefulWidget {
 }
 class _location_darkState extends State<location_dark> {
 FilePickerResult?result;
+FilePickerResult?result1;
+FilePickerResult?result2;
+FilePickerResult?result3;
 String? _filename;
+String? _filename1;
+String? _filename2;
+String? _filename3;
 PlatformFile?pickedfile;
+PlatformFile?pickedfile1;
+PlatformFile?pickedfile2;
+PlatformFile?pickedfile3;
 bool isLoading=false;
+bool isLoading1=false;
+bool isLoading2=false;
+bool isLoading3=false;
 File? fileToDisplay;
+File? fileToDisplay1;
+File? fileToDisplay2;
+File? fileToDisplay3;
 void pickFile()async{
   try{
   setState(() {
@@ -40,6 +55,72 @@ void pickFile()async{
     print("ne marche pas");
   }
 }
+void pickFile1()async{
+  try{
+  setState(() {
+    isLoading1=true;
+  }); 
+  result1=await FilePicker.platform.pickFiles(
+    type: FileType.custom,
+    allowedExtensions: ['jpg', 'pdf', 'doc'],
+  );
+  if(result1!=null){
+    _filename1=result1!.files.first.name;
+    pickedfile1=result1!.files.first;
+    fileToDisplay1=File(pickedfile1!.path.toString());
+    print('file name ${_filename1}');
+  }
+  setState(() {
+    isLoading1=false;
+  });
+  }catch(er){
+    print("ne marche pas");
+  }
+}
+void pickFile2()async{
+  try{
+  setState(() {
+    isLoading2=true;
+  }); 
+  result2=await FilePicker.platform.pickFiles(
+    type: FileType.custom,
+    allowedExtensions: ['jpg', 'pdf', 'doc'],
+  );
+  if(result2!=null){
+    _filename2=result2!.files.first.name;
+    pickedfile2=result2!.files.first;
+    fileToDisplay2=File(pickedfile2!.path.toString());
+    print('file name ${_filename2}');
+  }
+  setState(() {
+    isLoading2=false;
+  });
+  }catch(er){
+    print("ne marche pas");
+  }
+}
+void pickFile3()async{
+  try{
+  setState(() {
+    isLoading3=true;
+  }); 
+  result3=await FilePicker.platform.pickFiles(
+    type: FileType.custom,
+    allowedExtensions: ['jpg', 'pdf', 'doc'],
+  );
+  if(result3!=null){
+    _filename3=result3!.files.first.name;
+    pickedfile3=result3!.files.first;
+    fileToDisplay3=File(pickedfile3!.path.toString());
+    print('file name ${_filename3}');
+  }
+  setState(() {
+    isLoading3=false;
+  });
+  }catch(er){
+    print("ne marche pas");
+  }
+}
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,77 +130,125 @@ void pickFile()async{
           ),
         
           child:Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,  
+              // mainAxisAlignment: MainAxisAlignment.spaceEvenly,  
               children: [
-                Padding(padding: EdgeInsets.all(10),
-            child:  Column(
-                  children: [
-                  Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text("Locations",style:TextStyle(color: Colors.red,fontSize: 30,fontWeight: FontWeight.bold))
-                  ],
-                ),
-                  Row(
-
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
+               Container(
+              height: 300,
+              decoration: BoxDecoration(
+                boxShadow: [
+                       BoxShadow(color: Colors.white,blurRadius: 3.0,spreadRadius: 4.2),
+              ],
+                image: DecorationImage(image: AssetImage('images/maisonNight.jpg'),fit: BoxFit.cover),
+                borderRadius: BorderRadius.only(bottomRight: Radius.circular(30),bottomLeft: Radius.circular(30))
+              ),
+              child: Stack(
+                    /// Width of the [ImageSlideshow].
+                    children: [
                     
-                    Text("lorem sjdfhkjghsbhsfdbhvdshdvbhssvhsfdhdsfhvfd\ngfhdsgvshdvfshdfbsdjbfsd\nfdhsgfgvfgsdhv",style:TextStyle(color: Colors.black,fontSize: 15))
-                  ],
-                ),
-
-                  ],
-                ),
-            ),
-            // SizedBox(height: 60,),
-            Center(
-              child: Column(children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      width:300,
-                      decoration:  BoxDecoration(color: Colors.grey.shade900,borderRadius: BorderRadius.circular((8))),
-                      child:  ElevatedButton.icon(onPressed: (){
-                       pickFile();
-                      },icon:Icon(Icons.file_upload_outlined), label:const Text("Contrat de logement",style: TextStyle(fontSize: 16,color: Colors.black),)),
-                  ),
-                  ],  
-                ),
-                const SizedBox(height: 8,),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      width:300,
-                      decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((8))),
-                      child: ElevatedButton.icon(onPressed: (){pickFile();}, label:const Text("Facture de logement",style: TextStyle(fontSize: 16,color: Colors.black)),icon:Icon(Icons.file_upload_outlined)),
-                ),
-                // Positioned(child:),
-                ],
-                ),
-                const SizedBox(height: 8,),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      width:300,
-                      decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((8))),
-                      child: ElevatedButton.icon(onPressed: (){pickFile();},icon:Icon(Icons.file_upload_outlined),label:const Text("Autres",style: TextStyle(fontSize: 16,color: Colors.black),)),
+                    Center(
+                      child: 
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                      SizedBox(height: 10,),
+                      Align(
+                        alignment: Alignment.center,
+                        child: Text("Mes Documents",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
                       
-                ),
-                ],
-                ),
-                const SizedBox(height: 8,),
-              ]),
-            )
-                
+                      ),
+                      Text("lorem ghdfshgvhsgsvss\nfhvsgvbfsfj\bnfbssbvfsvsvhn",style: TextStyle(color:Colors.white,fontSize: 13,fontWeight: FontWeight.normal),),
+                      SizedBox(height: 10,),
+                      ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white),onPressed: (){}, child: Text("voir plus",style: TextStyle(color: Colors.black),))
+                    ],),
+                    ),
+                    ],
+                  ),
+               ),
+              Container(
+                      margin: EdgeInsets.all(5),
+                      padding: EdgeInsets.all(10),
+                      alignment: Alignment.center,
+                      width:350,
+                      decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((30))),
+                      child:Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                           Container(
+                      decoration: BoxDecoration(color: Colors.red,borderRadius: BorderRadius.circular(7)),
+                      height:35,width: 50,
+                      
+                      child: 
+                    Image.asset('images/🦆 icon _building one_.png',color: Colors.white,),
+                    ),
+                     Container(
+                      child:TextButton(
+                        onPressed: (){
+                       pickFile();
+                        }, child:const Text("Contrat de logement",style: TextStyle(fontSize: 15,color: Colors.black),)),
+                     ),Icon(Icons.upload_file,color: Colors.red,),
+                        ],
+                      ),
+                  ),
+
+                 result!=null?Text("${_filename}"):Text(""),
+                Container(
+                      margin: EdgeInsets.all(5),
+                      padding: EdgeInsets.all(10),
+                      alignment: Alignment.center,
+                      width:350,
+                      decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((30))),
+                      child:Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                           Container(
+                      decoration: BoxDecoration(color: Colors.red,borderRadius: BorderRadius.circular(7)),
+                      height:35,width: 50,
+                      
+                      child: 
+                    Image.asset('images/🦆 icon _building one_.png',color: Colors.white,),
+                    ),
+                     Container(
+                      child:TextButton(
+                        onPressed: (){
+                       pickFile1();
+                        }, child:const Text("Facture de logement",style: TextStyle(fontSize: 15,color: Colors.black),)),
+                      ), Icon(Icons.upload_file,color: Colors.red,),
+                        ],
+                      ),
+                  ),
+
+              result1!=null?Text("${_filename1}"):Text(""),
+                 Container(
+                      margin: EdgeInsets.all(5),
+                      padding: EdgeInsets.all(10),
+                      alignment: Alignment.center,
+                      width:350,
+                      decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((30))),
+                      child:Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                           Container(
+                      decoration: BoxDecoration(color: Colors.red,borderRadius: BorderRadius.circular(7)),
+                      height:35,width: 50,
+                      
+                      child: 
+                    Image.asset('images/🦆 icon _building one_.png',color: Colors.white,),
+                    ),
+                     Container(
+                      child:TextButton(
+                        onPressed: (){
+                       pickFile2();
+                        }, child:const Text("autre                          ",style: TextStyle(fontSize: 15,color: Colors.black),)),
+                     ),Icon(Icons.upload_file,color: Colors.red,),
+                        ],
+                      ),
+                  ),
+              result2!=null?Text("${_filename2}"):Text(""),
+            // SizedBox(height: 60,),
               ],
             ),
-          ),
-        
-        
+          ),       
     );
     
   }

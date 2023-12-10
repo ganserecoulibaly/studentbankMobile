@@ -29,24 +29,12 @@ class _Accueil_mobiliteState extends State<Accueil_mobilite> {
     
     return Scaffold(
       extendBody: true,
-      body: Container(
-        margin: EdgeInsets.all(0),
-        padding: EdgeInsets.all(0),
-        decoration: BoxDecoration(
-          color: Colors.white70,
-          image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
-        ),
-        // width: double.infinity,
-        // height: double.infinity,
-        child: ListView(
-          scrollDirection: Axis.vertical,
-          children: [
-            Container(
+      appBar: PreferredSize(preferredSize: Size.fromHeight(300), child:    Container(
               decoration: BoxDecoration(
                 boxShadow: [
-                  BoxShadow(color: Colors.blue.shade200,blurRadius: 3.0,spreadRadius: 4.2),
+                  BoxShadow(color: Colors.pink.shade200,blurRadius: 3.0,spreadRadius: 4.2),
                 ],
-                image: DecorationImage(image: AssetImage('images/mobilite.jpeg'),fit: BoxFit.cover),
+                image: DecorationImage(image: AssetImage('images/mobilite_3.jpg'),fit: BoxFit.fill),
                 borderRadius: BorderRadius.only(bottomRight: Radius.circular(30),bottomLeft: Radius.circular(30))
               ),
               child: ImageSlideshow(
@@ -54,13 +42,13 @@ class _Accueil_mobiliteState extends State<Accueil_mobilite> {
                     width: double.infinity,
 
                     /// Height of the [ImageSlideshow].
-                    height: 450,
+                    height: 350,
 
                     /// The page to show when first creating the [ImageSlideshow].
                     initialPage: 0,
 
                     /// The color to paint the indicator.
-                    indicatorColor: Colors.blue.shade200,
+                    indicatorColor: Colors.pink.shade200,
                   
                     /// The color to paint behind th indicator.
                     indicatorBackgroundColor: Colors.white,
@@ -128,7 +116,20 @@ class _Accueil_mobiliteState extends State<Accueil_mobilite> {
                     isLoop: true,
                   ),
             ),
-            Container(
+           ),
+      body: Container(
+        margin: EdgeInsets.all(0),
+        padding: EdgeInsets.all(0),
+        decoration: BoxDecoration(
+          color: Colors.pink,
+          // image: DecorationImage(image: AssetImage('images/LogoN_Mobilite.png'),fit: BoxFit.fill)
+        ),
+        // width: double.infinity,
+        // height: double.infinity,
+        child: ListView(
+          scrollDirection: Axis.vertical,
+          children: [
+          Container(
               padding: EdgeInsets.only(top: 20,bottom: 20),
               alignment: Alignment.center,
               decoration: BoxDecoration(
@@ -137,14 +138,14 @@ class _Accueil_mobiliteState extends State<Accueil_mobilite> {
               child: Center(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
                   // alignment: Alignment.center,
               children: [
                       Center(
                    child: Container(
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        color: Colors.blue.shade100
+                        // borderRadius: BorderRadius.circular(30),
+                        border: Border.all(color: Colors.white,width: 2),
+                        color: Colors.pink.shade200
                       ),
                       width: 330,
                      child: DropdownButton(
@@ -173,11 +174,11 @@ class _Accueil_mobiliteState extends State<Accueil_mobilite> {
                           //   onTap: (){
                           
                           //  },
-                           icon:Icon(Icons.arrow_drop_down),
+                           icon:Icon(Icons.arrow_drop_down_circle_outlined),
                            iconSize: 30,
-                           iconEnabledColor: Colors.red,
+                           iconEnabledColor: Colors.white,
                            isExpanded: true,
-                           style: TextStyle(color: Colors.red,),
+                           style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 18),
                            ),
                    ),
                  ),
@@ -185,8 +186,9 @@ class _Accueil_mobiliteState extends State<Accueil_mobilite> {
                   Center(
                    child: Container(
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        color: Colors.blue.shade100
+                        // borderRadius: BorderRadius.circular(30),
+                        border: Border.all(color: Colors.white,width: 2),
+                        color: Colors.pink.shade200
                       ),
                       width: 330,
                      child: DropdownButton(
@@ -214,11 +216,11 @@ class _Accueil_mobiliteState extends State<Accueil_mobilite> {
                             Navigator.push(context, MaterialPageRoute(builder: (context)=>admision()));
                             }
                            },
-                           icon:Icon(Icons.arrow_drop_down),
+                            icon:Icon(Icons.arrow_drop_down_circle_outlined),
                            iconSize: 30,
-                           iconEnabledColor: Colors.red,
+                           iconEnabledColor: Colors.white,
                            isExpanded: true,
-                           style: TextStyle(color: Colors.red,),
+                           style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 18),
                            ),
                    ),
                  ),
@@ -227,14 +229,19 @@ class _Accueil_mobiliteState extends State<Accueil_mobilite> {
                    child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
-                        color: Colors.blue.shade100
+                        color: Colors.pink.shade200
                       ),
                       width: 330,
-                     child:Row(
+                     child:Column(
                       children: [
-                        TextButton(onPressed: (){}, child: Text("My Buddy",style: TextStyle(color: Colors.red,fontSize: 18),) ),
-                        SizedBox(width: 120,),
-                        Expanded(child:Icon(Icons.arrow_drop_down,color: Colors.red,size: 30,) )
+                        // SizedBox(width: 30,),
+                        Center(
+                          child: TextButton(
+                            onPressed: (){}, 
+                            child:const Text("My Buddy",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 18),) )
+                            ),
+                        // SizedBox(width: 120,),
+                        // Expanded(child:Icon(Icons.arrow_circle_down_sharp,color: Colors.white,size: 30,) )
                         
                       ],
                      )
@@ -245,14 +252,15 @@ class _Accueil_mobiliteState extends State<Accueil_mobilite> {
                    child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
-                        color: Colors.blue.shade100
+                        color: Colors.pink.shade200
                       ),
                       width: 330,
-                     child: Row(
+                     child: Column(
                       children: [
-                        TextButton(onPressed: (){}, child: Text("Nos Services",style: TextStyle(color: Colors.red,fontSize: 18),) ),
-                         SizedBox(width: 100,),
-                        Expanded(child:Icon(Icons.arrow_drop_down,color: Colors.red,size: 30,), )
+                        SizedBox(width: 30,),
+                        Center(child: TextButton(onPressed: (){}, child: Text("Nos Services",style: TextStyle(color: Colors.black,fontSize: 18),) )),
+                        //  SizedBox(width: 100,),
+                        // Expanded(child:Icon(Icons.arrow_circle_down,color: Colors.white,size: 30,), )
                         
                       ],
                      )
@@ -267,39 +275,7 @@ class _Accueil_mobiliteState extends State<Accueil_mobilite> {
           ],
         ),
       ),
-     bottomNavigationBar:  Container(
-                  // color: Colors.orange,
-                  height: 70,
-                  // margin: EdgeInsets.only(top: 0),
-                  decoration: BoxDecoration(
-                    color: Colors.blue.shade100,
-                    // borderRadius: BorderRadius.only(topLeft: Radius.circular(45),topRight: Radius.circular(45))
-                    ),
-                child: Center(
-                  child: Container(
-                  // margin: EdgeInsets.all(10),
-
-                  padding: EdgeInsets.all(5),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon: Image.asset('images/setting.png'),iconSize: 40,),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset("images/euro_symbol.png"),iconSize: 40),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset("images/Acceuil_icone.png",),iconSize: 40,),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset('images/move_location.png'),iconSize: 40),
-                        
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset('images/night_shelter.png'),iconSize: 40)
-                      ],
-                    ),
-                  ),
-                ),
-                )
-              
+                
     );
   }
 }

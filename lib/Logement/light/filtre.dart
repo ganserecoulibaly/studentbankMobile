@@ -42,7 +42,9 @@ class _FiltreState extends State<Filtre> {
     return Scaffold(
       
       body: Container(
-        decoration: BoxDecoration(color: Colors.orange),
+        decoration: BoxDecoration(
+          image: DecorationImage(image: AssetImage("images/theme_blanc_rose_studentBanc.png"),fit: BoxFit.fill),
+        ),
         child: ListView(
           // scrollDirection: Axis.vertical,
           children: [
@@ -57,14 +59,14 @@ class _FiltreState extends State<Filtre> {
                   child: Align(
                     
                     alignment: Alignment.topLeft,
-                    child: Text("Filtres",style: TextStyle(color: Colors.white,fontSize:30,fontWeight: FontWeight.bold),),
+                    child: Text("Filtres",style: TextStyle(color: Colors.grey.shade900,fontSize:30,fontWeight: FontWeight.bold),),
                   ),
                 ),
                 SizedBox(width: 200,),
                 Container(
                   child: Align(
                     alignment: Alignment.topRight,
-                    child: Icon(Icons.notifications,color: Colors.white,size: 50,),
+                    child: Icon(Icons.notifications,color: Colors.grey.shade900,size: 50,),
                     ),
                 )
               ],
@@ -76,22 +78,24 @@ class _FiltreState extends State<Filtre> {
                    Padding(padding: EdgeInsets.only(left:10,top: 20),
                         child: Row(
                           children: [
-                            Icon(CupertinoIcons.money_dollar_circle_fill,size: 25,color:Colors.white)
+                            Icon(CupertinoIcons.money_dollar_circle_fill,size: 25,color:Colors.grey.shade900)
                             ,SizedBox(width: 5,),
                             Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(30),
-                                color: Colors.white
+                                color: Colors.grey.shade900
                               ),
                               child: SizedBox(
                             width: 50,
                             height: 50,
                             child: TextField(
                               controller: _prixmin,
-                              obscureText: true,
+                              style: TextStyle(color: Colors.white),
+                              textAlign: TextAlign.center,
                               decoration: InputDecoration(
                                 // border: OutlineInputBorder(),
                                 labelText: '  min',
+                                labelStyle: TextStyle(color: Colors.orange)
                               ),
                             ),)
                             ),
@@ -101,17 +105,19 @@ class _FiltreState extends State<Filtre> {
                             Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(30),
-                                color: Colors.white
+                                color: Colors.grey.shade900
                               ),
                               child: SizedBox( 
                             width: 50,
                             height: 50,
                             child: TextField(
                               controller: _prixmax,
-                              obscureText: true,
+                              style: TextStyle(color: Colors.white),
+                              textAlign: TextAlign.center,
                               decoration: InputDecoration(
                                 // border: OutlineInputBorder(),
                                 labelText: '  max',
+                                labelStyle: TextStyle(color: Colors.orange)
                               ),
                             ),)
                             ),
@@ -120,20 +126,22 @@ class _FiltreState extends State<Filtre> {
                         Padding(padding: EdgeInsets.only(left:10,top: 20),
                         child:Row(
                           children: [
-                            Icon(CupertinoIcons.rectangle_fill_on_rectangle_fill,size:25,color:Colors.white)
+                            Icon(CupertinoIcons.rectangle_fill_on_rectangle_fill,size:25,color:Colors.grey.shade900)
                             ,SizedBox(width: 10,),
                             Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(30),
-                                color: Colors.white
+                                color: Colors.grey.shade900
                               ),
                               child:  SizedBox(
                                 width: 100,
                                 child: TextField(
                                   controller: _place,
-                                  obscureText: true,
+                                  style: TextStyle(color: Colors.white),
+                                  textAlign: TextAlign.center,
                                   decoration: InputDecoration(
                                     labelText: '  Place',
+                                labelStyle: TextStyle(color: Colors.orange)
                                   ),
                             ),)
                              ),
@@ -143,21 +151,23 @@ class _FiltreState extends State<Filtre> {
                  Padding(padding: EdgeInsets.only(left:10,top: 20),
                         child: Row(
                           children: [
-                            Icon(Icons.place,size:25,color:Colors.white),
+                            Icon(Icons.place,size:25,color:Colors.grey.shade900),
                             SizedBox(width: 10,),
                             Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(30),
-                                color: Colors.white
+                                color: Colors.grey.shade900
                               ),
                               child: SizedBox(
                                 width: 100,
                                 child: TextField(
                                   controller: _Location,
-                                  obscureText: true,
+                                  style: TextStyle(color: Colors.white),
+                                  textAlign: TextAlign.center,
                                   decoration: InputDecoration(
                                 // border: OutlineInputBorder(),
                                 labelText: ' Location',
+                                labelStyle: TextStyle(color: Colors.orange)
                               ),
                             ),)
                             ),
@@ -166,21 +176,23 @@ class _FiltreState extends State<Filtre> {
                         Padding(padding: EdgeInsets.only(left:10,top: 20),
                         child: Row(
                           children: [
-                            Icon(Icons.screenshot_monitor,size:25,color:Colors.white),
+                            Icon(Icons.screenshot_monitor,size:25,color:Colors.grey.shade900),
                             SizedBox(width: 10,),
                              Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(30),
-                                color: Colors.white
+                                color: Colors.grey.shade900
                               ),
                               child: SizedBox(
                                 width: 100,
                                 child: TextField(
                                   controller: _Surface,
-                                  obscureText: true,
+                                  style: TextStyle(color: Colors.white),
+                                  textAlign: TextAlign.center,
                                   decoration: InputDecoration(
                                 // border: OutlineInputBorder(),
                                 labelText: ' Surface',
+                                labelStyle: TextStyle(color: Colors.orange)
                               ),
                             ),)
                             ), 
@@ -189,20 +201,22 @@ class _FiltreState extends State<Filtre> {
                         ),
                    Padding(padding: EdgeInsets.only(left:10,top: 20),
                         child: Row(children: [
-                          Icon(CupertinoIcons.cube_box_fill,size:25,color:Colors.white),
+                          Icon(CupertinoIcons.cube_box_fill,size:25,color:Colors.grey.shade900),
                           SizedBox(width: 10,),
                           Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(30),
-                                color: Colors.white
+                                color: Colors.grey.shade900
                               ),
                               child:  SizedBox(
                                 width: 100,
                                 child: TextField(
                                   controller: _meuble,
-                                  obscureText: true,
+                                  style: TextStyle(color: Colors.white),
+                                  textAlign: TextAlign.center,
                                   decoration: InputDecoration(
                                     labelText: ' meuble',
+                                labelStyle: TextStyle(color: Colors.orange)
                                   ),
                             ),)
                             ),
@@ -211,7 +225,22 @@ class _FiltreState extends State<Filtre> {
                         
                 ],
               ),
-            )
+            ),
+             Center(
+               child: Container(
+                margin: EdgeInsets.only(top:60,bottom: 5),
+                  width: 100,
+                alignment: Alignment.bottomCenter,
+                          decoration: BoxDecoration(color: Colors.grey[900],borderRadius: BorderRadius.circular(30)),
+                          child: Center(
+                             child: TextButton(child: Text("Continuer",style: TextStyle(color: Colors.orange),),
+                             onPressed: (){
+                              Navigator.pop(context);
+                             },
+                            ),
+                          )
+                        ),
+             )  
           ],
         ),
       ),

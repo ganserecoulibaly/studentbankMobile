@@ -32,7 +32,7 @@ class _demande_admissionState extends State<demande_admission> {
             margin: EdgeInsets.all(30),
             
             decoration:BoxDecoration(borderRadius: BorderRadius.circular(20),
-            image: DecorationImage(image:  AssetImage("images/mobilite.jpeg"),fit: BoxFit.cover,scale: 4)),
+            image: DecorationImage(image:  AssetImage("images/mobilite_3.jpg"),fit: BoxFit.fill,scale: 4)),
             // child: Image.asset("images/mobilite.jpeg",fit: BoxFit.contain,),
             height: 150,
             width: double.infinity,
@@ -46,7 +46,7 @@ class _demande_admissionState extends State<demande_admission> {
                       Container(
                         margin: EdgeInsets.all(20),
                         child: LinearProgressIndicator(
-                        color: Colors.blue.shade100,
+                        color: Colors.pink.shade100,
                         backgroundColor: Colors.blueGrey,
                         value: 2/3,
                         borderRadius: BorderRadius.circular(30),
@@ -79,7 +79,7 @@ class _demande_admissionState extends State<demande_admission> {
                                
                       Image(image:AssetImage("images/🦆 icon _building one_.png")),
                               // SizedBox(height:3),
-                      Text("Universite de Barcelone",style: TextStyle(color: Colors.white,fontSize: 14,fontWeight: FontWeight.bold,),)
+                      Text("Université de Barcelone",style: TextStyle(color: Colors.white,fontSize: 14,fontWeight: FontWeight.bold,),)
                         
                             ],
                           )
@@ -98,7 +98,7 @@ class _demande_admissionState extends State<demande_admission> {
                           height:30,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            color: Colors.white70,),
+                            color: Colors.pink,),
                           child: Center(
                             child: TextField(
                               controller: _nom,
@@ -114,11 +114,11 @@ class _demande_admissionState extends State<demande_admission> {
                       margin: EdgeInsets.all(10),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.white70,),
+                        color: Colors.pink,),
                       child: Center(
                         child: TextField(
                           controller: _prenom,
-                          decoration: InputDecoration(label: Text("Prenom*",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),)
+                          decoration: InputDecoration(label: Text("Prénom*",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),)
                         ),
                       ),
                     ),
@@ -133,7 +133,7 @@ class _demande_admissionState extends State<demande_admission> {
                           height:30,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            color: Colors.white70,),
+                            color: Colors.pink,),
                           child: TextField(
                             controller: _num,
                             decoration: InputDecoration(
@@ -147,7 +147,7 @@ class _demande_admissionState extends State<demande_admission> {
                       margin: EdgeInsets.all(10),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.white70,),
+                        color: Colors.pink,),
                       child: TextField(
                         controller: _num2,
                         decoration: InputDecoration(label: Text("Telephone",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),)
@@ -164,7 +164,7 @@ class _demande_admissionState extends State<demande_admission> {
                           height:30,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            color: Colors.white70,),
+                            color: Colors.pink,),
                           child:  DropdownButton(
                             items:list_niveau.map((String items){
                               return DropdownMenuItem(child: Text(items),value: items,);
@@ -188,7 +188,7 @@ class _demande_admissionState extends State<demande_admission> {
                       margin: EdgeInsets.all(10),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.white70,),
+                        color: Colors.pink,),
                       child: Center(
                         child: DropdownButton(
                               items:list_filiere.map((String items){
@@ -213,7 +213,7 @@ class _demande_admissionState extends State<demande_admission> {
                 width: 50,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(30),
-                  color: Colors.white70
+                  color: Colors.pink
                 ),
                 child: TextField( 
                   controller: _email,
@@ -228,7 +228,7 @@ class _demande_admissionState extends State<demande_admission> {
                 width: 50,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(30),
-                  color: Colors.white70
+                  color: Colors.pink
                 ),
                 child: Center(
                   child: TextField( 
@@ -250,7 +250,7 @@ class _demande_admissionState extends State<demande_admission> {
                 width: 50,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(30),
-                  color: Colors.white70
+                  color: Colors.pink
                 ),
                 child: TextField( 
                   cursorColor: Colors.black,
@@ -274,39 +274,6 @@ class _demande_admissionState extends State<demande_admission> {
         )],
         ),
       ),
-       bottomNavigationBar:  Container(
-                  // color: Colors.orange,
-                  height: 70,
-                  // margin: EdgeInsets.only(top: 0),
-                  decoration: BoxDecoration(
-                    color: Colors.blue.shade100,
-                    // borderRadius: BorderRadius.only(topLeft: Radius.circular(45),topRight: Radius.circular(45))
-                    ),
-                child: Center(
-                  child: Container(
-                  // margin: EdgeInsets.all(10),
-
-                  padding: EdgeInsets.all(5),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon: Image.asset('images/setting.png'),iconSize: 40,),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset("images/euro_symbol.png"),iconSize: 40),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset("images/Acceuil_icone.png",),iconSize: 40,),
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset('images/move_location.png'),iconSize: 40),
-                        
-                        SizedBox(width:15),
-                        IconButton(onPressed: (){}, icon:Image.asset('images/night_shelter.png'),iconSize: 40)
-                      ],
-                    ),
-                  ),
-                ),
-                )
-
-    );
+        );
   }
 }
