@@ -18,19 +18,7 @@ class _GestionLogState extends State<GestionLog> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        margin: EdgeInsets.all(0),
-        padding: EdgeInsets.all(0),
-        decoration: BoxDecoration(
-          color: Colors.white,
-          image: DecorationImage(image: AssetImage('images/LogoNlogement.png'),fit: BoxFit.fill)
-        ),
-        // width: double.infinity,
-        // height: double.infinity,
-        child: ListView(
-          scrollDirection: Axis.vertical,
-          children: [
-            Container(
+      appBar: PreferredSize(preferredSize: Size.fromHeight(300), child:   Container(
               height: 300,
               decoration: BoxDecoration(
                 boxShadow: [
@@ -92,7 +80,20 @@ class _GestionLogState extends State<GestionLog> {
                     isLoop: true,
                   ),
             ),
-            Container(
+            ),
+      body: Container(
+        margin: EdgeInsets.all(0),
+        padding: EdgeInsets.all(0),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          image: DecorationImage(image: AssetImage('images/LogoNlogement.png'),fit: BoxFit.fill)
+        ),
+        // width: double.infinity,
+        // height: double.infinity,
+        child: ListView(
+          scrollDirection: Axis.vertical,
+          children: [
+          Container(
               padding: EdgeInsets.all(30),
               // alignment: Alignment.center,
               decoration: BoxDecoration(
@@ -108,7 +109,7 @@ class _GestionLogState extends State<GestionLog> {
                       padding: EdgeInsets.all(10),
                       alignment: Alignment.center,
                       width:350,
-                      decoration:  BoxDecoration(color: Colors.white,boxShadow: [BoxShadow(color:Colors.black,blurRadius: 3,)],borderRadius: BorderRadius.circular((10))),
+                      decoration:  BoxDecoration(color: Colors.white,boxShadow: [BoxShadow(color:Colors.black,blurRadius: 3,)],borderRadius: BorderRadius.circular((30))),
                       child:Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
@@ -134,7 +135,7 @@ class _GestionLogState extends State<GestionLog> {
                       padding: EdgeInsets.all(10),
                       alignment: Alignment.center,
                       width:350,
-                      decoration:  BoxDecoration(color: Colors.white,boxShadow: [BoxShadow(color:Colors.black,blurRadius: 3,)],borderRadius: BorderRadius.circular((10))),
+                      decoration:  BoxDecoration(color: Colors.white,boxShadow: [BoxShadow(color:Colors.black,blurRadius: 3,)],borderRadius: BorderRadius.circular((30))),
                       child:Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
@@ -162,7 +163,7 @@ class _GestionLogState extends State<GestionLog> {
                       padding: EdgeInsets.all(10),
                       alignment: Alignment.center,
                       width:350,
-                      decoration:  BoxDecoration(color: Colors.white,boxShadow: [BoxShadow(color:Colors.black,blurRadius: 3,)],borderRadius: BorderRadius.circular((10))),
+                      decoration:  BoxDecoration(color: Colors.white,boxShadow: [BoxShadow(color:Colors.black,blurRadius: 3,)],borderRadius: BorderRadius.circular((30))),
                       child:Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
@@ -191,7 +192,7 @@ class _GestionLogState extends State<GestionLog> {
                       padding: EdgeInsets.all(10),
                       alignment: Alignment.center,
                       width:350,
-                      decoration:  BoxDecoration(color: Colors.white,boxShadow: [BoxShadow(color:Colors.black,blurRadius: 3,)],borderRadius: BorderRadius.circular((10))),
+                      decoration:  BoxDecoration(color: Colors.white,boxShadow: [BoxShadow(color:Colors.black,blurRadius: 3,)],borderRadius: BorderRadius.circular((30))),
                       child:Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [

@@ -22,18 +22,9 @@ class _Annonces_darkState extends State<Annonces_dark> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: 
-        Container(
-        margin: EdgeInsets.all(0),
-        padding: EdgeInsets.all(0),
-        decoration: BoxDecoration(
-          color: Colors.black,
-          image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
-        ),
-        child: ListView(
-          scrollDirection: Axis.vertical,
-          children: [
-            Container(
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(300),
+       child:  Container(
               decoration: BoxDecoration(
                 boxShadow: [
                    BoxShadow(color: Colors.white,blurRadius: 3.0,spreadRadius: 4.2),
@@ -166,7 +157,20 @@ class _Annonces_darkState extends State<Annonces_dark> {
                     isLoop: true,
                   ),
             ),
-            Container(
+            
+      ),
+      body: 
+        Container(
+        margin: EdgeInsets.all(0),
+        padding: EdgeInsets.all(0),
+        decoration: BoxDecoration(
+          color: Colors.black,
+          image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
+        ),
+        child: ListView(
+          scrollDirection: Axis.vertical,
+          children: [
+           Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
                   ),

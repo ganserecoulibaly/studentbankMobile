@@ -124,17 +124,7 @@ void pickFile3()async{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-          decoration: BoxDecoration(
-            color:Colors.white,
-              image: DecorationImage(image: AssetImage('images/LogoNlogement.png'),fit: BoxFit.fill)
-        
-          ),
-        
-          child:Column(
-              // mainAxisAlignment: MainAxisAlignment.spaceEvenly,  
-              children: [
-               Container(
+      appBar: PreferredSize(preferredSize: Size.fromHeight(300), child:   Container(
               height: 300,
               decoration: BoxDecoration(
                 boxShadow: [
@@ -167,7 +157,18 @@ void pickFile3()async{
                     ],
                   ),
                ),
-                 // const SizedBox(height: 8,),
+              ),
+      body: Container(
+          decoration: BoxDecoration(
+            color:Colors.white,
+              image: DecorationImage(image: AssetImage('images/LogoNlogement.png'),fit: BoxFit.fill)
+        
+          ),
+        
+          child:Column(
+              // mainAxisAlignment: MainAxisAlignment.spaceEvenly,  
+              children: [
+                // const SizedBox(height: 8,),
                Container(
                       margin: EdgeInsets.all(5),
                       padding: EdgeInsets.all(10),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:studentbankmobile/banque_sow/parametre.dart';
 import 'package:studentbankmobile/banque_sow/parametre_dark.dart';
+import 'package:studentbankmobile/banque_sow/profile.dart';
 import 'package:studentbankmobile/banque_sow/profile_dark.dart';
 import 'package:studentbankmobile/map/map.dart';
 import 'package:studentbankmobile/Logement/logement.dart';
@@ -234,26 +236,54 @@ class _AccueilState extends State<Accueil> {
                           Navigator.push(context, MaterialPageRoute(builder: (context)=> mymap()));
                         },child: Text("map",style: TextStyle(color: Colors.white),), ),
                       ),
-                        Container(
-                        margin: EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                            color: Colors.pink,
-                            borderRadius: BorderRadius.circular(30)
+                        Row(
+                          children: [
+                            Container(
+                            margin: EdgeInsets.all(10),
+                            decoration: BoxDecoration(
+                                color: Colors.pink,
+                                borderRadius: BorderRadius.circular(30)
+                            ),
+                            child: TextButton(onPressed:(){
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=> parametre_dark()));
+                            },child: Text("parametre_dark",style: TextStyle(color: Colors.white),), ),
+                                                  ),
+                            Container(
+                            margin: EdgeInsets.all(10),
+                            decoration: BoxDecoration(
+                                color: Colors.pink,
+                                borderRadius: BorderRadius.circular(30)
+                            ),
+                            child: TextButton(onPressed:(){
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=> parametre()));
+                            },child: Text("parametre",style: TextStyle(color: Colors.white),), ),
+                                                  ),
+                          ],
                         ),
-                        child: TextButton(onPressed:(){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=> parametre_dark()));
-                        },child: Text("parametre",style: TextStyle(color: Colors.white),), ),
-                      ),
-                        Container(
-                        margin: EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                            color: Colors.pink,
-                            borderRadius: BorderRadius.circular(30)
+                        Row(
+                          children: [
+                            Container(
+                            margin: EdgeInsets.all(10),
+                            decoration: BoxDecoration(
+                                color: Colors.pink,
+                                borderRadius: BorderRadius.circular(30)
+                            ),
+                            child: TextButton(onPressed:(){
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=> profile_dark()));
+                            },child: Text("profile_dark",style: TextStyle(color: Colors.white),), ),
+                                                  ),
+                            Container(
+                            margin: EdgeInsets.all(10),
+                            decoration: BoxDecoration(
+                                color: Colors.pink,
+                                borderRadius: BorderRadius.circular(30)
+                            ),
+                            child: TextButton(onPressed:(){
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=> profile()));
+                            },child: Text("profile",style: TextStyle(color: Colors.white),), ),
+                                                  ),
+                          ],
                         ),
-                        child: TextButton(onPressed:(){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=> profile_dark()));
-                        },child: Text("profile",style: TextStyle(color: Colors.white),), ),
-                      ),
                  
                     ],
                   ),

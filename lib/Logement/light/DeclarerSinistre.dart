@@ -14,20 +14,7 @@ class _DeclarerSinistreState extends State<DeclarerSinistre> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        margin: EdgeInsets.all(0),
-        padding: EdgeInsets.all(0),
-        decoration: BoxDecoration(
-          color: Colors.white,
-          image: DecorationImage(image: AssetImage('images/LogoNlogement.png'),fit: BoxFit.fill
-          )
-        ),
-        // width: double.infinity,
-        // height: double.infinity,
-        child: ListView(
-          scrollDirection: Axis.vertical,
-          children: [
-            Container(
+      appBar: PreferredSize(preferredSize: Size.fromHeight(300), child:     Container(
               height: 200,
               decoration: BoxDecoration(
                 boxShadow: [
@@ -41,7 +28,21 @@ class _DeclarerSinistreState extends State<DeclarerSinistre> {
                         child: Text("Déclarer un sinistre",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
                       ),
             ),
-             Container(
+          ),
+      body: Container(
+        margin: EdgeInsets.all(0),
+        padding: EdgeInsets.all(0),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          image: DecorationImage(image: AssetImage('images/LogoNlogement.png'),fit: BoxFit.fill
+          )
+        ),
+        // width: double.infinity,
+        // height: double.infinity,
+        child: ListView(
+          scrollDirection: Axis.vertical,
+          children: [
+           Container(
                     color: Colors.transparent,
                     margin: EdgeInsets.only(left:30,top:10),
                     child:Column(

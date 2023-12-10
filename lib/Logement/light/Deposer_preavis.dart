@@ -14,20 +14,7 @@ class _DeposerPreavisState extends State<DeposerPreavis> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        margin: EdgeInsets.all(0),
-        padding: EdgeInsets.all(0),
-        decoration: BoxDecoration(
-          color: Colors.white,
-          image: DecorationImage(image: AssetImage('images/LogoNlogement.png'),fit: BoxFit.fill)
-        ),
-        // width: double.infinity,
-        // height: double.infinity,
-        child: ListView(
-          // scrollDirection: Axis.vertical,
-          children: [
-            
-            Container(
+      appBar: PreferredSize(preferredSize: Size.fromHeight(300), child:    Container(
               height: 200,
               decoration: BoxDecoration(
                 boxShadow: [
@@ -42,13 +29,27 @@ class _DeposerPreavisState extends State<DeposerPreavis> {
                       
                       ),
             ),
-            Container(
+           ),
+      body: Container(
+        margin: EdgeInsets.all(0),
+        padding: EdgeInsets.all(0),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          image: DecorationImage(image: AssetImage('images/LogoNlogement.png'),fit: BoxFit.fill)
+        ),
+        // width: double.infinity,
+        // height: double.infinity,
+        child: ListView(
+          // scrollDirection: Axis.vertical,
+          children: [
+            
+          Container(
                margin: EdgeInsets.all(20),
 
               padding: EdgeInsets.all(20),
               decoration: BoxDecoration(
                 boxShadow:[
-                  BoxShadow(spreadRadius: 4.2,blurRadius: 11),
+                  BoxShadow(spreadRadius: 4.2,blurRadius: 5),
                 ] ,
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(20)),

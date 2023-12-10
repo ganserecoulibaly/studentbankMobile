@@ -23,21 +23,7 @@ class _AnnoncesState extends State<Annonces> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: 
-        Container(
-        margin: EdgeInsets.all(0),
-        padding: EdgeInsets.all(0),
-        decoration: BoxDecoration(
-          color: Colors.white,
-          image: DecorationImage(image: AssetImage('images/LogoNlogement.png'),fit: BoxFit.contain)
-        ),
-        child: ListView(
-          scrollDirection: Axis.vertical,
-
-          children: [
-            Column(
-              children: [
-                Container(
+      appBar: PreferredSize(preferredSize: Size.fromHeight(300), child:   Container(
                   decoration: BoxDecoration(
                     boxShadow: [
                        BoxShadow(color: Colors.orange.shade200,blurRadius: 3.0,spreadRadius: 4.2),
@@ -170,7 +156,22 @@ class _AnnoncesState extends State<Annonces> {
                         isLoop: true,
                       ),
                 ),
-                Container(
+               ),
+      body: 
+        Container(
+        margin: EdgeInsets.all(0),
+        padding: EdgeInsets.all(0),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          image: DecorationImage(image: AssetImage('images/LogoNlogement.png'),fit: BoxFit.contain)
+        ),
+        child: ListView(
+          scrollDirection: Axis.vertical,
+
+          children: [
+            Column(
+              children: [
+               Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
                     color: Colors.orange

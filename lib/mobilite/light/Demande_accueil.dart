@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
 import 'package:intl/intl.dart';
 import 'package:studentbankmobile/mobilite/light/paiement.dart';
 class demande_accueil extends StatefulWidget {
@@ -230,7 +231,7 @@ class _demande_accueilState extends State<demande_accueil> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  child: TextButton(onPressed: (){}, child: Text("Appeler",style: TextStyle(color: Colors.black),)),
+                  child: TextButton(onPressed: ()=>FlutterPhoneDirectCaller.callNumber("338553682"), child: Text("Appeler",style: TextStyle(color: Colors.black),)),
                 ),
                 SizedBox(width: 30,),
                  Container(

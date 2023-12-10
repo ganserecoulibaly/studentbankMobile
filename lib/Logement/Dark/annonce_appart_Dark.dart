@@ -18,18 +18,9 @@ class Annonce_appart_dark extends StatelessWidget {
     return Scaffold(
       
       // backgroundColor: Colors.white,
-      
-      body: Container(
-         margin: EdgeInsets.all(0),
-        padding: EdgeInsets.all(0),
-        decoration: BoxDecoration(
-          color: Colors.grey.shade900,
-          image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
-        ),
-        child: ListView(
-          
-        children:[ 
-           Container(
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(300), 
+        child:     Container(
                 decoration: BoxDecoration(
                   boxShadow: [
                       BoxShadow(color: Colors.white,blurRadius: 3.0,spreadRadius: 4.2),
@@ -73,7 +64,18 @@ class Annonce_appart_dark extends StatelessWidget {
                     
                     ),
                   ),
-          Container(
+        ),
+      body: Container(
+         margin: EdgeInsets.all(0),
+        padding: EdgeInsets.all(0),
+        decoration: BoxDecoration(
+          color: Colors.grey.shade900,
+          image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
+        ),
+        child: ListView(
+          
+        children:[ 
+         Container(
             child: Container(
              
               width: MediaQuery.of(context).size.width,

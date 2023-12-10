@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
 import 'package:studentbankmobile/mobilite/light/demande_admission.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 class demandeAdmission_ins extends StatefulWidget {
@@ -27,7 +28,7 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                 decoration:BoxDecoration(borderRadius: BorderRadius.circular(20),
                 image: DecorationImage(image:  AssetImage("images/mobilite_3.jpg"),fit: BoxFit.fill,scale: 4)),
                 // child: Image.asset("images/mobilite.jpeg",fit: BoxFit.contain,),
-                height: 150,
+                height: 200,
                 width: double.infinity,
                 child:
                     Align(
@@ -127,7 +128,8 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                                        color: Colors.pink.shade300
                                       ),
                                       width: 150,
-                                      child: TextButton(onPressed: (){},child: Text("contactez-nous",style: TextStyle(color: Colors.white,fontSize: 14),),),
+                                      child: TextButton(onPressed: ()=>FlutterPhoneDirectCaller.callNumber("338553682")
+                                      ,child: Text("contactez-nous",style: TextStyle(color: Colors.white,fontSize: 14),),),
                                     )
                                   ],
                                 ),
@@ -142,211 +144,233 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
 
                   // Row(children: [Padding(padding:EdgeInsets.only(top: 10,left: 20),child:Text("Apartement",style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold,color: Colors.black)),),],),
                 
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Padding(padding: EdgeInsets.only(left:10,top: 20),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Center(
                       child: Container(
-                        width: 190,
-                        height: 40,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          boxShadow: [BoxShadow(blurRadius: 3.0,spreadRadius: 2),],
-                          borderRadius: BorderRadius.circular(30)
-                          ),
+                        margin: EdgeInsets.all(10),
                         child: Row(
-                          children: [Icon(Icons.place,size:25,color:Colors.pinkAccent),SizedBox(width: 10,),Text("Lile",style:TextStyle(color:Colors.pinkAccent,fontSize: 12))],)) 
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Container(
+                              width: 150,
+                              height: 40,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                boxShadow: [BoxShadow(blurRadius: 3.0,spreadRadius: 2),],
+                                borderRadius: BorderRadius.circular(30)
+                                ),
+                              child: Row(
+                                children: [Icon(Icons.place,size:25,color:Colors.pinkAccent),SizedBox(width: 10,),Text("Lile",style:TextStyle(color:Colors.pinkAccent,fontSize: 12))],)),
+                          SizedBox(width: 30,),
+                            Container(
+                               width: 150,
+                               height: 40,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                boxShadow: [BoxShadow(blurRadius: 3.0,spreadRadius: 2),],
+                                borderRadius: BorderRadius.circular(30)
+                                ),
+                              child: Row(
+                                children: [Icon(Icons.screenshot_monitor,size:25,color:Colors.pinkAccent),SizedBox(width: 10,),Text("300m2        ",style:TextStyle(color:Colors.pinkAccent,fontSize: 12))],)),
+                          ],
+                        ),
                       ),
-                      Padding(padding: EdgeInsets.only(left:10,top: 20),
-                      child: Container(
-                         width: 190,
-                         height: 40,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(30)
-                          ),
-                        child: Row(
-                          children: [Icon(Icons.screenshot_monitor,size:25,color:Colors.pinkAccent),SizedBox(width: 10,),Text("300m2        ",style:TextStyle(color:Colors.pinkAccent,fontSize: 12))],)) 
-                      ),
-                    ],
+                    ),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Padding(padding: EdgeInsets.only(left:10,top: 20),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Center(
                       child: Container(
-                        width: 100,
-                         height: 40,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          boxShadow: [BoxShadow(blurRadius: 3.0,spreadRadius: 2),],
-                          borderRadius: BorderRadius.circular(30)
-                          ),
+                        margin: EdgeInsets.all(10),
                         child: Row(
-                          children: [Icon(CupertinoIcons.cube_box_fill,size:25,color:Colors.pinkAccent),SizedBox(width: 10,),Text("20 ans d'existance   ",style:TextStyle(color:Colors.pinkAccent,fontSize: 12))],)) 
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Container(
+                              // width: 150,
+                               height: 40,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                boxShadow: [BoxShadow(blurRadius: 3.0,spreadRadius: 2),],
+                                borderRadius: BorderRadius.circular(30)
+                                ),
+                              child: Row(
+                                children: [Icon(CupertinoIcons.cube_box_fill,size:25,color:Colors.pinkAccent),SizedBox(width: 10,),Text("20 ans d'existance   ",style:TextStyle(color:Colors.pinkAccent,fontSize: 12))],)),
+                             SizedBox(width: 30,),
+                            Container(
+                              width: 150,
+                               height: 40,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                boxShadow: [BoxShadow(blurRadius: 3.0,spreadRadius: 2),],
+                                borderRadius: BorderRadius.circular(30)
+                                ),
+                              child: Row(
+                                children: [Icon(CupertinoIcons.person_2,size:25,color:Colors.pinkAccent),SizedBox(width: 10,),Text("+5000 etudiants",style:TextStyle(color:Colors.pinkAccent,fontSize: 12))],)),
+                          ],
+                        ),
                       ),
-                      Padding(padding: EdgeInsets.only(left:10,top: 20),
-                      child: Container(
-                        width: 100,
-                         height: 40,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          boxShadow: [BoxShadow(blurRadius: 3.0,spreadRadius: 2),],
-                          borderRadius: BorderRadius.circular(30)
-                          ),
-                        child: Row(
-                          children: [Icon(CupertinoIcons.person_2,size:25,color:Colors.pinkAccent),SizedBox(width: 10,),Text("+5000 etudiants",style:TextStyle(color:Colors.pinkAccent,fontSize: 12))],)) 
-                      ),
-                    ],
+                    ),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Padding(padding: EdgeInsets.only(left:10,top: 20),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Center(
                       child: Container(
-                         width: 100,
-                         height: 40,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          boxShadow: [BoxShadow(blurRadius: 3.0,spreadRadius: 2),],
-                          borderRadius: BorderRadius.circular(30)
-                          ),
+                        margin: EdgeInsets.all(10),
                         child: Row(
-                          children: [Icon(CupertinoIcons.cube_box_fill,size:25,color:Colors.pinkAccent),SizedBox(width: 10,),Text("programme acredite   ",style:TextStyle(color:Colors.pinkAccent,fontSize: 12))],)) 
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Container(
+                              //  width: 150,
+                               height: 40,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                boxShadow: [BoxShadow(blurRadius: 3.0,spreadRadius: 2),],
+                                borderRadius: BorderRadius.circular(30)
+                                ),
+                              child: Row(
+                                children: [Icon(CupertinoIcons.cube_box_fill,size:25,color:Colors.pinkAccent),SizedBox(width: 10,),Text("programme acredite   ",style:TextStyle(color:Colors.pinkAccent,fontSize: 12))],)),
+                             SizedBox(width: 30,),
+                             Container(
+                              //  width: 150,
+                               height: 40,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                boxShadow: [BoxShadow(blurRadius: 3.0,spreadRadius: 2),],
+                                borderRadius: BorderRadius.circular(30)
+                                ),
+                              child: Row(
+                                children: [Icon(CupertinoIcons.person_2,size:25,color:Colors.pinkAccent),SizedBox(width: 10,),Text("+1000 etudiants etrangers",style:TextStyle(color:Colors.pinkAccent,fontSize: 12))],)),
+                          ],
+                        ),
                       ),
-                      Padding(padding: EdgeInsets.only(left:10,top: 20),
-                      child: Container(
-                         width: 100,
-                         height: 40,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          boxShadow: [BoxShadow(blurRadius: 3.0,spreadRadius: 2),],
-                          borderRadius: BorderRadius.circular(30)
-                          ),
-                        child: Row(
-                          children: [Icon(CupertinoIcons.person_2,size:25,color:Colors.pinkAccent),SizedBox(width: 10,),Text("+1000 etudiants etrangers",style:TextStyle(color:Colors.pinkAccent,fontSize: 12))],)) 
-                      ),
-                    ],
+                    ),
                   ),
                   Align(
                     alignment: Alignment.topLeft,
                     child: Text("Temoignages",style: TextStyle(color: Colors.pink,fontWeight: FontWeight.bold,fontSize: 28,),)
                     ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Container(
-                        margin: EdgeInsets.all(20),
-                        width: 100,
-                        height: 100,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          boxShadow: [BoxShadow(blurRadius: 3.0,spreadRadius: 2),],
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                        child: Column(
-                          children: [
-                            Row(
-                              // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                Align(
-                                  alignment: Alignment.topLeft,
-                                  child: Icon(Icons.person_pin),
-                                ),
-                                Text("Alfred Sitou",style: TextStyle(color: Colors.pink),)
-                              ],
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Center(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Container(
+                            margin: EdgeInsets.all(20),
+                            width: 170,
+                            height: 100,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              boxShadow: [BoxShadow(blurRadius: 3.0,spreadRadius: 2),],
+                              borderRadius: BorderRadius.circular(20),
                             ),
-                            Text("lorem hdbjbshdb hbjfbjs fdsj"),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
+                            child: Column(
                               children: [
-                                RatingBar.builder(
-                                  initialRating: 3,
-                                  minRating: 1,
-                                  direction: Axis.horizontal,
-                                  allowHalfRating: true,
-                                  itemCount: 5,
-                                  itemSize: 12,
-                                  itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
-                                  itemBuilder: (context, _) => Icon(
-                                    Icons.star,
-                                    color: Colors.amber,
-                                  ),
-                                  onRatingUpdate: (rating) {
-                                    print(rating);
-                                  },
-                                ),
-                                 Container(
-                                    decoration:BoxDecoration(
-                                      borderRadius: BorderRadius.circular(20),
-                                      // gradient: LinearGradient(colors: [const Color.fromARGB(179, 212, 44, 44),Colors.pinkAccent])
-                                      color: Colors.pink
+                                Row(
+                                  // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Align(
+                                      alignment: Alignment.topLeft,
+                                      child: Icon(Icons.person_pin),
                                     ),
-                                    height: 30,
-                                    width: 60,
-                                    child: TextButton(onPressed: (){},child: Text("contacter",style: TextStyle(color: Colors.white,fontSize: 10),),),
+                                    Text("Alfred Sitou",style: TextStyle(color: Colors.pink),)
+                                  ],
+                                ),
+                                Text("lorem hdbjbshdb hbjfbjs fdsj"),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    RatingBar.builder(
+                                      initialRating: 3,
+                                      minRating: 1,
+                                      direction: Axis.horizontal,
+                                      allowHalfRating: true,
+                                      itemCount: 5,
+                                      itemSize: 12,
+                                      itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
+                                      itemBuilder: (context, _) => Icon(
+                                        Icons.star,
+                                        color: Colors.amber,
+                                      ),
+                                      onRatingUpdate: (rating) {
+                                        print(rating);
+                                      },
+                                    ),
+                                     Container(
+                                        decoration:BoxDecoration(
+                                          borderRadius: BorderRadius.circular(20),
+                                          // gradient: LinearGradient(colors: [const Color.fromARGB(179, 212, 44, 44),Colors.pinkAccent])
+                                          color: Colors.pink
+                                        ),
+                                        height: 30,
+                                        width: 60,
+                                        child: TextButton(onPressed: (){},child: Text("contacter",style: TextStyle(color: Colors.white,fontSize: 10),),),
+                                    )
+                                  ],
                                 )
                               ],
                             )
-                          ],
-                        )
-                      ),
-                       Container(
-                        margin: EdgeInsets.all(20),
-                        width: 170,
-                        height: 100,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                        child: Column(
-                          children: [
-                            Row(
-                              // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                Align(
-                                  alignment: Alignment.topLeft,
-                                  child: Icon(Icons.person_pin),
-                                ),
-                                Text("Alfred Sitou",style: TextStyle(color: Colors.pink),)
-                              ],
+                          ),
+                           Container(
+                            margin: EdgeInsets.all(20),
+                            width: 170,
+                            height: 100,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(20),
+                              boxShadow: [BoxShadow(blurRadius: 3.0,spreadRadius: 2),],
                             ),
-                            Text("lorem hdbjbshdb hbjfbjs fdsj"),
-
-                            Row(
+                            child: Column(
                               children: [
-                                RatingBar.builder(
-                                  initialRating: 3,
-                                  minRating: 1,
-                                  direction: Axis.horizontal,
-                                  allowHalfRating: true,
-                                  itemCount: 5,
-                                  itemSize: 12,
-                                  itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
-                                  itemBuilder: (context, _) => Icon(
-                                    Icons.star,
-                                    color: Colors.amber,
-                                  ),
-                                  onRatingUpdate: (rating) {
-                                    print(rating);
-                                  },
+                                Row(
+                                  // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Align(
+                                      alignment: Alignment.topLeft,
+                                      child: Icon(Icons.person_pin),
+                                    ),
+                                    Text("Alfred Sitou",style: TextStyle(color: Colors.pink),)
+                                  ],
                                 ),
-                                 Container(
-                                      decoration:BoxDecoration(
-                                        borderRadius: BorderRadius.circular(20),
-                                        // gradient: LinearGradient(colors: [const Color.fromARGB(179, 212, 44, 44),Colors.pinkAccent])
-                                       color: Colors.pink
+                                Text("lorem hdbjbshdb hbjfbjs fdsj"),
+                      
+                                Row(
+                                  children: [
+                                    RatingBar.builder(
+                                      initialRating: 3,
+                                      minRating: 1,
+                                      direction: Axis.horizontal,
+                                      allowHalfRating: true,
+                                      itemCount: 5,
+                                      itemSize: 12,
+                                      itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
+                                      itemBuilder: (context, _) => Icon(
+                                        Icons.star,
+                                        color: Colors.amber,
                                       ),
-                                      height: 30,
-                                      width: 60,
-                                      child: TextButton(onPressed: (){},child: Text("contacter",style: TextStyle(color: Colors.white,fontSize: 10),),),
-                                    )
+                                      onRatingUpdate: (rating) {
+                                        print(rating);
+                                      },
+                                    ),
+                                     Container(
+                                          decoration:BoxDecoration(
+                                            borderRadius: BorderRadius.circular(20),
+                                            // gradient: LinearGradient(colors: [const Color.fromARGB(179, 212, 44, 44),Colors.pinkAccent])
+                                           color: Colors.pink
+                                          ),
+                                          height: 30,
+                                          width: 60,
+                                          child: TextButton(onPressed: (){},child: Text("contacter",style: TextStyle(color: Colors.white,fontSize: 10),),),
+                                        )
+                                  ],
+                                )
                               ],
                             )
-                          ],
-                        )
-                      )
-                    ],
+                          )
+                        ],
+                      ),
+                    ),
                   )
                 ],
                 ),

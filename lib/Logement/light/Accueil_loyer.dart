@@ -22,19 +22,7 @@ class _AccueilLoyerState extends State<AccueilLoyer> {
     bool press=false;
     return Scaffold(
       // extendBody: true,
-      body: Container(
-        margin: EdgeInsets.all(0),
-        padding: EdgeInsets.all(0),
-        decoration: BoxDecoration(
-          color: Colors.white,
-          image: DecorationImage(image: AssetImage('images/LogoNlogement.png'),fit: BoxFit.fill)
-        ),
-        // width: double.infinity,
-        // height: double.infinity,
-        child: ListView(
-          scrollDirection: Axis.vertical,
-          children: [
-            Container(
+      appBar: PreferredSize(preferredSize: Size.fromHeight(300), child:    Container(
               decoration: BoxDecoration(
                 boxShadow: [
                   BoxShadow(color: Colors.orange.shade200,blurRadius: 3.0,spreadRadius: 4.2),
@@ -170,7 +158,20 @@ class _AccueilLoyerState extends State<AccueilLoyer> {
                     isLoop: true,
                   ),
             ),
-            Container(
+          ),
+      body: Container(
+        margin: EdgeInsets.all(0),
+        padding: EdgeInsets.all(0),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          image: DecorationImage(image: AssetImage('images/LogoNlogement.png'),fit: BoxFit.fill)
+        ),
+        // width: double.infinity,
+        // height: double.infinity,
+        child: ListView(
+          scrollDirection: Axis.vertical,
+          children: [
+           Container(
               padding: EdgeInsets.only(bottom: 20),
               alignment: Alignment.center,
               decoration: BoxDecoration(
@@ -192,7 +193,7 @@ class _AccueilLoyerState extends State<AccueilLoyer> {
                       padding: EdgeInsets.all(10),
                       alignment: Alignment.center,
                       width:350,
-                      decoration:  BoxDecoration(color: Colors.white,boxShadow: [BoxShadow(color:Colors.black,blurRadius: 3,)],borderRadius: BorderRadius.circular((10))),
+                      decoration:  BoxDecoration(color: Colors.white,boxShadow: [BoxShadow(color:Colors.black,blurRadius: 3,)],borderRadius: BorderRadius.circular((30))),
                       child:Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
@@ -221,7 +222,7 @@ class _AccueilLoyerState extends State<AccueilLoyer> {
                       padding: EdgeInsets.all(10),
                       alignment: Alignment.center,
                       width:350,
-                      decoration:  BoxDecoration(color: Colors.white,boxShadow: [BoxShadow(color:Colors.black,blurRadius: 3,)],borderRadius: BorderRadius.circular((10))),
+                      decoration:  BoxDecoration(color: Colors.white,boxShadow: [BoxShadow(color:Colors.black,blurRadius: 3,)],borderRadius: BorderRadius.circular((30))),
                       child:Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
@@ -248,7 +249,7 @@ class _AccueilLoyerState extends State<AccueilLoyer> {
                       padding: EdgeInsets.all(10),
                       alignment: Alignment.center,
                       width:350,
-                      decoration:  BoxDecoration(color: Colors.white,boxShadow: [BoxShadow(color:Colors.black,blurRadius: 3,)],borderRadius: BorderRadius.circular((10))),
+                      decoration:  BoxDecoration(color: Colors.white,boxShadow: [BoxShadow(color:Colors.black,blurRadius: 3,)],borderRadius: BorderRadius.circular((30))),
                       child:Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
@@ -274,7 +275,7 @@ class _AccueilLoyerState extends State<AccueilLoyer> {
                       padding: EdgeInsets.all(10),
                       alignment: Alignment.center,
                       width:350,
-                      decoration:  BoxDecoration(color: Colors.white,boxShadow: [BoxShadow(color:Colors.black,blurRadius: 3,)],borderRadius: BorderRadius.circular((10))),
+                      decoration:  BoxDecoration(color: Colors.white,boxShadow: [BoxShadow(color:Colors.black,blurRadius: 3,)],borderRadius: BorderRadius.circular((30))),
                       child:Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
@@ -300,7 +301,7 @@ class _AccueilLoyerState extends State<AccueilLoyer> {
                       padding: EdgeInsets.all(10),
                       alignment: Alignment.center,
                       width:350,
-                      decoration:  BoxDecoration(color: Colors.white,boxShadow: [BoxShadow(color:Colors.black,blurRadius: 3,)],borderRadius: BorderRadius.circular((10))),
+                      decoration:  BoxDecoration(color: Colors.white,boxShadow: [BoxShadow(color:Colors.black,blurRadius: 3,)],borderRadius: BorderRadius.circular((30))),
                       child:Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [

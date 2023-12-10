@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
 import 'package:intl/intl.dart';
 import 'package:studentbankmobile/mobilite/dark/paiement_dark.dart';
 import 'package:studentbankmobile/mobilite/light/paiement.dart';
@@ -205,7 +206,7 @@ class _demande_accueil_darkState extends State<demande_accueil_dark> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  child: TextButton(onPressed: (){}, child: Text("Appeler",style: TextStyle(color: Colors.white),)),
+                  child: TextButton(onPressed: ()=>FlutterPhoneDirectCaller.callNumber("338553682"), child: Text("Appeler",style: TextStyle(color: Colors.white),)),
                 ),
                 SizedBox(width: 30,),
                  Container(

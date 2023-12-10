@@ -19,19 +19,9 @@ class _GestionLog_darkState extends State<GestionLog_dark> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        margin: EdgeInsets.all(0),
-        padding: EdgeInsets.all(0),
-        decoration: BoxDecoration(
-          color: Colors.grey.shade900,
-          image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
-        ),
-        // width: double.infinity,
-        // height: double.infinity,
-        child: ListView(
-          scrollDirection: Axis.vertical,
-          children: [
-            Container(
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(250), 
+        child:   Container(
               height: 300,
               decoration: BoxDecoration(
                 boxShadow: [
@@ -93,7 +83,20 @@ class _GestionLog_darkState extends State<GestionLog_dark> {
                     isLoop: true,
                   ),
             ),
-            Container(
+           ),
+      body: Container(
+        margin: EdgeInsets.all(0),
+        padding: EdgeInsets.all(0),
+        decoration: BoxDecoration(
+          color: Colors.grey.shade900,
+          image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
+        ),
+        // width: double.infinity,
+        // height: double.infinity,
+        child: ListView(
+          scrollDirection: Axis.vertical,
+          children: [
+           Container(
               padding: EdgeInsets.all(30),
               // alignment: Alignment.center,
               decoration: BoxDecoration(

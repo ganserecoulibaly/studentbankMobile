@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:studentbankmobile/mobilite/dark/demande_admission_dark.dart';
 import 'package:studentbankmobile/mobilite/light/demande_admission.dart';
@@ -128,7 +129,7 @@ class _demandeAdmission_ins_darkState extends State<demandeAdmission_ins_dark> {
                                        color: Colors.pink
                                       ),
                                       width: 150,
-                                      child: TextButton(onPressed: (){},child: Text("contactez-nous",style: TextStyle(color: Colors.white,fontSize: 14),),),
+                                      child: TextButton(onPressed: ()=>FlutterPhoneDirectCaller.callNumber("338553682"),child: Text("contactez-nous",style: TextStyle(color: Colors.white,fontSize: 14),),),
                                     )
                                   ],
                                 ),

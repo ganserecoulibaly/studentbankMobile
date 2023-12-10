@@ -14,25 +14,7 @@ class loyerinfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        child: [
-          ListView(
-            scrollDirection: Axis.vertical,
-            children: [
-              Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                  height: MediaQuery.of(context).size.height/2,
-                  width: MediaQuery.of(context).size.width,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    image: DecorationImage(image: AssetImage('images/LogoNlogement.png'),fit: BoxFit.contain)
-                  ),
-                  child: ListView(
-                    scrollDirection: Axis.vertical,
-                    children: [
-                       Container(
+      appBar: PreferredSize(preferredSize: Size.fromHeight(300), child:     Container(
                         height: 300,
                     decoration: BoxDecoration(
                       boxShadow: [
@@ -77,11 +59,16 @@ class loyerinfo extends StatelessWidget {
                         
                         ),
                       ),
-                     
-                      
-                    ],
-                  ),
-                ),
+                   ),
+      body: Container(
+        child: [
+          ListView(
+            scrollDirection: Axis.vertical,
+            children: [
+              Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+               
 
                 // SizedBox(height: 10),
                  Center(
@@ -169,61 +156,6 @@ class loyerinfo extends StatelessWidget {
            Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
-                  height: MediaQuery.of(context).size.height/2,
-                  width: MediaQuery.of(context).size.width,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    image: DecorationImage(image: AssetImage('images/LogoNlogement.png'),fit: BoxFit.contain)
-                  ),
-                  child: ListView(
-                    scrollDirection: Axis.vertical,
-                    children: [
-                       Container(
-                        height: 300,
-                    decoration: BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(color: Colors.orange.shade200,blurRadius: 3.0,spreadRadius: 4.2),
-                      ],
-                      image: DecorationImage(image: AssetImage('images/maisonNight.jpg'),fit: BoxFit.cover),
-                      borderRadius: BorderRadius.only(bottomRight: Radius.circular(30),bottomLeft: Radius.circular(30))
-                    ),
-                    child: Container(
-                           child: 
-                          Center(
-                            child: 
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                            SizedBox(height: 10,),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                            Align(
-                              alignment: Alignment.centerLeft,
-                              child: Text("ANNONCES",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
-                            
-                            ),
-                            Align(
-                            alignment: Alignment.centerRight,
-                              child: IconButton(onPressed: (){},icon: Icon(Icons.menu),color: Colors.white,),
-                              ),
-                              ],
-                              
-                            ),
-                            Text("lorem ghdfshgvhsgsvss\nfhvsgvbfsfj\bnfbssbvfsvsvhn",style: TextStyle(color:Colors.white,fontSize: 13,fontWeight: FontWeight.normal),),
-                            SizedBox(height: 10,),
-                            ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white),onPressed: (){}, child: Text("voir plus",style: TextStyle(color: Colors.black),))
-                          ],),
-                          ),
-                        
-                        ),
-                      ),
-                     
-                    ],
-                  ),
-                ),
 
                 // SizedBox(height: 10),
                  Center(
@@ -315,63 +247,7 @@ class loyerinfo extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
-                  height: MediaQuery.of(context).size.height/2,
-                  width: MediaQuery.of(context).size.width,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    image: DecorationImage(image: AssetImage('images/LogoNlogement.png'),fit: BoxFit.contain)
-                  ),
-                  child: ListView(
-                    scrollDirection: Axis.vertical,
-                    children: [
-                       Container(
-                        height: 300,
-                    decoration: BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(color: Colors.orange.shade200,blurRadius: 3.0,spreadRadius: 4.2),
-                      ],
-                      image: DecorationImage(image: AssetImage('images/maisonNight.jpg'),fit: BoxFit.cover),
-                      borderRadius: BorderRadius.only(bottomRight: Radius.circular(30),bottomLeft: Radius.circular(30))
-                    ),
-                    child: Container(
-                           child: 
-                          Center(
-                            child: 
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                            SizedBox(height: 10,),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                            Align(
-                              alignment: Alignment.centerLeft,
-                              child: Text("ANNONCES",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
-                            
-                            ),
-                            Align(
-                            alignment: Alignment.centerRight,
-                              child: IconButton(onPressed: (){},icon: Icon(Icons.menu),color: Colors.white,),
-                              ),
-                              ],
-                              
-                            ),
-                            Text("lorem ghdfshgvhsgsvss\nfhvsgvbfsfj\bnfbssbvfsvsvhn",style: TextStyle(color:Colors.white,fontSize: 13,fontWeight: FontWeight.normal),),
-                            SizedBox(height: 10,),
-                            ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white),onPressed: (){}, child: Text("voir plus",style: TextStyle(color: Colors.black),))
-                          ],),
-                          ),
-                        
-                        ),
-                      ),
-                     
-                      
-                    ],
-                  ),
-                ),
-
+          
                 // SizedBox(height: 10),
                  Center(
                    child: Container(
@@ -459,64 +335,7 @@ class loyerinfo extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
-                  height: MediaQuery.of(context).size.height/2,
-                  width: MediaQuery.of(context).size.width,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    image: DecorationImage(image: AssetImage('images/LogoNlogement.png'),fit: BoxFit.contain)
-                  ),
-                  child: ListView(
-                    scrollDirection: Axis.vertical,
-                    children: [
-                       Container(
-                        height: 300,
-                    decoration: BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(color: Colors.orange.shade200,blurRadius: 3.0,spreadRadius: 4.2),
-                      ],
-                      image: DecorationImage(image: AssetImage('images/maisonNight.jpg'),fit: BoxFit.cover),
-                      borderRadius: BorderRadius.only(bottomRight: Radius.circular(30),bottomLeft: Radius.circular(30))
-                    ),
-                    child: Container(
-                        
-                           child: 
-                          Center(
-                            child: 
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                            SizedBox(height: 10,),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                            Align(
-                              alignment: Alignment.centerLeft,
-                              child: Text("ANNONCES",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
-                            
-                            ),
-                            Align(
-                            alignment: Alignment.centerRight,
-                              child: IconButton(onPressed: (){},icon: Icon(Icons.menu),color: Colors.white,),
-                              ),
-                              ],
-                              
-                            ),
-                            Text("lorem ghdfshgvhsgsvss\nfhvsgvbfsfj\bnfbssbvfsvsvhn",style: TextStyle(color:Colors.white,fontSize: 13,fontWeight: FontWeight.normal),),
-                            SizedBox(height: 10,),
-                            ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white),onPressed: (){}, child: Text("voir plus",style: TextStyle(color: Colors.black),))
-                          ],),
-                          ),
-                        
-                        ),
-                      ),
-                    
-                      
-                    ],
-                  ),
-                ),
-                  Center(
+                 Center(
                         child: Container(
                           alignment: Alignment.center,
                           margin: EdgeInsets.only(left:15,right:15),

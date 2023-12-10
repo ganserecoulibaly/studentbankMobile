@@ -124,17 +124,7 @@ void pickFile3()async{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-          decoration: BoxDecoration(
-            color:Colors.white,
-            image: DecorationImage(image: AssetImage('images/LogoNlogement.png'),fit: BoxFit.contain)
-        
-          ),
-        
-          child:ListView(
-              // mainAxisAlignment: MainAxisAlignment.spaceEvenly,  
-              children: [
-               Container(
+      appBar: PreferredSize(preferredSize: Size.fromHeight(300), child:    Container(
               height: 300,
               decoration: BoxDecoration(
                 boxShadow: [
@@ -167,14 +157,25 @@ void pickFile3()async{
                     ],
                   ),
                ),
-               Center(
+            ),
+      body: Container(
+          decoration: BoxDecoration(
+            color:Colors.white,
+            image: DecorationImage(image: AssetImage('images/LogoNlogement.png'),fit: BoxFit.contain)
+        
+          ),
+        
+          child:ListView(
+              // mainAxisAlignment: MainAxisAlignment.spaceEvenly,  
+              children: [
+              Center(
                  child:   // const SizedBox(height: 8,),
                Container(
                       margin: EdgeInsets.all(5),
                       padding: EdgeInsets.all(10),
                       alignment: Alignment.center,
                       width:350,
-                      decoration:  BoxDecoration(color: Colors.white,boxShadow: [BoxShadow(color:Colors.black,blurRadius: 3,)],borderRadius: BorderRadius.circular((10))),
+                      decoration:  BoxDecoration(color: Colors.white,boxShadow: [BoxShadow(color:Colors.black,blurRadius: 3,)],borderRadius: BorderRadius.circular((30))),
                       child:Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
@@ -205,7 +206,7 @@ void pickFile3()async{
                       padding: EdgeInsets.all(10),
                       alignment: Alignment.center,
                       width:350,
-                      decoration:  BoxDecoration(color: Colors.white,boxShadow: [BoxShadow(color:Colors.black,blurRadius: 3,)],borderRadius: BorderRadius.circular((10))),
+                      decoration:  BoxDecoration(color: Colors.white,boxShadow: [BoxShadow(color:Colors.black,blurRadius: 3,)],borderRadius: BorderRadius.circular((30))),
                       child:Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
@@ -236,7 +237,7 @@ void pickFile3()async{
                       padding: EdgeInsets.all(10),
                       alignment: Alignment.center,
                       width:350,
-                      decoration:  BoxDecoration(color: Colors.white,boxShadow: [BoxShadow(color:Colors.black,blurRadius: 3,)],borderRadius: BorderRadius.circular((10))),
+                      decoration:  BoxDecoration(color: Colors.white,boxShadow: [BoxShadow(color:Colors.black,blurRadius: 3,)],borderRadius: BorderRadius.circular((30))),
                       child:Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
@@ -266,7 +267,7 @@ void pickFile3()async{
                       padding: EdgeInsets.all(10),
                       alignment: Alignment.center,
                       width:350,
-                      decoration:  BoxDecoration(color: Colors.white,boxShadow: [BoxShadow(color:Colors.black,blurRadius: 3,)],borderRadius: BorderRadius.circular((10))),
+                      decoration:  BoxDecoration(color: Colors.white,boxShadow: [BoxShadow(color:Colors.black,blurRadius: 3,)],borderRadius: BorderRadius.circular((30))),
                       child:Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [

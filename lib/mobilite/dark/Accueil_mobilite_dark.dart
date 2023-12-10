@@ -34,19 +34,7 @@ class _Accueil_mobilite_darkState extends State<Accueil_mobilite_dark> {
     
     return Scaffold(
       extendBody: true,
-      body: Container(
-        margin: EdgeInsets.all(0),
-        padding: EdgeInsets.all(0),
-        decoration: BoxDecoration(
-                        color: Colors.grey.shade900,
-                        image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
-         ),
-        // width: double.infinity,
-        // height: double.infinity,
-        child: ListView(
-          scrollDirection: Axis.vertical,
-          children: [
-            Container(
+      appBar: PreferredSize(preferredSize: Size.fromHeight(300), child:   Container(
               decoration: BoxDecoration(
                 boxShadow: [
                   BoxShadow(color: Colors.pink.shade200,blurRadius: 3.0,spreadRadius: 4.2),
@@ -133,7 +121,20 @@ class _Accueil_mobilite_darkState extends State<Accueil_mobilite_dark> {
                     isLoop: true,
                   ),
             ),
-            Container(
+           ),
+      body: Container(
+        margin: EdgeInsets.all(0),
+        padding: EdgeInsets.all(0),
+        decoration: BoxDecoration(
+                        color: Colors.grey.shade900,
+                        image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
+         ),
+        // width: double.infinity,
+        // height: double.infinity,
+        child: ListView(
+          scrollDirection: Axis.vertical,
+          children: [
+           Container(
               padding: EdgeInsets.only(top: 20,bottom: 20),
               alignment: Alignment.center,
               decoration: BoxDecoration(

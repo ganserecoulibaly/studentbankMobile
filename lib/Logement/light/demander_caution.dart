@@ -14,20 +14,9 @@ class _DemanderCautionState extends State<DemanderCaution> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        margin: EdgeInsets.all(0),
-        padding: EdgeInsets.all(0),
-        decoration: BoxDecoration(
-          color: Colors.white,
-          image: DecorationImage(image: AssetImage('images/LogoNlogement.png'),fit: BoxFit.fill)
-        ),
-        // width: double.infinity,
-        // height: double.infinity,
-        child: ListView(
-          // scrollDirection: Axis.vertical,
-          children: [
-            
-            Container(
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(300), 
+        child:  Container(
               height: 200,
               decoration: BoxDecoration(
                 boxShadow: [
@@ -42,7 +31,21 @@ class _DemanderCautionState extends State<DemanderCaution> {
                       
                       ),
             ),
-            Container(
+            ),
+      body: Container(
+        margin: EdgeInsets.all(0),
+        padding: EdgeInsets.all(0),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          image: DecorationImage(image: AssetImage('images/LogoNlogement.png'),fit: BoxFit.fill)
+        ),
+        // width: double.infinity,
+        // height: double.infinity,
+        child: ListView(
+          // scrollDirection: Axis.vertical,
+          children: [
+            
+           Container(
                margin: EdgeInsets.all(20),
 
               padding: EdgeInsets.all(20),

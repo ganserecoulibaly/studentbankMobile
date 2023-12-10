@@ -24,25 +24,13 @@ class _AccueilLoyer_DarkState extends State<AccueilLoyer_Dark> {
     // bool press=false;
     return Scaffold(
       // extendBody: true,
-      body: Container(
-        margin: EdgeInsets.all(0),
-        padding: EdgeInsets.all(0),
-        decoration: BoxDecoration(
-          color: Colors.grey.shade900,
-          image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
-        ),
-        // width: double.infinity,
-        // height: double.infinity,
-        child: ListView(
-          scrollDirection: Axis.vertical,
-          children: [
-            Container(
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(250),
+       child:    Container(
               decoration: BoxDecoration(
-                boxShadow: [
-                  BoxShadow(color: Colors.white,blurRadius: 3.0,spreadRadius: 4.2),
-                ],
-                image: DecorationImage(image: AssetImage('images/maisonNight.jpg'),fit: BoxFit.cover),
-                borderRadius: BorderRadius.only(bottomRight: Radius.circular(30),bottomLeft: Radius.circular(30))
+              border: Border(bottom: BorderSide(width: 1,color: Colors.white,)),
+                image: DecorationImage(image: AssetImage('images/maisonNight.jpg'),fit: BoxFit.fill),
+                borderRadius: BorderRadius.only(bottomRight: Radius.circular(50),bottomLeft: Radius.circular(50))
               ),
               child: ImageSlideshow(
                     /// Width of the [ImageSlideshow].
@@ -169,7 +157,153 @@ class _AccueilLoyer_DarkState extends State<AccueilLoyer_Dark> {
                     isLoop: true,
                   ),
             ),
+         ),
+      body: Container(
+        margin: EdgeInsets.all(0),
+        padding: EdgeInsets.all(0),
+        decoration: BoxDecoration(
+          color: Colors.grey.shade900,
+          image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
+        ),
+        // width: double.infinity,
+        // height: double.infinity,
+        child: ListView(
+          scrollDirection: Axis.vertical,
+          children: [
             // Container(
+            //   decoration: BoxDecoration(
+            //     boxShadow: [
+            //       BoxShadow(color: Colors.white,blurRadius: 3.0,spreadRadius: 4.2),
+            //     ],
+            //     image: DecorationImage(image: AssetImage('images/maisonNight.jpg'),fit: BoxFit.cover),
+            //     borderRadius: BorderRadius.only(bottomRight: Radius.circular(30),bottomLeft: Radius.circular(30))
+            //   ),
+            //   child: ImageSlideshow(
+            //         /// Width of the [ImageSlideshow].
+            //         width: double.infinity,
+
+            //         /// Height of the [ImageSlideshow].
+            //         height: 250,
+
+            //         /// The page to show when first creating the [ImageSlideshow].
+            //         initialPage: 0,
+
+            //         /// The color to paint the indicator.
+            //         indicatorColor: Colors.red,
+                  
+            //         /// The color to paint behind th indicator.
+            //         indicatorBackgroundColor: Colors.white,
+
+            //         /// The widgets to display in the [ImageSlideshow].
+            //         /// Add the sample image file into the images folder
+            //         // autoPlayInterval: 1, 
+            //         children: [
+                    
+            //         Center(
+            //           child: 
+            //         Column(
+            //           mainAxisAlignment: MainAxisAlignment.center,
+            //           crossAxisAlignment: CrossAxisAlignment.center,
+            //           children: [
+            //           SizedBox(height: 10,),
+            //             Row(
+            //             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //             children: [
+            //           Align(
+            //             alignment: Alignment.centerLeft,
+            //             child: Text("ANNONCES",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
+                      
+            //           ),
+            //           Align(
+            //           alignment: Alignment.centerRight,
+            //             child: IconButton(onPressed: (){},icon: Icon(Icons.menu),color: Colors.white,),
+            //             ),
+            //             ],
+                        
+            //           ),
+            //            Align(
+            //           alignment: Alignment.centerRight,
+            //             child: IconButton(onPressed: (){},icon: Icon(Icons.favorite_border),color: Colors.white,),
+            //             ),
+            //           Text("lorem ghdfshgvhsgsvss\nfhvsgvbfsfj\bnfbssbvfsvsvhn",style: TextStyle(color:Colors.white,fontSize: 13,fontWeight: FontWeight.normal),),
+            //           SizedBox(height: 10,),
+            //           ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white),onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>Annonces_dark()));}, child: Text("voir plus",style: TextStyle(color: Colors.black),))
+            //         ],),
+            //         ),
+            //         Center(
+            //           child: Column(
+            //           mainAxisAlignment: MainAxisAlignment.center,
+            //           crossAxisAlignment: CrossAxisAlignment.center,
+            //           children: [
+            //           SizedBox(height: 10,),
+            //             Row(
+            //             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //             children: [
+            //           Align(
+            //             alignment: Alignment.centerLeft,
+            //             child: Text("ANNONCES",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
+                      
+            //           ),
+            //           Align(
+            //           alignment: Alignment.centerRight,
+            //             child: IconButton(onPressed: (){},icon: Icon(Icons.menu),color: Colors.white,),
+            //             ),
+            //             ],
+                        
+            //           ),
+            //           Align(
+            //           alignment: Alignment.centerRight,
+            //             child: IconButton(onPressed: (){},icon: Icon(Icons.favorite_border),color: Colors.white,),
+            //             ), 
+            //           Text("lorem ghdfshgvhsgsvss\nfhvsgvbfsfj\bnfbssbvfsvsvhn",style: TextStyle(color:Colors.white,fontSize: 13,fontWeight: FontWeight.normal),),
+            //           SizedBox(height: 10,),
+            //           ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white),onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>Annonces_dark()));}, child: Text("voir plus",style: TextStyle(color: Colors.black),))
+            //         ],),),
+            //         Center(child: 
+            //         Column(
+            //          mainAxisAlignment: MainAxisAlignment.center,
+            //           crossAxisAlignment: CrossAxisAlignment.center,
+            //           children: [
+            //           SizedBox(height: 10,),
+            //             Row(
+            //             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //             children: [
+            //           Align(
+            //             alignment: Alignment.centerLeft,
+            //             child: Text("ANNONCES",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
+                      
+            //           ),
+            //           Align(
+            //           alignment: Alignment.centerRight,
+            //             child: IconButton(onPressed: (){},icon: Icon(Icons.menu),color: Colors.white,),
+            //             ),
+            //             ],
+                        
+            //           ),
+            //            Align(
+            //           alignment: Alignment.centerRight,
+            //             child: IconButton(onPressed: (){},icon: Icon(Icons.favorite_border),color: Colors.white,),
+            //             ), 
+            //           Text("lorem ghdfshgvhsgsvss\nfhvsgvbfsfj\bnfbssbvfsvsvhn",style: TextStyle(color:Colors.white,fontSize: 13,fontWeight: FontWeight.normal),),
+            //           SizedBox(height: 10,),
+            //           ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white),onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>Annonces_dark()));}, child: Text("voir plus",style: TextStyle(color: Colors.black),))
+            //         ],),)
+            //         ],
+
+            //         /// Called whenever the page in the center of the viewport changes.
+            //         onPageChanged: (value) {
+            //           print('Page changed: $value');
+            //         },
+                    
+            //         /// Auto scroll interval.
+            //         /// Do not auto scroll with null or 0.
+            //         // autoPlayInterval: 3000,
+
+            //         /// Loops back to first slide.
+            //         isLoop: true,
+            //       ),
+            // ),
+            // // Container(
             //   padding: EdgeInsets.only(top: 20,bottom: 20),
             //   alignment: Alignment.center,
             //   decoration: BoxDecoration(
