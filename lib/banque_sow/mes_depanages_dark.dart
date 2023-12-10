@@ -1,23 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-class depanages extends StatefulWidget {
-  const depanages({super.key});
+class depanages_dark extends StatefulWidget {
+  const depanages_dark({super.key});
 
   @override
-  State<depanages> createState() => _depanagesState();
+  State<depanages_dark> createState() => _depanages_darkState();
 }
  TextEditingController _date=TextEditingController();
   TextEditingController _montant=TextEditingController();
   TextEditingController _inf=TextEditingController();
   
-class _depanagesState extends State<depanages> {
+class _depanages_darkState extends State<depanages_dark> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
-          image: DecorationImage(image: AssetImage("images/filiter_white.jpg"),fit: BoxFit.cover),
+          image: DecorationImage(image: AssetImage("images/filter_banque_black.png"),fit: BoxFit.cover),
         ),
         child: ListView(
           children: [
@@ -74,9 +74,10 @@ class _depanagesState extends State<depanages> {
                       width: 120,
                       decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
-                      color: Colors.pink,
+                      color: Colors.white60,
+                        border: Border.all(color: Colors.grey,width: 2),
                       ),
-                      child:const Align(alignment:Alignment.center ,child: Text("Montant*",style: TextStyle(color:Colors.white,fontSize: 12,fontWeight: FontWeight.bold),)),
+                      child:const Align(alignment:Alignment.center ,child: Text("Montant*",style: TextStyle(color:Colors.black,fontSize: 12,fontWeight: FontWeight.bold),)),
                     ),
                     Container(
                       margin: EdgeInsets.all(10),
@@ -94,9 +95,10 @@ class _depanagesState extends State<depanages> {
                       width: 70,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                      color: Colors.pink,
+                        border: Border.all(color: Colors.grey,width: 2),
+                      color: Colors.white60,
                       ),
-                      child: Container(alignment: Alignment.center ,child: Image.asset("images/currency-exchange 1.png",fit: BoxFit.cover,),),
+                      child: Container(alignment: Alignment.center ,child: Image.asset("images/currency-exchange 1.png",fit: BoxFit.cover,color: Colors.black,),),
                     )
                   ],
                 ),
@@ -127,9 +129,10 @@ class _depanagesState extends State<depanages> {
                       width: 120,
                       decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
-                      color: Colors.pink,
+                        border: Border.all(color: Colors.grey,width: 2),
+                      color: Colors.white60,
                       ),
-                      child:const Align(alignment:Alignment.center ,child: Text("Immédiat",style: TextStyle(color:Colors.white,fontSize: 12,fontWeight: FontWeight.bold),)),
+                      child:const Align(alignment:Alignment.center ,child: Text("Immédiat",style: TextStyle(color:Colors.black,fontSize: 12,fontWeight: FontWeight.bold),)),
                     ),
                     Container(
                       margin: EdgeInsets.all(10),
@@ -170,9 +173,10 @@ class _depanagesState extends State<depanages> {
                       width: 70,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                      color: Colors.pink,
+                        border: Border.all(color: Colors.grey,width: 2),
+                      color: Colors.white60,
                       ),
-                      child: Container(alignment: Alignment.center ,child: Icon(Icons.calendar_today,size: 30,color: Colors.white,)),
+                      child: Container(alignment: Alignment.center ,child: Icon(Icons.calendar_today,size: 30,color: Colors.black,)),
                     )
                   ],
                 ),
@@ -203,9 +207,10 @@ class _depanagesState extends State<depanages> {
                       width: 120,
                       decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
-                      color: Colors.pink,
+                        border: Border.all(color: Colors.grey,width: 2),
+                      color: Colors.white60,
                       ),
-                      child:const Align(alignment:Alignment.center ,child: Text("information\ncomplémentaires",style: TextStyle(color:Colors.white,fontSize: 12,fontWeight: FontWeight.bold),)),
+                      child:const Align(alignment:Alignment.center ,child: Text(" information\ncomplémentaires",style: TextStyle(color:Colors.black,fontSize: 12,fontWeight: FontWeight.bold),)),
                     ),
                     Container(
                       margin: EdgeInsets.all(10),
@@ -224,9 +229,10 @@ class _depanagesState extends State<depanages> {
                       width: 70,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                      color: Colors.pink,
+                        border: Border.all(color: Colors.grey,width: 2),
+                      color: Colors.white60,
                       ),
-                      child: Container(alignment: Alignment.center ,child: Image.asset("images/person-square 1.png",fit: BoxFit.cover,color: Colors.white,),),
+                      child: Container(alignment: Alignment.center ,child: Image.asset("images/person-square 1.png",fit: BoxFit.cover,color: Colors.black,),),
                     )
                   ],
                 ),

@@ -165,12 +165,14 @@ void pickFile3()async{
                     ],
                   ),
                ),
-               Container(
-                      padding: EdgeInsets.all(20),
+              Container(
+                      margin: EdgeInsets.all(5),
+                      padding: EdgeInsets.all(10),
                       alignment: Alignment.center,
-                      width:300,
-                      // decoration:  BoxDecoration(color: Colors.grey.shade900,borderRadius: BorderRadius.circular((8))),
+                      width:350,
+                      decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((30))),
                       child:Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                            Container(
                       decoration: BoxDecoration(color: Colors.red,borderRadius: BorderRadius.circular(7)),
@@ -179,22 +181,25 @@ void pickFile3()async{
                       child: 
                     Image.asset('images/🦆 icon _building one_.png',color: Colors.white,),
                     ),
-                      ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white,elevation: 10,shadowColor: Colors.black),
-                      onPressed: (){
+                     Container(
+                      child:TextButton(
+                        onPressed: (){
                        pickFile();
                         }, child:const Text("Contrat de logement",style: TextStyle(fontSize: 15,color: Colors.black),)),
-                      Icon(Icons.upload_file,color: Colors.red,),
+                     ),Icon(Icons.upload_file,color: Colors.red,),
                         ],
                       ),
                   ),
 
                  result!=null?Text("${_filename}"):Text(""),
-                 Container(
-                      padding: EdgeInsets.all(20),
+                Container(
+                      margin: EdgeInsets.all(5),
+                      padding: EdgeInsets.all(10),
                       alignment: Alignment.center,
-                      width:300,
-                      // decoration:  BoxDecoration(color: Colors.grey.shade900,borderRadius: BorderRadius.circular((8))),
+                      width:350,
+                      decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((30))),
                       child:Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                            Container(
                       decoration: BoxDecoration(color: Colors.red,borderRadius: BorderRadius.circular(7)),
@@ -203,22 +208,25 @@ void pickFile3()async{
                       child: 
                     Image.asset('images/🦆 icon _building one_.png',color: Colors.white,),
                     ),
-                      ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white,elevation: 10,shadowColor: Colors.black),
-                      onPressed: (){
+                     Container(
+                      child:TextButton(
+                        onPressed: (){
                        pickFile1();
                         }, child:const Text("Facture de logement",style: TextStyle(fontSize: 15,color: Colors.black),)),
-                      Icon(Icons.upload_file,color: Colors.red,),
+                      ), Icon(Icons.upload_file,color: Colors.red,),
                         ],
                       ),
                   ),
 
               result1!=null?Text("${_filename1}"):Text(""),
-                  Container(
-                      padding: EdgeInsets.all(20),
+                 Container(
+                      margin: EdgeInsets.all(5),
+                      padding: EdgeInsets.all(10),
                       alignment: Alignment.center,
-                      width:300,
-                      // decoration:  BoxDecoration(color: Colors.grey.shade900,borderRadius: BorderRadius.circular((8))),
+                      width:350,
+                      decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((30))),
                       child:Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                            Container(
                       decoration: BoxDecoration(color: Colors.red,borderRadius: BorderRadius.circular(7)),
@@ -227,11 +235,12 @@ void pickFile3()async{
                       child: 
                     Image.asset('images/🦆 icon _building one_.png',color: Colors.white,),
                     ),
-                      ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white,elevation: 10,shadowColor: Colors.black),
-                      onPressed: (){
+                     Container(
+                      child:TextButton(
+                        onPressed: (){
                        pickFile2();
                         }, child:const Text("autre                          ",style: TextStyle(fontSize: 15,color: Colors.black),)),
-                      Icon(Icons.upload_file,color: Colors.red,),
+                     ),Icon(Icons.upload_file,color: Colors.red,),
                         ],
                       ),
                   ),

@@ -102,12 +102,15 @@ class _GestionLogState extends State<GestionLog> {
                 child: Column(
                   // alignment: Alignment.center,
               children: [
-                    Container(
+                      // const SizedBox(height: 8,),
+               Container(
+                      margin: EdgeInsets.all(5),
                       padding: EdgeInsets.all(10),
                       alignment: Alignment.center,
-                      width:300,
-                      decoration:  BoxDecoration(color: Colors.transparent,borderRadius: BorderRadius.circular((8))),
+                      width:350,
+                      decoration:  BoxDecoration(color: Colors.white,boxShadow: [BoxShadow(color:Colors.black,blurRadius: 3,)],borderRadius: BorderRadius.circular((10))),
                       child:Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                            Container(
                       decoration: BoxDecoration(color: Colors.orange,borderRadius: BorderRadius.circular(7)),
@@ -116,22 +119,24 @@ class _GestionLogState extends State<GestionLog> {
                       child: 
                     Image.asset('images/🦆 icon _building one_.png',color: Colors.white,),
                     ),
-                     ElevatedButton(
-                      style: ElevatedButton.styleFrom(backgroundColor: Colors.white,elevation: 10,shadowColor: Colors.black),
-                      
+                     Container(
+                      child:TextButton(
                         // style:ElevatedButton.styleFrom(primary: Colors.white),
                         onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>Demandelocation()));
                       }, child:const Text("Demande de location                 ",style: TextStyle(fontSize: 14,color: Colors.black),)),
-                    
+                     )
                         ],
                       )  
                       ),
-                    Container(
+                     // const SizedBox(height: 8,),
+               Container(
+                      margin: EdgeInsets.all(5),
                       padding: EdgeInsets.all(10),
                       alignment: Alignment.center,
-                      width:300,
-                      decoration:  BoxDecoration(color: Colors.transparent,borderRadius: BorderRadius.circular((8))),
+                      width:350,
+                      decoration:  BoxDecoration(color: Colors.white,boxShadow: [BoxShadow(color:Colors.black,blurRadius: 3,)],borderRadius: BorderRadius.circular((10))),
                       child:Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                            Container(
                       decoration: BoxDecoration(color: Colors.orange,borderRadius: BorderRadius.circular(7)),
@@ -140,23 +145,26 @@ class _GestionLogState extends State<GestionLog> {
                       child: 
                     Image.asset('images/🦆 icon _building one_.png',color: Colors.white,),
                     ),
-                     ElevatedButton(
-                      style: ElevatedButton.styleFrom(backgroundColor: Colors.white,elevation: 10,shadowColor: Colors.black),
-                      
+                     Container(
+                      child:TextButton(
+                       
                         // style:ElevatedButton.styleFrom(primary: Colors.white),
                         onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>DeclarerSinistre()));
                       }, child:const Text("Déposer un sinistre                    ",style: TextStyle(fontSize: 14,color: Colors.black),)),
-                    
+                     )
                         ],
                       )  
                       ),
                 // const SizedBox(height: 8,),
-                Container(
+                 // const SizedBox(height: 8,),
+               Container(
+                      margin: EdgeInsets.all(5),
                       padding: EdgeInsets.all(10),
                       alignment: Alignment.center,
-                      width:300,
-                      decoration:  BoxDecoration(color: Colors.transparent,borderRadius: BorderRadius.circular((8))),
+                      width:350,
+                      decoration:  BoxDecoration(color: Colors.white,boxShadow: [BoxShadow(color:Colors.black,blurRadius: 3,)],borderRadius: BorderRadius.circular((10))),
                       child:Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                            Container(
                       decoration: BoxDecoration(color: Colors.orange,borderRadius: BorderRadius.circular(7)),
@@ -165,23 +173,27 @@ class _GestionLogState extends State<GestionLog> {
                       child: 
                     Image.asset('images/🦆 icon _building one_.png',color: Colors.white,),
                     ),
-                      ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white,elevation: 10,shadowColor: Colors.black),
-                      onPressed: (){
+                     Container(
+                      child:TextButton(
+                        onPressed: (){
                         Navigator.push(context, MaterialPageRoute(builder: (context)=>DeposerPreavis()));
                         // showDialog(context: context, builder: (context)=>Dialog(child: Text("service indisponible pour le moment"),));
                       }, child:const Text("Déposer un pré avis                     ",style: TextStyle(fontSize: 14,color: Colors.black),)),
-                      
+                     )
                         ],
                       ),
                   ),
                 
                 // const SizedBox(height: 8,),
-                 Container(
+                   // const SizedBox(height: 8,),
+               Container(
+                      margin: EdgeInsets.all(5),
                       padding: EdgeInsets.all(10),
                       alignment: Alignment.center,
-                      width:300,
-                      decoration:  BoxDecoration(color: Colors.transparent,borderRadius: BorderRadius.circular((8))),
+                      width:350,
+                      decoration:  BoxDecoration(color: Colors.white,boxShadow: [BoxShadow(color:Colors.black,blurRadius: 3,)],borderRadius: BorderRadius.circular((10))),
                       child:Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                            Container(
                       decoration: BoxDecoration(color: Colors.orange,borderRadius: BorderRadius.circular(7)),
@@ -190,11 +202,12 @@ class _GestionLogState extends State<GestionLog> {
                       child: 
                     Image.asset('images/🦆 icon _building one_.png',color: Colors.white,),
                     ),
-                      ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white,elevation: 10,shadowColor: Colors.black),
-                      onPressed: (){
+                     Container(
+                      child:TextButton(
+                       onPressed: (){
                         Navigator.push(context, MaterialPageRoute(builder: (context)=>DemanderCaution()));
                       }, child:const Text("Demander une caution Garantie",style: TextStyle(fontSize: 14,color: Colors.black),)),
-                     
+                     )
                         ],
                       ),
                   ),

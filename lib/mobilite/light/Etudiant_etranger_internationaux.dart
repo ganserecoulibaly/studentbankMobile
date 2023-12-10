@@ -175,7 +175,7 @@ class _etudiant_etranger_internationauxState extends State<etudiant_etranger_int
                                       color: color[i],
                                       borderRadius: BorderRadius.circular(20)
                             ),
-                            height: 350,
+                            height: 400,
                             width: 220,
                           child: Column(
                             children: [
@@ -210,7 +210,7 @@ class _etudiant_etranger_internationauxState extends State<etudiant_etranger_int
                                     children: [
                                       Image(image: AssetImage("images/Spain.png")),
                                       SizedBox(height:3),
-                                      Text("Espagne",style: TextStyle(color: Colors.pink,fontSize: 14,fontWeight: FontWeight.bold)  ),
+                                      Text("Espagne",style: TextStyle(color: Colors.pink,fontSize: 12,fontWeight: FontWeight.bold)  ),
                                   ]
                               ),
                               Column(
@@ -218,7 +218,7 @@ class _etudiant_etranger_internationauxState extends State<etudiant_etranger_int
                                           
                                   Image(image:AssetImage("images/🦆 icon _building one_.png")),
                                           SizedBox(height:3),
-                                  Text("Universite de Barcelone",style: TextStyle(color: Colors.pink,fontSize: 14,fontWeight: FontWeight.bold,),)
+                                  Text("Universite de Barcelone",style: TextStyle(color: Colors.pink,fontSize: 12,fontWeight: FontWeight.bold,),)
                                     
                                 ],
                               )

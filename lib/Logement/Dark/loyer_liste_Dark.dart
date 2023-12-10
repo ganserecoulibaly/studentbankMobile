@@ -75,7 +75,22 @@ class Loyerlist_dark extends StatelessWidget {
                         Text("lorem ghdfshgvhsgsvss\nfhvsgvbfsfj\bnfbssbvfsvsvhn",style: TextStyle(color:Colors.white,fontSize: 13,fontWeight: FontWeight.normal),),
                         SizedBox(height: 10,),
                         ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white),onPressed: (){}, child: Text("voir plus",style: TextStyle(color: Colors.black),))
+                       ,Container(
+                          width: 250,
+                          decoration: BoxDecoration(
+                            color: Colors.white70,
+                            border: Border.all(color: Colors.black),
+                            borderRadius: BorderRadius.circular(30)
+                            ),
+                          child: IconButton(onPressed: (){
+                            showSearch(
+                              context: context,
+                              delegate: CustomSearchDelegate()
+                              );
+                          }, icon: Icon(Icons.search)),
+                        ),
                       ],),
+                      
                       ),
                     
                     ),
@@ -88,23 +103,7 @@ class Loyerlist_dark extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 // SizedBox(height: 20),
-                Container(
-                  width: 50,
-                  decoration: BoxDecoration(
-                    color: Colors.white70,
-                    border: Border.all(color: Colors.black),
-                    borderRadius: BorderRadius.circular(30)
-                    ),
-
-                  child: SingleChildScrollView(
-                    child: IconButton(onPressed: (){
-                      showSearch(
-                        context: context,
-                        delegate: CustomSearchDelegate()
-                        );
-                    }, icon: Icon(Icons.search)),
-                  ),
-                ),
+               
                 for(int i=0;i<4;i++)
                 Container(
                     decoration: BoxDecoration(

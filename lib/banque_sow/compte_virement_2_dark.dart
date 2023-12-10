@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class compte_virement_2 extends StatefulWidget {
-  const compte_virement_2({super.key});
+class compte_virement_2_dark extends StatefulWidget {
+  const compte_virement_2_dark({super.key});
 
   @override
-  State<compte_virement_2> createState() => _compte_virement_2State();
+  State<compte_virement_2_dark> createState() => _compte_virement_2_darkState();
 }
 
-class _compte_virement_2State extends State<compte_virement_2> {
+class _compte_virement_2_darkState extends State<compte_virement_2_dark> {
   String premon="MR NOM PRENOM";
   String N="00000000001";
   String nom="Nom de compte";
@@ -16,29 +16,32 @@ class _compte_virement_2State extends State<compte_virement_2> {
   Widget build(BuildContext context) {
     return Scaffold(
       body:Container(
-        decoration: BoxDecoration(image:DecorationImage(image:AssetImage("images/fiiter_light_banque.png"),fit: BoxFit.fill)),
+        decoration: BoxDecoration(image:DecorationImage(image:AssetImage("images/filter_banque_black.png"),fit: BoxFit.fill)),
         child: ListView(
           children: [
-            Container(
-              width: 434,
+             Container(
+              width: double.infinity,
               height: 310,
-              decoration: ShapeDecoration(
+              decoration: BoxDecoration(
                   // color: Colors.white,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(50),
-                          bottomRight: Radius.circular(50),
-                      ),
+                  border: Border(bottom: BorderSide(color: Colors.white,width: 2)),
+                 // boxShadow:[ BoxShadow(blurRadius: 1,spreadRadius: 1,color: Colors.white)],
+                  borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(50),
+                  bottomRight: Radius.circular(50),
+                  
                   ),
-                  gradient: LinearGradient(colors: [Colors.pink.shade100,Colors.pink.shade100,Colors.white]),
-                  shadows: [
-                      BoxShadow(
-                          color: Color(0x7F000000),
-                          blurRadius: 15,
-                          offset: Offset(0, 4),
-                          spreadRadius: 0,
-                            )
-                          ]
+                  color: Colors.black
+                  // gradient: LinearGradient(colors: [Colors.pink.shade100,Colors.pink.shade100,Colors.white]),
+                  // shadows: [
+                  //     BoxShadow(
+                  //         color: Colors,
+                  //         blurRadius: 15,
+                  //         offset: Offset(0, 4),
+                  //         spreadRadius: 0,
+                  //           )
+                  //         ]
+                  
               ),
               child: Column(
                 // crossAxisAlignment: CrossAxisAlignment.start,
@@ -55,7 +58,7 @@ class _compte_virement_2State extends State<compte_virement_2> {
                             Text(
                                 'Virement',
                                 style: TextStyle(
-                                    color: Color(0xFFED174C),
+                                    color: Colors.white,
                                     fontSize: 20,
                                     fontFamily: 'Poppins',
                                     fontWeight: FontWeight.w700,
@@ -69,7 +72,7 @@ class _compte_virement_2State extends State<compte_virement_2> {
                           child: Text(
                               'Compte éméteur',
                               style: TextStyle(
-                                  color: Color(0xFFED174C),
+                                  color: Colors.white,
                                   fontSize: 16,
                                   fontFamily: 'Roboto',
                                   fontWeight: FontWeight.w700,
@@ -120,20 +123,23 @@ class _compte_virement_2State extends State<compte_virement_2> {
                             ),
                             Container(
                               margin: EdgeInsets.only(top: 5,bottom: 5,left: 20),
-                              child: Text("${numero} £",
+                              child: Text("${numero}",
                               style: TextStyle(fontSize: 35,color: Colors.white),
                               )
                             ),
-                            Row(
-                              children: [
-                                IconButton(onPressed: (){}, icon: Image.asset("images/graph-up 1.png"),iconSize: 20),
-                                Container(
-                                  width: 30,
-                                  child: IconButton(onPressed: (){}, icon: Image.asset("images/transfert.png",fit: BoxFit.cover,),iconSize: 5)),
-                               SizedBox(
-                                width: 250,
-                                child: IconButton(onPressed: (){}, icon: Image.asset("images/currency-exchange 1.png"),iconSize: 20,)),
-                              ],
+                            SingleChildScrollView(
+                              scrollDirection: Axis.horizontal,
+                              child: Row(
+                                children: [
+                                  IconButton(onPressed: (){}, icon: Image.asset("images/graph-up 1.png"),iconSize: 20),
+                                  Container(
+                                    width: 30,
+                                    child: IconButton(onPressed: (){}, icon: Image.asset("images/transfert.png",fit: BoxFit.cover,),iconSize: 5)),
+                                 SizedBox(
+                                  width: 460,
+                                  child: IconButton(onPressed: (){}, icon: Image.asset("images/currency-exchange 1.png"),iconSize: 20,)),
+                                ],
+                              ),
                             ),
                           ]
                           ),
@@ -146,7 +152,7 @@ class _compte_virement_2State extends State<compte_virement_2> {
                         child: const Text(
                             'Gerer mes plafonds',
                             style: TextStyle(
-                                color: Color(0xFFED174C),
+                                color: Colors.white,
                                 fontSize: 14,
                                 fontFamily: 'Roboto',
                                 fontWeight: FontWeight.w500,
@@ -164,7 +170,7 @@ class _compte_virement_2State extends State<compte_virement_2> {
               height: 56,
               margin: EdgeInsets.only(top:10,bottom: 10),
               decoration: ShapeDecoration(
-                  color: Color(0xFFED174C),
+                  color: Colors.white,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(30),
@@ -185,7 +191,7 @@ class _compte_virement_2State extends State<compte_virement_2> {
                         'Compte bénéficiaire',
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                            color: Colors.white,
+                            color: Colors.black,
                             fontSize: 16,
                             fontFamily: 'Poppins',
                             fontWeight: FontWeight.w700,
@@ -194,147 +200,155 @@ class _compte_virement_2State extends State<compte_virement_2> {
                     ),
               ),
           ),
-          Container(
-            margin: EdgeInsets.only(top:10,bottom: 10,left: 40),
-            width: 300,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                    'NOM  ',
-                    style: TextStyle(
-                        color: Color(0xFFED174C),
-                        fontSize: 16,
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.w500,
-                        height: 0,
-                    ),
-                ),
-                Container(
-                  
-                  width: 300,
-                  decoration: BoxDecoration(
-                    color: Colors.pink,
-                    borderRadius: BorderRadius.circular(10),
+          Center(
+            child: Container(
+              margin: EdgeInsets.only(top:10,bottom: 10),
+              width: 300,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                      'NOM  ',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.bold,
+                          height: 0,
+                      ),
                   ),
-                  child:const Center(
-                    child: TextField(
-                      textAlign: TextAlign.center,
-                      decoration: InputDecoration(
-                        hintText: "Nom du bénéfice",
-                        hintStyle: TextStyle(color:Colors.white,fontWeight: FontWeight.normal)
+                  Container(
+                    
+                    width: 300,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child:const Center(
+                      child: TextField(
+                        textAlign: TextAlign.center,
+                        decoration: InputDecoration(
+                          hintText: "Nom du bénéfice",
+                          hintStyle: TextStyle(color:Colors.black,fontWeight: FontWeight.normal)
+                        ),
                       ),
                     ),
-                  ),
-                )
-              ],
+                  )
+                ],
+              ),
             ),
           ),
-           Container(
-            margin: EdgeInsets.only(top:10,bottom: 10,left: 40),
-            width: 300,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                    'PRENOM  ',
-                    style: TextStyle(
-                        color: Color(0xFFED174C),
-                        fontSize: 16,
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.w500,
-                        height: 0,
-                    ),
-                ),
-                Container(
-                  width: 300,
-                  decoration: BoxDecoration(
-                    color: Colors.pink,
-                    borderRadius: BorderRadius.circular(10),
+           Center(
+             child: Container(
+              margin: EdgeInsets.only(top:10,bottom: 10),
+              width: 300,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                      'PRENOM  ',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.bold,
+                          height: 0,
+                      ),
                   ),
-                  child:const Center(
-                    child: TextField(
-                      textAlign: TextAlign.center,
-                      decoration: InputDecoration(
-                        hintText: "Prénom du bénéfice",
-                        hintStyle: TextStyle(color:Colors.white,fontWeight: FontWeight.normal),
+                  Container(
+                    width: 300,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child:const Center(
+                      child: TextField(
+                        textAlign: TextAlign.center,
+                        decoration: InputDecoration(
+                          hintText: "Prénom du bénéfice",
+                          hintStyle: TextStyle(color:Colors.black,fontWeight: FontWeight.normal),
+                        ),
                       ),
                     ),
+                  )
+                ],
+              ),
+                       ),
+           ),
+           Center(
+             child: Container(
+              margin: EdgeInsets.only(top:10,bottom: 10),
+              width: 300,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                      'RIB  ',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.bold,
+                          height: 0,
+                      ),
                   ),
-                )
-              ],
-            ),
-          ),
-           Container(
-            margin: EdgeInsets.only(top:10,bottom: 10,left: 40),
-            width: 300,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                    'RIB  ',
-                    style: TextStyle(
-                        color: Color(0xFFED174C),
-                        fontSize: 16,
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.w500,
-                        height: 0,
+                  Container(
+                    width: 300,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
                     ),
-                ),
-                Container(
-                  width: 300,
-                  decoration: BoxDecoration(
-                    color: Colors.pink,
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child:const Center(
-                    child: TextField(
-                      textAlign: TextAlign.center,
-                      decoration: InputDecoration(
-                        hintText: "FR00 0001 0002 0003 0004 0005 123",
-                        hintStyle: TextStyle(color:Colors.white,fontWeight: FontWeight.normal)
+                    child:const Center(
+                      child: TextField(
+                        textAlign: TextAlign.center,
+                        decoration: InputDecoration(
+                          hintText: "FR00 0001 0002 0003 0004 0005 123",
+                          hintStyle: TextStyle(color:Colors.black,fontWeight: FontWeight.normal)
+                        ),
                       ),
                     ),
+                  )
+                ],
+              ),
+                       ),
+           ),
+           Center(
+             child: Container(
+              margin: EdgeInsets.only(top:10,bottom: 10,),
+              width: 300,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                      'BIC  ',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.bold,
+                          height: 0,
+                      ),
                   ),
-                )
-              ],
-            ),
-          ),
-           Container(
-            margin: EdgeInsets.only(top:10,bottom: 10,left: 40),
-            width: 300,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                    'BIC  ',
-                    style: TextStyle(
-                        color: Color(0xFFED174C),
-                        fontSize: 16,
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.w500,
-                        height: 0,
+                  Container(
+                    width:300,
+                     decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
                     ),
-                ),
-                Container(
-                  width:300,
-                   decoration: BoxDecoration(
-                    color: Colors.pink,
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child:const Center(
-                    child: TextField(
-                      textAlign: TextAlign.center,
-                      decoration: InputDecoration(
-                        hintText: "SBJPFRPP",
-                        hintStyle: TextStyle(color:Colors.white,fontWeight: FontWeight.normal)
+                    child:const Center(
+                      child: TextField(
+                        textAlign: TextAlign.center,
+                        decoration: InputDecoration(
+                          hintText: "SBJPFRPP",
+                          hintStyle: TextStyle(color:Colors.black,fontWeight: FontWeight.normal)
+                        ),
                       ),
                     ),
-                  ),
-                )
-              ],
-            ),
-          ),
+                  )
+                ],
+              ),
+                       ),
+           ),
            Center(
               child: Container(
                   margin: EdgeInsets.only(bottom: 10),
@@ -346,7 +360,7 @@ class _compte_virement_2State extends State<compte_virement_2> {
                       gradient: LinearGradient(
                           begin: Alignment(0.00, -1.00),
                           end: Alignment(0, 1),
-                          colors: [Color(0xFFAFDFE4), Color(0xFFED174C)],
+                          colors: [Colors.red.shade900, Colors.orange.shade800],
                       ),
                       shape: RoundedRectangleBorder(
                           side: BorderSide(

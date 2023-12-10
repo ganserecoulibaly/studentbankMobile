@@ -103,12 +103,14 @@ class _GestionLog_darkState extends State<GestionLog_dark> {
                 child: Column(
                   // alignment: Alignment.center,
               children: [
-                     Container(
+                    Container(
+                      margin: EdgeInsets.all(5),
                       padding: EdgeInsets.all(10),
                       alignment: Alignment.center,
                       width:350,
-                      // decoration:  BoxDecoration(color: Colors.grey.shade900,borderRadius: BorderRadius.circular((8))),
+                      decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((30))),
                       child:Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                            Container(
                       decoration: BoxDecoration(color: Colors.red,borderRadius: BorderRadius.circular(7)),
@@ -117,23 +119,24 @@ class _GestionLog_darkState extends State<GestionLog_dark> {
                       child: 
                     Image.asset('images/🦆 icon _building one_.png',color: Colors.white,),
                     ),
-                     ElevatedButton(
-                      style: ElevatedButton.styleFrom(backgroundColor: Colors.white,elevation: 10,shadowColor: Colors.black),
-                      
-                        // style:ElevatedButton.styleFrom(primary: Colors.white),
+                     Container(
+                      child:TextButton(
+                         // style:ElevatedButton.styleFrom(primary: Colors.white),
                         onPressed: (){
                           Navigator.push(context, MaterialPageRoute(builder: (context)=>DeclarerSinistre_dark()));
                       }, child:const Text("Déclarer un sinistre                       ",style: TextStyle(fontSize: 14,color: Colors.black),)),
-                    
+                     )
                         ],
                       )  
                       ),
-                    Container(
+                   Container(
+                      margin: EdgeInsets.all(5),
                       padding: EdgeInsets.all(10),
                       alignment: Alignment.center,
                       width:350,
-                      // decoration:  BoxDecoration(color: Colors.grey.shade900,borderRadius: BorderRadius.circular((8))),
+                      decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((30))),
                       child:Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                            Container(
                       decoration: BoxDecoration(color: Colors.red,borderRadius: BorderRadius.circular(7)),
@@ -142,23 +145,25 @@ class _GestionLog_darkState extends State<GestionLog_dark> {
                       child: 
                     Image.asset('images/🦆 icon _building one_.png',color: Colors.white,),
                     ),
-                     ElevatedButton(
-                      style: ElevatedButton.styleFrom(backgroundColor: Colors.white,elevation: 10,shadowColor: Colors.black),
-                      
+                     Container(
+                      child:TextButton(
+                        
                         // style:ElevatedButton.styleFrom(primary: Colors.white),
                         onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>Demandelocation_dark()));
                       }, child:const Text("Demander Location                      ",style: TextStyle(fontSize: 14,color: Colors.black),)),
-                    
+                     )
                         ],
                       )  
                       ),
                 // const SizedBox(height: 8,),
                 Container(
+                      margin: EdgeInsets.all(5),
                       padding: EdgeInsets.all(10),
                       alignment: Alignment.center,
                       width:350,
-                      // decoration:  BoxDecoration(color: Colors.grey.shade900,borderRadius: BorderRadius.circular((8))),
+                      decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((30))),
                       child:Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                            Container(
                       decoration: BoxDecoration(color: Colors.red,borderRadius: BorderRadius.circular(7)),
@@ -167,22 +172,25 @@ class _GestionLog_darkState extends State<GestionLog_dark> {
                       child: 
                     Image.asset('images/🦆 icon _building one_.png',color: Colors.white,),
                     ),
-                      ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white,elevation: 10,shadowColor: Colors.black),
-                      onPressed: (){
+                     Container(
+                      child:TextButton(
+                        onPressed: (){
                           Navigator.push(context, MaterialPageRoute(builder: (context)=>DeposerPreavis_dark()));
                        }, child:const Text("Déposer un pré avis                       ",style: TextStyle(fontSize: 14,color: Colors.black),)),
-                      
+                     )
                         ],
                       ),
                   ),
                 
                 // const SizedBox(height: 8,),
-                 Container(
+                Container(
+                      margin: EdgeInsets.all(5),
                       padding: EdgeInsets.all(10),
                       alignment: Alignment.center,
                       width:350,
-                      // decoration:  BoxDecoration(color: Colors.grey.shade900,borderRadius: BorderRadius.circular((8))),
+                      decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((30))),
                       child:Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                            Container(
                       decoration: BoxDecoration(color: Colors.red,borderRadius: BorderRadius.circular(7)),
@@ -191,11 +199,12 @@ class _GestionLog_darkState extends State<GestionLog_dark> {
                       child: 
                     Image.asset('images/🦆 icon _building one_.png',color: Colors.white,),
                     ),
-                      ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white,elevation: 10,shadowColor: Colors.black),
-                      onPressed: (){
+                     Container(
+                      child:TextButton(
+                        onPressed: (){
                         Navigator.push(context, MaterialPageRoute(builder: (context)=>DemanderCaution_dark()));
                       }, child:const Text("Demander une caution / Garantie",style: TextStyle(fontSize: 14,color: Colors.black),)),
-                     
+                     )
                         ],
                       ),
                   ),

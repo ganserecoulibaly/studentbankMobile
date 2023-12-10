@@ -188,11 +188,13 @@ class _AccueilLoyer_DarkState extends State<AccueilLoyer_Dark> {
                         },),
                       ),
                      Container(
+                      margin: EdgeInsets.all(5),
                       padding: EdgeInsets.all(10),
                       alignment: Alignment.center,
                       width:350,
-                      decoration:  BoxDecoration(color: Colors.transparent,borderRadius: BorderRadius.circular((8))),
+                      decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((30))),
                       child:Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                            Container(
                       decoration: BoxDecoration(color: Colors.red,borderRadius: BorderRadius.circular(7)),
@@ -201,26 +203,27 @@ class _AccueilLoyer_DarkState extends State<AccueilLoyer_Dark> {
                       child: 
                     Image.asset('images/🦆 icon _building one_.png',color: Colors.white,),
                     ),
-                     ElevatedButton(
-                      style: ElevatedButton.styleFrom(backgroundColor: Colors.white,elevation: 10,shadowColor: Colors.black),
+                     Container(
+                      child:TextButton(
+                      // style: ElevatedButton.styleFrom(backgroundColor: Colors.white,shadowColor: Colors.black),
                       
                         // style:ElevatedButton.styleFrom(primary: Colors.white),
-                        onPressed: (){
-                        setState(() {
-                          Navigator.push(context,MaterialPageRoute(builder: (context)=>Loyerlist_dark()));
-                        });
-                      }, child:const Text("Rechercher un appartement       ",style: TextStyle(fontSize: 16,color: Colors.black),)),
-                    
+                        onPressed: ()=>
+                          Navigator.push(context,MaterialPageRoute(builder: (context)=>Loyerlist_dark()))
+                       , child:const Text("Rechercher un appartement       ",style: TextStyle(fontSize: 16,color: Colors.black),)),
+                     )
                         ],
                       )  
                       ),
                 // const SizedBox(height: 8,),
                 Container(
+                      margin: EdgeInsets.all(5),
                       padding: EdgeInsets.all(10),
                       alignment: Alignment.center,
                       width:350,
-                      decoration:  BoxDecoration(color: Colors.transparent,borderRadius: BorderRadius.circular((8))),
+                      decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((30))),
                       child:Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                            Container(
                       decoration: BoxDecoration(color: Colors.red,borderRadius: BorderRadius.circular(7)),
@@ -229,22 +232,25 @@ class _AccueilLoyer_DarkState extends State<AccueilLoyer_Dark> {
                       child: 
                     Image.asset('images/🦆 icon _building one_.png',color: Colors.white,),
                     ),
-                      ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white,elevation: 10,shadowColor: Colors.black),
-                      onPressed: (){
+                     Container(
+                      child:TextButton(
+                        onPressed: (){
                         showDialog(context: context, builder: (context)=>Dialog(child: Text("service indisponible pour le moment"),));
                       }, child:const Text("Assurance                                      ",style: TextStyle(fontSize: 16,color: Colors.black),)),
-                      
+                     ),
                         ],
                       ),
                   ),
                 
                 // const SizedBox(height: 8,),
                  Container(
+                      margin: EdgeInsets.all(5),
                       padding: EdgeInsets.all(10),
                       alignment: Alignment.center,
                       width:350,
-                      decoration:  BoxDecoration(color: Colors.transparent,borderRadius: BorderRadius.circular((8))),
+                      decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((30))),
                       child:Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                            Container(
                       decoration: BoxDecoration(color: Colors.red,borderRadius: BorderRadius.circular(7)),
@@ -253,9 +259,10 @@ class _AccueilLoyer_DarkState extends State<AccueilLoyer_Dark> {
                       child: 
                     Image.asset('images/🦆 icon _building one_.png',color: Colors.white,),
                     ),
-                      ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white,elevation: 10,shadowColor: Colors.black),
-                      onPressed: (){}, child:const Text("calcul immobilier                          ",style: TextStyle(fontSize: 16,color: Colors.black),)),
-                     
+                     Container(
+                      child:TextButton(
+                        onPressed: (){}, child:const Text("calcul immobilier                          ",style: TextStyle(fontSize: 16,color: Colors.black),)),
+                     )
                         ],
                       ),
                   ),
@@ -263,46 +270,53 @@ class _AccueilLoyer_DarkState extends State<AccueilLoyer_Dark> {
                
                 // const SizedBox(height: 8,),
                 Container(
-                    padding: EdgeInsets.all(10),
-                    alignment: Alignment.center,
-                    width:350,
-                    decoration:  BoxDecoration(color: Colors.transparent,borderRadius: BorderRadius.circular((8))),
-                    child:Row(
-                      children: [
-                          Container(
-                    decoration: BoxDecoration(color: Colors.red,borderRadius: BorderRadius.circular(7)),
-                    height:35,width: 50,
-                    
-                    child: 
-                  Image.asset('images/🦆 icon _building one_.png',color: Colors.white,),
-                  ),ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white,elevation: 10,shadowColor: Colors.black),
-                    onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>GestionLog_dark()));},
+                      margin: EdgeInsets.all(5),
+                      padding: EdgeInsets.all(10),
+                      alignment: Alignment.center,
+                      width:350,
+                      decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((30))),
+                      child:Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                           Container(
+                      decoration: BoxDecoration(color: Colors.red,borderRadius: BorderRadius.circular(7)),
+                      height:35,width: 50,
+                      
+                      child: 
+                    Image.asset('images/🦆 icon _building one_.png',color: Colors.white,),
+                    ),
+                     Container(
+                      child:TextButton(
+                        onPressed: ()=>
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>GestionLog_dark())),
                      child:const Text("Gérer mes logements                   ",style: TextStyle(fontSize: 16,color: Colors.black),)),
-                  
+                     )
                       ],
                     ),
                 ),
                
                 // const SizedBox(height: 8,),
-                Container(
-                    padding: EdgeInsets.all(10),
-                    alignment: Alignment.center,
-                    width:350,
-                    decoration:  BoxDecoration(color: Colors.transparent,borderRadius: BorderRadius.circular((8))),
-                    child:Row(
-                      children: [
-                          Container(
-                    decoration: BoxDecoration(color: Colors.red,borderRadius: BorderRadius.circular(7)),
-                    height:35,width: 50,
-                    
-                    child: 
-                  Image.asset('images/🦆 icon _building one_.png',color: Colors.white,),
-                  ),ElevatedButton(
-                      style: ElevatedButton.styleFrom(backgroundColor: Colors.white,elevation: 10,shadowColor: Colors.black),
-                      onPressed: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>location_dark()));
-                      }, child:const Text("Mes Documents                             ",style: TextStyle(fontSize: 16,color: Colors.black),)),
-                    
+                 Container(
+                      margin: EdgeInsets.all(5),
+                      padding: EdgeInsets.all(10),
+                      alignment: Alignment.center,
+                      width:350,
+                      decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((30))),
+                      child:Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                           Container(
+                      decoration: BoxDecoration(color: Colors.red,borderRadius: BorderRadius.circular(7)),
+                      height:35,width: 50,
+                      
+                      child: 
+                    Image.asset('images/🦆 icon _building one_.png',color: Colors.white,),
+                    ),
+                     Container(
+                      child:TextButton( onPressed: ()=>
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>location_dark()))
+                      , child:const Text("Mes Documents                             ",style: TextStyle(fontSize: 16,color: Colors.black),)),
+                     )
                       ],
                     ),
                 ),

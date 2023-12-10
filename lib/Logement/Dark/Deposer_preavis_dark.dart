@@ -133,9 +133,10 @@ class _DeposerPreavis_darkState extends State<DeposerPreavis_dark> {
               children: [
                      Container(
                       padding: EdgeInsets.all(20),
+                      margin: EdgeInsets.all(5),
                       alignment: Alignment.center,
                       width:300,
-                      decoration:  BoxDecoration(color: Colors.transparent,borderRadius: BorderRadius.circular((8))),
+                      decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((20))),
                       child:Row(
                         children: [
                            Container(
@@ -144,10 +145,8 @@ class _DeposerPreavis_darkState extends State<DeposerPreavis_dark> {
                       
                       child: Icon(CupertinoIcons.calendar)
                     ),
-                     ElevatedButton(
-                      style: ElevatedButton.styleFrom(backgroundColor: Colors.white,elevation: 10,shadowColor: Colors.black),
-                      
-                        // style:ElevatedButton.styleFrom(primary: Colors.white),
+                    TextButton(
+                      // style:ElevatedButton.styleFrom(primary: Colors.white),
                         onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>DeclarerSinistre()));
                       }, child:const Text("Date de rentrée souhaitée",style: TextStyle(fontSize: 14,color: Colors.black),)),
                     
@@ -156,9 +155,10 @@ class _DeposerPreavis_darkState extends State<DeposerPreavis_dark> {
                       ),
                     Container(
                       padding: EdgeInsets.all(20),
+                      margin: EdgeInsets.all(5),
                       alignment: Alignment.center,
                       width:300,
-                      decoration:  BoxDecoration(color: Colors.transparent,borderRadius: BorderRadius.circular((8))),
+                      decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((20))),
                       child:Row(
                         children: [
                            Container(
@@ -167,11 +167,8 @@ class _DeposerPreavis_darkState extends State<DeposerPreavis_dark> {
                       
                       child: Icon(CupertinoIcons.calendar)
                     ),
-                     ElevatedButton(
-                      style: ElevatedButton.styleFrom(backgroundColor: Colors.white,elevation: 10,shadowColor: Colors.black),
-                      
-                        // style:ElevatedButton.styleFrom(primary: Colors.white),
-                        onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>DeclarerSinistre()));
+                     TextButton(
+                      onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>DeclarerSinistre()));
                       }, child:const Text("Date De Sortie souhaitée",style: TextStyle(fontSize: 14,color: Colors.black),)),
                     
                         ],

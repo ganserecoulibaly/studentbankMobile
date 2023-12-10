@@ -17,13 +17,7 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
-          // shape: BoxShape.,
-          // gradient: LinearGradient(
-          //   begin: Alignment.topLeft,
-          //   end: Alignment.bottomRight,
-          //   colors: [Colors.white, Colors.pinkAccent],
-          // ),
-          image: DecorationImage(image: AssetImage("images/whiteFilter.jpg"),fit: BoxFit.fill)
+          image: DecorationImage(image: AssetImage("images/theme_blanc_rose_studentBanc.png"),fit: BoxFit.fill)
         ),
         child:   ListView(
           children: [
@@ -94,7 +88,7 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                         borderRadius: BorderRadius.circular(20)
                         ),
                         margin: EdgeInsets.all(10),
-                        height: 390,
+                        height: 300,
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Column(
@@ -105,7 +99,7 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                               ),
                                Center(
                                 // alignment: Alignment.center,
-                                  child: Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",style: TextStyle(color: Colors.white,fontSize: 20),),
+                                  child: Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",style: TextStyle(color: Colors.white,fontSize: 14),),
                               ),
                               SizedBox(height: 10,),
                               Container(
@@ -157,6 +151,7 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                         height: 40,
                         decoration: BoxDecoration(
                           color: Colors.white,
+                          boxShadow: [BoxShadow(blurRadius: 3.0,spreadRadius: 2),],
                           borderRadius: BorderRadius.circular(30)
                           ),
                         child: Row(
@@ -176,14 +171,15 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                     ],
                   ),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Padding(padding: EdgeInsets.only(left:10,top: 20),
                       child: Container(
-                        width: 190,
+                        width: 100,
                          height: 40,
                         decoration: BoxDecoration(
-                          color: Colors.grey.shade900,
+                          color: Colors.white,
+                          boxShadow: [BoxShadow(blurRadius: 3.0,spreadRadius: 2),],
                           borderRadius: BorderRadius.circular(30)
                           ),
                         child: Row(
@@ -191,10 +187,11 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                       ),
                       Padding(padding: EdgeInsets.only(left:10,top: 20),
                       child: Container(
-                        width: 190,
+                        width: 100,
                          height: 40,
                         decoration: BoxDecoration(
                           color: Colors.white,
+                          boxShadow: [BoxShadow(blurRadius: 3.0,spreadRadius: 2),],
                           borderRadius: BorderRadius.circular(30)
                           ),
                         child: Row(
@@ -203,14 +200,15 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                     ],
                   ),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Padding(padding: EdgeInsets.only(left:10,top: 20),
                       child: Container(
-                         width: 190,
+                         width: 100,
                          height: 40,
                         decoration: BoxDecoration(
                           color: Colors.white,
+                          boxShadow: [BoxShadow(blurRadius: 3.0,spreadRadius: 2),],
                           borderRadius: BorderRadius.circular(30)
                           ),
                         child: Row(
@@ -218,10 +216,11 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                       ),
                       Padding(padding: EdgeInsets.only(left:10,top: 20),
                       child: Container(
-                         width: 190,
+                         width: 100,
                          height: 40,
                         decoration: BoxDecoration(
                           color: Colors.white,
+                          boxShadow: [BoxShadow(blurRadius: 3.0,spreadRadius: 2),],
                           borderRadius: BorderRadius.circular(30)
                           ),
                         child: Row(
@@ -234,14 +233,15 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                     child: Text("Temoignages",style: TextStyle(color: Colors.pink,fontWeight: FontWeight.bold,fontSize: 28,),)
                     ),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
                         margin: EdgeInsets.all(20),
-                        width: 160,
+                        width: 100,
                         height: 100,
                         decoration: BoxDecoration(
                           color: Colors.white,
+                          boxShadow: [BoxShadow(blurRadius: 3.0,spreadRadius: 2),],
                           borderRadius: BorderRadius.circular(20),
                         ),
                         child: Column(
@@ -277,15 +277,15 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                                   },
                                 ),
                                  Container(
-                                      decoration:BoxDecoration(
-                                        borderRadius: BorderRadius.circular(20),
-                                        // gradient: LinearGradient(colors: [const Color.fromARGB(179, 212, 44, 44),Colors.pinkAccent])
-                                       color: Colors.pink
-                                      ),
-                                      height: 30,
-                                      width: 60,
-                                      child: TextButton(onPressed: (){},child: Text("contacter",style: TextStyle(color: Colors.white,fontSize: 10),),),
-                                    )
+                                    decoration:BoxDecoration(
+                                      borderRadius: BorderRadius.circular(20),
+                                      // gradient: LinearGradient(colors: [const Color.fromARGB(179, 212, 44, 44),Colors.pinkAccent])
+                                      color: Colors.pink
+                                    ),
+                                    height: 30,
+                                    width: 60,
+                                    child: TextButton(onPressed: (){},child: Text("contacter",style: TextStyle(color: Colors.white,fontSize: 10),),),
+                                )
                               ],
                             )
                           ],

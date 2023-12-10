@@ -156,7 +156,9 @@ class loyerinfo extends StatelessWidget {
                        ],
                     )
                   ),  
-              
+                  Center(
+                    child: Container(),
+                  )
                 ],
               ),
             ],

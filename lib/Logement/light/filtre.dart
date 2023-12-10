@@ -43,7 +43,7 @@ class _FiltreState extends State<Filtre> {
       
       body: Container(
         decoration: BoxDecoration(
-          image: DecorationImage(image: AssetImage("images/whiteFilter.jpg"),fit: BoxFit.fill),
+          image: DecorationImage(image: AssetImage("images/theme_blanc_rose_studentBanc.png"),fit: BoxFit.fill),
         ),
         child: ListView(
           // scrollDirection: Axis.vertical,
@@ -226,16 +226,21 @@ class _FiltreState extends State<Filtre> {
                 ],
               ),
             ),
-             Container(
-                        decoration: BoxDecoration(color: Colors.grey[900]),
-                        child: Center(
-                           child: TextButton(child: Text("Continuer",style: TextStyle(color: Colors.orange),),
-                           onPressed: (){
-                            Navigator.pop(context);
-                           },
-                          ),
-                        )
-                      )  
+             Center(
+               child: Container(
+                margin: EdgeInsets.only(top:60,bottom: 5),
+                  width: 100,
+                alignment: Alignment.bottomCenter,
+                          decoration: BoxDecoration(color: Colors.grey[900],borderRadius: BorderRadius.circular(30)),
+                          child: Center(
+                             child: TextButton(child: Text("Continuer",style: TextStyle(color: Colors.orange),),
+                             onPressed: (){
+                              Navigator.pop(context);
+                             },
+                            ),
+                          )
+                        ),
+             )  
           ],
         ),
       ),

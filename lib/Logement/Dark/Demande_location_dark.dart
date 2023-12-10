@@ -168,25 +168,27 @@ void pickFile3()async{
                ),
                Center(
                  child: Container(
-                        padding: EdgeInsets.all(10),
-                        alignment: Alignment.center,
-                        width:300,
-                        // decoration:  BoxDecoration(color: Colors.grey.shade900,borderRadius: BorderRadius.circular((8))),
-                        child:Row(
-                          children: [
-                             Container(
-                        decoration: BoxDecoration(color: Colors.red,borderRadius: BorderRadius.circular(7)),
-                        height:35,width: 50,
-                        
-                        child: 
-                      Image.asset('images/🦆 icon _building one_.png',color: Colors.white,),
-                      ),
-                        ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white,elevation: 10,shadowColor: Colors.black),
-                        onPressed: (){
+                      margin: EdgeInsets.all(5),
+                      padding: EdgeInsets.all(10),
+                      alignment: Alignment.center,
+                      width:350,
+                      decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((30))),
+                      child:Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                           Container(
+                      decoration: BoxDecoration(color: Colors.red,borderRadius: BorderRadius.circular(7)),
+                      height:35,width: 50,
+                      
+                      child: 
+                    Image.asset('images/🦆 icon _building one_.png',color: Colors.white,),
+                    ),
+                     Container(
+                      child:TextButton(onPressed: (){
                          pickFile();
                           }, child:const Text("Assurance habitation    ",style: TextStyle(fontSize: 14,color: Colors.black),)),
                         
-                          IconButton(onPressed: (){}, icon: Icon(Icons.download_for_offline_outlined,color: Colors.red,),)
+                       ),   IconButton(onPressed: (){}, icon: Icon(Icons.download_for_offline_outlined,color: Colors.red,),)
                           ],
                         ),
                     ),
@@ -195,25 +197,27 @@ void pickFile3()async{
                  result!=null?Text("${_filename}"):Text(""),
                  Center(
                    child: Container(
-                        padding: EdgeInsets.all(10),
-                        alignment: Alignment.center,
-                        width:300,
-                        // decoration:  BoxDecoration(color: Colors.grey.shade900,borderRadius: BorderRadius.circular((8))),
-                        child:Row(
-                          children: [
-                             Container(
-                        decoration: BoxDecoration(color: Colors.red,borderRadius: BorderRadius.circular(7)),
-                        height:35,width: 50,
-                        
-                        child: 
-                      Image.asset('images/🦆 icon _building one_.png',color: Colors.white,),
-                      ),
-                        ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white,elevation: 10,shadowColor: Colors.black),
-                        onPressed: (){
+                      margin: EdgeInsets.all(5),
+                      padding: EdgeInsets.all(10),
+                      alignment: Alignment.center,
+                      width:350,
+                      decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((30))),
+                      child:Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                           Container(
+                      decoration: BoxDecoration(color: Colors.red,borderRadius: BorderRadius.circular(7)),
+                      height:35,width: 50,
+                      
+                      child: 
+                    Image.asset('images/🦆 icon _building one_.png',color: Colors.white,),
+                    ),
+                     Container(
+                      child:TextButton( onPressed: (){
                          pickFile1();
                           }, child:const Text("Caution                           ",style: TextStyle(fontSize: 14,color: Colors.black),)),
                         
-                          IconButton(onPressed: (){}, icon: Icon(Icons.download_for_offline_outlined,color: Colors.red,),)
+                        ),  IconButton(onPressed: (){}, icon: Icon(Icons.download_for_offline_outlined,color: Colors.red,),)
                           ],
                         ),
                     ),
@@ -222,25 +226,27 @@ void pickFile3()async{
               result1!=null?Text("${_filename1}"):Text(""),
                   Center(
                     child: Container(
-                        padding: EdgeInsets.all(10),
-                        alignment: Alignment.center,
-                        width:300,
-                        // decoration:  BoxDecoration(color: Colors.grey.shade900,borderRadius: BorderRadius.circular((8))),
-                        child:Row(
-                          children: [
-                             Container(
-                        decoration: BoxDecoration(color: Colors.red,borderRadius: BorderRadius.circular(7)),
-                        height:35,width: 50,
-                        
-                        child: 
-                      Image.asset('images/🦆 icon _building one_.png',color: Colors.white,),
-                      ),
-                        ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white,elevation: 10,shadowColor: Colors.black),
-                        onPressed: (){
+                      margin: EdgeInsets.all(5),
+                      padding: EdgeInsets.all(10),
+                      alignment: Alignment.center,
+                      width:350,
+                      decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((30))),
+                      child:Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                           Container(
+                      decoration: BoxDecoration(color: Colors.red,borderRadius: BorderRadius.circular(7)),
+                      height:35,width: 50,
+                      
+                      child: 
+                    Image.asset('images/🦆 icon _building one_.png',color: Colors.white,),
+                    ),
+                     Container(
+                      child:TextButton( onPressed: (){
                          pickFile2();
                           }, child:const Text("Contrat                            ",style: TextStyle(fontSize: 14,color: Colors.black),)),
                         
-                          IconButton(onPressed: (){}, icon: Icon(Icons.download_for_offline_outlined,color: Colors.red,),)
+                         ), IconButton(onPressed: (){}, icon: Icon(Icons.download_for_offline_outlined,color: Colors.red,),)
                           ],
                         ),
                     ),
@@ -248,24 +254,26 @@ void pickFile3()async{
               result2!=null?Text("${_filename2}"):Text(""),
               Center(
                 child: Container(
-                        padding: EdgeInsets.all(10),
-                        alignment: Alignment.center,
-                        width:300,
-                        // decoration:  BoxDecoration(color: Colors.grey.shade900,borderRadius: BorderRadius.circular((8))),
-                        child:Row(
-                          children: [
-                             Container(
-                        decoration: BoxDecoration(color: Colors.red,borderRadius: BorderRadius.circular(7)),
-                        height:35,width: 50,
-                        
-                        child: 
-                      Image.asset('images/🦆 icon _building one_.png',color: Colors.white,),
-                      ),
-                        ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white,elevation: 10,shadowColor: Colors.black),
-                        onPressed: (){
+                      margin: EdgeInsets.all(5),
+                      padding: EdgeInsets.all(10),
+                      alignment: Alignment.center,
+                      width:350,
+                      decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((30))),
+                      child:Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                           Container(
+                      decoration: BoxDecoration(color: Colors.red,borderRadius: BorderRadius.circular(7)),
+                      height:35,width: 50,
+                      
+                      child: 
+                    Image.asset('images/🦆 icon _building one_.png',color: Colors.white,),
+                    ),
+                     Container(
+                      child:TextButton(  onPressed: (){
                          pickFile3();
                           }, child:const Text("Autres                              ",style: TextStyle(fontSize: 14,color: Colors.black),)),
-                          IconButton(onPressed: (){}, icon: Icon(Icons.download_for_offline_outlined,color: Colors.red,),)
+                       ),   IconButton(onPressed: (){}, icon: Icon(Icons.download_for_offline_outlined,color: Colors.red,),)
                           ],
                         ),
                     ),

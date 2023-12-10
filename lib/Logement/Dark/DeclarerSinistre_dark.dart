@@ -49,9 +49,9 @@ class _DeclarerSinistre_darkState extends State<DeclarerSinistre_dark> {
                         Align(
                           alignment: Alignment.topLeft,
                           child:
-                       Text("Déclarer un sinistre",style:TextStyle(color:Colors.white,fontSize:15,fontWeight: FontWeight.bold)),
+                       Text("Déclarer un sinistre",style:TextStyle(color:Colors.red,fontSize:15,fontWeight: FontWeight.bold)),
                         ),SizedBox(height: 10,),
-                        Text("Lorem Ipsum is simply dummy\ntext of the printing and typesetting\ntext of the printing and typesettingtext of the printing \nand typesetting\ntext of the printing and typesetting\nindustry. Lorem Ipsum has\ntext of the printing and typesetting\nindustry. Lorem Ipsum has \n\n",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 15),),
+                        Text("Lorem Ipsum is simply dummy\ntext of the printing and typesetting\ntext of the printing and typesettingtext of the printing \nand typesetting\ntext of the printing and typesetting\nindustry. Lorem Ipsum has\ntext of the printing and typesetting\nindustry. Lorem Ipsum has \n\n",style: TextStyle(color: Colors.grey,fontWeight: FontWeight.bold,fontSize: 15),),
                        ],
                     )
                   ),  
@@ -64,9 +64,9 @@ class _DeclarerSinistre_darkState extends State<DeclarerSinistre_dark> {
                         Align(
                           alignment: Alignment.topLeft,
                           child:
-                       Text("Emplacement",style:TextStyle(color:Colors.white,fontSize:15,fontWeight: FontWeight.bold)),
+                       Text("Emplacement",style:TextStyle(color:Colors.red,fontSize:15,fontWeight: FontWeight.bold)),
                         ),SizedBox(height: 10,),
-                        Text("Lorem Ipsum is simply dummy\ntext of the printing and typesetting\ntext of the printing and typesettingtext of the printing \nand typesetting\ntext of the printing and typesetting\nindustry. Lorem Ipsum has\ntext of the printing and typesetting\nindustry. Lorem Ipsum has \n\n",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 15),),
+                        Text("Lorem Ipsum is simply dummy\ntext of the printing and typesetting\ntext of the printing and typesettingtext of the printing \nand typesetting\ntext of the printing and typesetting\nindustry. Lorem Ipsum has\ntext of the printing and typesetting\nindustry. Lorem Ipsum has \n\n",style: TextStyle(color: Colors.grey,fontWeight: FontWeight.bold,fontSize: 15),),
                        ],
                     )
                   ),  
