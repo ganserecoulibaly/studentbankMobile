@@ -17,11 +17,11 @@ class MyApp extends StatelessWidget {
         create: (context) => ThemeProvider(),
         builder: (context, _) {
           int index = 0;
-          final themeProvider = Provider.of<ThemeProvider>(context);
-          List<Widget> widgetOption = <Widget>[
-            // HomeScreen(),
-            // AccueilLoyer(),
-          ];
+          // final themeProvider = Provider.of<ThemeProvider>(context);
+          // List<Widget> widgetOption = <Widget>[
+          // HomeScreen(),
+          // AccueilLoyer(),
+          // ];
           return const MaterialApp(
             title: 'StudentBank',
             debugShowCheckedModeBanner: false,
