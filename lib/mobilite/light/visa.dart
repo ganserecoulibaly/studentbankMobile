@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'document.dart';
@@ -12,28 +11,28 @@ class Visa extends StatefulWidget {
 
 enum radioSex{Monsieur,Madame}
 class _VisaState extends State<Visa> {
-  TextEditingController _nom=TextEditingController();
-  TextEditingController _prenom=TextEditingController();
-  TextEditingController _dateLieu=TextEditingController();
-  TextEditingController _adresse=TextEditingController();
-  TextEditingController _num=TextEditingController();
+  final TextEditingController _nom=TextEditingController();
+  final TextEditingController _prenom=TextEditingController();
+  final TextEditingController _dateLieu=TextEditingController();
+  final TextEditingController _adresse=TextEditingController();
+  final TextEditingController _num=TextEditingController();
   radioSex sexe=radioSex.Monsieur;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
       body: Container(
-         decoration: BoxDecoration(
+         decoration: const BoxDecoration(
           color: Colors.pink,
           image: DecorationImage(image: AssetImage('images/LogoN_Mobilite.png'),fit: BoxFit.fill)
         ),
         child: ListView(
           children: [
             Container(
-              margin: EdgeInsets.all(20),
+              margin: const EdgeInsets.all(20),
               
               decoration:BoxDecoration(borderRadius: BorderRadius.circular(20),
-              image: DecorationImage(image:  AssetImage("images/mobilite_3.jpg"),fit: BoxFit.fill,scale: 4)),
+              image: const DecorationImage(image:  AssetImage("images/mobilite_3.jpg"),fit: BoxFit.fill,scale: 4)),
               // child: Image.asset("images/mobilite.jpeg",fit: BoxFit.contain,),
               height: 150,
               width: double.infinity,
@@ -45,7 +44,7 @@ class _VisaState extends State<Visa> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Container(
-                          margin: EdgeInsets.all(20),
+                          margin: const EdgeInsets.all(20),
                           child: LinearProgressIndicator(
                           color: Colors.pink.shade100,
                           backgroundColor: Colors.blueGrey,
@@ -54,17 +53,17 @@ class _VisaState extends State<Visa> {
                           minHeight: 10,
                           ),
                         ),
-                        SizedBox(height: 30,),
+                        const SizedBox(height: 30,),
                         Text("Demande de Visa",style: TextStyle(color:Colors.pink.shade100, fontWeight: FontWeight.bold,fontSize: 20),)
                       ],
                     ),
                   )
                
             ),
-            Center(child: Text("Informations Personnelles",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),),
+            const Center(child: Text("Informations Personnelles",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),),
             Container(
-              margin:EdgeInsets.only(left: 20),
-              child: Align(
+              margin:const EdgeInsets.only(left: 20),
+              child: const Align(
                   alignment: Alignment.topLeft,
                   child: Text("Civilite",style: TextStyle(fontWeight: FontWeight.bold),),
                  ),
@@ -73,7 +72,7 @@ class _VisaState extends State<Visa> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  SizedBox(height: 10,),
+                  const SizedBox(height: 10,),
                   Radio<radioSex>(
                     activeColor: Colors.pink.shade100,
                     value: radioSex.Monsieur, groupValue: sexe, onChanged: (radioSex? value){
@@ -81,28 +80,28 @@ class _VisaState extends State<Visa> {
                       sexe=value!;
                     });
                   }),
-                  Text("Monsieur"),
+                  const Text("Monsieur"),
                   Radio<radioSex>(
                     activeColor: Colors.pink.shade100,value: radioSex.Madame, groupValue: sexe, onChanged: (radioSex? value){
                     setState(() {
                       sexe=value!;
                     });
                   }),
-                  Text("Madame"),
+                  const Text("Madame"),
                 ],
               ),
             ),
             Container(
-              margin: EdgeInsets.only(left:20),
+              margin: const EdgeInsets.only(left:20),
               child: Column(
                 children: [
-                  Align(
+                  const Align(
                   alignment: Alignment.topLeft,
                   child: Text("Nom",style: TextStyle(fontWeight: FontWeight.bold),),
                  ),
                  SizedBox(
                     child: Container(
-                      margin: EdgeInsets.all(10),
+                      margin: const EdgeInsets.all(10),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.pink.shade100,),
@@ -111,13 +110,13 @@ class _VisaState extends State<Visa> {
                       ),
                     ),
                  ),
-                  Align(
+                  const Align(
                   alignment: Alignment.topLeft,
                   child: Text("Prenom",style: TextStyle(fontWeight: FontWeight.bold),),
                  ),
                   SizedBox(
                     child: Container(
-                      margin: EdgeInsets.all(10),
+                      margin: const EdgeInsets.all(10),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.pink.shade100,),
@@ -126,13 +125,13 @@ class _VisaState extends State<Visa> {
                       ),
                     ),
                  ),
-                  Align(
+                  const Align(
                   alignment: Alignment.topLeft,
                   child: Text("Date et lieu de naissance",style: TextStyle(fontWeight: FontWeight.bold),),
                  ),
                   SizedBox(
                     child: Container(
-                      margin: EdgeInsets.all(10),
+                      margin: const EdgeInsets.all(10),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.pink.shade100,),
@@ -141,13 +140,13 @@ class _VisaState extends State<Visa> {
                       ),
                     ),
                  ),
-                  Align(
+                  const Align(
                   alignment: Alignment.topLeft,
                   child: Text("Adresse mail",style: TextStyle(fontWeight: FontWeight.bold),),
                  ),
                   SizedBox(
                     child: Container(
-                      margin: EdgeInsets.all(10),
+                      margin: const EdgeInsets.all(10),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.pink.shade100,),
@@ -156,13 +155,13 @@ class _VisaState extends State<Visa> {
                       ),
                     ),
                  ),
-                  Align(
+                  const Align(
                   alignment: Alignment.topLeft,
                   child: Text("Numero de telephone",style: TextStyle(fontWeight: FontWeight.bold),),
                  ),
                   SizedBox(
                     child: Container(
-                      margin: EdgeInsets.all(10),
+                      margin: const EdgeInsets.all(10),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.pink.shade100,),
@@ -172,13 +171,13 @@ class _VisaState extends State<Visa> {
                     ),
                  ),
                  Container(
-                  margin: EdgeInsets.only(right: 10),
+                  margin: const EdgeInsets.only(right: 10),
                   child: Align(
                     alignment: Alignment.centerRight,
                     child: ElevatedButton(onPressed: (){
       
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=>MesDocs()));
-                    }, child: Text("Continuer",style: TextStyle(color: Colors.pink),),style: ElevatedButton.styleFrom(backgroundColor: Colors.white),),
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>const MesDocs()));
+                    },style: ElevatedButton.styleFrom(backgroundColor: Colors.white), child: const Text("Continuer",style: TextStyle(color: Colors.pink),),),
                   ),
                  )
                 ],

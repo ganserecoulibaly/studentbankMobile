@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 
 import 'LoyerInfo.dart';
 
@@ -24,13 +23,13 @@ class Loyerlist extends StatelessWidget {
     return Scaffold(
       
       // backgroundColor: Colors.white,
-      appBar: PreferredSize(preferredSize: Size.fromHeight(300), child:  Container(
+      appBar: PreferredSize(preferredSize: const Size.fromHeight(300), child:  Container(
                 decoration: BoxDecoration(
                   boxShadow: [
                       BoxShadow(color: Colors.orange.shade200,blurRadius: 3.0,spreadRadius: 4.2),
               ],
-                  image: DecorationImage(image: AssetImage('images/maisonNight.jpg'),fit: BoxFit.cover),
-                  borderRadius: BorderRadius.only(bottomRight: Radius.circular(30),bottomLeft: Radius.circular(30))
+                  image: const DecorationImage(image: AssetImage('images/maisonNight.jpg'),fit: BoxFit.cover),
+                  borderRadius: const BorderRadius.only(bottomRight: Radius.circular(30),bottomLeft: Radius.circular(30))
                 ),
                 child: Container(
                        child: 
@@ -40,29 +39,29 @@ class Loyerlist extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                        SizedBox(height: 10,),
+                        const SizedBox(height: 10,),
                          Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                      Align(
+                      const Align(
                         alignment: Alignment.centerLeft,
                         child: Text("LOCATIONS",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
                       
                       ),
                       Align(
                       alignment: Alignment.centerRight,
-                        child: IconButton(onPressed: (){},icon: Icon(Icons.menu),color: Colors.white,),
+                        child: IconButton(onPressed: (){},icon: const Icon(Icons.menu),color: Colors.white,),
                         ),
                         ],
                         
                       ),
                        Align(
                       alignment: Alignment.centerRight,
-                        child: IconButton(onPressed: (){},icon: Icon(Icons.favorite_border),color: Colors.white,),
+                        child: IconButton(onPressed: (){},icon: const Icon(Icons.favorite_border),color: Colors.white,),
                         ),
-                        Text("lorem ghdfshgvhsgsvss\nfhvsgvbfsfj\bnfbssbvfsvsvhn",style: TextStyle(color:Colors.white,fontSize: 13,fontWeight: FontWeight.normal),),
-                        SizedBox(height: 10,),
-                        ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white),onPressed: (){}, child: Text("voir plus",style: TextStyle(color: Colors.black),))
+                        const Text("lorem ghdfshgvhsgsvss\nfhvsgvbfsfj\bnfbssbvfsvsvhn",style: TextStyle(color:Colors.white,fontSize: 13,fontWeight: FontWeight.normal),),
+                        const SizedBox(height: 10,),
+                        ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white),onPressed: (){}, child: const Text("voir plus",style: TextStyle(color: Colors.black),))
                       , // SizedBox(height: 20),
                         Container(
                           width: 250,
@@ -78,7 +77,7 @@ class Loyerlist extends StatelessWidget {
                                 context: context,
                                 delegate: CustomSearchDelegate()
                                 );
-                            }, icon: Icon(Icons.search)),
+                            }, icon: const Icon(Icons.search)),
                           ),
                         ),
                       ],),
@@ -88,9 +87,9 @@ class Loyerlist extends StatelessWidget {
                   ),
          ),
       body: Container(
-         margin: EdgeInsets.all(0),
-        padding: EdgeInsets.all(0),
-        decoration: BoxDecoration(
+         margin: const EdgeInsets.all(0),
+        padding: const EdgeInsets.all(0),
+        decoration: const BoxDecoration(
           color: Colors.white,
           image: DecorationImage(image: AssetImage('images/LogoNlogement.png'),fit: BoxFit.contain)
         ),
@@ -98,7 +97,7 @@ class Loyerlist extends StatelessWidget {
           
         children:[ 
           Container(
-            child: Container(
+            child: SizedBox(
              
               width: MediaQuery.of(context).size.width,
               child: Column(
@@ -108,7 +107,7 @@ class Loyerlist extends StatelessWidget {
                 for(int i=0;i<4;i++)
                 Container(
                     decoration: BoxDecoration(
-                               boxShadow:[
+                               boxShadow:const [
                                 BoxShadow(color: Colors.black,blurRadius: 5,blurStyle: BlurStyle.outer),
                                 // BoxShadow(blurRadius: 0.1,color: Colors.black,spreadRadius: 0.3),
                                 // BoxShadow(blurRadius: 0.1,color: Colors.black,spreadRadius: 0.3),
@@ -117,7 +116,7 @@ class Loyerlist extends StatelessWidget {
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(30),
                   ),
-                  margin: EdgeInsets.only(left: 20,right: 20,top: 12),
+                  margin: const EdgeInsets.only(left: 20,right: 20,top: 12),
                   // padding: EdgeInsets.only(right: 10),
                   height: 120,
                   width: MediaQuery.of(context).size.width,
@@ -128,11 +127,11 @@ class Loyerlist extends StatelessWidget {
                           Container(
                             height: 100,
                             width: MediaQuery.of(context).size.width/2,
-                            margin: EdgeInsets.only(left: 5,bottom: 2),
-                            padding: EdgeInsets.only(right:10),
+                            margin: const EdgeInsets.only(left: 5,bottom: 2),
+                            padding: const EdgeInsets.only(right:10),
                             decoration: BoxDecoration(
                               // border: Border.all(color:Colors.black54),
-                               boxShadow:[
+                               boxShadow:const [
                                 BoxShadow(blurRadius: 5,color: Colors.white),
                                 BoxShadow(blurRadius: 5,color: Colors.white),],
                               // color: Color.fromARGB(255, 235, 236, 236),
@@ -152,13 +151,13 @@ class Loyerlist extends StatelessWidget {
                             // height: 60,
                             width: MediaQuery.of(context).size.width/2.6,
                             child: Padding(
-                              padding: EdgeInsets.only(left: 35,bottom: 10,top: 5,),
+                              padding: const EdgeInsets.only(left: 35,bottom: 10,top: 5,),
                               child: Column(
                               
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Row(
+                                  const Row(
                                     children: [
                                       Icon(Icons.money,size: 20,
                                       ),
@@ -177,7 +176,7 @@ class Loyerlist extends StatelessWidget {
                                       ),
                                     ],
                                   ),
-                                  Row(
+                                  const Row(
                                     children: [
                                       Icon(CupertinoIcons.rectangle_fill_on_rectangle_fill,size: 20,
                                       ),
@@ -192,7 +191,7 @@ class Loyerlist extends StatelessWidget {
                                       
                                     ],
                                   ),
-                                  Row(
+                                  const Row(
                                     children: [
                                       Icon(Icons.screenshot_monitor_sharp,size:20
                                       ),
@@ -210,17 +209,17 @@ class Loyerlist extends StatelessWidget {
                                  Row(
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                     children: [
-                                      Icon(CupertinoIcons.placemark,size: 20,
+                                      const Icon(CupertinoIcons.placemark,size: 20,
                                       ),
                                     
-                                      SizedBox(width: 5),
-                                      Text(ville[i],style: TextStyle(
+                                      const SizedBox(width: 5),
+                                      Text(ville[i],style: const TextStyle(
                                         color: Colors.black54,
                                         fontWeight: FontWeight.bold,
                                       ),
           
                                       ),
-                                      Icon(Icons.favorite_border,size:20),
+                                      const Icon(Icons.favorite_border,size:20),
           
                                     ],
                                   ),
@@ -305,7 +304,7 @@ class CustomSearchDelegate extends SearchDelegate {
       IconButton(onPressed: (){
         query="";
       },
-      icon: Icon(Icons.clear))
+      icon: const Icon(Icons.clear))
       ];
   }
 
@@ -316,7 +315,7 @@ class CustomSearchDelegate extends SearchDelegate {
       onPressed: (){
         close(context, null);
       }, 
-      icon: Icon(Icons.arrow_back)
+      icon: const Icon(Icons.arrow_back)
       );
   }
 
@@ -337,13 +336,13 @@ class CustomSearchDelegate extends SearchDelegate {
           if(result==ville[i]){
             return  Container(
                     decoration: BoxDecoration(
-                    boxShadow:[
+                    boxShadow:const [
                     BoxShadow(color: Colors.black,blurRadius: 5,blurStyle: BlurStyle.outer),
                     ],
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(30),
                   ),
-                  margin: EdgeInsets.only(left: 20,right: 20,top: 12),
+                  margin: const EdgeInsets.only(left: 20,right: 20,top: 12),
                   // padding: EdgeInsets.only(right: 10),
                   height: 120,
                   width: MediaQuery.of(context).size.width,
@@ -354,11 +353,11 @@ class CustomSearchDelegate extends SearchDelegate {
                           Container(
                             height: 100,
                             width: MediaQuery.of(context).size.width/2,
-                            margin: EdgeInsets.only(left: 5,bottom: 2),
-                            padding: EdgeInsets.only(right:10),
+                            margin: const EdgeInsets.only(left: 5,bottom: 2),
+                            padding: const EdgeInsets.only(right:10),
                             decoration: BoxDecoration(
                               // border: Border.all(color:Colors.black54),
-                               boxShadow:[
+                               boxShadow:const [
                                 BoxShadow(blurRadius: 5,color: Colors.white),
                                 BoxShadow(blurRadius: 5,color: Colors.white),],
                               // color: Color.fromARGB(255, 235, 236, 236),
@@ -389,13 +388,13 @@ class CustomSearchDelegate extends SearchDelegate {
                             // height: 60,
                             width: MediaQuery.of(context).size.width/2.6,
                             child: Padding(
-                              padding: EdgeInsets.only(left: 35,bottom: 10,top: 5,),
+                              padding: const EdgeInsets.only(left: 35,bottom: 10,top: 5,),
                               child: Column(
                               
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Row(
+                                  const Row(
                                     children: [
                                       Icon(Icons.money,size: 20,
                                       ),
@@ -414,7 +413,7 @@ class CustomSearchDelegate extends SearchDelegate {
                                       ),
                                     ],
                                   ),
-                                  Row(
+                                  const Row(
                                     children: [
                                       Icon(CupertinoIcons.rectangle_fill_on_rectangle_fill,size: 20,
                                       ),
@@ -429,7 +428,7 @@ class CustomSearchDelegate extends SearchDelegate {
                                       
                                     ],
                                   ),
-                                  Row(
+                                  const Row(
                                     children: [
                                       Icon(Icons.screenshot_monitor_sharp,size:20
                                       ),
@@ -447,17 +446,17 @@ class CustomSearchDelegate extends SearchDelegate {
                                   Row(
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                     children: [
-                                      Icon(CupertinoIcons.placemark,size: 20,
+                                      const Icon(CupertinoIcons.placemark,size: 20,
                                       ),
                                     
-                                      SizedBox(width: 5),
-                                      Text(ville[i],style: TextStyle(
+                                      const SizedBox(width: 5),
+                                      Text(ville[i],style: const TextStyle(
                                         color: Colors.black54,
                                         fontWeight: FontWeight.bold,
                                       ),
           
                                       ),
-                                      Icon(Icons.favorite_border,size:20),
+                                      const Icon(Icons.favorite_border,size:20),
           
                                     ],
                                   ),
@@ -493,13 +492,13 @@ class CustomSearchDelegate extends SearchDelegate {
           if(result==ville[i]){
             return  Container(
                     decoration: BoxDecoration(
-                    boxShadow:[
+                    boxShadow:const [
                     BoxShadow(color: Colors.black,blurRadius: 5,blurStyle: BlurStyle.outer),
                     ],
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(30),
                   ),
-                  margin: EdgeInsets.only(left: 20,right: 20,top: 12),
+                  margin: const EdgeInsets.only(left: 20,right: 20,top: 12),
                   // padding: EdgeInsets.only(right: 10),
                   height: 120,
                   width: MediaQuery.of(context).size.width,
@@ -510,11 +509,11 @@ class CustomSearchDelegate extends SearchDelegate {
                           Container(
                             height: 100,
                             width: MediaQuery.of(context).size.width/2,
-                            margin: EdgeInsets.only(left: 5,bottom: 2),
-                            padding: EdgeInsets.only(right:10),
+                            margin: const EdgeInsets.only(left: 5,bottom: 2),
+                            padding: const EdgeInsets.only(right:10),
                             decoration: BoxDecoration(
                               // border: Border.all(color:Colors.black54),
-                               boxShadow:[
+                               boxShadow:const [
                                 BoxShadow(blurRadius: 5,color: Colors.white),
                                 BoxShadow(blurRadius: 5,color: Colors.white),],
                               // color: Color.fromARGB(255, 235, 236, 236),
@@ -545,13 +544,13 @@ class CustomSearchDelegate extends SearchDelegate {
                             // height: 60,
                             width: MediaQuery.of(context).size.width/2.6,
                             child: Padding(
-                              padding: EdgeInsets.only(left: 35,bottom: 10,top: 5,),
+                              padding: const EdgeInsets.only(left: 35,bottom: 10,top: 5,),
                               child: Column(
                               
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Row(
+                                  const Row(
                                     children: [
                                       Icon(Icons.money,size: 20,
                                       ),
@@ -570,7 +569,7 @@ class CustomSearchDelegate extends SearchDelegate {
                                       ),
                                     ],
                                   ),
-                                  Row(
+                                  const Row(
                                     children: [
                                       Icon(CupertinoIcons.rectangle_fill_on_rectangle_fill,size: 20,
                                       ),
@@ -585,7 +584,7 @@ class CustomSearchDelegate extends SearchDelegate {
                                       
                                     ],
                                   ),
-                                  Row(
+                                  const Row(
                                     children: [
                                       Icon(Icons.screenshot_monitor_sharp,size:20
                                       ),
@@ -603,17 +602,17 @@ class CustomSearchDelegate extends SearchDelegate {
                                   Row(
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                     children: [
-                                      Icon(CupertinoIcons.placemark,size: 20,
+                                      const Icon(CupertinoIcons.placemark,size: 20,
                                       ),
                                     
-                                      SizedBox(width: 5),
-                                      Text(ville[i],style: TextStyle(
+                                      const SizedBox(width: 5),
+                                      Text(ville[i],style: const TextStyle(
                                         color: Colors.black54,
                                         fontWeight: FontWeight.bold,
                                       ),
           
                                       ),
-                                      Icon(Icons.favorite_border,size:20),
+                                      const Icon(Icons.favorite_border,size:20),
           
                                     ],
                                   ),

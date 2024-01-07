@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 // import 'package:studentbankmobile/Logement/Dark/Accueil_loyer_Dark.dart';
 // import 'package:studentbankmobile/Logement/Accueil_loyer.dart';
-import 'package:studentbankmobile/widgets/change_Theme_button.dart';
 
-import '../widgets/change_Mode.dart';
 import 'Dark/Accueil_loyer_Dark.dart';
 import 'light/Accueil_loyer.dart';
 // import 'light/Accueil_loyer.dart';
@@ -29,12 +26,12 @@ class _loyerState extends State<loyer> {
       body:GestureDetector(
         onTap: (){
               // changeMode();
-               Navigator.push(context, MaterialPageRoute(builder: (context)=>AccueilLoyer()));
+               Navigator.push(context, MaterialPageRoute(builder: (context)=>const AccueilLoyer()));
             },
         child: 
             Container(
               height: double.infinity,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(image: AssetImage('images/maisonpiscine2.jpg'),fit: BoxFit.cover)
               ),
            
@@ -48,7 +45,7 @@ class _loyerState extends State<loyer> {
                     child:  Image.asset('images/StudentBank - Logotype - Version quadrichrome dégradé-01 2.png')
              
                   ),
-                  Align(
+                  const Align(
                     alignment: Alignment.bottomRight,
                     child: Text("logement",style: TextStyle(color: Colors.black,fontSize: 23,fontWeight: FontWeight.bold),),
                   ),
@@ -62,11 +59,11 @@ class _loyerState extends State<loyer> {
                           setState(() {
                             press=!press;
                             if(press==false){
-                                 Navigator.push(context, MaterialPageRoute(builder: (context)=>AccueilLoyer()));
+                                 Navigator.push(context, MaterialPageRoute(builder: (context)=>const AccueilLoyer()));
                           
                            }
                             else{
-                                   Navigator.push(context, MaterialPageRoute(builder: (context)=>AccueilLoyer_Dark()));
+                                   Navigator.push(context, MaterialPageRoute(builder: (context)=>const AccueilLoyer_Dark()));
                             
                            }
                         

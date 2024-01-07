@@ -14,15 +14,15 @@ class _cagnotte_1State extends State<cagnotte_1> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
-          image: const DecorationImage(image:AssetImage("images/Logo_N_bleu_studentBanc.png"),fit: BoxFit.cover) ,
+        decoration: const BoxDecoration(
+          image: DecorationImage(image:AssetImage("images/Logo_N_bleu_studentBanc.png"),fit: BoxFit.cover) ,
         ),
         child: ListView(
           children:[
             Container(
               margin: const EdgeInsets.only(top: 20,left: 5,bottom: 5),
               alignment: Alignment.topLeft,
-              child: IconButton(icon: Icon(Icons.arrow_back,color: Colors.pink,),onPressed: ()=>Navigator.pop(context),),
+              child: IconButton(icon: const Icon(Icons.arrow_back,color: Colors.pink,),onPressed: ()=>Navigator.pop(context),),
             ),
             Container(
               margin:const EdgeInsets.only(bottom: 5),
@@ -42,11 +42,11 @@ class _cagnotte_1State extends State<cagnotte_1> {
                 decoration: ShapeDecoration(
                 color: Colors.white.withOpacity(0.6000000238418579),
                 shape: RoundedRectangleBorder(
-                side: BorderSide(width: 1, color: Color(0xFFED174C)),
+                side: const BorderSide(width: 1, color: Color(0xFFED174C)),
                 borderRadius: BorderRadius.circular(20),
                 ),
                 ),
-                child: CupertinoSearchTextField(
+                child: const CupertinoSearchTextField(
                 ),
               ),
             ),
@@ -61,7 +61,7 @@ class _cagnotte_1State extends State<cagnotte_1> {
         ),
         child:IconButton (
           icon:Icon(Icons.add,color:Colors.pink.shade100,size: 40,),
-           onPressed: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>cagnotte_2()))
+           onPressed: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>const cagnotte_2()))
            ),
       ),
     );

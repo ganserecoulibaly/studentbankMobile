@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:studentbankmobile/Logement/Dark/Gestion_logement_Dark.dart';
@@ -25,9 +24,9 @@ class _AccueilLoyer_DarkState extends State<AccueilLoyer_Dark> {
     return Scaffold(
       // extendBody: true,
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(250),
+        preferredSize: const Size.fromHeight(250),
        child:    Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
               border: Border(bottom: BorderSide(width: 1,color: Colors.white,)),
                 image: DecorationImage(image: AssetImage('images/maisonNight.jpg'),fit: BoxFit.fill),
                 borderRadius: BorderRadius.only(bottomRight: Radius.circular(50),bottomLeft: Radius.circular(50))
@@ -48,102 +47,6 @@ class _AccueilLoyer_DarkState extends State<AccueilLoyer_Dark> {
                     /// The color to paint behind th indicator.
                     indicatorBackgroundColor: Colors.white,
 
-                    /// The widgets to display in the [ImageSlideshow].
-                    /// Add the sample image file into the images folder
-                    // autoPlayInterval: 1, 
-                    children: [
-                    
-                    Center(
-                      child: 
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                      SizedBox(height: 10,),
-                        Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                      Align(
-                        alignment: Alignment.centerLeft,
-                        child: Text("ANNONCES",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
-                      
-                      ),
-                      Align(
-                      alignment: Alignment.centerRight,
-                        child: IconButton(onPressed: (){},icon: Icon(Icons.menu),color: Colors.white,),
-                        ),
-                        ],
-                        
-                      ),
-                       Align(
-                      alignment: Alignment.centerRight,
-                        child: IconButton(onPressed: (){},icon: Icon(Icons.favorite_border),color: Colors.white,),
-                        ),
-                      Text("lorem ghdfshgvhsgsvss\nfhvsgvbfsfj\bnfbssbvfsvsvhn",style: TextStyle(color:Colors.white,fontSize: 13,fontWeight: FontWeight.normal),),
-                      SizedBox(height: 10,),
-                      ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white),onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>Annonces_dark()));}, child: Text("voir plus",style: TextStyle(color: Colors.black),))
-                    ],),
-                    ),
-                    Center(
-                      child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                      SizedBox(height: 10,),
-                        Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                      Align(
-                        alignment: Alignment.centerLeft,
-                        child: Text("ANNONCES",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
-                      
-                      ),
-                      Align(
-                      alignment: Alignment.centerRight,
-                        child: IconButton(onPressed: (){},icon: Icon(Icons.menu),color: Colors.white,),
-                        ),
-                        ],
-                        
-                      ),
-                      Align(
-                      alignment: Alignment.centerRight,
-                        child: IconButton(onPressed: (){},icon: Icon(Icons.favorite_border),color: Colors.white,),
-                        ), 
-                      Text("lorem ghdfshgvhsgsvss\nfhvsgvbfsfj\bnfbssbvfsvsvhn",style: TextStyle(color:Colors.white,fontSize: 13,fontWeight: FontWeight.normal),),
-                      SizedBox(height: 10,),
-                      ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white),onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>Annonces_dark()));}, child: Text("voir plus",style: TextStyle(color: Colors.black),))
-                    ],),),
-                    Center(child: 
-                    Column(
-                     mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                      SizedBox(height: 10,),
-                        Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                      Align(
-                        alignment: Alignment.centerLeft,
-                        child: Text("ANNONCES",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
-                      
-                      ),
-                      Align(
-                      alignment: Alignment.centerRight,
-                        child: IconButton(onPressed: (){},icon: Icon(Icons.menu),color: Colors.white,),
-                        ),
-                        ],
-                        
-                      ),
-                       Align(
-                      alignment: Alignment.centerRight,
-                        child: IconButton(onPressed: (){},icon: Icon(Icons.favorite_border),color: Colors.white,),
-                        ), 
-                      Text("lorem ghdfshgvhsgsvss\nfhvsgvbfsfj\bnfbssbvfsvsvhn",style: TextStyle(color:Colors.white,fontSize: 13,fontWeight: FontWeight.normal),),
-                      SizedBox(height: 10,),
-                      ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white),onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>Annonces_dark()));}, child: Text("voir plus",style: TextStyle(color: Colors.black),))
-                    ],),)
-                    ],
-
                     /// Called whenever the page in the center of the viewport changes.
                     onPageChanged: (value) {
                       print('Page changed: $value');
@@ -155,15 +58,111 @@ class _AccueilLoyer_DarkState extends State<AccueilLoyer_Dark> {
 
                     /// Loops back to first slide.
                     isLoop: true,
+
+                    /// The widgets to display in the [ImageSlideshow].
+                    /// Add the sample image file into the images folder
+                    // autoPlayInterval: 1, 
+                    children: [
+                    
+                    Center(
+                      child: 
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                      const SizedBox(height: 10,),
+                        Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                      const Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text("ANNONCES",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
+                      
+                      ),
+                      Align(
+                      alignment: Alignment.centerRight,
+                        child: IconButton(onPressed: (){},icon: const Icon(Icons.menu),color: Colors.white,),
+                        ),
+                        ],
+                        
+                      ),
+                       Align(
+                      alignment: Alignment.centerRight,
+                        child: IconButton(onPressed: (){},icon: const Icon(Icons.favorite_border),color: Colors.white,),
+                        ),
+                      const Text("lorem ghdfshgvhsgsvss\nfhvsgvbfsfj\bnfbssbvfsvsvhn",style: TextStyle(color:Colors.white,fontSize: 13,fontWeight: FontWeight.normal),),
+                      const SizedBox(height: 10,),
+                      ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white),onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>const Annonces_dark()));}, child: const Text("voir plus",style: TextStyle(color: Colors.black),))
+                    ],),
+                    ),
+                    Center(
+                      child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                      const SizedBox(height: 10,),
+                        Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                      const Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text("ANNONCES",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
+                      
+                      ),
+                      Align(
+                      alignment: Alignment.centerRight,
+                        child: IconButton(onPressed: (){},icon: const Icon(Icons.menu),color: Colors.white,),
+                        ),
+                        ],
+                        
+                      ),
+                      Align(
+                      alignment: Alignment.centerRight,
+                        child: IconButton(onPressed: (){},icon: const Icon(Icons.favorite_border),color: Colors.white,),
+                        ), 
+                      const Text("lorem ghdfshgvhsgsvss\nfhvsgvbfsfj\bnfbssbvfsvsvhn",style: TextStyle(color:Colors.white,fontSize: 13,fontWeight: FontWeight.normal),),
+                      const SizedBox(height: 10,),
+                      ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white),onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>const Annonces_dark()));}, child: const Text("voir plus",style: TextStyle(color: Colors.black),))
+                    ],),),
+                    Center(child: 
+                    Column(
+                     mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                      const SizedBox(height: 10,),
+                        Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                      const Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text("ANNONCES",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
+                      
+                      ),
+                      Align(
+                      alignment: Alignment.centerRight,
+                        child: IconButton(onPressed: (){},icon: const Icon(Icons.menu),color: Colors.white,),
+                        ),
+                        ],
+                        
+                      ),
+                       Align(
+                      alignment: Alignment.centerRight,
+                        child: IconButton(onPressed: (){},icon: const Icon(Icons.favorite_border),color: Colors.white,),
+                        ), 
+                      const Text("lorem ghdfshgvhsgsvss\nfhvsgvbfsfj\bnfbssbvfsvsvhn",style: TextStyle(color:Colors.white,fontSize: 13,fontWeight: FontWeight.normal),),
+                      const SizedBox(height: 10,),
+                      ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white),onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>const Annonces_dark()));}, child: const Text("voir plus",style: TextStyle(color: Colors.black),))
+                    ],),)
+                    ],
                   ),
             ),
          ),
       body: Container(
-        margin: EdgeInsets.all(0),
-        padding: EdgeInsets.all(0),
+        margin: const EdgeInsets.all(0),
+        padding: const EdgeInsets.all(0),
         decoration: BoxDecoration(
           color: Colors.grey.shade900,
-          image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
+          image: const DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
         ),
         // width: double.infinity,
         // height: double.infinity,
@@ -317,13 +316,13 @@ class _AccueilLoyer_DarkState extends State<AccueilLoyer_Dark> {
               children: [
                       Align(
                         alignment: Alignment.topLeft,
-                        child: IconButton(icon: Icon(Icons.search,color: Colors.white,),onPressed: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>Filtre_dark()));
+                        child: IconButton(icon: const Icon(Icons.search,color: Colors.white,),onPressed: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const Filtre_dark()));
                         },),
                       ),
                      Container(
-                      margin: EdgeInsets.all(5),
-                      padding: EdgeInsets.all(10),
+                      margin: const EdgeInsets.all(5),
+                      padding: const EdgeInsets.all(10),
                       alignment: Alignment.center,
                       width:350,
                       decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((30))),
@@ -343,7 +342,7 @@ class _AccueilLoyer_DarkState extends State<AccueilLoyer_Dark> {
                       
                         // style:ElevatedButton.styleFrom(primary: Colors.white),
                         onPressed: ()=>
-                          Navigator.push(context,MaterialPageRoute(builder: (context)=>Loyerlist_dark()))
+                          Navigator.push(context,MaterialPageRoute(builder: (context)=>const Loyerlist_dark()))
                        , child:const Text("Rechercher un appartement       ",style: TextStyle(fontSize: 16,color: Colors.black),)),
                      )
                         ],
@@ -351,8 +350,8 @@ class _AccueilLoyer_DarkState extends State<AccueilLoyer_Dark> {
                       ),
                 // const SizedBox(height: 8,),
                 Container(
-                      margin: EdgeInsets.all(5),
-                      padding: EdgeInsets.all(10),
+                      margin: const EdgeInsets.all(5),
+                      padding: const EdgeInsets.all(10),
                       alignment: Alignment.center,
                       width:350,
                       decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((30))),
@@ -369,7 +368,7 @@ class _AccueilLoyer_DarkState extends State<AccueilLoyer_Dark> {
                      Container(
                       child:TextButton(
                         onPressed: (){
-                        showDialog(context: context, builder: (context)=>Dialog(child: Text("service indisponible pour le moment"),));
+                        showDialog(context: context, builder: (context)=>const Dialog(child: Text("service indisponible pour le moment"),));
                       }, child:const Text("Assurance                                      ",style: TextStyle(fontSize: 16,color: Colors.black),)),
                      ),
                         ],
@@ -378,8 +377,8 @@ class _AccueilLoyer_DarkState extends State<AccueilLoyer_Dark> {
                 
                 // const SizedBox(height: 8,),
                  Container(
-                      margin: EdgeInsets.all(5),
-                      padding: EdgeInsets.all(10),
+                      margin: const EdgeInsets.all(5),
+                      padding: const EdgeInsets.all(10),
                       alignment: Alignment.center,
                       width:350,
                       decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((30))),
@@ -404,8 +403,8 @@ class _AccueilLoyer_DarkState extends State<AccueilLoyer_Dark> {
                
                 // const SizedBox(height: 8,),
                 Container(
-                      margin: EdgeInsets.all(5),
-                      padding: EdgeInsets.all(10),
+                      margin: const EdgeInsets.all(5),
+                      padding: const EdgeInsets.all(10),
                       alignment: Alignment.center,
                       width:350,
                       decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((30))),
@@ -422,7 +421,7 @@ class _AccueilLoyer_DarkState extends State<AccueilLoyer_Dark> {
                      Container(
                       child:TextButton(
                         onPressed: ()=>
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>GestionLog_dark())),
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const GestionLog_dark())),
                      child:const Text("Gérer mes logements                   ",style: TextStyle(fontSize: 16,color: Colors.black),)),
                      )
                       ],
@@ -431,8 +430,8 @@ class _AccueilLoyer_DarkState extends State<AccueilLoyer_Dark> {
                
                 // const SizedBox(height: 8,),
                  Container(
-                      margin: EdgeInsets.all(5),
-                      padding: EdgeInsets.all(10),
+                      margin: const EdgeInsets.all(5),
+                      padding: const EdgeInsets.all(10),
                       alignment: Alignment.center,
                       width:350,
                       decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((30))),
@@ -448,7 +447,7 @@ class _AccueilLoyer_DarkState extends State<AccueilLoyer_Dark> {
                     ),
                      Container(
                       child:TextButton( onPressed: ()=>
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>location_dark()))
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>const location_dark()))
                       , child:const Text("Mes Documents                             ",style: TextStyle(fontSize: 16,color: Colors.black),)),
                      )
                       ],

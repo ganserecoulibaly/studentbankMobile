@@ -23,9 +23,9 @@ class _Annonces_darkState extends State<Annonces_dark> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(300),
+        preferredSize: const Size.fromHeight(300),
        child:  Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 boxShadow: [
                    BoxShadow(color: Colors.white,blurRadius: 3.0,spreadRadius: 4.2),
               ],
@@ -48,102 +48,6 @@ class _Annonces_darkState extends State<Annonces_dark> {
                     /// The color to paint behind th indicator.
                     indicatorBackgroundColor: Colors.white,
 
-                    /// The widgets to display in the [ImageSlideshow].
-                    /// Add the sample image file into the images folder
-                    // autoPlayInterval: 1, 
-                    children: [
-                    
-                    Center(
-                      child: 
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                      SizedBox(height: 10,),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                      Align(
-                        alignment: Alignment.centerLeft,
-                        child: Text("ANNONCES",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
-                      
-                      ),
-                      Align(
-                      alignment: Alignment.centerRight,
-                        child: IconButton(onPressed: (){},icon: Icon(Icons.menu),color: Colors.white,),
-                        ),
-                        ],
-                        
-                      ),
-                       Align(
-                      alignment: Alignment.centerRight,
-                        child: IconButton(onPressed: (){},icon: Icon(Icons.favorite_border),color: Colors.white,),
-                        ),
-                      Text("lorem ghdfshgvhsgsvss\nfhvsgvbfsfj\bnfbssbvfsvsvhn",style: TextStyle(color:Colors.white,fontSize: 13,fontWeight: FontWeight.normal),),
-                      SizedBox(height: 10,),
-                      ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white),onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>Annonces_dark()));}, child: Text("voir plus",style: TextStyle(color: Colors.black),))
-                    ],),
-                    ),
-                    Center(
-                      child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                      SizedBox(height: 10,),
-                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                      Align(
-                        alignment: Alignment.centerLeft,
-                        child: Text("ANNONCES",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
-                      
-                      ),
-                      Align(
-                      alignment: Alignment.centerRight,
-                        child: IconButton(onPressed: (){},icon: Icon(Icons.menu),color: Colors.white,),
-                        ),
-                        ],
-                        
-                      ),
-                       Align(
-                      alignment: Alignment.centerRight,
-                        child: IconButton(onPressed: (){},icon: Icon(Icons.favorite_border),color: Colors.white,),
-                        ),
-                      Text("lorem ghdfshgvhsgsvss\nfhvsgvbfsfj\bnfbssbvfsvsvhn",style: TextStyle(color:Colors.white,fontSize: 13,fontWeight: FontWeight.normal),),
-                      SizedBox(height: 10,),
-                      ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white),onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>Annonces_dark()));}, child: Text("voir plus",style: TextStyle(color: Colors.black),))
-                    ],),),
-                    Center(child: 
-                    Column(
-                     mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                      SizedBox(height: 10,),
-                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                      Align(
-                        alignment: Alignment.centerLeft,
-                        child: Text("ANNONCES",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
-                      
-                      ),
-                      Align(
-                      alignment: Alignment.centerRight,
-                        child: IconButton(onPressed: (){},icon: Icon(Icons.menu),color: Colors.white,),
-                        ),
-                        ],
-                        
-                      ),
-                       Align(
-                      alignment: Alignment.centerRight,
-                        child: IconButton(onPressed: (){},icon: Icon(Icons.favorite_border),color: Colors.white,),
-                        ),
-                      Text("lorem ghdfshgvhsgsvss\nfhvsgvbfsfj\bnfbssbvfsvsvhn",style: TextStyle(color:Colors.white,fontSize: 13,fontWeight: FontWeight.normal),),
-                      SizedBox(height: 10,),
-                      ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white),onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>Annonces_dark()));}, child: Text("voir plus",style: TextStyle(color: Colors.black),))
-                    ],),)
-                    ],
-
                     /// Called whenever the page in the center of the viewport changes.
                     onPageChanged: (value) {
                       print('Page changed: $value');
@@ -155,15 +59,111 @@ class _Annonces_darkState extends State<Annonces_dark> {
 
                     /// Loops back to first slide.
                     isLoop: true,
+
+                    /// The widgets to display in the [ImageSlideshow].
+                    /// Add the sample image file into the images folder
+                    // autoPlayInterval: 1, 
+                    children: [
+                    
+                    Center(
+                      child: 
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                      const SizedBox(height: 10,),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                      const Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text("ANNONCES",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
+                      
+                      ),
+                      Align(
+                      alignment: Alignment.centerRight,
+                        child: IconButton(onPressed: (){},icon: const Icon(Icons.menu),color: Colors.white,),
+                        ),
+                        ],
+                        
+                      ),
+                       Align(
+                      alignment: Alignment.centerRight,
+                        child: IconButton(onPressed: (){},icon: const Icon(Icons.favorite_border),color: Colors.white,),
+                        ),
+                      const Text("lorem ghdfshgvhsgsvss\nfhvsgvbfsfj\bnfbssbvfsvsvhn",style: TextStyle(color:Colors.white,fontSize: 13,fontWeight: FontWeight.normal),),
+                      const SizedBox(height: 10,),
+                      ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white),onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>const Annonces_dark()));}, child: const Text("voir plus",style: TextStyle(color: Colors.black),))
+                    ],),
+                    ),
+                    Center(
+                      child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                      const SizedBox(height: 10,),
+                       Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                      const Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text("ANNONCES",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
+                      
+                      ),
+                      Align(
+                      alignment: Alignment.centerRight,
+                        child: IconButton(onPressed: (){},icon: const Icon(Icons.menu),color: Colors.white,),
+                        ),
+                        ],
+                        
+                      ),
+                       Align(
+                      alignment: Alignment.centerRight,
+                        child: IconButton(onPressed: (){},icon: const Icon(Icons.favorite_border),color: Colors.white,),
+                        ),
+                      const Text("lorem ghdfshgvhsgsvss\nfhvsgvbfsfj\bnfbssbvfsvsvhn",style: TextStyle(color:Colors.white,fontSize: 13,fontWeight: FontWeight.normal),),
+                      const SizedBox(height: 10,),
+                      ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white),onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>const Annonces_dark()));}, child: const Text("voir plus",style: TextStyle(color: Colors.black),))
+                    ],),),
+                    Center(child: 
+                    Column(
+                     mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                      const SizedBox(height: 10,),
+                       Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                      const Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text("ANNONCES",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
+                      
+                      ),
+                      Align(
+                      alignment: Alignment.centerRight,
+                        child: IconButton(onPressed: (){},icon: const Icon(Icons.menu),color: Colors.white,),
+                        ),
+                        ],
+                        
+                      ),
+                       Align(
+                      alignment: Alignment.centerRight,
+                        child: IconButton(onPressed: (){},icon: const Icon(Icons.favorite_border),color: Colors.white,),
+                        ),
+                      const Text("lorem ghdfshgvhsgsvss\nfhvsgvbfsfj\bnfbssbvfsvsvhn",style: TextStyle(color:Colors.white,fontSize: 13,fontWeight: FontWeight.normal),),
+                      const SizedBox(height: 10,),
+                      ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white),onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>const Annonces_dark()));}, child: const Text("voir plus",style: TextStyle(color: Colors.black),))
+                    ],),)
+                    ],
                   ),
             ),
             
       ),
       body: 
         Container(
-        margin: EdgeInsets.all(0),
-        padding: EdgeInsets.all(0),
-        decoration: BoxDecoration(
+        margin: const EdgeInsets.all(0),
+        padding: const EdgeInsets.all(0),
+        decoration: const BoxDecoration(
           color: Colors.black,
           image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
         ),
@@ -174,20 +174,20 @@ class _Annonces_darkState extends State<Annonces_dark> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
                   ),
-                  margin: EdgeInsets.only(left:20,right: 20,top: 10,bottom: 10),
+                  margin: const EdgeInsets.only(left:20,right: 20,top: 10,bottom: 10),
                   child:Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      TextButton(onPressed: (){}, child: Text("Retour",style: TextStyle(color: Colors.white,fontSize: 15),)),
-                      ElevatedButton(onPressed: (){},style:ElevatedButton.styleFrom(backgroundColor: Colors.white), child: Text("Plus d'informations",style: TextStyle(color: Colors.black,fontSize: 15),)),
-                      TextButton(onPressed: (){}, child: Text("Suivant",style: TextStyle(color: Colors.white,fontSize: 15),))     
+                      TextButton(onPressed: (){}, child: const Text("Retour",style: TextStyle(color: Colors.white,fontSize: 15),)),
+                      ElevatedButton(onPressed: (){},style:ElevatedButton.styleFrom(backgroundColor: Colors.white), child: const Text("Plus d'informations",style: TextStyle(color: Colors.black,fontSize: 15),)),
+                      TextButton(onPressed: (){}, child: const Text("Suivant",style: TextStyle(color: Colors.white,fontSize: 15),))     
                     ],
                   )
                 ),
              Center(
                child: Container(
-                    decoration: BoxDecoration(  
+                    decoration: const BoxDecoration(  
                     borderRadius: BorderRadius.only(topLeft: Radius.circular(20),bottomLeft: Radius.circular(20))),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -201,7 +201,7 @@ class _Annonces_darkState extends State<Annonces_dark> {
                                       i=i-1;
                                       });
                                     }, icon: 
-                                    Icon(Icons.arrow_circle_left,color: Colors.white,)
+                                    const Icon(Icons.arrow_circle_left,color: Colors.white,)
                                   ),
                          Container(
                               // padding: EdgeInsets.all(20),
@@ -209,7 +209,7 @@ class _Annonces_darkState extends State<Annonces_dark> {
                               height: 200,
                               decoration: BoxDecoration(
                                 // border: Border.all(color:Colors.black54),
-                                 boxShadow:[
+                                 boxShadow:const [
                                   BoxShadow(blurRadius: 5,color: Colors.white),
                                   ],
                                 // color: Color.fromARGB(255, 235, 236, 236),
@@ -232,13 +232,13 @@ class _Annonces_darkState extends State<Annonces_dark> {
                                         }
                                       });
                                     }, 
-                                    icon: Icon(Icons.arrow_circle_right,color: Colors.white,)
+                                    icon: const Icon(Icons.arrow_circle_right,color: Colors.white,)
                             ),
                       ],
                     ),
                   ),
              ),
-                Column(
+                const Column(
                   // crossAxisAlignment:CrossAxisAlignment.center
                   children: [
 

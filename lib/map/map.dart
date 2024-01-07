@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
@@ -6,7 +5,6 @@ import 'package:flutter_map_location_marker/flutter_map_location_marker.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:studentbankmobile/Logement/light/Accueil_loyer.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 // import 'package:geolocator/geolocator.dart';
 
@@ -52,8 +50,8 @@ Future<Position> _determinePosition() async {
 }
 void getCurrentPositiion()async{
   Position currentposition=await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.best);
-  print("Latitude:  "+currentposition.latitude.toString());
-  print("Longitude:  "+currentposition.longitude.toString());
+  print("Latitude:  ${currentposition.latitude}");
+  print("Longitude:  ${currentposition.longitude}");
 }
 class mymap extends StatefulWidget {
   const mymap({super.key});
@@ -79,7 +77,7 @@ class _mymapState extends State<mymap> {
   @override
   Widget build(BuildContext context) {
     _determinePosition();
-    double add_remove=0;
+    double addRemove=0;
     return Scaffold(
 
       body: FlutterMap(
@@ -108,8 +106,8 @@ class _mymapState extends State<mymap> {
               children: [
               Container(
                 child: IconButton(onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>AccueilLoyer()));
-                }, icon: Icon(Icons.home),
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const AccueilLoyer()));
+                }, icon: const Icon(Icons.home),
               ),
             )
           ]
@@ -134,14 +132,14 @@ Widget build() {
                 ),
               ),
             ),
-    style: LocationMarkerStyle(
-      marker: const DefaultLocationMarker(
+    style: const LocationMarkerStyle(
+      marker: DefaultLocationMarker(
         child: Icon(
           Icons.navigation,
           color: Colors.black,
         ),
       ),
-      markerSize: const Size(40, 40),
+      markerSize: Size(40, 40),
       markerDirection: MarkerDirection.heading,
     ),
     indicators: LocationMarkerIndicators(

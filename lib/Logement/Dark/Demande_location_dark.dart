@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:file_picker/file_picker.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 
@@ -45,7 +44,7 @@ void pickFile()async{
     _filename=result!.files.first.name;
     pickedfile=result!.files.first;
     fileToDisplay=File(pickedfile!.path.toString());
-    print('file name ${_filename}');
+    print('file name $_filename');
   }
   setState(() {
     isLoading=false;
@@ -67,7 +66,7 @@ void pickFile1()async{
     _filename1=result1!.files.first.name;
     pickedfile1=result1!.files.first;
     fileToDisplay1=File(pickedfile1!.path.toString());
-    print('file name ${_filename1}');
+    print('file name $_filename1');
   }
   setState(() {
     isLoading1=false;
@@ -89,7 +88,7 @@ void pickFile2()async{
     _filename2=result2!.files.first.name;
     pickedfile2=result2!.files.first;
     fileToDisplay2=File(pickedfile2!.path.toString());
-    print('file name ${_filename2}');
+    print('file name $_filename2');
   }
   setState(() {
     isLoading2=false;
@@ -111,7 +110,7 @@ void pickFile3()async{
     _filename3=result3!.files.first.name;
     pickedfile3=result3!.files.first;
     fileToDisplay3=File(pickedfile3!.path.toString());
-    print('file name ${_filename3}');
+    print('file name $_filename3');
   }
   setState(() {
     isLoading3=false;
@@ -123,9 +122,9 @@ void pickFile3()async{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(preferredSize: Size.fromHeight(250), child:    Container(
+      appBar: PreferredSize(preferredSize: const Size.fromHeight(250), child:    Container(
               height: 300,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 boxShadow: [
                        BoxShadow(color: Colors.white,blurRadius: 3.0,spreadRadius: 4.2),
               ],
@@ -142,15 +141,15 @@ void pickFile3()async{
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                      SizedBox(height: 10,),
-                      Align(
+                      const SizedBox(height: 10,),
+                      const Align(
                         alignment: Alignment.center,
                         child: Text("Demande de location",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
                       
                       ),
-                      Text("lorem ghdfshgvhsgsvss\nfhvsgvbfsfj\bnfbssbvfsvsvhn",style: TextStyle(color:Colors.white,fontSize: 13,fontWeight: FontWeight.normal),),
-                      SizedBox(height: 10,),
-                      ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white),onPressed: (){}, child: Text("voir plus",style: TextStyle(color: Colors.black),))
+                      const Text("lorem ghdfshgvhsgsvss\nfhvsgvbfsfj\bnfbssbvfsvsvhn",style: TextStyle(color:Colors.white,fontSize: 13,fontWeight: FontWeight.normal),),
+                      const SizedBox(height: 10,),
+                      ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white),onPressed: (){}, child: const Text("voir plus",style: TextStyle(color: Colors.black),))
                     ],),
                     ),
                     ],
@@ -160,7 +159,7 @@ void pickFile3()async{
       body: Container(
           decoration: BoxDecoration(
             color: Colors.grey.shade900,
-            image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
+            image: const DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
         
           ),
         
@@ -169,8 +168,8 @@ void pickFile3()async{
               children: [
               Center(
                  child: Container(
-                      margin: EdgeInsets.all(5),
-                      padding: EdgeInsets.all(10),
+                      margin: const EdgeInsets.all(5),
+                      padding: const EdgeInsets.all(10),
                       alignment: Alignment.center,
                       width:350,
                       decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((30))),
@@ -189,17 +188,17 @@ void pickFile3()async{
                          pickFile();
                           }, child:const Text("Assurance habitation    ",style: TextStyle(fontSize: 14,color: Colors.black),)),
                         
-                       ),   IconButton(onPressed: (){}, icon: Icon(Icons.download_for_offline_outlined,color: Colors.red,),)
+                       ),   IconButton(onPressed: (){}, icon: const Icon(Icons.download_for_offline_outlined,color: Colors.red,),)
                           ],
                         ),
                     ),
                ),
 
-                 result!=null?Text("${_filename}"):Text(""),
+                 result!=null?Text("$_filename"):const Text(""),
                  Center(
                    child: Container(
-                      margin: EdgeInsets.all(5),
-                      padding: EdgeInsets.all(10),
+                      margin: const EdgeInsets.all(5),
+                      padding: const EdgeInsets.all(10),
                       alignment: Alignment.center,
                       width:350,
                       decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((30))),
@@ -218,17 +217,17 @@ void pickFile3()async{
                          pickFile1();
                           }, child:const Text("Caution                           ",style: TextStyle(fontSize: 14,color: Colors.black),)),
                         
-                        ),  IconButton(onPressed: (){}, icon: Icon(Icons.download_for_offline_outlined,color: Colors.red,),)
+                        ),  IconButton(onPressed: (){}, icon: const Icon(Icons.download_for_offline_outlined,color: Colors.red,),)
                           ],
                         ),
                     ),
                  ),
 
-              result1!=null?Text("${_filename1}"):Text(""),
+              result1!=null?Text("$_filename1"):const Text(""),
                   Center(
                     child: Container(
-                      margin: EdgeInsets.all(5),
-                      padding: EdgeInsets.all(10),
+                      margin: const EdgeInsets.all(5),
+                      padding: const EdgeInsets.all(10),
                       alignment: Alignment.center,
                       width:350,
                       decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((30))),
@@ -247,16 +246,16 @@ void pickFile3()async{
                          pickFile2();
                           }, child:const Text("Contrat                            ",style: TextStyle(fontSize: 14,color: Colors.black),)),
                         
-                         ), IconButton(onPressed: (){}, icon: Icon(Icons.download_for_offline_outlined,color: Colors.red,),)
+                         ), IconButton(onPressed: (){}, icon: const Icon(Icons.download_for_offline_outlined,color: Colors.red,),)
                           ],
                         ),
                     ),
                   ),
-              result2!=null?Text("${_filename2}"):Text(""),
+              result2!=null?Text("$_filename2"):const Text(""),
               Center(
                 child: Container(
-                      margin: EdgeInsets.all(5),
-                      padding: EdgeInsets.all(10),
+                      margin: const EdgeInsets.all(5),
+                      padding: const EdgeInsets.all(10),
                       alignment: Alignment.center,
                       width:350,
                       decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((30))),
@@ -274,23 +273,23 @@ void pickFile3()async{
                       child:TextButton(  onPressed: (){
                          pickFile3();
                           }, child:const Text("Autres                              ",style: TextStyle(fontSize: 14,color: Colors.black),)),
-                       ),   IconButton(onPressed: (){}, icon: Icon(Icons.download_for_offline_outlined,color: Colors.red,),)
+                       ),   IconButton(onPressed: (){}, icon: const Icon(Icons.download_for_offline_outlined,color: Colors.red,),)
                           ],
                         ),
                     ),
               ),
-              result3!=null?Text("${_filename3}"):Text(""),
-              SizedBox(height: 15,),
+              result3!=null?Text("$_filename3"):const Text(""),
+              const SizedBox(height: 15,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.red,elevation: 2),onPressed: (){}, child: Text("Annuler",style: TextStyle(color: Colors.black),)),
-                  SizedBox(width: 15,),
-                  ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.red),onPressed: (){}, child: Text("Valider",style: TextStyle(color: Colors.black),)),
+                  ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.red,elevation: 2),onPressed: (){}, child: const Text("Annuler",style: TextStyle(color: Colors.black),)),
+                  const SizedBox(width: 15,),
+                  ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.red),onPressed: (){}, child: const Text("Valider",style: TextStyle(color: Colors.black),)),
                 ],
               ),
-                  SizedBox(height: 20,)
+                  const SizedBox(height: 20,)
             
             // SizedBox(height: 60,),
               ],

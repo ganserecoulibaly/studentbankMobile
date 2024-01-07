@@ -1,18 +1,11 @@
 import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
-import 'package:studentbankmobile/page_d_accueil.dart';
+import 'package:studentbankmobile/Debut/Debut.dart';
 import 'package:studentbankmobile/widgets/theme_Provider.dart';
-import 'Sp_coder/provider/user_provider.dart';
-
 
 void main() {
-  runApp(
-    ChangeNotifierProvider(
-      create: (context) => UserProvider(),
-      child: const MyApp(),
-    ),
-  );
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -20,31 +13,20 @@ class MyApp extends StatelessWidget {
 
   // This widget is the root of your application.
   @override
-
-   Widget build(BuildContext context)=>ChangeNotifierProvider(
-    create: (context)=>ThemeProvider(),
-    builder: (context,_){
-      int index=0;
-      final themeProvider=Provider.of<ThemeProvider>(context);
-      List <Widget>widgetOption=<Widget>[
-        // HomeScreen(),
-        // AccueilLoyer(),
-      ];
-      return MaterialApp(
-        title: 'StudentBank',
-        debugShowCheckedModeBanner: false,
-        
-        // themeMode:themeProvider.themeMode,
-        // theme: MyThemes.lightTheme,
-        // darkTheme: MyThemes.darkTheme,
-// <<<<<<< HEAD
-      // home:PageIntro(),
-      // home:loyer(),
-// =======
-      // home:mobilite(),
-        home: Accueil(),
-// >>>>>>> 95ed056 (accueil_mobilite termine et accueil_mobilite_dark + commencement partie visa)
-    );
-    },
-    );
+  Widget build(BuildContext context) => ChangeNotifierProvider(
+        create: (context) => ThemeProvider(),
+        builder: (context, _) {
+          int index = 0;
+          final themeProvider = Provider.of<ThemeProvider>(context);
+          List<Widget> widgetOption = <Widget>[
+            // HomeScreen(),
+            // AccueilLoyer(),
+          ];
+          return const MaterialApp(
+            title: 'StudentBank',
+            debugShowCheckedModeBanner: false,
+            home: Debut(),
+          );
+        },
+      );
 }

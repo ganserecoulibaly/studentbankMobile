@@ -48,7 +48,7 @@ class _Filtre_darkState extends State<Filtre_dark> {
           color: 
          Colors.grey.shade900,
         
-        image: DecorationImage(image: AssetImage("images/darkFilter.jpg",),fit: BoxFit.fill,),
+        image: const DecorationImage(image: AssetImage("images/darkFilter.jpg",),fit: BoxFit.fill,),
         ),
         child: ListView(
           // scrollDirection: Axis.vertical,
@@ -60,16 +60,16 @@ class _Filtre_darkState extends State<Filtre_dark> {
             Row(
               children: [
                 Container(
-                  margin: EdgeInsets.all(10),
-                  child: Align(
+                  margin: const EdgeInsets.all(10),
+                  child: const Align(
                     
                     alignment: Alignment.topLeft,
                     child: Text("Filtres",style: TextStyle(color: Colors.white,fontSize:30,fontWeight: FontWeight.bold),),
                   ),
                 ),
-                SizedBox(width: 200,),
+                const SizedBox(width: 200,),
                 Container(
-                  child: Align(
+                  child: const Align(
                     alignment: Alignment.topRight,
                     child: Icon(Icons.notifications,color: Colors.white,size: 50,),
                     ),
@@ -77,14 +77,14 @@ class _Filtre_darkState extends State<Filtre_dark> {
               ],
             ),
           Container(
-              margin: EdgeInsets.only(left: 10),
+              margin: const EdgeInsets.only(left: 10),
               child: Column(
                 children: [
-                   Padding(padding: EdgeInsets.only(left:10,top: 20),
+                   Padding(padding: const EdgeInsets.only(left:10,top: 20),
                         child: Row(
                           children: [
-                            Icon(CupertinoIcons.money_dollar_circle_fill,size: 25,color:Colors.white)
-                            ,SizedBox(width: 5,),
+                            const Icon(CupertinoIcons.money_dollar_circle_fill,size: 25,color:Colors.white)
+                            ,const SizedBox(width: 5,),
                             Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(30),
@@ -96,16 +96,16 @@ class _Filtre_darkState extends State<Filtre_dark> {
                             child: TextField(
                               textAlign: TextAlign.center,
                               controller: _prixmin,
-                              decoration: InputDecoration(
+                              decoration: const InputDecoration(
                                 // border: OutlineInputBorder(),
                                 labelText: '  min',
                                 labelStyle: TextStyle(color: Colors.black)
                               ),
                             ),)
                             ),
-                            SizedBox(width: 50),
-                            SizedBox(child:Text("et")),
-                            SizedBox(width: 50),
+                            const SizedBox(width: 50),
+                            const SizedBox(child:Text("et")),
+                            const SizedBox(width: 50),
                             Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(30),
@@ -117,7 +117,7 @@ class _Filtre_darkState extends State<Filtre_dark> {
                             child: TextField(
                               textAlign: TextAlign.center,
                               controller: _prixmax,
-                              decoration: InputDecoration(
+                              decoration: const InputDecoration(
                                 // border: OutlineInputBorder(),
                                 labelText: '  max',
                                 labelStyle: TextStyle(color: Colors.black)
@@ -126,11 +126,11 @@ class _Filtre_darkState extends State<Filtre_dark> {
                             ),
                             ],) 
                         ),
-                        Padding(padding: EdgeInsets.only(left:10,top: 20),
+                        Padding(padding: const EdgeInsets.only(left:10,top: 20),
                         child:Row(
                           children: [
-                            Icon(CupertinoIcons.rectangle_fill_on_rectangle_fill,size:25,color:Colors.white)
-                            ,SizedBox(width: 10,),
+                            const Icon(CupertinoIcons.rectangle_fill_on_rectangle_fill,size:25,color:Colors.white)
+                            ,const SizedBox(width: 10,),
                             Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(30),
@@ -141,7 +141,7 @@ class _Filtre_darkState extends State<Filtre_dark> {
                                 child: TextField(
                                   textAlign: TextAlign.center,
                                   controller: _place,
-                                  decoration: InputDecoration(
+                                  decoration: const InputDecoration(
                                     labelText: '  Place',
                                     labelStyle: TextStyle(color: Colors.black)
                                   ),
@@ -150,11 +150,11 @@ class _Filtre_darkState extends State<Filtre_dark> {
                            
                             ],) 
                         ),
-                 Padding(padding: EdgeInsets.only(left:10,top: 20),
+                 Padding(padding: const EdgeInsets.only(left:10,top: 20),
                         child: Row(
                           children: [
-                            Icon(Icons.place,size:25,color:Colors.white),
-                            SizedBox(width: 10,),
+                            const Icon(Icons.place,size:25,color:Colors.white),
+                            const SizedBox(width: 10,),
                             Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(30),
@@ -165,7 +165,7 @@ class _Filtre_darkState extends State<Filtre_dark> {
                                 child: TextField(
                                   textAlign: TextAlign.center,
                                   controller: _Location,
-                                  decoration: InputDecoration(
+                                  decoration: const InputDecoration(
                                 // border: OutlineInputBorder(),
                                 labelText: ' Location', 
                                 labelStyle: TextStyle(color: Colors.black)
@@ -174,11 +174,11 @@ class _Filtre_darkState extends State<Filtre_dark> {
                             ),
                            ],) 
                         ),
-                        Padding(padding: EdgeInsets.only(left:10,top: 20),
+                        Padding(padding: const EdgeInsets.only(left:10,top: 20),
                         child: Row(
                           children: [
-                            Icon(Icons.screenshot_monitor,size:25,color:Colors.white),
-                            SizedBox(width: 10,),
+                            const Icon(Icons.screenshot_monitor,size:25,color:Colors.white),
+                            const SizedBox(width: 10,),
                              Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(30),
@@ -189,7 +189,7 @@ class _Filtre_darkState extends State<Filtre_dark> {
                                 child: TextField(
                                   textAlign: TextAlign.center,
                                   controller: _Surface,
-                                  decoration: InputDecoration(
+                                  decoration: const InputDecoration(
                                 // border: OutlineInputBorder(),
                                 labelText: ' Surface', 
                                 labelStyle: TextStyle(color: Colors.black)
@@ -199,10 +199,10 @@ class _Filtre_darkState extends State<Filtre_dark> {
                             ],
                             ) 
                         ),
-                   Padding(padding: EdgeInsets.only(left:10,top: 20),
+                   Padding(padding: const EdgeInsets.only(left:10,top: 20),
                         child: Row(children: [
-                          Icon(CupertinoIcons.cube_box_fill,size:25,color:Colors.white),
-                          SizedBox(width: 10,),
+                          const Icon(CupertinoIcons.cube_box_fill,size:25,color:Colors.white),
+                          const SizedBox(width: 10,),
                           Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(30),
@@ -213,7 +213,7 @@ class _Filtre_darkState extends State<Filtre_dark> {
                                 child: TextField(
                                   textAlign: TextAlign.center,
                                   controller: _meuble,
-                                  decoration: InputDecoration(
+                                  decoration: const InputDecoration(
                                     labelText: ' meuble', 
                                     labelStyle: TextStyle(color: Colors.black)
                                   ),
@@ -222,9 +222,9 @@ class _Filtre_darkState extends State<Filtre_dark> {
                             ],) 
                         ),
                       Container(
-                        decoration: BoxDecoration(color: Colors.white),
+                        decoration: const BoxDecoration(color: Colors.white),
                         child: Center(
-                           child: TextButton(child: Text("Continuer",style: TextStyle(color: Colors.black),),
+                           child: TextButton(child: const Text("Continuer",style: TextStyle(color: Colors.black),),
                            onPressed: (){
                             Navigator.pop(context);
                            },

@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:studentbankmobile/mobilite/dark/Accueil_mobilite_dark.dart';
 import 'package:studentbankmobile/mobilite/light/Accueil_mobilite.dart';
 // import 'package:studentbankmobile/Logement/Dark/Accueil_loyer_Dark.dart';
 // import 'package:studentbankmobile/Logement/Accueil_loyer.dart';
-import 'package:studentbankmobile/widgets/change_Theme_button.dart';
 
-import '../widgets/change_Mode.dart';
 // import 'light/Accueil_loyer.dart';
 
 class mobilite extends StatefulWidget {
@@ -29,12 +26,12 @@ class _deuxiemeState extends State<mobilite> {
       body:GestureDetector(
         onTap: (){
               // changeMode();
-               Navigator.push(context, MaterialPageRoute(builder: (context)=>Accueil_mobilite()));
+               Navigator.push(context, MaterialPageRoute(builder: (context)=>const Accueil_mobilite()));
             },
         child: 
             Container(
               height: double.infinity,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(image: AssetImage('images/mobilite_3.jpg'),fit: BoxFit.cover)
               ),
            
@@ -48,7 +45,7 @@ class _deuxiemeState extends State<mobilite> {
                     child:  Image.asset('images/StudentBank - Logotype - Version quadrichrome dégradé-01 2.png')
              
                   ),
-                  Align(
+                  const Align(
                     alignment: Alignment.bottomRight,
                     child: Text("Mobilite",style: TextStyle(color: Colors.black,fontSize: 23,fontWeight: FontWeight.bold),),
                   ),
@@ -62,11 +59,11 @@ class _deuxiemeState extends State<mobilite> {
                           setState(() {
                             press=!press;
                             if(press==false){
-                                 Navigator.push(context, MaterialPageRoute(builder: (context)=>Accueil_mobilite()));
+                                 Navigator.push(context, MaterialPageRoute(builder: (context)=>const Accueil_mobilite()));
                           
                            }
                             else{
-                                   Navigator.push(context, MaterialPageRoute(builder: (context)=>Accueil_mobilite_dark()));
+                                   Navigator.push(context, MaterialPageRoute(builder: (context)=>const Accueil_mobilite_dark()));
                             
                            }
                         

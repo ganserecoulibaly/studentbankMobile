@@ -1,9 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
 import 'package:intl/intl.dart';
 import 'package:studentbankmobile/mobilite/dark/paiement_dark.dart';
-import 'package:studentbankmobile/mobilite/light/paiement.dart';
 
 class demande_accueil_dark extends StatefulWidget {
   const demande_accueil_dark({super.key});
@@ -13,33 +11,33 @@ class demande_accueil_dark extends StatefulWidget {
 }
 
 class _demande_accueil_darkState extends State<demande_accueil_dark> {
-  TextEditingController _nom=TextEditingController();
-  TextEditingController _prenom=TextEditingController();
-  TextEditingController _date=TextEditingController();
-  TextEditingController _adresse=TextEditingController();
-  TextEditingController _num=TextEditingController();
-  TextEditingController _pays_des=TextEditingController();
-  TextEditingController _vile_des=TextEditingController();
+  final TextEditingController _nom=TextEditingController();
+  final TextEditingController _prenom=TextEditingController();
+  final TextEditingController _date=TextEditingController();
+  final TextEditingController _adresse=TextEditingController();
+  final TextEditingController _num=TextEditingController();
+  final TextEditingController _pays_des=TextEditingController();
+  final TextEditingController _vile_des=TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
       body: Container(
-         margin: EdgeInsets.all(0),
-        padding: EdgeInsets.all(0),
+         margin: const EdgeInsets.all(0),
+        padding: const EdgeInsets.all(0),
         decoration: BoxDecoration(
           color: Colors.grey.shade900,
-          image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
+          image: const DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
         ),
         // width: double.infinity,
         // height: double.infinity,
         child: ListView(
           children: [
             Container(
-            margin: EdgeInsets.all(30),
+            margin: const EdgeInsets.all(30),
             
             decoration:BoxDecoration(borderRadius: BorderRadius.circular(20),
-            image: DecorationImage(image:  AssetImage("images/mobilite_3.jpg"),fit: BoxFit.fill,scale: 4)),
+            image: const DecorationImage(image:  AssetImage("images/mobilite_3.jpg"),fit: BoxFit.fill,scale: 4)),
             // child: Image.asset("images/mobilite.jpeg",fit: BoxFit.contain,),
             height: 150,
             width: double.infinity,
@@ -51,7 +49,7 @@ class _demande_accueil_darkState extends State<demande_accueil_dark> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Container(
-                        margin: EdgeInsets.all(20),
+                        margin: const EdgeInsets.all(20),
                         child: LinearProgressIndicator(
                         color: Colors.pink.shade100,
                         backgroundColor: Colors.blueGrey,
@@ -60,7 +58,7 @@ class _demande_accueil_darkState extends State<demande_accueil_dark> {
                         minHeight: 10,
                         ),
                       ),
-                      SizedBox(height: 30,),
+                      const SizedBox(height: 30,),
                       Text("Demande d'accueil",style: TextStyle(color:Colors.pink.shade100, fontWeight: FontWeight.bold,fontSize: 20),)
                     ],
                   ),
@@ -68,7 +66,7 @@ class _demande_accueil_darkState extends State<demande_accueil_dark> {
              
           ),
           Container(
-             margin: EdgeInsets.all(30),
+             margin: const EdgeInsets.all(30),
             
             decoration:BoxDecoration(
                 // backgroundBlendMode: BlendMode.darken,
@@ -88,7 +86,7 @@ class _demande_accueil_darkState extends State<demande_accueil_dark> {
                             color: Colors.black,),
                           child: TextField(
                             controller: _nom,
-                            decoration: InputDecoration(
+                            decoration: const InputDecoration(
                               label: Text("Nom*",style: TextStyle(color: Colors.white,fontSize: 10),),
                               ),
                           ),
@@ -96,13 +94,13 @@ class _demande_accueil_darkState extends State<demande_accueil_dark> {
                          Container(
                       width: 150,
                       height:30,
-                      margin: EdgeInsets.all(10),
+                      margin: const EdgeInsets.all(10),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.black,),
                       child: TextField(
                         controller: _prenom,
-                        decoration: InputDecoration(label: Text("Prenom*",style: TextStyle(color: Colors.white,fontSize: 10),)),
+                        decoration: const InputDecoration(label: Text("Prenom*",style: TextStyle(color: Colors.white,fontSize: 10),)),
                       ),
                     ),
                     
@@ -119,19 +117,19 @@ class _demande_accueil_darkState extends State<demande_accueil_dark> {
                             color: Colors.black,),
                           child: TextField(
                             controller: _adresse,
-                            decoration: InputDecoration(label: Text("Adresse mail*",style: TextStyle(color: Colors.white,fontSize: 10),)),
+                            decoration: const InputDecoration(label: Text("Adresse mail*",style: TextStyle(color: Colors.white,fontSize: 10),)),
                           ),
                         ),
                          Container(
                       width: 150,
                       height:30,
-                      margin: EdgeInsets.all(10),
+                      margin: const EdgeInsets.all(10),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.black,),
                       child: TextField(
                         controller: _num,
-                        decoration: InputDecoration(label: Text("Tel*",style: TextStyle(color: Colors.white,fontSize: 10),)),
+                        decoration: const InputDecoration(label: Text("Tel*",style: TextStyle(color: Colors.white,fontSize: 10),)),
                       ),
                     ),
                     
@@ -148,19 +146,19 @@ class _demande_accueil_darkState extends State<demande_accueil_dark> {
                             color: Colors.black,),
                           child: TextField(
                             controller: _nom,
-                            decoration: InputDecoration(label: Text("Pays de Destination*",style: TextStyle(color: Colors.white,fontSize: 10),)),
+                            decoration: const InputDecoration(label: Text("Pays de Destination*",style: TextStyle(color: Colors.white,fontSize: 10),)),
                           ),
                         ),
                          Container(
                       width: 150,
                       height:30,
-                      margin: EdgeInsets.all(10),
+                      margin: const EdgeInsets.all(10),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.black,),
                       child: TextField(
                         controller: _nom,
-                        decoration: InputDecoration(label: Text("Ville de destination*",style: TextStyle(color: Colors.white,fontSize: 10),)),
+                        decoration: const InputDecoration(label: Text("Ville de destination*",style: TextStyle(color: Colors.white,fontSize: 10),)),
                       ),
                     ),
                     
@@ -206,14 +204,14 @@ class _demande_accueil_darkState extends State<demande_accueil_dark> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  child: TextButton(onPressed: ()=>FlutterPhoneDirectCaller.callNumber("338553682"), child: Text("Appeler",style: TextStyle(color: Colors.white),)),
+                  child: TextButton(onPressed: ()=>FlutterPhoneDirectCaller.callNumber("338553682"), child: const Text("Appeler",style: TextStyle(color: Colors.white),)),
                 ),
-                SizedBox(width: 30,),
+                const SizedBox(width: 30,),
                  Container(
-                  decoration: BoxDecoration(),
+                  decoration: const BoxDecoration(),
                   child: TextButton(onPressed: (){
-                    Navigator.push(context,MaterialPageRoute(builder: (context)=>paiement_dark()));
-                  }, child: Text("Continuer",style: TextStyle(color: Colors.white),)),
+                    Navigator.push(context,MaterialPageRoute(builder: (context)=>const paiement_dark()));
+                  }, child: const Text("Continuer",style: TextStyle(color: Colors.white),)),
                 )
               ],
             ),
@@ -227,8 +225,8 @@ class _demande_accueil_darkState extends State<demande_accueil_dark> {
                   // margin: EdgeInsets.only(top: 0),
                   decoration: BoxDecoration(
                         color: Colors.grey.shade900,
-                        image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain),
-                        boxShadow: [
+                        image: const DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain),
+                        boxShadow: const [
                           BoxShadow(color: Colors.white),
                           BoxShadow(color: Colors.white),
                           BoxShadow(color: Colors.white),
@@ -239,20 +237,20 @@ class _demande_accueil_darkState extends State<demande_accueil_dark> {
                   child: Container(
                   // margin: EdgeInsets.all(10),
 
-                  padding: EdgeInsets.all(5),
+                  padding: const EdgeInsets.all(5),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        SizedBox(width:15),
+                        const SizedBox(width:15),
                         IconButton(onPressed: (){}, icon: Image.asset('images/setting.png'),iconSize: 40,),
-                        SizedBox(width:15),
+                        const SizedBox(width:15),
                         IconButton(onPressed: (){}, icon:Image.asset("images/euro_symbol.png"),iconSize: 40),
-                        SizedBox(width:15),
+                        const SizedBox(width:15),
                         IconButton(onPressed: (){}, icon:Image.asset("images/Acceuil_icone.png",),iconSize: 40,),
-                        SizedBox(width:15),
+                        const SizedBox(width:15),
                         IconButton(onPressed: (){}, icon:Image.asset('images/move_location.png'),iconSize: 40),
                         
-                        SizedBox(width:15),
+                        const SizedBox(width:15),
                         IconButton(onPressed: (){}, icon:Image.asset('images/night_shelter.png'),iconSize: 40)
                       ],
                     ),

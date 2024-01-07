@@ -13,10 +13,10 @@ class _v_pin_codeState extends State<v_pin_code> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: Colors.white,
         ),
-        child:otpScreen(),
+        child:const otpScreen(),
       ),
     );
   }
@@ -36,7 +36,7 @@ class _otpScreenState extends State<otpScreen> {
   TextEditingController pinfour=TextEditingController();
   var outlineInputBorder=OutlineInputBorder(
     borderRadius: BorderRadius.circular(10),
-    borderSide: BorderSide(color: Colors.transparent,
+    borderSide: const BorderSide(color: Colors.transparent,
   ));
   int pinIndex=0;
   @override
@@ -47,12 +47,12 @@ class _otpScreenState extends State<otpScreen> {
           buildExitButton(),
           Expanded(
             child:Container(
-              alignment: Alignment(0,0.5),
-              padding: EdgeInsets.symmetric(horizontal: 16),
+              alignment: const Alignment(0,0.5),
+              padding: const EdgeInsets.symmetric(horizontal: 16),
               child: Column(
                 children: [
                   buildSecurityText(),
-                  SizedBox(
+                  const SizedBox(
                     height:40,
                   ),
                   buildPinRow(),
@@ -151,7 +151,7 @@ class _otpScreenState extends State<otpScreen> {
                   //   onPressed:(){
                   //   },
                   // ),
-                  Container(
+                  const SizedBox(
                     width: 60,
                     child: MaterialButton(
                       onPressed: null,
@@ -164,7 +164,7 @@ class _otpScreenState extends State<otpScreen> {
                       pinIndexSettup("0");
                     },
                   ),
-                   Container(
+                   SizedBox(
 
                     width: 60,
                     child: MaterialButton(
@@ -173,7 +173,7 @@ class _otpScreenState extends State<otpScreen> {
                       onPressed: (){
                         clearPin();
                       },
-                      child: Icon(CupertinoIcons.delete_left),
+                      child: const Icon(CupertinoIcons.delete_left),
                     ),
                   ),
                   // keyboardNumber(
@@ -270,8 +270,8 @@ class _otpScreenState extends State<otpScreen> {
     );
   }
   buildSecurityText(){
-    return Text("mot de Passe",style: TextStyle(
-      color: const Color.fromARGB(96, 221, 34, 34),
+    return const Text("mot de Passe",style: TextStyle(
+      color: Color.fromARGB(96, 221, 34, 34),
       fontSize: 21,
       fontWeight: FontWeight.bold
     ),);
@@ -287,8 +287,8 @@ class _otpScreenState extends State<otpScreen> {
             onPressed: (){},
             height: 50.0,
             minWidth: 50.0,
-            shape: RoundedRectangleBorder(),  
-            child: Icon(Icons.clear,color: Colors.black54,),
+            shape: const RoundedRectangleBorder(),  
+            child: const Icon(Icons.clear,color: Colors.black54,),
 
           ),
             
@@ -314,14 +314,14 @@ class keyboardNumber extends StatelessWidget {
       alignment: Alignment.center,
       child: MaterialButton(
         onPressed: onPressed,
-        padding: EdgeInsets.all(8),
+        padding: const EdgeInsets.all(8),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(60)
         ),
         height: 90,
         child: Text("$n",
         textAlign: TextAlign.center,
-        style: TextStyle(
+        style: const TextStyle(
           fontSize: 24,
           color: Colors.pinkAccent,
           fontWeight: FontWeight.bold
@@ -338,7 +338,7 @@ class PinNumber extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: 50,
       child: TextField(
         controller: textEditingController,
@@ -346,12 +346,12 @@ class PinNumber extends StatelessWidget {
         obscureText: true,
         textAlign: TextAlign.center,
         decoration: InputDecoration(
-          contentPadding: EdgeInsets.all(17),
+          contentPadding: const EdgeInsets.all(17),
           border: OutlinedInputBorder,
           filled: true,
           fillColor: Colors.pink
         ),
-        style: TextStyle(
+        style: const TextStyle(
           fontWeight: FontWeight.bold,
           fontSize: 21,
           color: Colors.pink,

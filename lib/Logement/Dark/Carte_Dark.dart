@@ -25,19 +25,19 @@ void GetPostion()async{
 
   }else{
     Position currentPosition=await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.best);
-    print("Latitude: "+currentPosition.latitude.toString()+"longitude:"+currentPosition.longitude.toString());
+    print("Latitude: ${currentPosition.latitude}longitude:${currentPosition.longitude}");
   }
 }
 class _Carte_darkState extends State<Carte_dark> {
  
-Map<String,Marker>_markers={};
+final Map<String,Marker>_markers={};
 late GoogleMapController mapController;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
         child: GoogleMap(
-          initialCameraPosition: CameraPosition(target: currentLocation,zoom:14,)
+          initialCameraPosition: const CameraPosition(target: currentLocation,zoom:14,)
           ,onMapCreated: (controller){
             mapController=controller;
             adMarker("test", currentLocation);

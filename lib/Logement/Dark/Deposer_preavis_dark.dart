@@ -15,17 +15,17 @@ class _DeposerPreavis_darkState extends State<DeposerPreavis_dark> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(300), 
+        preferredSize: const Size.fromHeight(300), 
         child:    Container(
               height: 200,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 boxShadow: [
                        BoxShadow(color: Colors.white,blurRadius: 3.0,spreadRadius: 4.2),
               ],
                 image: DecorationImage(image: AssetImage('images/maisonNight.jpg'),fit: BoxFit.cover),
                 borderRadius: BorderRadius.only(bottomRight: Radius.circular(30),bottomLeft: Radius.circular(30))
               ),
-              child:  Align(
+              child:  const Align(
                         alignment: Alignment.center,
                         child: Text("Déposer un pré avis",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
                       
@@ -33,11 +33,11 @@ class _DeposerPreavis_darkState extends State<DeposerPreavis_dark> {
             ),
          ),
       body: Container(
-        margin: EdgeInsets.all(0),
-        padding: EdgeInsets.all(0),
+        margin: const EdgeInsets.all(0),
+        padding: const EdgeInsets.all(0),
         decoration: BoxDecoration(
           color: Colors.grey.shade900,
-          image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
+          image: const DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
         ),
         // width: double.infinity,
         // height: double.infinity,
@@ -46,11 +46,11 @@ class _DeposerPreavis_darkState extends State<DeposerPreavis_dark> {
           children: [
             
            Container(
-               margin: EdgeInsets.all(20),
+               margin: const EdgeInsets.all(20),
 
-              padding: EdgeInsets.all(20),
+              padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
-                boxShadow:[
+                boxShadow:const [
                   BoxShadow(spreadRadius: 4.2,blurRadius: 11),
                 ] ,
                 color: Colors.white,
@@ -59,7 +59,7 @@ class _DeposerPreavis_darkState extends State<DeposerPreavis_dark> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Row(
+                  const Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
@@ -77,7 +77,7 @@ class _DeposerPreavis_darkState extends State<DeposerPreavis_dark> {
                     alignment: Alignment.center,
                     child: Column(
                       children: [
-                        Text("Loyer Précédent"),
+                        const Text("Loyer Précédent"),
                         Center(child: Text("350${Icons.euro}"),)
                       ]
                       ),
@@ -86,10 +86,10 @@ class _DeposerPreavis_darkState extends State<DeposerPreavis_dark> {
                 ),
             ),
             Container(
-              margin: EdgeInsets.all(20),
-              padding: EdgeInsets.all(20),
+              margin: const EdgeInsets.all(20),
+              padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
-                boxShadow:[
+                boxShadow:const [
                   BoxShadow(spreadRadius: 4.2,blurRadius: 11),
                 ] ,
                 color: Colors.white,
@@ -98,7 +98,7 @@ class _DeposerPreavis_darkState extends State<DeposerPreavis_dark> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Row(
+                  const Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
@@ -116,7 +116,7 @@ class _DeposerPreavis_darkState extends State<DeposerPreavis_dark> {
                     alignment: Alignment.center,
                     child: Column(
                       children: [
-                        Text("Loyer Precedent"),
+                        const Text("Loyer Precedent"),
                         Center(child: Text("350${Icons.euro}"),)
                       ]
                       ),
@@ -125,9 +125,9 @@ class _DeposerPreavis_darkState extends State<DeposerPreavis_dark> {
                 ),
             ),
             Container(
-              padding: EdgeInsets.all(30),
+              padding: const EdgeInsets.all(30),
               // alignment: Alignment.center,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 // boxShadow: BoxShadow(blurRadius: ),
               ),
               child: Center(
@@ -135,43 +135,43 @@ class _DeposerPreavis_darkState extends State<DeposerPreavis_dark> {
                   // alignment: Alignment.center,
               children: [
                      Container(
-                      padding: EdgeInsets.all(20),
-                      margin: EdgeInsets.all(5),
+                      padding: const EdgeInsets.all(20),
+                      margin: const EdgeInsets.all(5),
                       alignment: Alignment.center,
                       width:300,
                       decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((20))),
                       child:Row(
                         children: [
                            Container(
-                      decoration: BoxDecoration(color: Color.fromARGB(255, 180, 71, 38),borderRadius: BorderRadius.circular(7)),
+                      decoration: BoxDecoration(color: const Color.fromARGB(255, 180, 71, 38),borderRadius: BorderRadius.circular(7)),
                       height:35,width: 50,
                       
-                      child: Icon(CupertinoIcons.calendar)
+                      child: const Icon(CupertinoIcons.calendar)
                     ),
                     TextButton(
                       // style:ElevatedButton.styleFrom(primary: Colors.white),
-                        onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>DeclarerSinistre()));
+                        onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>const DeclarerSinistre()));
                       }, child:const Text("Date de rentrée souhaitée",style: TextStyle(fontSize: 14,color: Colors.black),)),
                     
                         ],
                       )  
                       ),
                     Container(
-                      padding: EdgeInsets.all(20),
-                      margin: EdgeInsets.all(5),
+                      padding: const EdgeInsets.all(20),
+                      margin: const EdgeInsets.all(5),
                       alignment: Alignment.center,
                       width:300,
                       decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((20))),
                       child:Row(
                         children: [
                            Container(
-                      decoration: BoxDecoration(color: Color.fromARGB(255, 180, 71, 38),borderRadius: BorderRadius.circular(7)),
+                      decoration: BoxDecoration(color: const Color.fromARGB(255, 180, 71, 38),borderRadius: BorderRadius.circular(7)),
                       height:35,width: 50,
                       
-                      child: Icon(CupertinoIcons.calendar)
+                      child: const Icon(CupertinoIcons.calendar)
                     ),
                      TextButton(
-                      onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>DeclarerSinistre()));
+                      onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>const DeclarerSinistre()));
                       }, child:const Text("Date De Sortie souhaitée",style: TextStyle(fontSize: 14,color: Colors.black),)),
                     
                         ],
@@ -180,14 +180,14 @@ class _DeposerPreavis_darkState extends State<DeposerPreavis_dark> {
                 // const SizedBox(height: 8,),
                 Container(
                     decoration: BoxDecoration(
-                       boxShadow:[
+                       boxShadow:const [
                   BoxShadow(spreadRadius: 4.2,blurRadius: 11),
                 ] ,
                       color: Colors.red,borderRadius: BorderRadius.circular(20)),
-                    margin: EdgeInsets.all(20),
+                    margin: const EdgeInsets.all(20),
 
-              padding: EdgeInsets.all(20),
-                    child:Column(
+              padding: const EdgeInsets.all(20),
+                    child:const Column(
                       // mainAxisAlignment: MainAxisAlignment.center,
                       // crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
@@ -206,7 +206,7 @@ class _DeposerPreavis_darkState extends State<DeposerPreavis_dark> {
             ),
             Center(
               child:
-               ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.red),onPressed: (){}, child: Text("Continuer",style: TextStyle(color: Colors.black),)),
+               ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.red),onPressed: (){}, child: const Text("Continuer",style: TextStyle(color: Colors.black),)),
             )
           ],
         ),

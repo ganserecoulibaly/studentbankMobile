@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:studentbankmobile/mobilite/dark/Accueil_mobilite_dark.dart';
-import 'package:studentbankmobile/mobilite/light/Accueil_mobilite.dart';
 class admission_en_attente_dark extends StatefulWidget {
   const admission_en_attente_dark({super.key});
 
@@ -15,7 +14,7 @@ class _admission_en_attente_darkState extends State<admission_en_attente_dark> {
       body:  Container(
                       decoration: BoxDecoration(
                         color: Colors.grey.shade900,
-                        image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
+                        image: const DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
                       ),
                       child: Column(
                         
@@ -30,34 +29,34 @@ class _admission_en_attente_darkState extends State<admission_en_attente_dark> {
                           //   minHeight: 10,
                           //   ),
                           // ),
-                          SizedBox(height: 30,),
+                          const SizedBox(height: 30,),
                           Container(
-                            margin: EdgeInsets.all(10),
-                            child: Center(
+                            margin: const EdgeInsets.all(10),
+                            child: const Center(
                               child: 
                                 Text("Demande d'admission",style: TextStyle(color: Colors.white,fontSize: 30,fontWeight: FontWeight.bold),)),
                           ),
                           Container(
-                            margin: EdgeInsets.all(40),
+                            margin: const EdgeInsets.all(40),
                             child: Center(
                               child: Container(
-                                margin: EdgeInsets.only(top: 50),
+                                margin: const EdgeInsets.only(top: 50),
                                   width: 200,
                                   height: 200,    
                                 child: CircleAvatar(
                                   backgroundColor: Colors.red.shade400,
                                   // foregroundColor: Colors.white,
-                                  child: Text("En Cours de Traitement...") 
+                                  child: const Text("En Cours de Traitement...") 
                                 )
                               ),
                             ),
                           ),
-                           SizedBox(width: 30,),
+                           const SizedBox(width: 30,),
                            Container(
-                            margin: EdgeInsets.only(top:30,right: 50,left: 50),
+                            margin: const EdgeInsets.only(top:30,right: 50,left: 50),
                             width: 100,
                             decoration: BoxDecoration(
-                              gradient: LinearGradient(colors: [
+                              gradient: const LinearGradient(colors: [
                                 Colors.white,
                                 Colors.red
                               ]),
@@ -67,9 +66,9 @@ class _admission_en_attente_darkState extends State<admission_en_attente_dark> {
                             child: Align(
                               alignment: Alignment.bottomCenter,
                               child: TextButton(onPressed: (){
-                                Navigator.push(context, MaterialPageRoute(builder: (context)=>Accueil_mobilite_dark()));
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=>const Accueil_mobilite_dark()));
                                   // Navigator.push(context, MaterialPageRoute(builder: (context)=>traitement()));
-                              }, child: Text(" Retour ",style: TextStyle(color: Colors.white),)),
+                              }, child: const Text(" Retour ",style: TextStyle(color: Colors.white),)),
                             ),
                             )
                        ],

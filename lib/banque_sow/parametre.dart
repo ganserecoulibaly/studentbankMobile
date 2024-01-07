@@ -15,17 +15,17 @@ class _parametreState extends State<parametre> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
-          image: const DecorationImage(image:AssetImage("images/theme_blanc_rose_studentBanc.png"),fit: BoxFit.cover) ,
+        decoration: const BoxDecoration(
+          image: DecorationImage(image:AssetImage("images/theme_blanc_rose_studentBanc.png"),fit: BoxFit.cover) ,
         ),
         child: ListView(
           children: [
             Container(
-              margin: EdgeInsets.all(10),
+              margin: const EdgeInsets.all(10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  IconButton(onPressed: ()=>Navigator.pop(context), icon: Icon(Icons.arrow_back,color: Colors.pink,)),
+                  IconButton(onPressed: ()=>Navigator.pop(context), icon: const Icon(Icons.arrow_back,color: Colors.pink,)),
                   Container(
                     width: 60,
                     height: 60,
@@ -34,7 +34,7 @@ class _parametreState extends State<parametre> {
                       border: Border.all(color: Colors.black,width: 2)
                     ),
                     child: GestureDetector(
-                      onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>profile())),
+                      onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>const profile())),
                       child: Image.asset("images/person-square 1.png",),
                     ),
                   )
@@ -46,13 +46,13 @@ class _parametreState extends State<parametre> {
             ),
            Center(
             child: Container(
-              margin: EdgeInsets.all(5),
-              decoration: BoxDecoration(
+              margin: const EdgeInsets.all(5),
+              decoration: const BoxDecoration(
                 border: Border(bottom: BorderSide(width: 2,color: Colors.black))
               ),
               child: TextButton(
                 onPressed: (){},
-                child: Row(
+                child: const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Row(
@@ -77,8 +77,8 @@ class _parametreState extends State<parametre> {
            ),
            Center(
             child: Container(
-              margin: EdgeInsets.all(5),
-              decoration: BoxDecoration(
+              margin: const EdgeInsets.all(5),
+              decoration: const BoxDecoration(
                 border: Border(bottom: BorderSide(width: 2,color: Colors.black))
               ),
               child: TextButton(
@@ -86,7 +86,7 @@ class _parametreState extends State<parametre> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Row(
+                    const Row(
                       children: [
                         Icon(Icons.notifications_active,color: Colors.black,),
                     SizedBox(width: 15,),
@@ -128,13 +128,13 @@ class _parametreState extends State<parametre> {
            ),
            Center(
             child: Container(
-              margin: EdgeInsets.all(5),
-              decoration: BoxDecoration(
+              margin: const EdgeInsets.all(5),
+              decoration: const BoxDecoration(
                 border: Border(bottom: BorderSide(width: 2,color: Colors.black))
               ),
               child: TextButton(
                 onPressed: (){},
-                child: Row(
+                child: const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                         Row(
@@ -159,8 +159,8 @@ class _parametreState extends State<parametre> {
            ),
            Center(
             child: Container(
-              margin: EdgeInsets.all(5),
-              decoration: BoxDecoration(
+              margin: const EdgeInsets.all(5),
+              decoration: const BoxDecoration(
                 border: Border(bottom: BorderSide(width: 2,color: Colors.black))
               ),
               child: TextButton(
@@ -168,7 +168,7 @@ class _parametreState extends State<parametre> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Row(
+                    const Row(
                       children: [
                         ImageIcon(AssetImage("images/Embroidery.png"),color: Colors.black,),
                         SizedBox(width: 15,),
@@ -209,13 +209,13 @@ class _parametreState extends State<parametre> {
            ),
            Center(
             child: Container(
-              margin: EdgeInsets.all(5),
-              decoration: BoxDecoration(
+              margin: const EdgeInsets.all(5),
+              decoration: const BoxDecoration(
                 border: Border(bottom: BorderSide(width: 2,color: Colors.black))
               ),
               child: TextButton(
                 onPressed: (){},
-                child: Row(
+                child: const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Row(
@@ -241,13 +241,13 @@ class _parametreState extends State<parametre> {
           
            Center(
             child: Container(
-              margin: EdgeInsets.all(5),
-              decoration: BoxDecoration(
+              margin: const EdgeInsets.all(5),
+              decoration: const BoxDecoration(
                 border: Border(bottom: BorderSide(width: 2,color: Colors.black))
               ),
               child: TextButton(
                 onPressed: (){},
-                child: Row(
+                child: const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Row(
@@ -274,13 +274,13 @@ class _parametreState extends State<parametre> {
           
            Center(
             child: Container(
-              margin: EdgeInsets.all(5),
-              decoration: BoxDecoration(
+              margin: const EdgeInsets.all(5),
+              decoration: const BoxDecoration(
                 border: Border(bottom: BorderSide(width: 2,color: Colors.black))
               ),
               child: TextButton(
                 onPressed: (){},
-                child: Row(
+                child: const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Row(
@@ -307,13 +307,13 @@ class _parametreState extends State<parametre> {
           
            Center(
             child: Container(
-              margin: EdgeInsets.all(5),
-              decoration: BoxDecoration(
+              margin: const EdgeInsets.all(5),
+              decoration: const BoxDecoration(
                 border: Border(bottom: BorderSide(width: 2,color: Colors.black))
               ),
               child: TextButton(
                 onPressed: (){},
-                child: Row(
+                child: const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Row(

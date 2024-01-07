@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:studentbankmobile/Logement/Dark/Accueil_loyer_Dark.dart';
 import 'package:studentbankmobile/Logement/light/Accueil_loyer.dart';
@@ -13,10 +12,10 @@ class changeMode extends StatelessWidget {
       inactiveThumbColor: Colors.red,
       value: isdark, onChanged: (value){  
       if(value==false){
-        Navigator.push(context, MaterialPageRoute(builder: (context)=>AccueilLoyer()));
+        Navigator.push(context, MaterialPageRoute(builder: (context)=>const AccueilLoyer()));
       }
       else{
-       Navigator.push(context, MaterialPageRoute(builder: (context)=>AccueilLoyer_Dark()));
+       Navigator.push(context, MaterialPageRoute(builder: (context)=>const AccueilLoyer_Dark()));
       }
       
     });

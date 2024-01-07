@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:studentbankmobile/mobilite/light/Accueil_mobilite.dart';
 
@@ -15,14 +14,14 @@ class _valider_docState extends State<valider_doc> {
     return Scaffold(
       extendBody: true,
       body: Container(
-         decoration: BoxDecoration(
+         decoration: const BoxDecoration(
           color: Colors.pink,
           image: DecorationImage(image: AssetImage('images/LogoN_Mobilite.png'),fit: BoxFit.fill)
         ),
         child: ListView(
           children: [
              Container(
-              margin: EdgeInsets.only(top:50,left: 30,right: 30,bottom: 40),
+              margin: const EdgeInsets.only(top:50,left: 30,right: 30,bottom: 40),
               child: LinearProgressIndicator(
               color: Colors.pink.shade100,
               value: 1,
@@ -31,12 +30,12 @@ class _valider_docState extends State<valider_doc> {
               minHeight: 10,
               ),
             ),
-            Center(
+            const Center(
             child: 
               Text("  Dossier à été transmis ! \n      avec succes\n",style: TextStyle(color: Colors.black,fontSize: 20,fontStyle: FontStyle.italic),)
             ),
-            SizedBox(height: 15,),
-            Center(
+            const SizedBox(height: 15,),
+            const Center(
               child: 
                 Text(" Lorem dhfjfjgbbhfbfbdfjhbdjdbjd! \nipsumvfsfsdvsvfbsbsnsvnsvs vn snnsv\n",style: TextStyle(color: Colors.black,fontSize: 12,fontStyle: FontStyle.italic),)
             ),
@@ -44,7 +43,7 @@ class _valider_docState extends State<valider_doc> {
               child: Icon(Icons.download_done_sharp,color: Colors.green[300],size: 200,),
             ),
              Container(
-                margin: EdgeInsets.only(top:20,right: 50,bottom: 5,left: 50),
+                margin: const EdgeInsets.only(top:20,right: 50,bottom: 5,left: 50),
                 decoration: BoxDecoration(
                   color: Colors.red.shade400,
                   borderRadius: BorderRadius.circular(30),
@@ -52,9 +51,9 @@ class _valider_docState extends State<valider_doc> {
                 child: Align(
                   alignment: Alignment.bottomCenter,
                   child: TextButton(onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Accueil_mobilite()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const Accueil_mobilite()));
                       // Navigator.push(context, MaterialPageRoute(builder: (context)=>traitement()));
-                  }, child: Text(" Retour ",style: TextStyle(color: Colors.white),)),
+                  }, child: const Text(" Retour ",style: TextStyle(color: Colors.white),)),
                 ),
                 )
           ],

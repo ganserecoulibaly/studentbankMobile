@@ -8,14 +8,14 @@ class demande_admission_dark extends StatefulWidget {
 }
 
 class _demande_admission_darkState extends State<demande_admission_dark> {
-   TextEditingController _nom=TextEditingController();
-  TextEditingController _prenom=TextEditingController();
-  TextEditingController _email=TextEditingController();
-  TextEditingController _motsDePass=TextEditingController();
-  TextEditingController _num=TextEditingController();
-  TextEditingController _num2=TextEditingController();
-  TextEditingController _pays=TextEditingController();
-  TextEditingController _message=TextEditingController();
+   final TextEditingController _nom=TextEditingController();
+  final TextEditingController _prenom=TextEditingController();
+  final TextEditingController _email=TextEditingController();
+  final TextEditingController _motsDePass=TextEditingController();
+  final TextEditingController _num=TextEditingController();
+  final TextEditingController _num2=TextEditingController();
+  final TextEditingController _pays=TextEditingController();
+  final TextEditingController _message=TextEditingController();
   String niveau="1er annee";
   String  filiere="Reseau et telecom";
   var  list_niveau=["1er annee","2em annee"];
@@ -25,15 +25,15 @@ class _demande_admission_darkState extends State<demande_admission_dark> {
     return Scaffold(
       body: Container(
          decoration:BoxDecoration(borderRadius: BorderRadius.circular(20),
-          image: DecorationImage(image:  AssetImage("images/mobilite.jpeg"),fit: BoxFit.cover,scale: 4)),
+          image: const DecorationImage(image:  AssetImage("images/mobilite.jpeg"),fit: BoxFit.cover,scale: 4)),
         child: ListView(
           children: [
              Container(
-            margin: EdgeInsets.all(30),
+            margin: const EdgeInsets.all(30),
             
             decoration:BoxDecoration(borderRadius: BorderRadius.circular(20),
             color: Colors.grey.shade900,
-            image: DecorationImage(image:  AssetImage("images/mobilite_3.jpg"),fit: BoxFit.cover,scale: 4)),
+            image: const DecorationImage(image:  AssetImage("images/mobilite_3.jpg"),fit: BoxFit.cover,scale: 4)),
             // child: Image.asset("images/mobilite.jpeg",fit: BoxFit.contain,),
             height: 150,
             width: double.infinity,
@@ -45,15 +45,8 @@ class _demande_admission_darkState extends State<demande_admission_dark> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Container(
-                        margin: EdgeInsets.all(20),
-                        child: LinearProgressIndicator(
-                        color: Colors.pink.shade100,
-                        backgroundColor: Colors.blueGrey,
-                        value: 2/3,
-                        borderRadius: BorderRadius.circular(30),
-                        minHeight: 10,
-                        ),
-                        decoration: BoxDecoration(
+                        margin: const EdgeInsets.all(20),
+                        decoration: const BoxDecoration(
                           boxShadow: [
                             BoxShadow(color: Colors.white),
                             BoxShadow(color: Colors.white),
@@ -61,11 +54,18 @@ class _demande_admission_darkState extends State<demande_admission_dark> {
                             BoxShadow(color: Colors.white),
                           ]
                         ),
+                        child: LinearProgressIndicator(
+                        color: Colors.pink.shade100,
+                        backgroundColor: Colors.blueGrey,
+                        value: 2/3,
+                        borderRadius: BorderRadius.circular(30),
+                        minHeight: 10,
+                        ),
                       ),
-                      SizedBox(height: 30,),
-                      Text("Demande d'admission",style: TextStyle(color:Colors.white, fontWeight: FontWeight.bold,fontSize: 20),)
+                      const SizedBox(height: 30,),
+                      const Text("Demande d'admission",style: TextStyle(color:Colors.white, fontWeight: FontWeight.bold,fontSize: 20),)
                     ,
-                      Row(
+                      const Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Column(
@@ -103,7 +103,7 @@ class _demande_admission_darkState extends State<demande_admission_dark> {
                           child: Center(
                             child: TextField(
                               controller: _nom,
-                              decoration: InputDecoration(
+                              decoration: const InputDecoration(
                                 label: Text("Nom*",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),)
                                 ),
                             ),
@@ -112,14 +112,14 @@ class _demande_admission_darkState extends State<demande_admission_dark> {
                          Container(
                       width: 170,
                       height:30,
-                      margin: EdgeInsets.all(10),
+                      margin: const EdgeInsets.all(10),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.white70,),
                       child: Center(
                         child: TextField(
                           controller: _prenom,
-                          decoration: InputDecoration(label: Text("Prénom*",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),)
+                          decoration: const InputDecoration(label: Text("Prénom*",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),)
                         ),
                       ),
                     ),
@@ -137,7 +137,7 @@ class _demande_admission_darkState extends State<demande_admission_dark> {
                             color: Colors.white70,),
                           child: TextField(
                             controller: _num,
-                            decoration: InputDecoration(
+                            decoration: const InputDecoration(
                               label: Text("Telephone*",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
                               ),
                           ),
@@ -145,13 +145,13 @@ class _demande_admission_darkState extends State<demande_admission_dark> {
                          Container(
                       width: 170,
                       height:30,
-                      margin: EdgeInsets.all(10),
+                      margin: const EdgeInsets.all(10),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.white70,),
                       child: TextField(
                         controller: _num2,
-                        decoration: InputDecoration(label: Text("Telephone",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),)
+                        decoration: const InputDecoration(label: Text("Telephone",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),)
                       ),
                       ))
                     
@@ -168,7 +168,7 @@ class _demande_admission_darkState extends State<demande_admission_dark> {
                             color: Colors.white70,),
                           child:  DropdownButton(
                             items:list_niveau.map((String items){
-                              return DropdownMenuItem(child: Text(items),value: items,);
+                              return DropdownMenuItem(value: items,child: Text(items),);
                             }).toList(),
                            value: niveau,
                            onChanged: (String? value) {
@@ -176,24 +176,24 @@ class _demande_admission_darkState extends State<demande_admission_dark> {
                                     niveau= value!;
                                   });
                            },
-                           icon:Icon(Icons.arrow_drop_down),
+                           icon:const Icon(Icons.arrow_drop_down),
                            iconSize: 20,
                            iconEnabledColor: Colors.red,
                            isExpanded: true,
-                           style: TextStyle(color: Colors.red,),
+                           style: const TextStyle(color: Colors.red,),
                            ),
                         ),
                          Container(
                       width: 170,
                       height:30,
-                      margin: EdgeInsets.all(10),
+                      margin: const EdgeInsets.all(10),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.white70,),
                       child: Center(
                         child: DropdownButton(
                               items:list_filiere.map((String items){
-                                return DropdownMenuItem(child: Text(items),value: items,);
+                                return DropdownMenuItem(value: items,child: Text(items),);
                               }).toList(),
                              value: filiere,
                              onChanged: (String? value) {
@@ -209,7 +209,7 @@ class _demande_admission_darkState extends State<demande_admission_dark> {
                     ),
               //  SizedBox(height: 10,),
               Container(
-                margin: EdgeInsets.only(top:10,right: 20,left: 20),
+                margin: const EdgeInsets.only(top:10,right: 20,left: 20),
                 height: 50,
                 width: 50,
                 decoration: BoxDecoration(
@@ -218,13 +218,13 @@ class _demande_admission_darkState extends State<demande_admission_dark> {
                 ),
                 child: TextField( 
                   controller: _email,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     labelText: "email"
                   ),
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(top:10,right: 20,left: 20),
+                margin: const EdgeInsets.only(top:10,right: 20,left: 20),
                 height: 50,
                 width: 50,
                 decoration: BoxDecoration(
@@ -234,19 +234,19 @@ class _demande_admission_darkState extends State<demande_admission_dark> {
                 child: Center(
                   child: TextField( 
                     controller: _motsDePass,
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       labelText: "mots de passe"
                     ),
                   ),
                 ),
               ),
-              Align(
+              const Align(
                 alignment: Alignment.topLeft,
                 child: Text("Message",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),),
               ),
                 // SizedBox(height: 10,),
               Container(
-                margin: EdgeInsets.all(30),
+                margin: const EdgeInsets.all(30),
                 height: 200,
                 width: 50,
                 decoration: BoxDecoration(
@@ -258,19 +258,19 @@ class _demande_admission_darkState extends State<demande_admission_dark> {
                   controller: _message,
                 ),
               ),
-               SizedBox(width: 30,),
+               const SizedBox(width: 30,),
                Align(
                 alignment: Alignment.bottomRight,
                 child:  Container(
-              margin: EdgeInsets.only(top:20,right: 50,bottom: 5,left: 50),
+              margin: const EdgeInsets.only(top:20,right: 50,bottom: 5,left: 50),
               decoration: BoxDecoration(
                 color: Colors.red.shade400,
                 borderRadius: BorderRadius.circular(30),
                 ),
               child: TextButton(onPressed: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>doc_admission_edit()));
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>const doc_admission_edit()));
                   // Navigator.push(context, MaterialPageRoute(builder: (context)=>traitement()));
-              }, child: Text(" continuer ",style: TextStyle(color: Colors.white),)),
+              }, child: const Text(" continuer ",style: TextStyle(color: Colors.white),)),
               )
         )],
         ),

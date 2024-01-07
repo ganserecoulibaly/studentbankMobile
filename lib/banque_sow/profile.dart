@@ -13,19 +13,19 @@ class _profileState extends State<profile> {
   Widget build(BuildContext context) {
     return Scaffold(
       body:  Container(
-        decoration: BoxDecoration(
-          image: const DecorationImage(image:AssetImage("images/theme_blanc_rose_studentBanc.png"),fit: BoxFit.cover) ,
+        decoration: const BoxDecoration(
+          image: DecorationImage(image:AssetImage("images/theme_blanc_rose_studentBanc.png"),fit: BoxFit.cover) ,
         ),
         child: ListView(
           children: [
              Container(
               alignment: Alignment.centerLeft,
-              margin: EdgeInsets.all(10),
-              child: IconButton(onPressed: ()=>Navigator.pop(context), icon: Icon(Icons.arrow_back,color: Colors.pink,)),
+              margin: const EdgeInsets.all(10),
+              child: IconButton(onPressed: ()=>Navigator.pop(context), icon: const Icon(Icons.arrow_back,color: Colors.pink,)),
             ),
             Center(
               child: Container(
-                margin: EdgeInsets.all(20),
+                margin: const EdgeInsets.all(20),
                 child:   Container(
                     width: 150,
                     height: 150,
@@ -42,8 +42,8 @@ class _profileState extends State<profile> {
             ),
             Center(
             child: Container(
-              margin: EdgeInsets.all(5),
-              decoration: BoxDecoration(
+              margin: const EdgeInsets.all(5),
+              decoration: const BoxDecoration(
                 border: Border(bottom: BorderSide(width: 2,color: Colors.black))
               ),
               child: TextButton(
@@ -51,7 +51,7 @@ class _profileState extends State<profile> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Row(
+                    const Row(
                       children: [
                         Icon(Icons.person,color: Colors.black,),
                     SizedBox(width: 15,),
@@ -67,39 +67,39 @@ class _profileState extends State<profile> {
                     ),
                   IconButton(onPressed: ()=>showAdaptiveDialog(
                     builder: (context) => Dialog(
-                      child: Container(
+                      backgroundColor: Colors.white,
+                      child: SizedBox(
                         width: 200,
                         height: 200,
                         child: Center(
                           child: Column(
                             children: [
-                              Text("Nom"),
-                              SizedBox(height: 10,),
+                              const Text("Nom"),
+                              const SizedBox(height: 10,),
                               Container(
                                 decoration: BoxDecoration(
                                   // border: Border.all(width: 1,color: Colors.black)
                                   borderRadius: BorderRadius.circular(30)
                                 ),
                                 width: 100,
-                                child: TextField(
+                                child: const TextField(
                                   style: TextStyle(color: Colors.black),
                                 ),
                               ),
-                              SizedBox(height: 30,),
+                              const SizedBox(height: 30,),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                                 children: [
-                                  ElevatedButton(onPressed: ()=>Navigator.pop(context), child: Text("retour")),
-                                  ElevatedButton(onPressed: (){}, child: Text("valide")),
+                                  ElevatedButton(onPressed: ()=>Navigator.pop(context), child: const Text("retour")),
+                                  ElevatedButton(onPressed: (){}, child: const Text("valide")),
                                 ],
                               ),
                             ],
                           ),
                         ),
-                      ),
-                      backgroundColor: Colors.white,),
+                      ),),
                       context: context
-                      ), icon:Icon(CupertinoIcons.pen))
+                      ), icon:const Icon(CupertinoIcons.pen))
                    ],
                 ),
               ),
@@ -107,8 +107,8 @@ class _profileState extends State<profile> {
            ),
            Center(
             child: Container(
-              margin: EdgeInsets.all(5),
-              decoration: BoxDecoration(
+              margin: const EdgeInsets.all(5),
+              decoration: const BoxDecoration(
                 border: Border(bottom: BorderSide(width: 2,color: Colors.black))
               ),
               child: TextButton(
@@ -116,7 +116,7 @@ class _profileState extends State<profile> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Row(
+                    const Row(
                       children: [
                         Icon(Icons.mail_outline,color: Colors.black,),
                     SizedBox(width: 15,),
@@ -130,34 +130,34 @@ class _profileState extends State<profile> {
                     ),
                       ],
                     ),
-                    IconButton(onPressed: ()=>showAdaptiveDialog(builder: (context) => Dialog(  child: Container(
+                    IconButton(onPressed: ()=>showAdaptiveDialog(builder: (context) => Dialog(  backgroundColor: Colors.white,  child: SizedBox(
                         width: 200,
                         height: 200,
                         child: Center(
                           child: Container(
-                            margin: EdgeInsets.only(top: 10),
+                            margin: const EdgeInsets.only(top: 10),
                             child: Container(
-                            margin: EdgeInsets.only(top: 20),
+                            margin: const EdgeInsets.only(top: 20),
                               child: Column(
                                 children: [
-                                  Text("mail"),
-                                  SizedBox(height: 10,),
+                                  const Text("mail"),
+                                  const SizedBox(height: 10,),
                                   Container(
                                     decoration: BoxDecoration(
                                       // border: Border.all(width: 1,color: Colors.black)
                                       borderRadius: BorderRadius.circular(30)
                                     ),
                                     width: 100,
-                                    child: TextField(
+                                    child: const TextField(
                                       style: TextStyle(color: Colors.black),
                                     ),
                                   ),
-                                  SizedBox(height: 30,),
+                                  const SizedBox(height: 30,),
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                                     children: [
-                                      ElevatedButton(onPressed: ()=>Navigator.pop(context), child: Text("retour")),
-                                      ElevatedButton(onPressed: (){}, child: Text("valide")),
+                                      ElevatedButton(onPressed: ()=>Navigator.pop(context), child: const Text("retour")),
+                                      ElevatedButton(onPressed: (){}, child: const Text("valide")),
                                     ],
                                   ),
                                 ],
@@ -165,9 +165,8 @@ class _profileState extends State<profile> {
                             ),
                           ),
                         ),
-                      ),
-                      backgroundColor: Colors.white,),
-                context: context), icon:Icon(CupertinoIcons.pen))
+                      ),),
+                context: context), icon:const Icon(CupertinoIcons.pen))
                  ],
                 ),
               ),
@@ -175,8 +174,8 @@ class _profileState extends State<profile> {
            ),
            Center(
             child: Container(
-              margin: EdgeInsets.all(5),
-              decoration: BoxDecoration(
+              margin: const EdgeInsets.all(5),
+              decoration: const BoxDecoration(
                 border: Border(bottom: BorderSide(width: 2,color: Colors.black))
               ),
               child: TextButton(
@@ -184,7 +183,7 @@ class _profileState extends State<profile> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Row(
+                    const Row(
                       children: [
                         Icon(Icons.lock_outline_sharp,color: Colors.black,),
                     SizedBox(width: 15,),
@@ -198,41 +197,40 @@ class _profileState extends State<profile> {
                     ),
                       ],
                     ),
-                    IconButton(onPressed: ()=>showAdaptiveDialog(builder: (context) => Dialog(  child: Container(
+                    IconButton(onPressed: ()=>showAdaptiveDialog(builder: (context) => Dialog(  backgroundColor: Colors.white,  child: SizedBox(
                         width: 200,
                         height: 200,
                         child: Center(
                           child: Container(
-                            margin: EdgeInsets.only(top: 20),
+                            margin: const EdgeInsets.only(top: 20),
                             child: Column(
                               children: [
-                                Text("Mot de passe"),
-                                SizedBox(height: 10,),
+                                const Text("Mot de passe"),
+                                const SizedBox(height: 10,),
                                 Container(
                                   decoration: BoxDecoration(
                                     // border: Border.all(width: 1,color: Colors.black)
                                     borderRadius: BorderRadius.circular(30)
                                   ),
                                   width: 100,
-                                  child: TextField(
+                                  child: const TextField(
                                     style: TextStyle(color: Colors.black),
                                   ),
                                 ),
-                                SizedBox(height: 30,),
+                                const SizedBox(height: 30,),
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                                   children: [
-                                    ElevatedButton(onPressed: ()=>Navigator.pop(context), child: Text("retour")),
-                                    ElevatedButton(onPressed: (){}, child: Text("valide")),
+                                    ElevatedButton(onPressed: ()=>Navigator.pop(context), child: const Text("retour")),
+                                    ElevatedButton(onPressed: (){}, child: const Text("valide")),
                                   ],
                                 ),
                               ],
                             ),
                           ),
                         ),
-                      ),
-                      backgroundColor: Colors.white,),
-                     context: context), icon:Icon(CupertinoIcons.pen))
+                      ),),
+                     context: context), icon:const Icon(CupertinoIcons.pen))
                   ],
                 ),
               ),

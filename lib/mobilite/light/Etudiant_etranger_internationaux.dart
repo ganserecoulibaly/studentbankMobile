@@ -25,21 +25,22 @@ class _etudiant_etranger_internationauxState extends State<etudiant_etranger_int
   var list_universite=["Universite 1","Universite 2","Universite 3"];
   // var liste_formation=["Genie Civil","Medecine","informatique"];
   var maformation=["Genie civil","Medecine","Informatique"];
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
           decoration:BoxDecoration(borderRadius: BorderRadius.circular(20),
-          image: DecorationImage(image:  AssetImage("images/mobilite_3.jpg"),fit: BoxFit.cover,scale: 4)),    
+          image: const DecorationImage(image:  AssetImage("images/mobilite_3.jpg"),fit: BoxFit.cover,scale: 4)),    
           child: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Colors.white12
             ),
             child: ListView(
               children: [
-                SizedBox(height: 30,),
+                const SizedBox(height: 30,),
                 Container(
-                  margin: EdgeInsets.all(10),
-                  child: Center(
+                  margin: const EdgeInsets.all(10),
+                  child: const Center(
                     child: 
                       Text("Etudiant etrangers et internationaux",style: TextStyle(color: Colors.pink,fontSize: 22,fontWeight: FontWeight.bold),)),
                 ),
@@ -50,7 +51,7 @@ class _etudiant_etranger_internationauxState extends State<etudiant_etranger_int
                   ),
                   // width: double.infinity,
                   height: 100,
-                  margin: EdgeInsets.only(left: 20,right: 20),
+                  margin: const EdgeInsets.only(left: 20,right: 20),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
@@ -62,14 +63,14 @@ class _etudiant_etranger_internationauxState extends State<etudiant_etranger_int
                             height:30,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              gradient: LinearGradient(colors: [
+                              gradient: const LinearGradient(colors: [
                                 Colors.white,
                                 Colors.pink
                               ])
                              ),
                             child:  DropdownButton(
                               items:list_Pays.map((String items){
-                                return DropdownMenuItem(child: Text(items,style: TextStyle(fontSize: 20),),value: items,);
+                                return DropdownMenuItem(value: items,child: Text(items,style: const TextStyle(fontSize: 20),),);
                               }).toList(),
                              value: pays,
                              onChanged: (String? value) {
@@ -85,14 +86,14 @@ class _etudiant_etranger_internationauxState extends State<etudiant_etranger_int
                             height:30,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              gradient: LinearGradient(colors: [
+                              gradient: const LinearGradient(colors: [
                                 Colors.white,
                                 Colors.pink
                               ])
                              ),
                             child:  DropdownButton(
                               items:list_ville.map((String items){
-                                return DropdownMenuItem(child: Text(items,style: TextStyle(fontSize: 20)),value: items,);
+                                return DropdownMenuItem(value: items,child: Text(items,style: const TextStyle(fontSize: 20)),);
                               }).toList(),
                              value: ville,
                              onChanged: (String? value) {
@@ -104,7 +105,7 @@ class _etudiant_etranger_internationauxState extends State<etudiant_etranger_int
                           ),
                         ],
                       ),
-                      SizedBox(height: 15,),
+                      const SizedBox(height: 15,),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
@@ -113,14 +114,14 @@ class _etudiant_etranger_internationauxState extends State<etudiant_etranger_int
                             height:30,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              gradient: LinearGradient(colors: [
+                              gradient: const LinearGradient(colors: [
                                 Colors.white,
                                 Colors.pink
                               ])
                              ),
                             child:  DropdownButton(
                               items:list_universite.map((String items){
-                                return DropdownMenuItem(child: Text(items,style: TextStyle(fontSize: 20)),value: items,);
+                                return DropdownMenuItem(value: items,child: Text(items,style: const TextStyle(fontSize: 20)),);
                               }).toList(),
                              value: universite,
                              onChanged: (String? value) {
@@ -135,14 +136,14 @@ class _etudiant_etranger_internationauxState extends State<etudiant_etranger_int
                             height:30,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              gradient: LinearGradient(colors: [
+                              gradient: const LinearGradient(colors: [
                                 Colors.white,
                                 Colors.pink
                               ])
                              ),
                             child:  DropdownButton(
                               items:maformation.map((String items){
-                                return DropdownMenuItem(child: Text(items,style: TextStyle(fontSize: 20)),value: items,);
+                                return DropdownMenuItem(value: items,child: Text(items,style: const TextStyle(fontSize: 20)),);
                               }).toList(),
                              value: format,
                              onChanged: (String? value) {
@@ -159,9 +160,9 @@ class _etudiant_etranger_internationauxState extends State<etudiant_etranger_int
                 ),
               //   Container(
               //  ),
-                Text("Voir aussi",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold,color: Colors.white),),
+                const Text("Voir aussi",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold,color: Colors.white),),
                
-                Container(
+                SizedBox(
                   height: 500,
                   child: SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
@@ -170,7 +171,7 @@ class _etudiant_etranger_internationauxState extends State<etudiant_etranger_int
                       children: [
                         for(int i=0;i<3;i++)
                         Container(
-                          margin: EdgeInsets.all(10),
+                          margin: const EdgeInsets.all(10),
                            decoration: BoxDecoration(
                                       color: color[i],
                                       borderRadius: BorderRadius.circular(20)
@@ -179,7 +180,7 @@ class _etudiant_etranger_internationauxState extends State<etudiant_etranger_int
                             width: 220,
                           child: Column(
                             children: [
-                              SizedBox(height: 10,),
+                              const SizedBox(height: 10,),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                                 children: [
@@ -189,21 +190,21 @@ class _etudiant_etranger_internationauxState extends State<etudiant_etranger_int
                                       color: Colors.pink,
                                       borderRadius: BorderRadius.circular(30)
                                     ),
-                                    child: Center(child: Text("Info",style: TextStyle(color: Colors.white,fontSize: 20),)),
+                                    child: const Center(child: Text("Info",style: TextStyle(color: Colors.white,fontSize: 20),)),
                                   ),
-                                  Icon(Icons.favorite_outline,color: Colors.pink,)
+                                  const Icon(Icons.favorite_outline,color: Colors.pink,)
                                 ],
                               ),
                               Container(
-                                margin: EdgeInsets.all(5),
-                                child:color[i]==Colors.black87? Text(
+                                margin: const EdgeInsets.all(5),
+                                child:color[i]==Colors.black87? const Text(
                                     //  "Lorem ipsum dolor sit amet,\n consectetur adipiscing elit, \nsed do eiusmod tempor incididunt ut\n labore et dolore magna aliqua\n Ut enim ad minim veniam, quis \nnostrud exercitation ullamco \nlaboris nisi ut aliquip ex ea \ncommodo consequat. Duis aute irure \ndolor in reprehenderit in voluptate \nvelit esse cillum dolore eu fugiat\n nulla pariatur. Excepteur\nsint occaecat cupidatat non proident,\n sunt in culpa qui officia deserunt\n mollit anim id est laborum."
                                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
                                  ,style: TextStyle(color: Colors.white),
-                                ):Text(  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                                ):const Text(  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
                                  ),
                               ),
-                               Row(
+                               const Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Column(

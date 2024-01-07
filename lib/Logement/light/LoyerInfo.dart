@@ -14,14 +14,14 @@ class loyerinfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(preferredSize: Size.fromHeight(300), child:     Container(
+      appBar: PreferredSize(preferredSize: const Size.fromHeight(300), child:     Container(
                         height: 300,
                     decoration: BoxDecoration(
                       boxShadow: [
                         BoxShadow(color: Colors.orange.shade200,blurRadius: 3.0,spreadRadius: 4.2),
                       ],
-                      image: DecorationImage(image: AssetImage('images/maisonNight.jpg'),fit: BoxFit.cover),
-                      borderRadius: BorderRadius.only(bottomRight: Radius.circular(30),bottomLeft: Radius.circular(30))
+                      image: const DecorationImage(image: AssetImage('images/maisonNight.jpg'),fit: BoxFit.cover),
+                      borderRadius: const BorderRadius.only(bottomRight: Radius.circular(30),bottomLeft: Radius.circular(30))
                     ),
                     child: Container(
                            child: 
@@ -31,29 +31,29 @@ class loyerinfo extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                            SizedBox(height: 10,),
+                            const SizedBox(height: 10,),
                               Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                            Align(
+                            const Align(
                               alignment: Alignment.centerLeft,
                               child: Text("ANNONCES",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
                             
                             ),
                             Align(
                             alignment: Alignment.centerRight,
-                              child: IconButton(onPressed: (){},icon: Icon(Icons.menu),color: Colors.white,),
+                              child: IconButton(onPressed: (){},icon: const Icon(Icons.menu),color: Colors.white,),
                               ),
                               ],
                               
                             ),
                             Align(
                             alignment: Alignment.centerRight,
-                              child: IconButton(onPressed: (){},icon: Icon(Icons.favorite_border),color: Colors.white,),
+                              child: IconButton(onPressed: (){},icon: const Icon(Icons.favorite_border),color: Colors.white,),
                               ),
-                            Text("lorem ghdfshgvhsgsvss\nfhvsgvbfsfj\bnfbssbvfsvsvhn",style: TextStyle(color:Colors.white,fontSize: 13,fontWeight: FontWeight.normal),),
+                            const Text("lorem ghdfshgvhsgsvss\nfhvsgvbfsfj\bnfbssbvfsvsvhn",style: TextStyle(color:Colors.white,fontSize: 13,fontWeight: FontWeight.normal),),
                             // SizedBox(height: 10,),
-                            ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white),onPressed: (){}, child: Text("voir plus",style: TextStyle(color: Colors.black),))
+                            ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white),onPressed: (){}, child: const Text("voir plus",style: TextStyle(color: Colors.black),))
                           ],),
                           ),
                         
@@ -74,7 +74,7 @@ class loyerinfo extends StatelessWidget {
                  Center(
                    child: Container(
                           alignment: Alignment.center,
-                          margin: EdgeInsets.only(left:15,right:15),
+                          margin: const EdgeInsets.only(left:15,right:15),
                           // padding: EdgeInsets.all(20),
                           width: double.infinity,
                           height: 300,
@@ -86,7 +86,7 @@ class loyerinfo extends StatelessWidget {
                         ),
                  ),
                 // SizedBox(height: 10),
-                Column(
+                const Column(
                   // crossAxisAlignment:CrossAxisAlignment.center
                   children: [
 
@@ -126,11 +126,11 @@ class loyerinfo extends StatelessWidget {
                   )
                 ]),
                  Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Colors.transparent
                     ),
-                    margin: EdgeInsets.only(left:30,top:10),
-                    child:Column(
+                    margin: const EdgeInsets.only(left:30,top:10),
+                    child:const Column(
                       // mainAxisAlignment: MainAxisAlignment.center,
                       // crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
@@ -163,7 +163,7 @@ class loyerinfo extends StatelessWidget {
                           alignment: Alignment.center,
                           // margin: EdgeInsets.all(10),
                           // padding: EdgeInsets.all(20),
-                          margin: EdgeInsets.only(left:15,right:15),
+                          margin: const EdgeInsets.only(left:15,right:15),
                           // padding: EdgeInsets.all(20),
                           width: double.infinity,
                           height: 300,
@@ -178,10 +178,10 @@ class loyerinfo extends StatelessWidget {
                 // SizedBox(height: 10),
                 Container(
                   // height: 100,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Colors.transparent
                     ),
-                    child: Column(children: [
+                    child: const Column(children: [
                       // Row(children: [Padding(padding:EdgeInsets.only(top: 10,left: 20),child:Text("Apartement",style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold,color: Colors.black)),),],),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -219,11 +219,11 @@ class loyerinfo extends StatelessWidget {
                     ]),
                 ),
                  Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Colors.transparent
                     ),
-                    margin: EdgeInsets.only(left:30,top:10),
-                    child:Column(
+                    margin: const EdgeInsets.only(left:30,top:10),
+                    child:const Column(
                       // mainAxisAlignment: MainAxisAlignment.center,
                       // crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
@@ -253,7 +253,7 @@ class loyerinfo extends StatelessWidget {
                    child: Container(
                           alignment: Alignment.center,
                           // padding: EdgeInsets.all(20),
-                          margin: EdgeInsets.only(left:15,right:15),
+                          margin: const EdgeInsets.only(left:15,right:15),
                           // padding: EdgeInsets.all(20),
                           width: double.infinity,
                           height: 300,
@@ -266,10 +266,10 @@ class loyerinfo extends StatelessWidget {
                  ),
              Container(
                   // height: 100,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Colors.transparent
                     ),
-                    child: Column(children: [
+                    child: const Column(children: [
                       // Row(children: [Padding(padding:EdgeInsets.only(top: 10,left: 20),child:Text("Apartement",style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold,color: Colors.black)),),],),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -307,11 +307,11 @@ class loyerinfo extends StatelessWidget {
                     ]),
                 ),
                  Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Colors.transparent
                     ),
-                    margin: EdgeInsets.only(left:30,top:10),
-                    child:Column(
+                    margin: const EdgeInsets.only(left:30,top:10),
+                    child:const Column(
                       // mainAxisAlignment: MainAxisAlignment.center,
                       // crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
@@ -338,7 +338,7 @@ class loyerinfo extends StatelessWidget {
                  Center(
                         child: Container(
                           alignment: Alignment.center,
-                          margin: EdgeInsets.only(left:15,right:15),
+                          margin: const EdgeInsets.only(left:15,right:15),
                           // padding: EdgeInsets.all(20),
                           width: double.infinity,
                           height: 300,
@@ -351,11 +351,11 @@ class loyerinfo extends StatelessWidget {
                       ),
                 Container(
                   // height: 100,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                     color: Colors.transparent,
                     // image: DecorationImage(image: AssetImage('images/LogoNlogement.png'),fit: BoxFit.fill)
                   ),
-                    child: Column(children: [
+                    child: const Column(children: [
                       // Row(children: [Padding(padding:EdgeInsets.only(top: 10,left: 20),child:Text("Apartement",style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold,color: Colors.black)),),],),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -393,11 +393,11 @@ class loyerinfo extends StatelessWidget {
                     ]),
                 ),
                  Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Colors.transparent
                     ),
-                    margin: EdgeInsets.only(left:30,top:10),
-                    child:Column(
+                    margin: const EdgeInsets.only(left:30,top:10),
+                    child:const Column(
                       // mainAxisAlignment: MainAxisAlignment.center,
                       // crossAxisAlignment: CrossAxisAlignment.center,
                       children: [

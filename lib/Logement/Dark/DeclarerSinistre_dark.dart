@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 
 
 class DeclarerSinistre_dark extends StatefulWidget {
@@ -15,28 +13,28 @@ class _DeclarerSinistre_darkState extends State<DeclarerSinistre_dark> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(300), 
+        preferredSize: const Size.fromHeight(300), 
         child:  Container(
               height: 200,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 boxShadow: [
                        BoxShadow(color: Colors.white,blurRadius: 3.0,spreadRadius: 4.2),
               ],
                 image: DecorationImage(image: AssetImage('images/maisonNight.jpg'),fit: BoxFit.cover),
                 borderRadius: BorderRadius.only(bottomRight: Radius.circular(30),bottomLeft: Radius.circular(30))
               ),
-              child:  Align(
+              child:  const Align(
                         alignment: Alignment.centerLeft,
                         child: Text("Déclarer un sinistre",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
                       ),
             ),
            ),
       body: Container(
-        margin: EdgeInsets.all(0),
-        padding: EdgeInsets.all(0),
+        margin: const EdgeInsets.all(0),
+        padding: const EdgeInsets.all(0),
         decoration: BoxDecoration(
           color: Colors.grey.shade900,
-          image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
+          image: const DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
         ),
         // width: double.infinity,
         // height: double.infinity,
@@ -44,8 +42,8 @@ class _DeclarerSinistre_darkState extends State<DeclarerSinistre_dark> {
           scrollDirection: Axis.vertical,
           children: [
              Container(
-                    margin: EdgeInsets.only(left:30,top:20),
-                    child:Column(
+                    margin: const EdgeInsets.only(left:30,top:20),
+                    child:const Column(
                       // mainAxisAlignment: MainAxisAlignment.center,
                       // crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
@@ -59,8 +57,8 @@ class _DeclarerSinistre_darkState extends State<DeclarerSinistre_dark> {
                     )
                   ),  
              Container(
-                    margin: EdgeInsets.only(left:30,top:10),
-                    child:Column(
+                    margin: const EdgeInsets.only(left:30,top:10),
+                    child:const Column(
                       // mainAxisAlignment: MainAxisAlignment.center,
                       // crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
@@ -78,19 +76,19 @@ class _DeclarerSinistre_darkState extends State<DeclarerSinistre_dark> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  IconButton(onPressed: (){}, icon: Icon(Icons.upload_file,color: Colors.white,),tooltip: "partie 1",),
-                  SizedBox(width: 10,),
-                  IconButton(onPressed: (){}, icon: Icon(Icons.upload_file,color: Colors.white,),tooltip: "partie 2",),
-                  SizedBox(width: 10,),
-                  IconButton(onPressed: (){}, icon: Icon(Icons.upload_file,color: Colors.white,),tooltip: "partie 3",)           
+                  IconButton(onPressed: (){}, icon: const Icon(Icons.upload_file,color: Colors.white,),tooltip: "partie 1",),
+                  const SizedBox(width: 10,),
+                  IconButton(onPressed: (){}, icon: const Icon(Icons.upload_file,color: Colors.white,),tooltip: "partie 2",),
+                  const SizedBox(width: 10,),
+                  IconButton(onPressed: (){}, icon: const Icon(Icons.upload_file,color: Colors.white,),tooltip: "partie 3",)           
                 ],
               ),
             ),
             Center(
               child:
-               ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.red),onPressed: (){}, child: Text("Contacter le proprietaire",style: TextStyle(color: Colors.black),)),
+               ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.red),onPressed: (){}, child: const Text("Contacter le proprietaire",style: TextStyle(color: Colors.black),)),
             ),
-            SizedBox(height: 10,)
+            const SizedBox(height: 10,)
           ],
         ),
       ),  

@@ -3,7 +3,6 @@ import 'dart:io';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 
-import 'package:flutter/cupertino.dart';
 
 import 'myphoto.dart';
 
@@ -53,7 +52,7 @@ void pickFile()async{
     _filename=result!.files.first.name;
     pickedfile=result!.files.first;
     fileToDisplay=File(pickedfile!.path.toString());
-    print('file name ${_filename}');
+    print('file name $_filename');
   }
   setState(() {
     isLoading=false;
@@ -75,7 +74,7 @@ void pickFile1()async{
     _filename1=result1!.files.first.name;
     pickedfile1=result1!.files.first;
     fileToDisplay1=File(pickedfile1!.path.toString());
-    print('file name ${_filename1}');
+    print('file name $_filename1');
   }
   setState(() {
     isLoading1=false;
@@ -97,7 +96,7 @@ void pickFile2()async{
     _filename2=result2!.files.first.name;
     pickedfile2=result2!.files.first;
     fileToDisplay2=File(pickedfile2!.path.toString());
-    print('file name ${_filename2}');
+    print('file name $_filename2');
   }
   setState(() {
     isLoading2=false;
@@ -119,7 +118,7 @@ void pickFile3()async{
     _filename3=result3!.files.first.name;
     pickedfile3=result3!.files.first;
     fileToDisplay3=File(pickedfile3!.path.toString());
-    print('file name ${_filename3}');
+    print('file name $_filename3');
   }
   setState(() {
     isLoading3=false;
@@ -132,9 +131,9 @@ void pickFile3()async{
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-         margin: EdgeInsets.all(0),
-        padding: EdgeInsets.all(0),
-        decoration: BoxDecoration(
+         margin: const EdgeInsets.all(0),
+        padding: const EdgeInsets.all(0),
+        decoration: const BoxDecoration(
           color: Colors.pink,
           image: DecorationImage(image: AssetImage('images/LogoN_Mobilite.png'),fit: BoxFit.fill)
         ),
@@ -143,10 +142,10 @@ void pickFile3()async{
         child: ListView(
           children: [
             Container(
-              margin: EdgeInsets.all(20),
+              margin: const EdgeInsets.all(20),
               
               decoration:BoxDecoration(borderRadius: BorderRadius.circular(20),
-              image: DecorationImage(image:  AssetImage("images/mobilite_3.jpg"),fit: BoxFit.fill,scale: 4)),
+              image: const DecorationImage(image:  AssetImage("images/mobilite_3.jpg"),fit: BoxFit.fill,scale: 4)),
               // child: Image.asset("images/mobilite.jpeg",fit: BoxFit.contain,),
               height: 150,
               width: double.infinity,
@@ -160,7 +159,7 @@ void pickFile3()async{
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Container(
-                          margin: EdgeInsets.all(20),
+                          margin: const EdgeInsets.all(20),
                           child: LinearProgressIndicator(
                           color: Colors.pink.shade100,
                           backgroundColor: Colors.blueGrey,
@@ -169,7 +168,7 @@ void pickFile3()async{
                           minHeight: 10,
                           ),
                         ),
-                        SizedBox(height: 30,),
+                        const SizedBox(height: 30,),
                         Text("Demande de Visa",style: TextStyle(color:Colors.pink.shade100, fontWeight: FontWeight.bold,fontSize: 20),)
                       ],
                     ),
@@ -178,15 +177,15 @@ void pickFile3()async{
                 ],
               ),
             ),
-            Center(child: Text("Mes Documents",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),),
-            Center(child: Text("Pieces joints",style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold),),),
+            const Center(child: Text("Mes Documents",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),),
+            const Center(child: Text("Pieces joints",style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold),),),
             Container(
-              margin: EdgeInsets.only(top:20,left: 20,right: 20),
+              margin: const EdgeInsets.only(top:20,left: 20,right: 20),
               height: 250,
               width: double.infinity,
               decoration: BoxDecoration(
               border: Border.all(color: Colors.black,),
-              boxShadow: [
+              boxShadow: const [
                 BoxShadow(blurRadius: 3.0,spreadRadius: 4.8,color: Colors.white),
                 BoxShadow(blurRadius: 3.0,spreadRadius: 4.8,color: Colors.white),
                 ],borderRadius: BorderRadius.circular(10)
@@ -199,27 +198,27 @@ void pickFile3()async{
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Container(
-                        margin: EdgeInsets.all(10),
+                        margin: const EdgeInsets.all(10),
                         height: 150,
                         width: 100,
-                        decoration: BoxDecoration(color: Colors.black),
-                        child: Center(child: IconButton(onPressed: (){pickFile();}, icon: Icon(Icons.upload_file),color: Colors.white,)),
+                        decoration: const BoxDecoration(color: Colors.black),
+                        child: Center(child: IconButton(onPressed: (){pickFile();}, icon: const Icon(Icons.upload_file),color: Colors.white,)),
                       ),
-                      SizedBox(width: 30,),
+                      const SizedBox(width: 30,),
                       Container(
-                        margin: EdgeInsets.all(10),
+                        margin: const EdgeInsets.all(10),
                         height: 150,
                         width: 100,
-                        decoration: BoxDecoration(color: Colors.black),
-                        child: Center(child: IconButton(onPressed: (){pickFile1();}, icon: Icon(Icons.upload_file),color: Colors.white,)),
+                        decoration: const BoxDecoration(color: Colors.black),
+                        child: Center(child: IconButton(onPressed: (){pickFile1();}, icon: const Icon(Icons.upload_file),color: Colors.white,)),
                       )
                     ],
                   ),
                   Container(
-                    margin: EdgeInsets.only(left: 10,right: 10),
+                    margin: const EdgeInsets.only(left: 10,right: 10),
                     height: 70,
                     decoration: BoxDecoration(border: Border.all(color: Colors.black,style: BorderStyle.values[1],),),
-                    child:  Row(
+                    child:  const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                     Text("Recto"),
@@ -234,12 +233,12 @@ void pickFile3()async{
             Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-             result!=null?Text("recto: ${_filename}"):Text(""),
-             result1!=null?Text("verso: ${_filename1}"):Text(""),
+             result!=null?Text("recto: $_filename"):const Text(""),
+             result1!=null?Text("verso: $_filename1"):const Text(""),
               ],
             ),
-            SizedBox(height: 20,),
-            Row(
+            const SizedBox(height: 20,),
+            const Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 SizedBox(),
@@ -249,14 +248,14 @@ void pickFile3()async{
               ],
             ),
             Container(
-              margin: EdgeInsets.only(top: 20,left:20,right: 20),
+              margin: const EdgeInsets.only(top: 20,left:20,right: 20),
               height: 250,
               width: double.infinity,
               decoration: BoxDecoration(
               
               border: Border.all(color: Colors.black,),
               borderRadius: BorderRadius.circular(10),
-              boxShadow: [
+              boxShadow: const [
                 BoxShadow(blurRadius: 3.0,spreadRadius: 4.8,color: Colors.white),
                 BoxShadow(blurRadius: 3.0,spreadRadius: 4.8,color: Colors.white),
                 ]),
@@ -267,27 +266,27 @@ void pickFile3()async{
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Container(
-                        margin: EdgeInsets.all(10),
+                        margin: const EdgeInsets.all(10),
                         height: 150,
                         width: 100,
-                        decoration: BoxDecoration(color: Colors.black),
-                        child: Center(child: IconButton(onPressed: (){pickFile2();}, icon: Icon(Icons.upload_file),color: Colors.white,)),
+                        decoration: const BoxDecoration(color: Colors.black),
+                        child: Center(child: IconButton(onPressed: (){pickFile2();}, icon: const Icon(Icons.upload_file),color: Colors.white,)),
                       ),
-                      SizedBox(width: 30,),
+                      const SizedBox(width: 30,),
                       Container(
-                        margin: EdgeInsets.all(10),
+                        margin: const EdgeInsets.all(10),
                         height: 150,
                         width: 100,
-                        decoration: BoxDecoration(color: Colors.black),
-                        child: Center(child: IconButton(onPressed: (){pickFile3();}, icon: Icon(Icons.upload_file),color: Colors.white,)),
+                        decoration: const BoxDecoration(color: Colors.black),
+                        child: Center(child: IconButton(onPressed: (){pickFile3();}, icon: const Icon(Icons.upload_file),color: Colors.white,)),
                       )
                     ],
                   ),
                   Container(
-                    margin: EdgeInsets.only(left: 10,right: 10),
+                    margin: const EdgeInsets.only(left: 10,right: 10),
                     height: 70,
                     decoration: BoxDecoration(border: Border.all(color: Colors.black,style: BorderStyle.values[1],),),
-                    child:  Row(
+                    child:  const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                     Text("Joindre"),
@@ -302,18 +301,18 @@ void pickFile3()async{
             Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                  result2!=null?Text("cv: ${_filename2}"):Text(""),
-                  result3!=null?Text("motivation: ${_filename3}"):Text(""),
+                  result2!=null?Text("cv: $_filename2"):const Text(""),
+                  result3!=null?Text("motivation: $_filename3"):const Text(""),
               ],
             ),
               Container(
-                margin: EdgeInsets.only(top:5,right: 10,bottom: 5),
+                margin: const EdgeInsets.only(top:5,right: 10,bottom: 5),
                 child: Align(
                   alignment: Alignment.centerRight,
                   child: ElevatedButton(onPressed: (){
       
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>Myphoto()));
-                  }, child: Text("Continuer",style: TextStyle(color: Colors.pink),),style: ElevatedButton.styleFrom(backgroundColor: Colors.white),),
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const Myphoto()));
+                  },style: ElevatedButton.styleFrom(backgroundColor: Colors.white), child: const Text("Continuer",style: TextStyle(color: Colors.pink),),),
                 ),
                 )
           ],

@@ -16,12 +16,12 @@ class _depanagesState extends State<depanages> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(image: AssetImage("images/filiter_white.jpg"),fit: BoxFit.cover),
         ),
         child: ListView(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             SizedBox(
@@ -31,12 +31,12 @@ class _depanagesState extends State<depanages> {
                   alignment: Alignment.topLeft,
                   child: IconButton(onPressed: (){
                     Navigator.pop(context);
-                  }, icon: Icon(Icons.arrow_back,color: Colors.white,)),
+                  }, icon: const Icon(Icons.arrow_back,color: Colors.white,)),
                 ),
             ),
             Container(
-              margin: EdgeInsets.only(top:100,bottom: 75),
-              child: Column(
+              margin: const EdgeInsets.only(top:100,bottom: 75),
+              child: const Column(
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -52,13 +52,13 @@ class _depanagesState extends State<depanages> {
                 width: 402,
                 height: 58,
                 
-                margin: EdgeInsets.only(left: 20,right: 20,bottom:30 ),
+                margin: const EdgeInsets.only(left: 20,right: 20,bottom:30 ),
                 decoration: ShapeDecoration(
                     color: Colors.white,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                     ),
-                    shadows: [
+                    shadows: const [
                         BoxShadow(
                             color: Color(0x7F000000),
                             blurRadius: 10,
@@ -79,7 +79,7 @@ class _depanagesState extends State<depanages> {
                       child:const Align(alignment:Alignment.center ,child: Text("Montant*",style: TextStyle(color:Colors.white,fontSize: 12,fontWeight: FontWeight.bold),)),
                     ),
                     Container(
-                      margin: EdgeInsets.all(10),
+                      margin: const EdgeInsets.all(10),
                       width: 130,
                       child: TextField(
                         keyboardType: TextInputType.number,
@@ -105,13 +105,13 @@ class _depanagesState extends State<depanages> {
                 width: 402,
                 height: 58,
                 
-                margin: EdgeInsets.only(left: 20,right: 20,bottom:30 ),
+                margin: const EdgeInsets.only(left: 20,right: 20,bottom:30 ),
                 decoration: ShapeDecoration(
                     color: Colors.white,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                     ),
-                    shadows: [
+                    shadows: const [
                         BoxShadow(
                             color: Color(0x7F000000),
                             blurRadius: 10,
@@ -132,7 +132,7 @@ class _depanagesState extends State<depanages> {
                       child:const Align(alignment:Alignment.center ,child: Text("Immédiat",style: TextStyle(color:Colors.white,fontSize: 12,fontWeight: FontWeight.bold),)),
                     ),
                     Container(
-                      margin: EdgeInsets.all(10),
+                      margin: const EdgeInsets.all(10),
                       width: 130,
                       child: TextField(
                         controller: _date,//editing controller of this TextField
@@ -172,7 +172,7 @@ class _depanagesState extends State<depanages> {
                         borderRadius: BorderRadius.circular(20),
                       color: Colors.pink,
                       ),
-                      child: Container(alignment: Alignment.center ,child: Icon(Icons.calendar_today,size: 30,color: Colors.white,)),
+                      child: Container(alignment: Alignment.center ,child: const Icon(Icons.calendar_today,size: 30,color: Colors.white,)),
                     )
                   ],
                 ),
@@ -181,13 +181,13 @@ class _depanagesState extends State<depanages> {
                 width: 402,
                 height: 58,
                 
-                margin: EdgeInsets.only(left: 20,right: 20,bottom:30 ),
+                margin: const EdgeInsets.only(left: 20,right: 20,bottom:30 ),
                 decoration: ShapeDecoration(
                     color: Colors.white,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                     ),
-                    shadows: [
+                    shadows: const [
                         BoxShadow(
                             color: Color(0x7F000000),
                             blurRadius: 10,
@@ -208,7 +208,7 @@ class _depanagesState extends State<depanages> {
                       child:const Align(alignment:Alignment.center ,child: Text("information\ncomplémentaires",style: TextStyle(color:Colors.white,fontSize: 12,fontWeight: FontWeight.bold),)),
                     ),
                     Container(
-                      margin: EdgeInsets.all(10),
+                      margin: const EdgeInsets.all(10),
                       width: 130,
                       child: TextField(
                         controller: _inf,
@@ -233,7 +233,7 @@ class _depanagesState extends State<depanages> {
             ),
                Center(
               child: Container(
-                  margin: EdgeInsets.only(top:32,bottom: 10),
+                  margin: const EdgeInsets.only(top:32,bottom: 10),
                   width: 150,
                    height: 35,
                   clipBehavior: Clip.antiAlias,
@@ -244,14 +244,14 @@ class _depanagesState extends State<depanages> {
                           colors: [Colors.red.shade800, Colors.orange.shade800],
                       ),
                       shape: RoundedRectangleBorder(
-                          side: BorderSide(
+                          side: const BorderSide(
                               width: 1,
                               strokeAlign: BorderSide.strokeAlignOutside,
                               color: Colors.white,
                           ),
                           borderRadius: BorderRadius.circular(20),
                       ),
-                      shadows: [
+                      shadows: const [
                           BoxShadow(
                               color: Color(0x3F000000),
                               blurRadius: 4,
@@ -260,7 +260,7 @@ class _depanagesState extends State<depanages> {
                           )
                       ],
                   ),
-                  child: TextButton(onPressed: (){}, child:  Text(
+                  child: TextButton(onPressed: (){}, child:  const Text(
                         'Continuer',
                         textAlign: TextAlign.center,
                         style: TextStyle( 

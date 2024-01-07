@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:studentbankmobile/Logement/light/DeclarerSinistre.dart';
 
 
 class DemanderCaution extends StatefulWidget {
@@ -15,17 +14,17 @@ class _DemanderCautionState extends State<DemanderCaution> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(300), 
+        preferredSize: const Size.fromHeight(300), 
         child:  Container(
               height: 200,
               decoration: BoxDecoration(
                 boxShadow: [
                        BoxShadow(color: Colors.orange.shade200,blurRadius: 3.0,spreadRadius: 4.2),
               ],
-                image: DecorationImage(image: AssetImage('images/maisonNight.jpg'),fit: BoxFit.cover),
-                borderRadius: BorderRadius.only(bottomRight: Radius.circular(30),bottomLeft: Radius.circular(30))
+                image: const DecorationImage(image: AssetImage('images/maisonNight.jpg'),fit: BoxFit.cover),
+                borderRadius: const BorderRadius.only(bottomRight: Radius.circular(30),bottomLeft: Radius.circular(30))
               ),
-              child:  Align(
+              child:  const Align(
                         alignment: Alignment.center,
                         child: Text("Demander une caution",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
                       
@@ -33,9 +32,9 @@ class _DemanderCautionState extends State<DemanderCaution> {
             ),
             ),
       body: Container(
-        margin: EdgeInsets.all(0),
-        padding: EdgeInsets.all(0),
-        decoration: BoxDecoration(
+        margin: const EdgeInsets.all(0),
+        padding: const EdgeInsets.all(0),
+        decoration: const BoxDecoration(
           color: Colors.white,
           image: DecorationImage(image: AssetImage('images/LogoNlogement.png'),fit: BoxFit.fill)
         ),
@@ -46,11 +45,11 @@ class _DemanderCautionState extends State<DemanderCaution> {
           children: [
             
            Container(
-               margin: EdgeInsets.all(20),
+               margin: const EdgeInsets.all(20),
 
-              padding: EdgeInsets.all(20),
+              padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
-                boxShadow:[
+                boxShadow:const [
                   BoxShadow(spreadRadius: 4.2,blurRadius: 11),
                 ] ,
                 color: Colors.white,
@@ -59,7 +58,7 @@ class _DemanderCautionState extends State<DemanderCaution> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Row(
+                  const Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -72,8 +71,8 @@ class _DemanderCautionState extends State<DemanderCaution> {
                     alignment: Alignment.center,
                     child: Column(
                       children: [
-                        Text("Loyer Precedent"),
-                        Center(child: Text("550${Icon(Icons.euro)}"),)
+                        const Text("Loyer Precedent"),
+                        Center(child: Text("550${const Icon(Icons.euro)}"),)
                       ]
                       ),
                   )
@@ -81,15 +80,15 @@ class _DemanderCautionState extends State<DemanderCaution> {
                 ),
             ),
             Container(
-              margin: EdgeInsets.all(20),
-              padding: EdgeInsets.all(20),
+              margin: const EdgeInsets.all(20),
+              padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
-                boxShadow:[
+                boxShadow:const [
                   BoxShadow(spreadRadius: 4.2,blurRadius: 11),
                 ] ,
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(20)),
-              child: Column(
+              child: const Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
@@ -115,15 +114,15 @@ class _DemanderCautionState extends State<DemanderCaution> {
                 ),
             ),
             Container(
-              margin: EdgeInsets.all(20),
-              padding: EdgeInsets.all(20),
+              margin: const EdgeInsets.all(20),
+              padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
-                boxShadow:[
+                boxShadow:const [
                   BoxShadow(spreadRadius: 4.2,blurRadius: 11),
                 ] ,
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(20)),
-              child: Column(
+              child: const Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
@@ -141,15 +140,15 @@ class _DemanderCautionState extends State<DemanderCaution> {
                 ),
             ),
             Container(
-              margin: EdgeInsets.all(20),
-              padding: EdgeInsets.all(20),
+              margin: const EdgeInsets.all(20),
+              padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
-                boxShadow:[
+                boxShadow:const [
                   BoxShadow(spreadRadius: 4.2,blurRadius: 11),
                 ] ,
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(20)),
-              child: Column(
+              child: const Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
@@ -168,35 +167,35 @@ class _DemanderCautionState extends State<DemanderCaution> {
                 ),
             ),
             Container(
-              margin: EdgeInsets.all(20),
-              padding: EdgeInsets.all(20),
+              margin: const EdgeInsets.all(20),
+              padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
-                boxShadow:[
+                boxShadow:const [
                   BoxShadow(spreadRadius: 4.2,blurRadius: 11),
                 ] ,
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(20)),
-              child:Text("Information suplementaire"),
+              child:const Text("Information suplementaire"),
             ),
            Center(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  IconButton(onPressed: (){}, icon: Icon(Icons.upload_file,color: Colors.orange,),tooltip: "partie 1",),
-                  SizedBox(width: 10,),
-                  IconButton(onPressed: (){}, icon: Icon(Icons.upload_file,color: Colors.orange,),tooltip: "partie 2",),
-                  SizedBox(width: 10,),
-                  IconButton(onPressed: (){}, icon: Icon(Icons.upload_file,color: Colors.orange,),tooltip: "partie 3",)           
+                  IconButton(onPressed: (){}, icon: const Icon(Icons.upload_file,color: Colors.orange,),tooltip: "partie 1",),
+                  const SizedBox(width: 10,),
+                  IconButton(onPressed: (){}, icon: const Icon(Icons.upload_file,color: Colors.orange,),tooltip: "partie 2",),
+                  const SizedBox(width: 10,),
+                  IconButton(onPressed: (){}, icon: const Icon(Icons.upload_file,color: Colors.orange,),tooltip: "partie 3",)           
                 ],
               ),
             ),
             Center(
               child:
-               ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.red),onPressed: (){}, child: Text("Continuer",style: TextStyle(color: Colors.black),)),
+               ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.red),onPressed: (){}, child: const Text("Continuer",style: TextStyle(color: Colors.black),)),
               
             ),
-            SizedBox(height: 20,),
+            const SizedBox(height: 20,),
           ],
         ),
       ),  

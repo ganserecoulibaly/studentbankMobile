@@ -1,7 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:studentbankmobile/mobilite/dark/Accueil_mobilite_dark.dart';
-import 'package:studentbankmobile/mobilite/light/Accueil_mobilite.dart';
 
 class valider_doc_dark extends StatefulWidget {
   const valider_doc_dark({super.key});
@@ -21,12 +19,12 @@ class _valider_doc_darkState extends State<valider_doc_dark> {
         child: Container(
             decoration: BoxDecoration(
           color: Colors.grey.shade900,   
-          image: DecorationImage(image: AssetImage("images/Logo N.png"),fit: BoxFit.fill)
+          image: const DecorationImage(image: AssetImage("images/Logo N.png"),fit: BoxFit.fill)
         ),
           child: ListView(
             children: [
                Container(
-                margin: EdgeInsets.only(top:50,left: 30,right: 30,bottom: 40),
+                margin: const EdgeInsets.only(top:50,left: 30,right: 30,bottom: 40),
                 child: LinearProgressIndicator(
                 color: Colors.pink.shade100,
                 value: 1,
@@ -35,12 +33,12 @@ class _valider_doc_darkState extends State<valider_doc_dark> {
                 minHeight: 10,
                 ),
               ),
-              Center(
+              const Center(
               child: 
                 Text("  Dossier à été transmis ! \n      avec succes\n",style: TextStyle(color: Colors.black,fontSize: 20,fontStyle: FontStyle.italic),)
               ),
-              SizedBox(height: 15,),
-              Center(
+              const SizedBox(height: 15,),
+              const Center(
                 child: 
                   Text(" Lorem dhfjfjgbbhfbfbdfjhbdjdbjd! \nipsumvfsfsdvsvfbsbsnsvnsvs vn snnsv\n",style: TextStyle(color: Colors.black,fontSize: 12,fontStyle: FontStyle.italic),)
               ),
@@ -48,7 +46,7 @@ class _valider_doc_darkState extends State<valider_doc_dark> {
                 child: Icon(Icons.download_done_sharp,color: Colors.green[300],size: 200,),
               ),
                Container(
-                  margin: EdgeInsets.only(top:20,right: 50,bottom: 5,left: 50),
+                  margin: const EdgeInsets.only(top:20,right: 50,bottom: 5,left: 50),
                   decoration: BoxDecoration(
                     color: Colors.red.shade400,
                     borderRadius: BorderRadius.circular(30),
@@ -56,9 +54,9 @@ class _valider_doc_darkState extends State<valider_doc_dark> {
                   child: Align(
                     alignment: Alignment.bottomCenter,
                     child: TextButton(onPressed: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>Accueil_mobilite_dark()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>const Accueil_mobilite_dark()));
                         // Navigator.push(context, MaterialPageRoute(builder: (context)=>traitement()));
-                    }, child: Text(" Retour ",style: TextStyle(color: Colors.white),)),
+                    }, child: const Text(" Retour ",style: TextStyle(color: Colors.white),)),
                   ),
                   )
             ],

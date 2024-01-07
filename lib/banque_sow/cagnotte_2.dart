@@ -17,7 +17,7 @@ class _cagnotte_2State extends State<cagnotte_2> {
     return Scaffold(
       body: Container(
         alignment: Alignment.center,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(image: AssetImage("images/Logo_N_bleu_studentBanc.png"),fit: BoxFit.cover)
         ),
         child: ListView(
@@ -25,28 +25,28 @@ class _cagnotte_2State extends State<cagnotte_2> {
              Container(
               margin: const EdgeInsets.only(top: 20,left: 5,bottom: 5),
               alignment: Alignment.topLeft,
-              child: IconButton(icon: Icon(Icons.arrow_back,color: Colors.pink,),onPressed: ()=>Navigator.pop(context),),
+              child: IconButton(icon: const Icon(Icons.arrow_back,color: Colors.pink,),onPressed: ()=>Navigator.pop(context),),
             ),
              Container(
               margin:const EdgeInsets.only(bottom: 5),
               alignment: Alignment.center,
-              child:Text("Créer ma cagnotte",style: TextStyle(color: Colors.pink,fontSize: 20,fontWeight: FontWeight.bold),),
+              child:const Text("Créer ma cagnotte",style: TextStyle(color: Colors.pink,fontSize: 20,fontWeight: FontWeight.bold),),
             ),
              Container(
               // alignment: Alignment.center,
-              margin: EdgeInsets.only(left:20,right: 20,bottom: 5),
+              margin: const EdgeInsets.only(left:20,right: 20,bottom: 5),
              
-              child: Text("Nom de la cagnotte",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),)
+              child: const Text("Nom de la cagnotte",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),)
             ),
              Container(
               // alignment: Alignment.center,
-              margin: EdgeInsets.only(left:20,right: 20,bottom: 5),
+              margin: const EdgeInsets.only(left:20,right: 20,bottom: 5),
                width: 365.47,
               height: 37,
               decoration: ShapeDecoration(
-              color: Color(0x28ED174C),
+              color: const Color(0x28ED174C),
               shape: RoundedRectangleBorder(
-              side: BorderSide(width: 1, color: Color(0xFFED174C)),
+              side: const BorderSide(width: 1, color: Color(0xFFED174C)),
               borderRadius: BorderRadius.circular(10),
               ),
               ),
@@ -57,19 +57,19 @@ class _cagnotte_2State extends State<cagnotte_2> {
             ),
              Container(
               // alignment: Alignment.center,
-              margin: EdgeInsets.only(left:20,right: 20,bottom: 5),
+              margin: const EdgeInsets.only(left:20,right: 20,bottom: 5),
              
-              child: Text("Type de la cagnotte",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),)
+              child: const Text("Type de la cagnotte",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),)
             ),
               Container(
               // alignment: Alignment.center,
-              margin: EdgeInsets.only(left:20,right: 20,bottom: 5),
+              margin: const EdgeInsets.only(left:20,right: 20,bottom: 5),
               width: 365.47,
               height: 37,
               decoration: ShapeDecoration(
-              color: Color(0x28ED174C),
+              color: const Color(0x28ED174C),
               shape: RoundedRectangleBorder(
-              side: BorderSide(width: 1, color: Color(0xFFED174C)),
+              side: const BorderSide(width: 1, color: Color(0xFFED174C)),
               borderRadius: BorderRadius.circular(10),)),
               child:const TextField(
                 textAlign: TextAlign.center,
@@ -78,19 +78,19 @@ class _cagnotte_2State extends State<cagnotte_2> {
             ),
              Container(
               // alignment: Alignment.center,
-              margin: EdgeInsets.only(left:20,right: 20,bottom: 5),
+              margin: const EdgeInsets.only(left:20,right: 20,bottom: 5),
              
               child: const Text("Description",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),)
             ),
               Container(
               // alignment: Alignment.center,
-              margin: EdgeInsets.only(left:20,right: 20,bottom: 5),
+              margin: const EdgeInsets.only(left:20,right: 20,bottom: 5),
               width: 365.47,
               height: 100,
               decoration: ShapeDecoration(
-              color: Color(0x28ED174C),
+              color: const Color(0x28ED174C),
               shape: RoundedRectangleBorder(
-              side: BorderSide(width: 1, color: Color(0xFFED174C)),
+              side: const BorderSide(width: 1, color: Color(0xFFED174C)),
               borderRadius: BorderRadius.circular(10),)),
               child: const TextField(
                 minLines: 1,
@@ -108,13 +108,13 @@ class _cagnotte_2State extends State<cagnotte_2> {
             ),
             Center(
               child: Container(
-                margin: EdgeInsets.only(left:20,right: 20,bottom: 5),
+                margin: const EdgeInsets.only(left:20,right: 20,bottom: 5),
                 width: 100,
                 height: 37,
                 decoration: ShapeDecoration(
-                color: Color(0x28ED174C),
+                color: const Color(0x28ED174C),
                 shape: RoundedRectangleBorder(
-                side: BorderSide(width: 1, color: Color(0xFFED174C)),
+                side: const BorderSide(width: 1, color: Color(0xFFED174C)),
                 borderRadius: BorderRadius.circular(10),)),
               child: DropdownButton(
                   
@@ -145,13 +145,13 @@ class _cagnotte_2State extends State<cagnotte_2> {
                 alignment: Alignment.topLeft,
                 child: Container(
                 // alignment: Alignment.center,
-                margin: EdgeInsets.only(left:20,right: 20,bottom: 5),
+                margin: const EdgeInsets.only(left:20,right: 20,bottom: 5),
                 width: 100,
                 height: 37,
                 decoration: ShapeDecoration(
-                color: Color(0x28ED174C),
+                color: const Color(0x28ED174C),
                 shape: RoundedRectangleBorder(
-                side: BorderSide(width: 1, color: Color(0xFFED174C)),
+                side: const BorderSide(width: 1, color: Color(0xFFED174C)),
                 borderRadius: BorderRadius.circular(10),)),
                 child:const TextField(
                   textAlign: TextAlign.center,
@@ -164,15 +164,15 @@ class _cagnotte_2State extends State<cagnotte_2> {
               ),
               Center(
                 child: Container(
-                  margin: EdgeInsets.all(10),
+                  margin: const EdgeInsets.all(10),
                   width: 364,
                   height: 200,
                   decoration: ShapeDecoration(
-                      color: Color(0xD1ED174C),
+                      color: const Color(0xD1ED174C),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(32),
                       ),
-                      shadows: [
+                      shadows: const [
                           BoxShadow(
                               color: Color(0x3F000000),
                               blurRadius: 4,
@@ -186,9 +186,9 @@ class _cagnotte_2State extends State<cagnotte_2> {
                     children: [
                       // SizedBox(height: 10,),
                       Container(
-                            margin: EdgeInsets.only(top: 10),
+                            margin: const EdgeInsets.only(top: 10),
                             width: 186.70,
-                            child: Text(
+                            child: const Text(
                                 'Sélectionner un ami',
                                 style: TextStyle(
                                     color: Colors.white,
@@ -206,19 +206,19 @@ class _cagnotte_2State extends State<cagnotte_2> {
                           decoration: ShapeDecoration(
                           color: Colors.white.withOpacity(0.6000000238418579),
                           shape: RoundedRectangleBorder(
-                          side: BorderSide(width: 1, color: Color(0xFFED174C)),
+                          side: const BorderSide(width: 1, color: Color(0xFFED174C)),
                           borderRadius: BorderRadius.circular(20),
                           ),
                           ),
-                          child: CupertinoSearchTextField(
+                          child: const CupertinoSearchTextField(
                           ),
                         ),
                         Container(
-                          margin: EdgeInsets.only(top: 10,right: 5,left: 5,),
-                          child: Text("${nom[st]}",style: TextStyle(color: Colors.white,fontSize: 14,),),
+                          margin: const EdgeInsets.only(top: 10,right: 5,left: 5,),
+                          child: Text(nom[st],style: const TextStyle(color: Colors.white,fontSize: 14,),),
                         ),
                         Container(
-                          margin: EdgeInsets.only(top: 10,right: 5,left: 5,bottom: 5),
+                          margin: const EdgeInsets.only(top: 10,right: 5,left: 5,bottom: 5),
                           child: SingleChildScrollView(
                             scrollDirection: Axis.horizontal,
                             child: Row(
@@ -227,7 +227,7 @@ class _cagnotte_2State extends State<cagnotte_2> {
                                 Container(
                                   width:60,
                                   height: 60,
-                                  margin: EdgeInsets.all(5),
+                                  margin: const EdgeInsets.all(5),
                                   child: Stack(
                                       children: [
                                           Positioned(
@@ -236,7 +236,7 @@ class _cagnotte_2State extends State<cagnotte_2> {
                                               child: Container(
                                                   width: 60,
                                                   height: 60,
-                                                  decoration: ShapeDecoration(
+                                                  decoration: const ShapeDecoration(
                                                       color: Colors.white,
                                                       shape: OvalBorder(),
                                                       shadows: [
@@ -248,7 +248,7 @@ class _cagnotte_2State extends State<cagnotte_2> {
                                                           )
                                                       ],
                                                   ),
-                                                  child: IconButton(icon:Icon(Icons.person_outline_rounded),onPressed: (){
+                                                  child: IconButton(icon:const Icon(Icons.person_outline_rounded),onPressed: (){
                                                     setState(() {
                                                       st=i;
                                                     });
@@ -261,7 +261,7 @@ class _cagnotte_2State extends State<cagnotte_2> {
                                               child: Container(
                                                   width: 20,
                                                   height: 20,
-                                                  decoration: ShapeDecoration(
+                                                  decoration: const ShapeDecoration(
                                                       color: Color(0xFF8BE16D),
                                                       shape: OvalBorder(side: BorderSide(width: 1)),
                                                       shadows: [
@@ -300,7 +300,7 @@ class _cagnotte_2State extends State<cagnotte_2> {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       ),
-                      shadows: [
+                      shadows: const [
                         BoxShadow(
                             color: Color(0x3F000000),
                             blurRadius: 4,
@@ -311,7 +311,7 @@ class _cagnotte_2State extends State<cagnotte_2> {
                     ),
                     child:TextButton(
                       onPressed: (){},
-                      child: Text( 'Valider',
+                      child: const Text( 'Valider',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           color: Colors.white,

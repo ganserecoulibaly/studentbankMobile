@@ -1,11 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:studentbankmobile/Logement/Dark/DeclarerSinistre_dark.dart';
 import 'package:studentbankmobile/Logement/Dark/Demande_location_dark.dart';
 import 'package:studentbankmobile/Logement/Dark/Deposer_preavis_dark.dart';
 import 'package:studentbankmobile/Logement/Dark/demander_caution_dark.dart';
-import 'package:studentbankmobile/Logement/light/demander_caution.dart';
 
 
 class GestionLog_dark extends StatefulWidget {
@@ -20,10 +18,10 @@ class _GestionLog_darkState extends State<GestionLog_dark> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(250), 
+        preferredSize: const Size.fromHeight(250), 
         child:   Container(
               height: 300,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 boxShadow: [
                        BoxShadow(color: Colors.white,blurRadius: 3.0,spreadRadius: 4.2),
               ],
@@ -46,30 +44,6 @@ class _GestionLog_darkState extends State<GestionLog_dark> {
                     /// The color to paint behind th indicator.
                     indicatorBackgroundColor: Colors.white,
 
-                    /// The widgets to display in the [ImageSlideshow].
-                    /// Add the sample image file into the images folder
-                    // autoPlayInterval: 1, 
-                    children: [
-                    
-                    Center(
-                      child: 
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                      SizedBox(height: 10,),
-                      Align(
-                        alignment: Alignment.center,
-                        child: Text("Gestion des Logements",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
-                      
-                      ),
-                      Text("lorem ghdfshgvhsgsvss\nfhvsgvbfsfj\bnfbssbvfsvsvhn",style: TextStyle(color:Colors.white,fontSize: 13,fontWeight: FontWeight.normal),),
-                      SizedBox(height: 10,),
-                      ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white),onPressed: (){}, child: Text("voir plus",style: TextStyle(color: Colors.black),))
-                    ],),
-                    ),
-                    ],
-
                     /// Called whenever the page in the center of the viewport changes.
                     onPageChanged: (value) {
                       print('Page changed: $value');
@@ -81,15 +55,39 @@ class _GestionLog_darkState extends State<GestionLog_dark> {
 
                     /// Loops back to first slide.
                     isLoop: true,
+
+                    /// The widgets to display in the [ImageSlideshow].
+                    /// Add the sample image file into the images folder
+                    // autoPlayInterval: 1, 
+                    children: [
+                    
+                    Center(
+                      child: 
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                      const SizedBox(height: 10,),
+                      const Align(
+                        alignment: Alignment.center,
+                        child: Text("Gestion des Logements",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
+                      
+                      ),
+                      const Text("lorem ghdfshgvhsgsvss\nfhvsgvbfsfj\bnfbssbvfsvsvhn",style: TextStyle(color:Colors.white,fontSize: 13,fontWeight: FontWeight.normal),),
+                      const SizedBox(height: 10,),
+                      ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white),onPressed: (){}, child: const Text("voir plus",style: TextStyle(color: Colors.black),))
+                    ],),
+                    ),
+                    ],
                   ),
             ),
            ),
       body: Container(
-        margin: EdgeInsets.all(0),
-        padding: EdgeInsets.all(0),
+        margin: const EdgeInsets.all(0),
+        padding: const EdgeInsets.all(0),
         decoration: BoxDecoration(
           color: Colors.grey.shade900,
-          image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
+          image: const DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
         ),
         // width: double.infinity,
         // height: double.infinity,
@@ -97,9 +95,9 @@ class _GestionLog_darkState extends State<GestionLog_dark> {
           scrollDirection: Axis.vertical,
           children: [
            Container(
-              padding: EdgeInsets.all(30),
+              padding: const EdgeInsets.all(30),
               // alignment: Alignment.center,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 // boxShadow: BoxShadow(blurRadius: ),
               ),
               child: Center(
@@ -107,8 +105,8 @@ class _GestionLog_darkState extends State<GestionLog_dark> {
                   // alignment: Alignment.center,
               children: [
                     Container(
-                      margin: EdgeInsets.all(5),
-                      padding: EdgeInsets.all(10),
+                      margin: const EdgeInsets.all(5),
+                      padding: const EdgeInsets.all(10),
                       alignment: Alignment.center,
                       width:350,
                       decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((30))),
@@ -126,15 +124,15 @@ class _GestionLog_darkState extends State<GestionLog_dark> {
                       child:TextButton(
                          // style:ElevatedButton.styleFrom(primary: Colors.white),
                         onPressed: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>DeclarerSinistre_dark()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const DeclarerSinistre_dark()));
                       }, child:const Text("Déclarer un sinistre                       ",style: TextStyle(fontSize: 14,color: Colors.black),)),
                      )
                         ],
                       )  
                       ),
                    Container(
-                      margin: EdgeInsets.all(5),
-                      padding: EdgeInsets.all(10),
+                      margin: const EdgeInsets.all(5),
+                      padding: const EdgeInsets.all(10),
                       alignment: Alignment.center,
                       width:350,
                       decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((30))),
@@ -152,7 +150,7 @@ class _GestionLog_darkState extends State<GestionLog_dark> {
                       child:TextButton(
                         
                         // style:ElevatedButton.styleFrom(primary: Colors.white),
-                        onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>Demandelocation_dark()));
+                        onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>const Demandelocation_dark()));
                       }, child:const Text("Demander Location                      ",style: TextStyle(fontSize: 14,color: Colors.black),)),
                      )
                         ],
@@ -160,8 +158,8 @@ class _GestionLog_darkState extends State<GestionLog_dark> {
                       ),
                 // const SizedBox(height: 8,),
                 Container(
-                      margin: EdgeInsets.all(5),
-                      padding: EdgeInsets.all(10),
+                      margin: const EdgeInsets.all(5),
+                      padding: const EdgeInsets.all(10),
                       alignment: Alignment.center,
                       width:350,
                       decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((30))),
@@ -178,7 +176,7 @@ class _GestionLog_darkState extends State<GestionLog_dark> {
                      Container(
                       child:TextButton(
                         onPressed: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>DeposerPreavis_dark()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const DeposerPreavis_dark()));
                        }, child:const Text("Déposer un pré avis                       ",style: TextStyle(fontSize: 14,color: Colors.black),)),
                      )
                         ],
@@ -187,8 +185,8 @@ class _GestionLog_darkState extends State<GestionLog_dark> {
                 
                 // const SizedBox(height: 8,),
                 Container(
-                      margin: EdgeInsets.all(5),
-                      padding: EdgeInsets.all(10),
+                      margin: const EdgeInsets.all(5),
+                      padding: const EdgeInsets.all(10),
                       alignment: Alignment.center,
                       width:350,
                       decoration:  BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular((30))),
@@ -205,7 +203,7 @@ class _GestionLog_darkState extends State<GestionLog_dark> {
                      Container(
                       child:TextButton(
                         onPressed: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>DemanderCaution_dark()));
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>const DemanderCaution_dark()));
                       }, child:const Text("Demander une caution / Garantie",style: TextStyle(fontSize: 14,color: Colors.black),)),
                      )
                         ],

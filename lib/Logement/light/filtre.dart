@@ -42,7 +42,7 @@ class _FiltreState extends State<Filtre> {
     return Scaffold(
       
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(image: AssetImage("images/theme_blanc_rose_studentBanc.png"),fit: BoxFit.fill),
         ),
         child: ListView(
@@ -55,14 +55,14 @@ class _FiltreState extends State<Filtre> {
             Row(
               children: [
                 Container(
-                  margin: EdgeInsets.all(10),
+                  margin: const EdgeInsets.all(10),
                   child: Align(
                     
                     alignment: Alignment.topLeft,
                     child: Text("Filtres",style: TextStyle(color: Colors.grey.shade900,fontSize:30,fontWeight: FontWeight.bold),),
                   ),
                 ),
-                SizedBox(width: 200,),
+                const SizedBox(width: 200,),
                 Container(
                   child: Align(
                     alignment: Alignment.topRight,
@@ -72,14 +72,14 @@ class _FiltreState extends State<Filtre> {
               ],
             ),
             Container(
-              margin: EdgeInsets.only(left: 10),
+              margin: const EdgeInsets.only(left: 10),
               child: Column(
                 children: [
-                   Padding(padding: EdgeInsets.only(left:10,top: 20),
+                   Padding(padding: const EdgeInsets.only(left:10,top: 20),
                         child: Row(
                           children: [
                             Icon(CupertinoIcons.money_dollar_circle_fill,size: 25,color:Colors.grey.shade900)
-                            ,SizedBox(width: 5,),
+                            ,const SizedBox(width: 5,),
                             Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(30),
@@ -90,18 +90,18 @@ class _FiltreState extends State<Filtre> {
                             height: 50,
                             child: TextField(
                               controller: _prixmin,
-                              style: TextStyle(color: Colors.white),
+                              style: const TextStyle(color: Colors.white),
                               textAlign: TextAlign.center,
-                              decoration: InputDecoration(
+                              decoration: const InputDecoration(
                                 // border: OutlineInputBorder(),
                                 labelText: '  min',
                                 labelStyle: TextStyle(color: Colors.orange)
                               ),
                             ),)
                             ),
-                            SizedBox(width: 50),
-                            SizedBox(child:Text("et")),
-                            SizedBox(width: 50),
+                            const SizedBox(width: 50),
+                            const SizedBox(child:Text("et")),
+                            const SizedBox(width: 50),
                             Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(30),
@@ -112,9 +112,9 @@ class _FiltreState extends State<Filtre> {
                             height: 50,
                             child: TextField(
                               controller: _prixmax,
-                              style: TextStyle(color: Colors.white),
+                              style: const TextStyle(color: Colors.white),
                               textAlign: TextAlign.center,
-                              decoration: InputDecoration(
+                              decoration: const InputDecoration(
                                 // border: OutlineInputBorder(),
                                 labelText: '  max',
                                 labelStyle: TextStyle(color: Colors.orange)
@@ -123,11 +123,11 @@ class _FiltreState extends State<Filtre> {
                             ),
                             ],) 
                         ),
-                        Padding(padding: EdgeInsets.only(left:10,top: 20),
+                        Padding(padding: const EdgeInsets.only(left:10,top: 20),
                         child:Row(
                           children: [
                             Icon(CupertinoIcons.rectangle_fill_on_rectangle_fill,size:25,color:Colors.grey.shade900)
-                            ,SizedBox(width: 10,),
+                            ,const SizedBox(width: 10,),
                             Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(30),
@@ -137,9 +137,9 @@ class _FiltreState extends State<Filtre> {
                                 width: 100,
                                 child: TextField(
                                   controller: _place,
-                                  style: TextStyle(color: Colors.white),
+                                  style: const TextStyle(color: Colors.white),
                                   textAlign: TextAlign.center,
-                                  decoration: InputDecoration(
+                                  decoration: const InputDecoration(
                                     labelText: '  Place',
                                 labelStyle: TextStyle(color: Colors.orange)
                                   ),
@@ -148,11 +148,11 @@ class _FiltreState extends State<Filtre> {
                            
                             ],) 
                         ),
-                 Padding(padding: EdgeInsets.only(left:10,top: 20),
+                 Padding(padding: const EdgeInsets.only(left:10,top: 20),
                         child: Row(
                           children: [
                             Icon(Icons.place,size:25,color:Colors.grey.shade900),
-                            SizedBox(width: 10,),
+                            const SizedBox(width: 10,),
                             Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(30),
@@ -162,9 +162,9 @@ class _FiltreState extends State<Filtre> {
                                 width: 100,
                                 child: TextField(
                                   controller: _Location,
-                                  style: TextStyle(color: Colors.white),
+                                  style: const TextStyle(color: Colors.white),
                                   textAlign: TextAlign.center,
-                                  decoration: InputDecoration(
+                                  decoration: const InputDecoration(
                                 // border: OutlineInputBorder(),
                                 labelText: ' Location',
                                 labelStyle: TextStyle(color: Colors.orange)
@@ -173,11 +173,11 @@ class _FiltreState extends State<Filtre> {
                             ),
                            ],) 
                         ),
-                        Padding(padding: EdgeInsets.only(left:10,top: 20),
+                        Padding(padding: const EdgeInsets.only(left:10,top: 20),
                         child: Row(
                           children: [
                             Icon(Icons.screenshot_monitor,size:25,color:Colors.grey.shade900),
-                            SizedBox(width: 10,),
+                            const SizedBox(width: 10,),
                              Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(30),
@@ -187,9 +187,9 @@ class _FiltreState extends State<Filtre> {
                                 width: 100,
                                 child: TextField(
                                   controller: _Surface,
-                                  style: TextStyle(color: Colors.white),
+                                  style: const TextStyle(color: Colors.white),
                                   textAlign: TextAlign.center,
-                                  decoration: InputDecoration(
+                                  decoration: const InputDecoration(
                                 // border: OutlineInputBorder(),
                                 labelText: ' Surface',
                                 labelStyle: TextStyle(color: Colors.orange)
@@ -199,10 +199,10 @@ class _FiltreState extends State<Filtre> {
                             ],
                             ) 
                         ),
-                   Padding(padding: EdgeInsets.only(left:10,top: 20),
+                   Padding(padding: const EdgeInsets.only(left:10,top: 20),
                         child: Row(children: [
                           Icon(CupertinoIcons.cube_box_fill,size:25,color:Colors.grey.shade900),
-                          SizedBox(width: 10,),
+                          const SizedBox(width: 10,),
                           Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(30),
@@ -212,9 +212,9 @@ class _FiltreState extends State<Filtre> {
                                 width: 100,
                                 child: TextField(
                                   controller: _meuble,
-                                  style: TextStyle(color: Colors.white),
+                                  style: const TextStyle(color: Colors.white),
                                   textAlign: TextAlign.center,
-                                  decoration: InputDecoration(
+                                  decoration: const InputDecoration(
                                     labelText: ' meuble',
                                 labelStyle: TextStyle(color: Colors.orange)
                                   ),
@@ -228,12 +228,12 @@ class _FiltreState extends State<Filtre> {
             ),
              Center(
                child: Container(
-                margin: EdgeInsets.only(top:60,bottom: 5),
+                margin: const EdgeInsets.only(top:60,bottom: 5),
                   width: 100,
                 alignment: Alignment.bottomCenter,
                           decoration: BoxDecoration(color: Colors.grey[900],borderRadius: BorderRadius.circular(30)),
                           child: Center(
-                             child: TextButton(child: Text("Continuer",style: TextStyle(color: Colors.orange),),
+                             child: TextButton(child: const Text("Continuer",style: TextStyle(color: Colors.orange),),
                              onPressed: (){
                               Navigator.pop(context);
                              },

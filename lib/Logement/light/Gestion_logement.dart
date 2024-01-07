@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:studentbankmobile/Logement/light/DeclarerSinistre.dart';
@@ -18,14 +17,14 @@ class _GestionLogState extends State<GestionLog> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(preferredSize: Size.fromHeight(300), child:   Container(
+      appBar: PreferredSize(preferredSize: const Size.fromHeight(300), child:   Container(
               height: 300,
               decoration: BoxDecoration(
                 boxShadow: [
                        BoxShadow(color: Colors.orange.shade200,blurRadius: 3.0,spreadRadius: 4.2),
               ],
-                image: DecorationImage(image: AssetImage('images/maisonNight.jpg'),fit: BoxFit.cover),
-                borderRadius: BorderRadius.only(bottomRight: Radius.circular(30),bottomLeft: Radius.circular(30))
+                image: const DecorationImage(image: AssetImage('images/maisonNight.jpg'),fit: BoxFit.cover),
+                borderRadius: const BorderRadius.only(bottomRight: Radius.circular(30),bottomLeft: Radius.circular(30))
               ),
               child: ImageSlideshow(
                     /// Width of the [ImageSlideshow].
@@ -43,30 +42,6 @@ class _GestionLogState extends State<GestionLog> {
                     /// The color to paint behind th indicator.
                     indicatorBackgroundColor: Colors.white,
 
-                    /// The widgets to display in the [ImageSlideshow].
-                    /// Add the sample image file into the images folder
-                    // autoPlayInterval: 1, 
-                    children: [
-                    
-                    Center(
-                      child: 
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                      SizedBox(height: 10,),
-                      Align(
-                        alignment: Alignment.center,
-                        child: Text("Gestion des Logements",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
-                      
-                      ),
-                      Text("lorem ghdfshgvhsgsvss\nfhvsgvbfsfj\bnfbssbvfsvsvhn",style: TextStyle(color:Colors.white,fontSize: 13,fontWeight: FontWeight.normal),),
-                      SizedBox(height: 10,),
-                      ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white),onPressed: (){}, child: Text("voir plus",style: TextStyle(color: Colors.black),))
-                    ],),
-                    ),
-                    ],
-
                     /// Called whenever the page in the center of the viewport changes.
                     onPageChanged: (value) {
                       print('Page changed: $value');
@@ -78,13 +53,37 @@ class _GestionLogState extends State<GestionLog> {
 
                     /// Loops back to first slide.
                     isLoop: true,
+
+                    /// The widgets to display in the [ImageSlideshow].
+                    /// Add the sample image file into the images folder
+                    // autoPlayInterval: 1, 
+                    children: [
+                    
+                    Center(
+                      child: 
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                      const SizedBox(height: 10,),
+                      const Align(
+                        alignment: Alignment.center,
+                        child: Text("Gestion des Logements",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
+                      
+                      ),
+                      const Text("lorem ghdfshgvhsgsvss\nfhvsgvbfsfj\bnfbssbvfsvsvhn",style: TextStyle(color:Colors.white,fontSize: 13,fontWeight: FontWeight.normal),),
+                      const SizedBox(height: 10,),
+                      ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white),onPressed: (){}, child: const Text("voir plus",style: TextStyle(color: Colors.black),))
+                    ],),
+                    ),
+                    ],
                   ),
             ),
             ),
       body: Container(
-        margin: EdgeInsets.all(0),
-        padding: EdgeInsets.all(0),
-        decoration: BoxDecoration(
+        margin: const EdgeInsets.all(0),
+        padding: const EdgeInsets.all(0),
+        decoration: const BoxDecoration(
           color: Colors.white,
           image: DecorationImage(image: AssetImage('images/LogoNlogement.png'),fit: BoxFit.fill)
         ),
@@ -94,9 +93,9 @@ class _GestionLogState extends State<GestionLog> {
           scrollDirection: Axis.vertical,
           children: [
           Container(
-              padding: EdgeInsets.all(30),
+              padding: const EdgeInsets.all(30),
               // alignment: Alignment.center,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 // boxShadow: BoxShadow(blurRadius: ),
               ),
               child: Center(
@@ -105,11 +104,11 @@ class _GestionLogState extends State<GestionLog> {
               children: [
                       // const SizedBox(height: 8,),
                Container(
-                      margin: EdgeInsets.all(5),
-                      padding: EdgeInsets.all(10),
+                      margin: const EdgeInsets.all(5),
+                      padding: const EdgeInsets.all(10),
                       alignment: Alignment.center,
                       width:350,
-                      decoration:  BoxDecoration(color: Colors.white,boxShadow: [BoxShadow(color:Colors.black,blurRadius: 3,)],borderRadius: BorderRadius.circular((30))),
+                      decoration:  BoxDecoration(color: Colors.white,boxShadow: const [BoxShadow(color:Colors.black,blurRadius: 3,)],borderRadius: BorderRadius.circular((30))),
                       child:Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
@@ -123,7 +122,7 @@ class _GestionLogState extends State<GestionLog> {
                      Container(
                       child:TextButton(
                         // style:ElevatedButton.styleFrom(primary: Colors.white),
-                        onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>Demandelocation()));
+                        onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>const Demandelocation()));
                       }, child:const Text("Demande de location                 ",style: TextStyle(fontSize: 14,color: Colors.black),)),
                      )
                         ],
@@ -131,11 +130,11 @@ class _GestionLogState extends State<GestionLog> {
                       ),
                      // const SizedBox(height: 8,),
                Container(
-                      margin: EdgeInsets.all(5),
-                      padding: EdgeInsets.all(10),
+                      margin: const EdgeInsets.all(5),
+                      padding: const EdgeInsets.all(10),
                       alignment: Alignment.center,
                       width:350,
-                      decoration:  BoxDecoration(color: Colors.white,boxShadow: [BoxShadow(color:Colors.black,blurRadius: 3,)],borderRadius: BorderRadius.circular((30))),
+                      decoration:  BoxDecoration(color: Colors.white,boxShadow: const [BoxShadow(color:Colors.black,blurRadius: 3,)],borderRadius: BorderRadius.circular((30))),
                       child:Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
@@ -150,7 +149,7 @@ class _GestionLogState extends State<GestionLog> {
                       child:TextButton(
                        
                         // style:ElevatedButton.styleFrom(primary: Colors.white),
-                        onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>DeclarerSinistre()));
+                        onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>const DeclarerSinistre()));
                       }, child:const Text("Déposer un sinistre                    ",style: TextStyle(fontSize: 14,color: Colors.black),)),
                      )
                         ],
@@ -159,11 +158,11 @@ class _GestionLogState extends State<GestionLog> {
                 // const SizedBox(height: 8,),
                  // const SizedBox(height: 8,),
                Container(
-                      margin: EdgeInsets.all(5),
-                      padding: EdgeInsets.all(10),
+                      margin: const EdgeInsets.all(5),
+                      padding: const EdgeInsets.all(10),
                       alignment: Alignment.center,
                       width:350,
-                      decoration:  BoxDecoration(color: Colors.white,boxShadow: [BoxShadow(color:Colors.black,blurRadius: 3,)],borderRadius: BorderRadius.circular((30))),
+                      decoration:  BoxDecoration(color: Colors.white,boxShadow: const [BoxShadow(color:Colors.black,blurRadius: 3,)],borderRadius: BorderRadius.circular((30))),
                       child:Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
@@ -177,7 +176,7 @@ class _GestionLogState extends State<GestionLog> {
                      Container(
                       child:TextButton(
                         onPressed: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>DeposerPreavis()));
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>const DeposerPreavis()));
                         // showDialog(context: context, builder: (context)=>Dialog(child: Text("service indisponible pour le moment"),));
                       }, child:const Text("Déposer un pré avis                     ",style: TextStyle(fontSize: 14,color: Colors.black),)),
                      )
@@ -188,11 +187,11 @@ class _GestionLogState extends State<GestionLog> {
                 // const SizedBox(height: 8,),
                    // const SizedBox(height: 8,),
                Container(
-                      margin: EdgeInsets.all(5),
-                      padding: EdgeInsets.all(10),
+                      margin: const EdgeInsets.all(5),
+                      padding: const EdgeInsets.all(10),
                       alignment: Alignment.center,
                       width:350,
-                      decoration:  BoxDecoration(color: Colors.white,boxShadow: [BoxShadow(color:Colors.black,blurRadius: 3,)],borderRadius: BorderRadius.circular((30))),
+                      decoration:  BoxDecoration(color: Colors.white,boxShadow: const [BoxShadow(color:Colors.black,blurRadius: 3,)],borderRadius: BorderRadius.circular((30))),
                       child:Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
@@ -206,7 +205,7 @@ class _GestionLogState extends State<GestionLog> {
                      Container(
                       child:TextButton(
                        onPressed: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>DemanderCaution()));
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>const DemanderCaution()));
                       }, child:const Text("Demander une caution Garantie",style: TextStyle(fontSize: 14,color: Colors.black),)),
                      )
                         ],

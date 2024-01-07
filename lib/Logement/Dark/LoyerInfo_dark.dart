@@ -14,19 +14,19 @@ class loyerinfo_dark extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(preferredSize: Size.fromHeight(300), child:  Container(
+      appBar: PreferredSize(preferredSize: const Size.fromHeight(300), child:  Container(
                   height: MediaQuery.of(context).size.height/2,
                   width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
                     color: Colors.grey.shade900,
-                    image: DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
+                    image: const DecorationImage(image: AssetImage('images/Logo N.png'),fit: BoxFit.contain)
                   ),
                   child: ListView(
                     scrollDirection: Axis.vertical,
                     children: [
                        Container(
                         height: 300,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       boxShadow: [
                         BoxShadow(color: Colors.white,blurRadius: 3.0,spreadRadius: 5.2),
                       ],
@@ -41,29 +41,29 @@ class loyerinfo_dark extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                            SizedBox(height: 10,),
+                            const SizedBox(height: 10,),
                               Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                            Align(
+                            const Align(
                               alignment: Alignment.centerLeft,
                               child: Text("ANNONCES",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
                             
                             ),
                             Align(
                             alignment: Alignment.centerRight,
-                              child: IconButton(onPressed: (){},icon: Icon(Icons.menu),color: Colors.white,),
+                              child: IconButton(onPressed: (){},icon: const Icon(Icons.menu),color: Colors.white,),
                               ),
                               ],
                               
                             ),
                             Align(
                             alignment: Alignment.centerRight,
-                              child: IconButton(onPressed: (){},icon: Icon(Icons.favorite_border),color: Colors.white,),
+                              child: IconButton(onPressed: (){},icon: const Icon(Icons.favorite_border),color: Colors.white,),
                               ),
-                            Text("lorem ghdfshgvhsgsvss\nfhvsgvbfsfj\bnfbssbvfsvsvhn",style: TextStyle(color:Colors.white,fontSize: 13,fontWeight: FontWeight.normal),),
-                            SizedBox(height: 10,),
-                            ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white),onPressed: (){}, child: Text("voir plus",style: TextStyle(color: Colors.black),))
+                            const Text("lorem ghdfshgvhsgsvss\nfhvsgvbfsfj\bnfbssbvfsvsvhn",style: TextStyle(color:Colors.white,fontSize: 13,fontWeight: FontWeight.normal),),
+                            const SizedBox(height: 10,),
+                            ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white),onPressed: (){}, child: const Text("voir plus",style: TextStyle(color: Colors.black),))
                           ],),
                           ),
                         
@@ -94,7 +94,7 @@ class loyerinfo_dark extends StatelessWidget {
                        Center(
                    child: Container(
                           alignment: Alignment.center,
-                          margin: EdgeInsets.only(left:15,right:15),
+                          margin: const EdgeInsets.only(left:15,right:15),
                           // padding: EdgeInsets.all(20),
                           width: double.infinity,
                           height: 300,
@@ -107,7 +107,7 @@ class loyerinfo_dark extends StatelessWidget {
                         ),
                  ),
                   // SizedBox(height: 10),
-                Column(
+                const Column(
                   // crossAxisAlignment:CrossAxisAlignment.center
                   children: [
 
@@ -148,8 +148,8 @@ class loyerinfo_dark extends StatelessWidget {
                 ]),
                  Container(
                   
-                    margin: EdgeInsets.only(left:30,top:10),
-                    child:Column(
+                    margin: const EdgeInsets.only(left:30,top:10),
+                    child:const Column(
                       // mainAxisAlignment: MainAxisAlignment.center,
                       // crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
@@ -245,7 +245,7 @@ class loyerinfo_dark extends StatelessWidget {
                           alignment: Alignment.center,
                           // margin: EdgeInsets.all(3),
                           // padding: EdgeInsets.all(20),
-                          margin: EdgeInsets.only(left:15,right:15),
+                          margin: const EdgeInsets.only(left:15,right:15),
                           // padding: EdgeInsets.all(20),
                           width: double.infinity,
                           height: 300,
@@ -266,8 +266,8 @@ class loyerinfo_dark extends StatelessWidget {
                 // ]),
                  Container(
                   
-                    margin: EdgeInsets.only(left:30,top:10),
-                    child:Column(
+                    margin: const EdgeInsets.only(left:30,top:10),
+                    child:const Column(
                       // mainAxisAlignment: MainAxisAlignment.center,
                       // crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
@@ -364,7 +364,7 @@ class loyerinfo_dark extends StatelessWidget {
                           alignment: Alignment.center,
                           // margin: EdgeInsets.all(3),
                           // padding: EdgeInsets.all(20),
-                          margin: EdgeInsets.only(left:15,right:15),
+                          margin: const EdgeInsets.only(left:15,right:15),
                           // padding: EdgeInsets.all(20),
                           width: double.infinity,
                           height: 300,
@@ -385,8 +385,8 @@ class loyerinfo_dark extends StatelessWidget {
                 // ]),
                  Container(
                   
-                    margin: EdgeInsets.only(left:30,top:10),
-                    child:Column(
+                    margin: const EdgeInsets.only(left:30,top:10),
+                    child:const Column(
                       // mainAxisAlignment: MainAxisAlignment.center,
                       // crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
@@ -482,7 +482,7 @@ class loyerinfo_dark extends StatelessWidget {
                           alignment: Alignment.center,
                           // margin: EdgeInsets.all(3),
                           // padding: EdgeInsets.all(20),
-                          margin: EdgeInsets.only(left:15,right:15),
+                          margin: const EdgeInsets.only(left:15,right:15),
                           // padding: EdgeInsets.all(20),
                           width: double.infinity,
                           height: 300,
@@ -503,8 +503,8 @@ class loyerinfo_dark extends StatelessWidget {
                 // ]),
                  Container(
                   
-                    margin: EdgeInsets.only(left:30,top:10),
-                    child:Column(
+                    margin: const EdgeInsets.only(left:30,top:10),
+                    child:const Column(
                       // mainAxisAlignment: MainAxisAlignment.center,
                       // crossAxisAlignment: CrossAxisAlignment.center,
                       children: [

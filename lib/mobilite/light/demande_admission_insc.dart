@@ -12,21 +12,21 @@ class demandeAdmission_ins extends StatefulWidget {
 
 class _demandeAdmission_insState extends State<demandeAdmission_ins> {
   var univ=["universite de lyon","universite de troyes","universite de lyon"];
-  TextEditingController _search=TextEditingController();
+  final TextEditingController _search=TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(image: AssetImage("images/theme_blanc_rose_studentBanc.png"),fit: BoxFit.fill)
         ),
         child:   ListView(
           children: [
             Container(
-                margin: EdgeInsets.all(30),
+                margin: const EdgeInsets.all(30),
                 
                 decoration:BoxDecoration(borderRadius: BorderRadius.circular(20),
-                image: DecorationImage(image:  AssetImage("images/mobilite_3.jpg"),fit: BoxFit.fill,scale: 4)),
+                image: const DecorationImage(image:  AssetImage("images/mobilite_3.jpg"),fit: BoxFit.fill,scale: 4)),
                 // child: Image.asset("images/mobilite.jpeg",fit: BoxFit.contain,),
                 height: 200,
                 width: double.infinity,
@@ -37,14 +37,7 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Container(
-                            margin: EdgeInsets.all(20),
-                            child: LinearProgressIndicator(
-                            color: Colors.pink.shade100,
-                            backgroundColor: Colors.blueGrey,
-                            value: 2/3,
-                            borderRadius: BorderRadius.circular(30),
-                            minHeight: 10,
-                            ),
+                            margin: const EdgeInsets.all(20),
                             decoration: BoxDecoration(
                               boxShadow: [
                                 BoxShadow(color: Colors.grey.shade900),
@@ -53,11 +46,18 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                                 BoxShadow(color: Colors.grey.shade900),
                               ]
                             ),
+                            child: LinearProgressIndicator(
+                            color: Colors.pink.shade100,
+                            backgroundColor: Colors.blueGrey,
+                            value: 2/3,
+                            borderRadius: BorderRadius.circular(30),
+                            minHeight: 10,
+                            ),
                           ),
-                          SizedBox(height: 30,),
-                          Text("Demande d'admission",style: TextStyle(color:Colors.pink, fontWeight: FontWeight.bold,fontSize: 20),)
+                          const SizedBox(height: 30,),
+                          const Text("Demande d'admission",style: TextStyle(color:Colors.pink, fontWeight: FontWeight.bold,fontSize: 20),)
                         ,
-                          Row(
+                          const Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Column(
@@ -88,23 +88,23 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                         decoration: BoxDecoration(color: Colors.grey.shade900,
                         borderRadius: BorderRadius.circular(20)
                         ),
-                        margin: EdgeInsets.all(10),
+                        margin: const EdgeInsets.all(10),
                         height: 300,
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Column(
                             children: [
-                              Align(
+                              const Align(
                                 alignment: Alignment.topLeft,
                                 child: Text("Description",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontStyle: FontStyle.normal),),
                               ),
-                               Center(
+                               const Center(
                                 // alignment: Alignment.center,
                                   child: Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",style: TextStyle(color: Colors.white,fontSize: 14),),
                               ),
-                              SizedBox(height: 10,),
+                              const SizedBox(height: 10,),
                               Container(
-                                margin: EdgeInsets.all(10),
+                                margin: const EdgeInsets.all(10),
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
@@ -117,10 +117,10 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                                       ),
                                       width: 150,
                                       child: TextButton(onPressed: (){
-                                        Navigator.push(context,MaterialPageRoute(builder: (context)=>demande_admission()));
-                                      },child: Text("inscription",style: TextStyle(color: Colors.white,fontSize:14),),),
+                                        Navigator.push(context,MaterialPageRoute(builder: (context)=>const demande_admission()));
+                                      },child: const Text("inscription",style: TextStyle(color: Colors.white,fontSize:14),),),
                                     ),
-                                    SizedBox(width: 15,),
+                                    const SizedBox(width: 15,),
                                       Container(
                                       decoration:BoxDecoration(
                                         borderRadius: BorderRadius.circular(30),
@@ -129,7 +129,7 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                                       ),
                                       width: 150,
                                       child: TextButton(onPressed: ()=>FlutterPhoneDirectCaller.callNumber("338553682")
-                                      ,child: Text("contactez-nous",style: TextStyle(color: Colors.white,fontSize: 14),),),
+                                      ,child: const Text("contactez-nous",style: TextStyle(color: Colors.white,fontSize: 14),),),
                                     )
                                   ],
                                 ),
@@ -148,7 +148,7 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                     scrollDirection: Axis.horizontal,
                     child: Center(
                       child: Container(
-                        margin: EdgeInsets.all(10),
+                        margin: const EdgeInsets.all(10),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
@@ -157,21 +157,21 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                               height: 40,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [BoxShadow(blurRadius: 3.0,spreadRadius: 2),],
+                                boxShadow: const [BoxShadow(blurRadius: 3.0,spreadRadius: 2),],
                                 borderRadius: BorderRadius.circular(30)
                                 ),
-                              child: Row(
+                              child: const Row(
                                 children: [Icon(Icons.place,size:25,color:Colors.pinkAccent),SizedBox(width: 10,),Text("Lile",style:TextStyle(color:Colors.pinkAccent,fontSize: 12))],)),
-                          SizedBox(width: 30,),
+                          const SizedBox(width: 30,),
                             Container(
                                width: 150,
                                height: 40,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [BoxShadow(blurRadius: 3.0,spreadRadius: 2),],
+                                boxShadow: const [BoxShadow(blurRadius: 3.0,spreadRadius: 2),],
                                 borderRadius: BorderRadius.circular(30)
                                 ),
-                              child: Row(
+                              child: const Row(
                                 children: [Icon(Icons.screenshot_monitor,size:25,color:Colors.pinkAccent),SizedBox(width: 10,),Text("300m2        ",style:TextStyle(color:Colors.pinkAccent,fontSize: 12))],)),
                           ],
                         ),
@@ -182,7 +182,7 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                     scrollDirection: Axis.horizontal,
                     child: Center(
                       child: Container(
-                        margin: EdgeInsets.all(10),
+                        margin: const EdgeInsets.all(10),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
@@ -191,21 +191,21 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                                height: 40,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [BoxShadow(blurRadius: 3.0,spreadRadius: 2),],
+                                boxShadow: const [BoxShadow(blurRadius: 3.0,spreadRadius: 2),],
                                 borderRadius: BorderRadius.circular(30)
                                 ),
-                              child: Row(
+                              child: const Row(
                                 children: [Icon(CupertinoIcons.cube_box_fill,size:25,color:Colors.pinkAccent),SizedBox(width: 10,),Text("20 ans d'existance   ",style:TextStyle(color:Colors.pinkAccent,fontSize: 12))],)),
-                             SizedBox(width: 30,),
+                             const SizedBox(width: 30,),
                             Container(
                               width: 150,
                                height: 40,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [BoxShadow(blurRadius: 3.0,spreadRadius: 2),],
+                                boxShadow: const [BoxShadow(blurRadius: 3.0,spreadRadius: 2),],
                                 borderRadius: BorderRadius.circular(30)
                                 ),
-                              child: Row(
+                              child: const Row(
                                 children: [Icon(CupertinoIcons.person_2,size:25,color:Colors.pinkAccent),SizedBox(width: 10,),Text("+5000 etudiants",style:TextStyle(color:Colors.pinkAccent,fontSize: 12))],)),
                           ],
                         ),
@@ -216,7 +216,7 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                     scrollDirection: Axis.horizontal,
                     child: Center(
                       child: Container(
-                        margin: EdgeInsets.all(10),
+                        margin: const EdgeInsets.all(10),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
@@ -225,28 +225,28 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                                height: 40,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [BoxShadow(blurRadius: 3.0,spreadRadius: 2),],
+                                boxShadow: const [BoxShadow(blurRadius: 3.0,spreadRadius: 2),],
                                 borderRadius: BorderRadius.circular(30)
                                 ),
-                              child: Row(
+                              child: const Row(
                                 children: [Icon(CupertinoIcons.cube_box_fill,size:25,color:Colors.pinkAccent),SizedBox(width: 10,),Text("programme acredite   ",style:TextStyle(color:Colors.pinkAccent,fontSize: 12))],)),
-                             SizedBox(width: 30,),
+                             const SizedBox(width: 30,),
                              Container(
                               //  width: 150,
                                height: 40,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [BoxShadow(blurRadius: 3.0,spreadRadius: 2),],
+                                boxShadow: const [BoxShadow(blurRadius: 3.0,spreadRadius: 2),],
                                 borderRadius: BorderRadius.circular(30)
                                 ),
-                              child: Row(
+                              child: const Row(
                                 children: [Icon(CupertinoIcons.person_2,size:25,color:Colors.pinkAccent),SizedBox(width: 10,),Text("+1000 etudiants etrangers",style:TextStyle(color:Colors.pinkAccent,fontSize: 12))],)),
                           ],
                         ),
                       ),
                     ),
                   ),
-                  Align(
+                  const Align(
                     alignment: Alignment.topLeft,
                     child: Text("Temoignages",style: TextStyle(color: Colors.pink,fontWeight: FontWeight.bold,fontSize: 28,),)
                     ),
@@ -257,17 +257,17 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           Container(
-                            margin: EdgeInsets.all(20),
+                            margin: const EdgeInsets.all(20),
                             width: 170,
                             height: 100,
                             decoration: BoxDecoration(
                               color: Colors.white,
-                              boxShadow: [BoxShadow(blurRadius: 3.0,spreadRadius: 2),],
+                              boxShadow: const [BoxShadow(blurRadius: 3.0,spreadRadius: 2),],
                               borderRadius: BorderRadius.circular(20),
                             ),
                             child: Column(
                               children: [
-                                Row(
+                                const Row(
                                   // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                   children: [
                                     Align(
@@ -277,7 +277,7 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                                     Text("Alfred Sitou",style: TextStyle(color: Colors.pink),)
                                   ],
                                 ),
-                                Text("lorem hdbjbshdb hbjfbjs fdsj"),
+                                const Text("lorem hdbjbshdb hbjfbjs fdsj"),
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
@@ -288,8 +288,8 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                                       allowHalfRating: true,
                                       itemCount: 5,
                                       itemSize: 12,
-                                      itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
-                                      itemBuilder: (context, _) => Icon(
+                                      itemPadding: const EdgeInsets.symmetric(horizontal: 4.0),
+                                      itemBuilder: (context, _) => const Icon(
                                         Icons.star,
                                         color: Colors.amber,
                                       ),
@@ -305,7 +305,7 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                                         ),
                                         height: 30,
                                         width: 60,
-                                        child: TextButton(onPressed: (){},child: Text("contacter",style: TextStyle(color: Colors.white,fontSize: 10),),),
+                                        child: TextButton(onPressed: (){},child: const Text("contacter",style: TextStyle(color: Colors.white,fontSize: 10),),),
                                     )
                                   ],
                                 )
@@ -313,17 +313,17 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                             )
                           ),
                            Container(
-                            margin: EdgeInsets.all(20),
+                            margin: const EdgeInsets.all(20),
                             width: 170,
                             height: 100,
                             decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(20),
-                              boxShadow: [BoxShadow(blurRadius: 3.0,spreadRadius: 2),],
+                              boxShadow: const [BoxShadow(blurRadius: 3.0,spreadRadius: 2),],
                             ),
                             child: Column(
                               children: [
-                                Row(
+                                const Row(
                                   // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                   children: [
                                     Align(
@@ -333,7 +333,7 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                                     Text("Alfred Sitou",style: TextStyle(color: Colors.pink),)
                                   ],
                                 ),
-                                Text("lorem hdbjbshdb hbjfbjs fdsj"),
+                                const Text("lorem hdbjbshdb hbjfbjs fdsj"),
                       
                                 Row(
                                   children: [
@@ -344,8 +344,8 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                                       allowHalfRating: true,
                                       itemCount: 5,
                                       itemSize: 12,
-                                      itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
-                                      itemBuilder: (context, _) => Icon(
+                                      itemPadding: const EdgeInsets.symmetric(horizontal: 4.0),
+                                      itemBuilder: (context, _) => const Icon(
                                         Icons.star,
                                         color: Colors.amber,
                                       ),
@@ -361,7 +361,7 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                                           ),
                                           height: 30,
                                           width: 60,
-                                          child: TextButton(onPressed: (){},child: Text("contacter",style: TextStyle(color: Colors.white,fontSize: 10),),),
+                                          child: TextButton(onPressed: (){},child: const Text("contacter",style: TextStyle(color: Colors.white,fontSize: 10),),),
                                         )
                                   ],
                                 )
@@ -375,11 +375,11 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                 ],
                 ),
                 Container(
-                  margin: EdgeInsets.only(left:10,top:10,bottom: 2),
-                  child: Text("Contact",style: TextStyle(color: Colors.pink,fontSize: 28,fontWeight: FontWeight.bold),),
+                  margin: const EdgeInsets.only(left:10,top:10,bottom: 2),
+                  child: const Text("Contact",style: TextStyle(color: Colors.pink,fontSize: 28,fontWeight: FontWeight.bold),),
                 ),
                 Container(
-                  margin: EdgeInsets.only(left: 10),
+                  margin: const EdgeInsets.only(left: 10),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -391,7 +391,7 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                 Align(
                   alignment: Alignment.topLeft,
                   child: Container(
-                  margin: EdgeInsets.all(10),
+                  margin: const EdgeInsets.all(10),
                   decoration:BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     // gradient: LinearGradient(colors: [const Color.fromARGB(179, 212, 44, 44),Colors.pinkAccent])
@@ -399,11 +399,11 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                   ),
                   // height: 60,
                   width: 250,
-                  child: TextButton(onPressed: (){},child: Text("contacter l'Université",style: TextStyle(color: Colors.white,fontSize: 18),),),
+                  child: TextButton(onPressed: (){},child: const Text("contacter l'Université",style: TextStyle(color: Colors.white,fontSize: 18),),),
                               ),
                 ),
                 Container(
-                  child: Text("Vous pourriez aussi aimer",style: TextStyle(color: Colors.pink,fontSize: 20,fontWeight: FontWeight.bold),),
+                  child: const Text("Vous pourriez aussi aimer",style: TextStyle(color: Colors.pink,fontSize: 20,fontWeight: FontWeight.bold),),
                 ),
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
@@ -413,7 +413,7 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                         children: [       
                       for(int i=0;i<3;i++)
                           Container(
-                                margin: EdgeInsets.all(5),
+                                margin: const EdgeInsets.all(5),
                                 width: 170,
                                 height: 140,
                                 decoration: BoxDecoration(
@@ -424,16 +424,16 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                                   
                                   children: [
                                     Container(
-                                      margin: EdgeInsets.all(2),
+                                      margin: const EdgeInsets.all(2),
                                       width: double.infinity,
                                       height: 30,
-                                      child: Image(image: AssetImage("images/img (6).jpg",),fit: BoxFit.fill,),),
+                                      child: const Image(image: AssetImage("images/img (6).jpg",),fit: BoxFit.fill,),),
                                       Container(
-                                        margin: EdgeInsets.only(left:5),
-                                        child: Text("lorem hdbjbshdb\n hbjfbjs fdsj")),
+                                        margin: const EdgeInsets.only(left:5),
+                                        child: const Text("lorem hdbjbshdb\n hbjfbjs fdsj")),
                                       Container(
-                                        margin: EdgeInsets.all(5),
-                                        child: Text(univ[i],style: TextStyle(fontSize: 14,color: Colors.pink),)),
+                                        margin: const EdgeInsets.all(5),
+                                        child: Text(univ[i],style: const TextStyle(fontSize: 14,color: Colors.pink),)),
                                     Row(
                                       children: [
                                         RatingBar.builder(
@@ -443,8 +443,8 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                                           allowHalfRating: true,
                                           itemCount: 5,
                                           itemSize: 12,
-                                          itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
-                                          itemBuilder: (context, _) => Icon(
+                                          itemPadding: const EdgeInsets.symmetric(horizontal: 4.0),
+                                          itemBuilder: (context, _) => const Icon(
                                             Icons.star,
                                             color: Colors.amber,
                                           ),
@@ -460,7 +460,7 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                                               ),
                                               height: 30,
                                               width: 60,
-                                              child: TextButton(onPressed: (){},child: Text("contacter",style: TextStyle(color: Colors.white,fontSize: 10),),),
+                                              child: TextButton(onPressed: (){},child: const Text("contacter",style: TextStyle(color: Colors.white,fontSize: 10),),),
                                             )
                                       ],
                                     )
@@ -471,7 +471,7 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                       ),
                   ),
                   Container(
-                    margin: EdgeInsets.all(20),
+                    margin: const EdgeInsets.all(20),
                     height: 250,
                     width: double.infinity,
                     decoration: BoxDecoration(color: Colors.pink,
@@ -480,18 +480,18 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                       
                       children: [
                         Container(
-                          margin: EdgeInsets.all(20),
-                          child: Text("My Buddies",style: TextStyle(fontSize: 20,color: Colors.white),),
+                          margin: const EdgeInsets.all(20),
+                          child: const Text("My Buddies",style: TextStyle(fontSize: 20,color: Colors.white),),
                         ),
                         Container(
-                          margin: EdgeInsets.all(10),
+                          margin: const EdgeInsets.all(10),
                           height: 30,
                           width: 200,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(30),
                             color: Colors.white70,
                           ),
-                          child: Row(
+                          child: const Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               Icon(Icons.search,color: Colors.black,size: 20,),
@@ -501,15 +501,15 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                           ),
                         ),
                         Container(
-                          margin: EdgeInsets.all(20),
-                          child: Text("Adrien",style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold,color: Colors.white),),
+                          margin: const EdgeInsets.all(20),
+                          child: const Text("Adrien",style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold,color: Colors.white),),
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             for(int i=0;i<5;i++)
                             Container(
-                            margin: EdgeInsets.only(left: 10),
+                            margin: const EdgeInsets.only(left: 10),
                             height: 40,
                             width: 40,
                             decoration: BoxDecoration(
@@ -526,7 +526,7 @@ class _demandeAdmission_insState extends State<demandeAdmission_ins> {
                                     decoration: BoxDecoration(color: Colors.green[300],borderRadius: BorderRadius.circular(30)),
                                   ),
                                 ),
-                                Center(child: Icon(CupertinoIcons.person)),
+                                const Center(child: Icon(CupertinoIcons.person)),
                               ],
                             ))
                           ],
