@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:studentbankmobile/banque_sow/parametre.dart';
-import 'package:studentbankmobile/banque_sow/dark/parametre_dark.dart';
-import 'package:studentbankmobile/banque_sow/profile.dart';
-import 'package:studentbankmobile/banque_sow/dark/profile_dark.dart';
+import 'package:studentbankmobile/parametre.dart';
+import 'package:studentbankmobile/banque/dark/parametre_dark.dart';
+import 'package:studentbankmobile/banque/profile.dart';
+import 'package:studentbankmobile/banque/dark/profile_dark.dart';
 import 'package:studentbankmobile/map/map.dart';
 import 'package:studentbankmobile/Logement/logement.dart';
-import 'package:studentbankmobile/banque_sow/cagnotte_1.dart';
-import 'package:studentbankmobile/banque_sow/dark/cagnotte_1_dark.dart';
-import 'package:studentbankmobile/banque_sow/compte_virement_1.dart';
-import 'package:studentbankmobile/banque_sow/dark/compte_virement_1_dark.dart';
-import 'package:studentbankmobile/banque_sow/dark/compte_virement_2_dark.dart';
-import 'package:studentbankmobile/banque_sow/mes_depanages.dart';
-import 'package:studentbankmobile/banque_sow/dark/mes_depanages_dark.dart';
-import 'package:studentbankmobile/banque_sow/participe_cagnotte.dart';
-import 'package:studentbankmobile/banque_sow/dark/participe_cagnotte_dark.dart';
-import 'package:studentbankmobile/banque_sow/virement_mot_de_passe.dart';
-import 'package:studentbankmobile/banque_sow/dark/virement_mot_de_passe_dark.dart';
+import 'package:studentbankmobile/banque/cagnotte_1.dart';
+import 'package:studentbankmobile/banque/dark/cagnotte_1_dark.dart';
+import 'package:studentbankmobile/banque/compte_virement_1.dart';
+import 'package:studentbankmobile/banque/dark/compte_virement_1_dark.dart';
+import 'package:studentbankmobile/banque/dark/compte_virement_2_dark.dart';
+import 'package:studentbankmobile/banque/mes_depanages.dart';
+import 'package:studentbankmobile/banque/dark/mes_depanages_dark.dart';
+import 'package:studentbankmobile/banque/participe_cagnotte.dart';
+import 'package:studentbankmobile/banque/dark/participe_cagnotte_dark.dart';
+import 'package:studentbankmobile/banque/virement_mot_de_passe.dart';
+import 'package:studentbankmobile/banque/dark/virement_mot_de_passe_dark.dart';
 import 'package:studentbankmobile/mobilite/mobilite.dart';
 
-import 'banque_sow/compte_virement_2.dart';
+import 'banque/compte_virement_2.dart';
 
 class Accueil extends StatefulWidget {
   const Accueil({super.key});

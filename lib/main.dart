@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
-import 'package:studentbankmobile/Debut/Debut.dart';
+import 'package:studentbankmobile/Debut/Dark/Debut.dart';
 import 'package:studentbankmobile/widgets/theme_Provider.dart';
 
 void main() {
